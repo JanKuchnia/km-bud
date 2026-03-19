@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="h-full scroll-smooth" lang="pl">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="logo.ico">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Galeria – KM-BUD Ogrodzenia | Myślenice</title>
+  <meta name="description" content="Zobacz nasze realizacje ogrodzeń panelowych, betonowych i z siatki w Myślenicach i okolicach. Galeria zdjęć montaży wykonanych przez KM-BUD.">
+  <meta property="og:title" content="Galeria realizacji – KM-BUD Ogrodzenia">
+  <meta property="og:description" content="Galeria naszych realizacji ogrodzeń panelowych, betonowych i z siatki. Profesjonalny montaż w Małopolsce.">
+
+  <style>
+    /* ── Lightbox ── */
+    #lightbox {
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    #lightbox.hidden-lb {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #lightbox img {
+      transition: transform 0.3s ease;
+    }
+
+    /* ── Gallery grid items ── */
+    .gallery-item {
+      break-inside: avoid;
+      transition: transform 0.25s ease, opacity 0.3s ease;
+    }
+    .gallery-item.hidden-item {
+      display: none;
+    }
+    .gallery-item img {
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    /* ── Filter buttons ── */
+    .filter-btn {
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .filter-btn.active {
+      background-color: var(--primary-color, #e53e3e);
+      color: #fff;
+      border-color: var(--primary-color, #e53e3e);
+    }
+  </style>
+</head>
+
+<body class="h-full bg-white antialiased [font-family:var(--font-family-body)]">
+<div class="frame-root">
+  <div class="frame-content">
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header id="global-header" class="code-section bg-[var(--dark-background-color)] shadow-md relative z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-32">
+
+          <a href="/" class="flex items-center">
+            <img src="logo_kadr.png" alt="KM-BUD Ogrodzenia" class="h-32 py-2">
+          </a>
+
+          <nav class="hidden lg:flex items-center space-x-4">
+            <a href="/#services-overview"
+               class="text-white hover:bg-white hover:text-[var(--dark-background-color)] px-4 py-2 rounded-[var(--button-rounded-radius)] font-medium transition-colors">Usługi</a>
+            <a href="galeria.html"
+               class="bg-white/10 text-white px-4 py-2 rounded-[var(--button-rounded-radius)] font-medium transition-colors">Galeria</a>
+            <a href="/#why-choose-us"
+               class="text-white hover:bg-white hover:text-[var(--dark-background-color)] px-4 py-2 rounded-[var(--button-rounded-radius)] font-medium transition-colors">O Nas</a>
+            <a href="/#contact"
+               class="text-white hover:bg-white hover:text-[var(--dark-background-color)] px-4 py-2 rounded-[var(--button-rounded-radius)] font-medium transition-colors">Kontakt</a>
+            <a href="/#contact"
+               class="bg-[var(--primary-color)] text-white px-6 py-3 rounded-[var(--button-rounded-radius)] font-semibold hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">Otrzymaj Wycenę</a>
+          </nav>
+
+          <button id="mobile-menu-button"
+                  class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:bg-white/10 transition-colors"
+                  aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-menu-backdrop"
+         class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300"
+         aria-hidden="true"></div>
+
+    <!-- Mobile menu drawer -->
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu nawigacyjne"
+         class="fixed top-0 right-0 h-full w-[85%] max-w-sm z-[100] flex flex-col
+                bg-[var(--dark-background-color)] shadow-2xl
+                transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+        <img src="logo_kadr.png" alt="KM-BUD" class="h-14">
+        <button id="mobile-menu-close" aria-label="Zamknij menu"
+                class="flex items-center justify-center w-10 h-10 rounded-lg text-white hover:bg-white/10 transition-colors">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col flex-1 px-4 py-6 space-y-1 overflow-y-auto">
+        <a href="/#services-overview" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-white/90 font-medium text-base hover:bg-white/10 hover:text-white transition-colors">
+          <i data-lucide="grid-2x2" class="w-5 h-5 text-[var(--accent2-color)]"></i> Usługi
+        </a>
+        <a href="galeria.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-white font-medium text-base bg-white/10 transition-colors">
+          <i data-lucide="image" class="w-5 h-5 text-[var(--accent2-color)]"></i> Galeria
+        </a>
+        <a href="/#why-choose-us" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-white/90 font-medium text-base hover:bg-white/10 hover:text-white transition-colors">
+          <i data-lucide="users" class="w-5 h-5 text-[var(--accent2-color)]"></i> O Nas
+        </a>
+        <a href="/#contact" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-white/90 font-medium text-base hover:bg-white/10 hover:text-white transition-colors">
+          <i data-lucide="mail" class="w-5 h-5 text-[var(--accent2-color)]"></i> Kontakt
+        </a>
+      </nav>
+      <div class="px-4 pb-8 pt-4 border-t border-white/10 space-y-3">
+        <a href="/#contact" class="mobile-nav-link flex items-center justify-center gap-2 w-full bg-[var(--primary-color)] text-white px-6 py-4 rounded-xl font-bold text-base hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">
+          <i data-lucide="calculator" class="w-5 h-5"></i> Otrzymaj Wycenę
+        </a>
+        <a href="tel:+48" class="mobile-nav-link flex items-center justify-center gap-2 w-full border border-white/20 text-white px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-white/10 transition-colors">
+          <i data-lucide="phone" class="w-4 h-4"></i> Zadzwoń teraz
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══════════════ PAGE HERO ═══════════════ -->
+    <section class="bg-[var(--dark-background-color)] py-16 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-[var(--accent2-color)] text-sm font-semibold tracking-widest uppercase mb-3">Nasze prace</p>
+        <h1 class="text-white text-4xl sm:text-5xl font-bold mb-4">Galeria Realizacji</h1>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto">
+          Każde ogrodzenie to osobna historia. Przeglądaj nasze dotychczasowe montaże – panelowe, betonowe, z siatki i podmurówki.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FILTER TABS ═══════════════ -->
+    <div class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm py-3 px-4">
+      <div class="max-w-7xl mx-auto flex flex-wrap gap-2 justify-center">
+        <button class="filter-btn active flex items-center gap-1.5 border border-gray-300 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="all">
+          <i data-lucide="layout-grid" class="w-4 h-4"></i> Wszystkie
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="panelowe">
+          <i data-lucide="square" class="w-4 h-4"></i> Panelowe
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="betonowe">
+          <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i> Betonowe
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="siatka">
+          <i data-lucide="grid-3x3" class="w-4 h-4"></i> Siatka
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="podmurówka">
+          <i data-lucide="layers" class="w-4 h-4"></i> Podmurówka
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="bramy">
+          <i data-lucide="door-open" class="w-4 h-4"></i> Bramy
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════ GALLERY GRID ═══════════════ -->
+    <section class="py-12 px-4 bg-gray-50 min-h-[60vh]">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Stats row -->
+        <div class="flex flex-wrap justify-center gap-8 mb-10 text-center">
+          <div>
+            <p class="text-3xl font-bold text-[var(--dark-background-color)]">200+</p>
+            <p class="text-gray-500 text-sm">Zrealizowanych projektów</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-[var(--dark-background-color)]">5+</p>
+            <p class="text-gray-500 text-sm">Lat doświadczenia</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-[var(--dark-background-color)]">100%</p>
+            <p class="text-gray-500 text-sm">Zadowolonych klientów</p>
+          </div>
+        </div>
+
+        <!-- Masonry grid -->
+        <div id="gallery-grid"
+             class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+
+          <!-- Panelowe -->
+          <div class="gallery-item" data-category="panelowe"
+               data-title="Ogrodzenie panelowe – antracyt"
+               data-desc="Montaż ogrodzenia panelowego w kolorze antracyt z podmurówką. Myślenice, 2024.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[4/3] bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie panelowe antracyt</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Panelowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie panelowe – antracyt</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="panelowe"
+               data-title="Ogrodzenie panelowe – zielone"
+               data-desc="Panele 3D w kolorze zielonym z ocynkowanymi słupkami. Dobczyce, 2024.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/4] bg-gradient-to-br from-green-800 to-green-600 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie panelowe zielone</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Panelowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie panelowe – zielone</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Betonowe -->
+          <div class="gallery-item" data-category="betonowe"
+               data-title="Ogrodzenie betonowe systemowe"
+               data-desc="Pełne ogrodzenie betonowe systemowe w Myślenicach. Montaż kompleksowy. 2023.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[4/3] bg-gradient-to-br from-stone-500 to-stone-700 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie betonowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Betonowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie betonowe systemowe</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Siatka -->
+          <div class="gallery-item" data-category="siatka"
+               data-title="Ogrodzenie z siatki zgrzewanej"
+               data-desc="Ogrodzenie z siatki zgrzewanej ocynkowanej z podmurówką. Wieliczka, 2023.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[16/9] bg-gradient-to-br from-zinc-500 to-zinc-700 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie z siatki</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Siatka</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie z siatki zgrzewanej</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Podmurówka -->
+          <div class="gallery-item" data-category="podmurówka"
+               data-title="Podmurówka betonowa pod panel"
+               data-desc="Kompleksowa podmurówka betonowa systemowa z przęsłami panelowymi. Myślenice 2024.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/4] bg-gradient-to-br from-amber-800 to-amber-600 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Podmurówka betonowa</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Podmurówka</span>
+                  <p class="text-white font-semibold text-sm">Podmurówka betonowa pod panel</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Bramy -->
+          <div class="gallery-item" data-category="bramy"
+               data-title="Brama przesuwna – stalowa"
+               data-desc="Brama przesuwna stalowa z automatyką. Montaż kompletny. Dobczyce, 2023.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[4/3] bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Brama przesuwna</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Bramy</span>
+                  <p class="text-white font-semibold text-sm">Brama przesuwna – stalowa</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- More items -->
+          <div class="gallery-item" data-category="panelowe"
+               data-title="Panel 3D – czarny"
+               data-desc="Ogrodzenie panelowe 3D w kolorze czarnym z ocynkowanymi słupkami. Myślenice, 2024.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[4/5] bg-gradient-to-br from-neutral-800 to-black flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Panel 3D czarny</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Panelowe</span>
+                  <p class="text-white font-semibold text-sm">Panel 3D – czarny</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="betonowe"
+               data-title="Ogrodzenie betonowe – dekoracyjne"
+               data-desc="Ogrodzenie betonowe z dekoracyjnymi przęsłami. Pcim, 2024.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[4/3] bg-gradient-to-br from-stone-300 to-stone-500 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie betonowe dekoracyjne</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Betonowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie betonowe – dekoracyjne</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="siatka"
+               data-title="Siatka leśna – ocynkowana"
+               data-desc="Ogrodzenie z siatki leśnej ocynkowanej. Siepraw, 2023.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[3/2] bg-gradient-to-br from-lime-700 to-lime-500 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Siatka leśna</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Siatka</span>
+                  <p class="text-white font-semibold text-sm">Siatka leśna – ocynkowana</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="bramy"
+               data-title="Brama dwuskrzydłowa"
+               data-desc="Brama dwuskrzydłowa w kolorze antracyt. Myślenice, 2024.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[16/9] bg-gradient-to-br from-slate-700 to-slate-500 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Brama dwuskrzydłowa</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Bramy</span>
+                  <p class="text-white font-semibold text-sm">Brama dwuskrzydłowa</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="podmurówka"
+               data-title="Podmurówka z pustaków betonowych"
+               data-desc="Podmurówka z pustaków betonowych dekoracyjnych. Wielka Wola, 2024.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[4/3] bg-gradient-to-br from-orange-800 to-orange-600 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Podmurówka z pustaków</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Podmurówka</span>
+                  <p class="text-white font-semibold text-sm">Podmurówka z pustaków betonowych</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="panelowe"
+               data-title="Ogrodzenie panelowe – szare"
+               data-desc="Panele 3D szare z murowanymi słupkami. Myślenice 2023.">
+            <div class="relative overflow-hidden rounded-xl group shadow-md cursor-zoom-in">
+              <div class="aspect-[4/3] bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="image" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie panelowe szare</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Panelowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie panelowe – szare</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+        </div><!-- /gallery-grid -->
+
+        <!-- Empty state -->
+        <div id="empty-state" class="hidden text-center py-20 text-gray-400">
+          <i data-lucide="image-off" class="w-12 h-12 mx-auto mb-4 opacity-40"></i>
+          <p class="text-lg font-medium">Brak zdjęć w tej kategorii</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ CTA SECTION ═══════════════ -->
+    <section class="bg-[var(--dark-background-color)] py-16 px-4">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-white text-3xl font-bold mb-4">Podoba Ci się nasza praca?</h2>
+        <p class="text-white/60 mb-8">Zadzwoń lub napisz – bezpłatnie omówimy Twoje ogrodzenie i przyjedziemy na pomiar.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/#contact"
+             class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-base hover:bg-[var(--primary-button-hover-bg-color)] transition-colors">
+            <i data-lucide="calculator" class="w-5 h-5"></i>
+            Otrzymaj Darmową Wycenę
+          </a>
+          <a href="tel:+48"
+             class="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-medium text-base hover:bg-white/10 transition-colors">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            Zadzwoń teraz
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="bg-black/80 text-white/50 text-sm text-center py-6 px-4">
+      <p>© 2024 KM-BUD Ogrodzenia · Konrad Małucha · Myślenice i okolice</p>
+    </footer>
+
+  </div><!-- /frame-content -->
+</div><!-- /frame-root -->
+
+<!-- ═══════════════ LIGHTBOX ═══════════════ -->
+<div id="lightbox"
+     class="hidden-lb fixed inset-0 z-[200] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+     role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+
+  <!-- Close -->
+  <button id="lb-close"
+          class="absolute top-4 right-4 text-white/70 hover:text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
+          aria-label="Zamknij">
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+
+  <!-- Prev -->
+  <button id="lb-prev"
+          class="absolute left-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
+          aria-label="Poprzednie zdjęcie">
+    <i data-lucide="chevron-left" class="w-7 h-7"></i>
+  </button>
+
+  <!-- Next -->
+  <button id="lb-next"
+          class="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
+          aria-label="Następne zdjęcie">
+    <i data-lucide="chevron-right" class="w-7 h-7"></i>
+  </button>
+
+  <!-- Content -->
+  <div class="max-w-3xl w-full">
+    <!-- Placeholder panel (swaps to real <img> when real photos exist) -->
+    <div id="lb-preview"
+         class="w-full rounded-xl overflow-hidden bg-gray-900 flex items-center justify-center min-h-[300px]">
+      <i data-lucide="image" class="w-16 h-16 text-white/20"></i>
+    </div>
+    <div id="lb-info" class="mt-4 text-center">
+      <p id="lb-title" class="text-white font-semibold text-lg"></p>
+      <p id="lb-desc" class="text-white/50 text-sm mt-1"></p>
+    </div>
+    <p id="lb-counter" class="text-white/30 text-xs text-center mt-2"></p>
+  </div>
+</div>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+  lucide.createIcons();
+
+  /* ── Mobile menu ── */
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuClose  = document.getElementById('mobile-menu-close');
+  const mobileMenu       = document.getElementById('mobile-menu');
+  const backdrop         = document.getElementById('mobile-menu-backdrop');
+  const navLinks         = document.querySelectorAll('.mobile-nav-link');
+
+  function openMenu() {
+    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.add('translate-x-0');
+    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop.classList.add('opacity-100');
+    document.body.style.overflow = 'hidden';
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.classList.remove('translate-x-0');
+    backdrop.classList.add('opacity-0', 'pointer-events-none');
+    backdrop.classList.remove('opacity-100');
+    document.body.style.overflow = '';
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+  }
+  mobileMenuButton.addEventListener('click', openMenu);
+  mobileMenuClose.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+  navLinks.forEach(l => l.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeLightbox(); closeMenu(); } });
+
+  /* ── Filter ── */
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items      = document.querySelectorAll('.gallery-item');
+  const emptyState = document.getElementById('empty-state');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      let visible = 0;
+      items.forEach(item => {
+        const match = filter === 'all' || item.dataset.category === filter;
+        item.classList.toggle('hidden-item', !match);
+        if (match) visible++;
+      });
+      emptyState.classList.toggle('hidden', visible > 0);
+    });
+  });
+
+  /* ── Lightbox ── */
+  const lightbox  = document.getElementById('lightbox');
+  const lbPreview = document.getElementById('lb-preview');
+  const lbTitle   = document.getElementById('lb-title');
+  const lbDesc    = document.getElementById('lb-desc');
+  const lbCounter = document.getElementById('lb-counter');
+
+  let currentIndex = 0;
+  let visibleItems = [];
+
+  function getVisible() {
+    return [...items].filter(i => !i.classList.contains('hidden-item'));
+  }
+
+  function openLightbox(el) {
+    visibleItems = getVisible();
+    currentIndex = visibleItems.indexOf(el);
+    showItem(currentIndex);
+    lightbox.classList.remove('hidden-lb');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden-lb');
+    document.body.style.overflow = '';
+  }
+
+  function showItem(idx) {
+    const item = visibleItems[idx];
+    if (!item) return;
+    lbTitle.textContent   = item.dataset.title   || '';
+    lbDesc.textContent    = item.dataset.desc     || '';
+    lbCounter.textContent = `${idx + 1} / ${visibleItems.length}`;
+    // If you add real <img> tags later, swap lbPreview content here
+    lbPreview.innerHTML   = `<div class="w-full aspect-video bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center rounded-xl min-h-[300px]">
+      <i data-lucide="image" style="width:4rem;height:4rem;color:rgba(255,255,255,0.15)"></i>
+    </div>`;
+    lucide.createIcons();
+  }
+
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+  document.getElementById('lb-prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+    showItem(currentIndex);
+  });
+  document.getElementById('lb-next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % visibleItems.length;
+    showItem(currentIndex);
+  });
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('hidden-lb')) return;
+    if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; showItem(currentIndex); }
+    if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % visibleItems.length; showItem(currentIndex); }
+  });
+</script>
+</body>
+</html>
