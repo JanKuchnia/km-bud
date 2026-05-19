@@ -240,7 +240,7 @@
                   </p>
                   <a href="galeria.html?filter=panelowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -260,7 +260,7 @@
                   </p>
                   <a href="galeria.html?filter=siatka"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -280,7 +280,7 @@
                   </p>
                   <a href="galeria.html?filter=betonowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -300,7 +300,7 @@
                   </p>
                   <a href="galeria.html?filter=gabionowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -320,7 +320,7 @@
                   </p>
                   <a href="galeria.html?filter=sztachetowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -340,7 +340,7 @@
                   </p>
                   <a href="galeria.html?filter=przemysłowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -360,7 +360,7 @@
                   </p>
                   <a href="galeria.html?filter=tymczasowe"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -380,7 +380,7 @@
                   </p>
                   <a href="galeria.html?filter=bramy"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -400,7 +400,7 @@
                   </p>
                   <a href="galeria.html?filter=podmurówka"
                     class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Dowiedz się więcej <i data-lucide="arrow-right"></i>
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
                   </a>
                 </div>
 
@@ -1087,6 +1087,14 @@
       </div>
       <!-- Indicators -->
       <div id="modal-dots" class="mt-4 flex gap-2 justify-center z-[210]"></div>
+
+      <!-- Gallery link button (Option A) -->
+      <div class="mt-8 text-center z-[210]">
+        <a id="modal-gallery-btn" href="#"
+          class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-3.5 rounded-[var(--button-rounded-radius)] font-bold text-base hover:bg-[var(--primary-button-hover-bg-color)] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 duration-200">
+          Przejdź do galerii <i data-lucide="images"></i>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -1273,6 +1281,12 @@
       activeModalSlides = serviceSlides[category];
       currentModalSlide = 0;
 
+      // Update gallery button href dynamically
+      const galleryBtn = document.getElementById('modal-gallery-btn');
+      if (galleryBtn) {
+        galleryBtn.href = `galeria.html?filter=${category}`;
+      }
+
       // Generate dots
       modalDotsContainer.innerHTML = '';
       activeModalSlides.forEach((_, idx) => {
@@ -1305,10 +1319,12 @@
       renderModalSlide();
     }
 
-    // Bind cards
+    // Bind cards and links to open modal
     document.querySelectorAll('.service-card').forEach(card => {
       card.addEventListener('click', (e) => {
-        if (e.target.closest('.service-link')) return; // ignore link clicks
+        if (e.target.closest('.service-link')) {
+          e.preventDefault(); // Prevent direct navigation, open modal instead
+        }
         const category = card.getAttribute('data-service-category');
         openServiceModal(category);
       });

@@ -56,9 +56,9 @@
     }
 
     .filter-btn.active {
-      background-color: var(--primary-color, #e53e3e);
-      color: #fff;
-      border-color: var(--primary-color, #e53e3e);
+      background-color: var(--primary-color, #e53e3e) !important;
+      color: #fff !important;
+      border-color: var(--primary-color, #e53e3e) !important;
     }
   </style>
 </head>
@@ -155,65 +155,63 @@
         </div>
       </section>
 
-      <!-- ═══════════════ FILTER TABS ═══════════════ -->
-      <div class="sticky top-20 lg:top-28 z-40 bg-white/95 backdrop-blur border-b border-gray-100 shadow-sm py-3 px-4 transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex flex-wrap gap-2 justify-center">
-          <button
-            class="filter-btn active flex items-center gap-1.5 border border-gray-300 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="all">
-            <i data-lucide="layout-grid" class="w-4 h-4"></i> Wszystkie
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="panelowe">
-            <i data-lucide="square" class="w-4 h-4"></i> Ogrodzenia panelowe
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="betonowe">
-            <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i> Ogrodzenia z bloczków
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="siatka">
-            <i data-lucide="grid-3x3" class="w-4 h-4"></i> Ogrodzenia z siatki
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="podmurówka">
-            <i data-lucide="layers" class="w-4 h-4"></i> Mury oporowe
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="bramy">
-            <i data-lucide="door-open" class="w-4 h-4"></i> Bramy, furtki, przęsła
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="gabionowe">
-            <i data-lucide="layers" class="w-4 h-4"></i> Ogrodzenia gabionowe
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="sztachetowe">
-            <i data-lucide="align-justify" class="w-4 h-4"></i> Ogrodzenia sztachetowe
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="przemysłowe">
-            <i data-lucide="shield" class="w-4 h-4"></i> Ogrodzenia przemysłowe
-          </button>
-          <button
-            class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
-            data-filter="tymczasowe">
-            <i data-lucide="construction" class="w-4 h-4"></i> Ogrodzenia tymczasowe
-          </button>
-        </div>
-      </div>
-
       <!-- ═══════════════ GALLERY GRID ═══════════════ -->
       <section class="py-12 px-4 bg-gray-50 min-h-[60vh]">
         <div class="max-w-7xl mx-auto">
+
+          <!-- ═══════════════ FILTER TABS ═══════════════ -->
+          <div id="gallery-filters" class="scroll-mt-24 lg:scroll-mt-32 mb-10 flex flex-wrap gap-2.5 justify-center">
+            <button
+              class="filter-btn active flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="all">
+              <i data-lucide="layout-grid" class="w-4 h-4"></i> Wszystkie
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="panelowe">
+              <i data-lucide="square" class="w-4 h-4"></i> Ogrodzenia panelowe
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="betonowe">
+              <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i> Ogrodzenia z bloczków
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="siatka">
+              <i data-lucide="grid-3x3" class="w-4 h-4"></i> Ogrodzenia z siatki
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="podmurówka">
+              <i data-lucide="layers" class="w-4 h-4"></i> Mury oporowe
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="bramy">
+              <i data-lucide="door-open" class="w-4 h-4"></i> Bramy, furtki, przęsła
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="gabionowe">
+              <i data-lucide="layers" class="w-4 h-4"></i> Ogrodzenia gabionowe
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="sztachetowe">
+              <i data-lucide="align-justify" class="w-4 h-4"></i> Ogrodzenia sztachetowe
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="przemysłowe">
+              <i data-lucide="shield" class="w-4 h-4"></i> Ogrodzenia przemysłowe
+            </button>
+            <button
+              class="filter-btn flex items-center gap-1.5 border border-gray-200 bg-white shadow-sm text-gray-700 text-sm font-medium px-4 py-2.5 rounded-full hover:border-gray-400 hover:text-black transition-all duration-300"
+              data-filter="tymczasowe">
+              <i data-lucide="construction" class="w-4 h-4"></i> Ogrodzenia tymczasowe
+            </button>
+          </div>
 
           <!-- Stats row -->
           <div class="flex flex-wrap justify-center gap-8 mb-10 text-center">
@@ -979,6 +977,13 @@
       const targetBtn = document.querySelector(`.filter-btn[data-filter="${CSS.escape(filterParam)}"]`);
       if (targetBtn) {
         targetBtn.click();
+        // Smooth scroll to gallery filters after loading
+        setTimeout(() => {
+          const galleryFilters = document.getElementById('gallery-filters');
+          if (galleryFilters) {
+            galleryFilters.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
       }
     }
 
