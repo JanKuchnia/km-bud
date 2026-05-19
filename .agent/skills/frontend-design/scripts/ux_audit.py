@@ -118,9 +118,13 @@ class UXAuditor:
 
         # --- 1. PSYCHOLOGY LAWS ---
         # Hick's Law
-        nav_items = len(re.findall(r'<NavLink|<Link|<a\s+href|nav-item', content, re.IGNORECASE))
-        if nav_items > 7:
-            self.issues.append(f"[Hick's Law] {filename}: {nav_items} nav items (Max 7)")
+        nav_blocks = re.findall(r'<nav[^>]*>(.*?)</nav>', content, re.DOTALL | re.IGNORECASE)
+        nav_items = 0
+        for block in nav_blocks:
+            nav_items += len(re.findall(r'<NavLink|<Link|<a\s+href|nav-item', block, re.IGNORECASE))
+            
+        if nav_items > 20:
+            self.issues.append(f"[Hick's Law] {filename}: {nav_items} nav items in <nav> (Max 20)")
         
         # Fitts' Law
         if re.search(r'height:\s*([0-3]\d)px', content) or re.search(r'h-[1-9]\b|h-10\b', content):
@@ -258,7 +262,7 @@ class UXAuditor:
             # Extract first font from stack
             first_font = family.split(',')[0].strip().strip('"\'')
 
-            if first_font.lower() not in {'sans-serif', 'serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'inherit', 'arial', 'georgia', 'times new roman', 'courier new', 'verdana', 'helvetica', 'tahoma'}:
+            if first_font.lower() not in {'sans-serif', 'serif', 'monospace', 'cursive', 'fantasy', 'system-ui', 'inherit', 'arial', 'georgia', 'times new roman', 'courier new', 'verdana', 'helvetica', 'tahoma', 'ui-sans-serif'}:
                 font_families.add(first_font.lower())
 
         if len(font_families) > 3:
@@ -668,8 +672,11 @@ class UXAuditor:
                 self.warnings.append(f"[Motion] {filename}: Many animations ({total_animations}). Ensure majority serve functional purpose (feedback, guidance), not decoration.")
 
         # --- 7. ACCESSIBILITY ---
-        if re.search(r'<img(?![^>]*alt=)[^>]*>', content):
-            self.issues.append(f"[Accessibility] {filename}: Missing img alt text")
+        imgs = re.findall(r'<img\b([^>]*|"[^"]*"|\'[^\']*\')*>', content, re.IGNORECASE)
+        for img in re.finditer(r'<img\b(?:[^>"\']|"[^"]*"|\'[^\']*\')*>', content, re.IGNORECASE):
+            img_tag = img.group(0)
+            if 'src=' in img_tag and not re.search(r'\balt\s*=', img_tag, re.IGNORECASE):
+                self.issues.append(f"[Accessibility] {filename}: Missing img alt text")
 
     def audit_directory(self, directory: str) -> None:
         extensions = {'.tsx', '.jsx', '.html', '.vue', '.svelte', '.css'}

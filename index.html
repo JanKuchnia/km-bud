@@ -22,6 +22,31 @@
   <meta name=twitter:description
     content="Profesjonalny montaż ogrodzeń w Myślenicach i okolicach. Ogrodzenia panelowe, betonowe, podmurówki. Szybkie terminy, solidne wykonanie.">
 
+  <style>
+    #service-modal {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #service-modal.hidden-modal {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #service-modal.hidden-modal .modal-content-wrapper {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    #service-modal:not(.hidden-modal) .modal-content-wrapper {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .modal-content-wrapper {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    }
+  </style>
 </head>
 
 <body class="h-full bg-white">
@@ -111,7 +136,7 @@
                 <i data-lucide="calculator" class="w-5 h-5"></i>
                 Otrzymaj Wycenę
               </a>
-              <a href="tel:+48"
+              <a href="tel:+48 794 008 854"
                 class="mobile-nav-link flex items-center justify-center gap-2 w-full border border-white/20 text-white px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-white/10 transition-colors">
                 <i data-lucide="phone" class="w-4 h-4"></i>
                 Zadzwoń teraz
@@ -149,7 +174,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                  <a href=tel:+48
+                  <a href="tel:+48 794 008 854"
                     class="inline-flex items-center justify-center gap-3 bg-[var(--accent2-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg">
                     <i data-lucide="phone"></i>
                     Zadzwoń teraz
@@ -201,8 +226,8 @@
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
                 <!-- 1. Ogrodzenia panelowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="panelowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="scan" class="text-white text-2xl"></i>
@@ -211,17 +236,18 @@
                     Ogrodzenia panelowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów przemysłowych.
+                    Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów
+                    przemysłowych.
                   </p>
                   <a href="galeria.html?filter=panelowe"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 2. Ogrodzenia siatkowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="siatka"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="grid-3x3" class="text-white text-2xl"></i>
@@ -230,17 +256,18 @@
                     Ogrodzenia z siatki
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny leśne.
+                    Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny
+                    leśne.
                   </p>
                   <a href="galeria.html?filter=siatka"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 3. Ogrodzenia frontowe z bloczków -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="betonowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="brick-wall" class="text-white text-2xl"></i>
@@ -249,17 +276,18 @@
                     Ogrodzenia z bloczków
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i design.
+                    Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i
+                    design.
                   </p>
                   <a href="galeria.html?filter=betonowe"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 4. Ogrodzenia gabionowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="gabionowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="layers" class="text-white text-2xl"></i>
@@ -268,17 +296,18 @@
                     Ogrodzenia gabionowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną izolację akustyczną.
+                    Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną
+                    izolację akustyczną.
                   </p>
-                  <a href="galeria.html?filter=betonowe"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                  <a href="galeria.html?filter=gabionowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 5. Ogrodzenia sztachetowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="sztachetowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="align-justify" class="text-white text-2xl"></i>
@@ -287,17 +316,18 @@
                     Ogrodzenia sztachetowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z trwałością.
+                    Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z
+                    trwałością.
                   </p>
-                  <a href="galeria.html"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                  <a href="galeria.html?filter=sztachetowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 6. Ogrodzenia przemysłowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="przemysłowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="shield" class="text-white text-2xl"></i>
@@ -306,17 +336,18 @@
                     Ogrodzenia przemysłowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu zabezpieczenia.
+                    Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu
+                    zabezpieczenia.
                   </p>
-                  <a href="galeria.html?filter=panelowe"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                  <a href="galeria.html?filter=przemysłowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 7. Ogrodzenia tymczasowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="tymczasowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="construction" class="text-white text-2xl"></i>
@@ -325,17 +356,18 @@
                     Ogrodzenia tymczasowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu budowy.
+                    Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu
+                    budowy.
                   </p>
-                  <a href="galeria.html"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                  <a href="galeria.html?filter=tymczasowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 8. Bramy, furtki, przęsła -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="bramy"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="door-closed" class="text-white text-2xl"></i>
@@ -344,17 +376,18 @@
                     Bramy, furtki, przęsła
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu ogrodzenia.
+                    Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu
+                    ogrodzenia.
                   </p>
                   <a href="galeria.html?filter=bramy"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
 
                 <!-- 9. Mury oporowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl transition-all duration-300 group border border-[var(--light-border-color)]">
+                <div data-service-category="podmurówka"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                   <div
                     class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                     <i data-lucide="mountain" class="text-white text-2xl"></i>
@@ -363,10 +396,11 @@
                     Mury oporowe
                   </h3>
                   <p class="text-[var(--gray-text-color)] mb-4">
-                    Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki ogrodzeniowe.
+                    Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki
+                    ogrodzeniowe.
                   </p>
                   <a href="galeria.html?filter=podmurówka"
-                    class="text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
                     Dowiedz się więcej <i data-lucide="arrow-right"></i>
                   </a>
                 </div>
@@ -384,87 +418,151 @@
           </section>
 
           <!-- Carousel (Karuzela Realizacji) -->
-          <section id="realizations-carousel" class="code-section relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] bg-neutral-950 overflow-hidden">
+          <section id="realizations-carousel"
+            class="code-section relative w-full h-[350px] sm:h-[450px] md:h-[550px] lg:h-[600px] bg-neutral-950 overflow-hidden">
             <!-- Slides Container -->
             <div class="relative w-full h-full">
               <!-- Slide 1 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10" data-slide-index="0">
-                <img src="images/metal-picket-fence-with-stone-columns-and-wooden-texture-gate.avif" alt="Ekskluzywne Ogrodzenie Frontowe" class="w-full h-full object-cover object-center">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ekskluzywne Ogrodzenie Frontowe</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Sztachety metalowe z podmurówką z bloczków łupanych i elegancką bramą o strukturze drewna.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10"
+                data-slide-index="0">
+                <img src="images/metal-picket-fence-with-stone-columns-and-wooden-texture-gate.avif"
+                  alt="Ekskluzywne Ogrodzenie Frontowe" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ekskluzywne Ogrodzenie
+                    Frontowe</h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Sztachety metalowe z podmurówką z bloczków
+                    łupanych i elegancką bramą o strukturze drewna.</p>
                 </div>
               </div>
               <!-- Slide 2 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="1">
-                <img src="images/a-modern-panel-fence-in-anthracite-color.avif" alt="Ogrodzenie Panelowe Antracyt" class="w-full h-full object-cover object-center" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Panelowe Antracyt</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Klasyczne, minimalistyczne i estetyczne ogrodzenie panelowe z prefabrykowaną podmurówką.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                data-slide-index="1">
+                <img src="images/a-modern-panel-fence-in-anthracite-color.avif" alt="Ogrodzenie Panelowe Antracyt"
+                  class="w-full h-full object-cover object-center" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Panelowe
+                    Antracyt</h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Klasyczne, minimalistyczne i estetyczne
+                    ogrodzenie panelowe z prefabrykowaną podmurówką.</p>
                 </div>
               </div>
               <!-- Slide 3 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="2">
-                <img src="images/horizontal-pvc-slat-fence-with-metal-frame.avif" alt="Nowoczesne Ogrodzenie Żaluzyjne" class="w-full h-full object-cover object-center" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Nowoczesne Ogrodzenie Żaluzyjne</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Poziome lamele PVC w solidnej ramie stalowej, gwarantujące pełną prywatność i nowoczesny wygląd.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                data-slide-index="2">
+                <img src="images/horizontal-pvc-slat-fence-with-metal-frame.avif" alt="Nowoczesne Ogrodzenie Żaluzyjne"
+                  class="w-full h-full object-cover object-center" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Nowoczesne Ogrodzenie
+                    Żaluzyjne</h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Poziome lamele PVC w solidnej ramie stalowej,
+                    gwarantujące pełną prywatność i nowoczesny wygląd.</p>
                 </div>
               </div>
               <!-- Slide 4 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="3">
-                <img src="images/black-vertical-panel-fence-with-concrete-pillars-and-base.avif" alt="Ogrodzenie Pionowe z Podmurówką" class="w-full h-full object-cover object-center" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Pionowe z Podmurówką</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Pionowe profile metalowe na estetycznym i solidnym fundamencie z prefabrykowanych bloczków.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                data-slide-index="3">
+                <img src="images/black-vertical-panel-fence-with-concrete-pillars-and-base.avif"
+                  alt="Ogrodzenie Pionowe z Podmurówką" class="w-full h-full object-cover object-center" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Pionowe z
+                    Podmurówką</h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Pionowe profile metalowe na estetycznym i
+                    solidnym fundamencie z prefabrykowanych bloczków.</p>
                 </div>
               </div>
               <!-- Slide 5 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="4">
-                <img src="images/concrete-pattern-fence-with-green-thuja.avif" alt="Ogrodzenie Betonowe Dwustronne" class="w-full h-full object-cover object-center" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Betonowe</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Trwałe i estetyczne ogrodzenie z prefabrykowanych płyt betonowych, doskonale komponujące się z zielenią.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                data-slide-index="4">
+                <img src="images/concrete-pattern-fence-with-green-thuja.avif" alt="Ogrodzenie Betonowe Dwustronne"
+                  class="w-full h-full object-cover object-center" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Betonowe
+                  </h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Trwałe i estetyczne ogrodzenie z
+                    prefabrykowanych płyt betonowych, doskonale komponujące się z zielenią.</p>
                 </div>
               </div>
               <!-- Slide 6 -->
-              <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="5">
-                <img src="images/new-fence-with-factory-made-concrete-posts-and-foundations-and-brown-wooden-plank-spans.avif" alt="Ogrodzenie Drewniano-Betonowe" class="w-full h-full object-cover object-center" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <span class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
-                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie Drewniano-Betonowe</h3>
-                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Harmonijne połączenie naturalnych desek drewnianych z prefabrykowanymi słupkami i podmurówką.</p>
+              <div
+                class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                data-slide-index="5">
+                <img
+                  src="images/new-fence-with-factory-made-concrete-posts-and-foundations-and-brown-wooden-plank-spans.avif"
+                  alt="Ogrodzenie Drewniano-Betonowe" class="w-full h-full object-cover object-center" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 md:p-12 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <span
+                    class="inline-block bg-[var(--primary-color)] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">Realizacje</span>
+                  <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mb-2">Ogrodzenie
+                    Drewniano-Betonowe</h3>
+                  <p class="text-sm sm:text-base text-gray-300 max-w-2xl">Harmonijne połączenie naturalnych desek
+                    drewnianych z prefabrykowanymi słupkami i podmurówką.</p>
                 </div>
               </div>
             </div>
 
             <!-- Navigation Arrows -->
-            <button id="carousel-prev" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+            <button id="carousel-prev"
+              class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
               <i data-lucide="chevron-left" class="w-6 h-6"></i>
             </button>
-            <button id="carousel-next" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+            <button id="carousel-next"
+              class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
               <i data-lucide="chevron-right" class="w-6 h-6"></i>
             </button>
 
             <!-- Carousel Indicators (Dots) -->
             <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="0" aria-label="Idź do slajdu 1"></button>
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="1" aria-label="Idź do slajdu 2"></button>
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="2" aria-label="Idź do slajdu 3"></button>
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="3" aria-label="Idź do slajdu 4"></button>
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="4" aria-label="Idź do slajdu 5"></button>
-              <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300" data-dot-index="5" aria-label="Idź do slajdu 6"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="0" aria-label="Idź do slajdu 1"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="1" aria-label="Idź do slajdu 2"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="2" aria-label="Idź do slajdu 3"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="3" aria-label="Idź do slajdu 4"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="4" aria-label="Idź do slajdu 5"></button>
+              <button
+                class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                data-dot-index="5" aria-label="Idź do slajdu 6"></button>
             </div>
           </section>
 
@@ -474,8 +572,7 @@
 
                 <div class=relative>
                   <div class="rounded-2xl overflow-hidden shadow-2xl">
-                    <img
-                      src="images/workers-install-a-metal-profile-fence.avif"
+                    <img src="images/workers-install-a-metal-profile-fence.avif"
                       alt="Workers install a metal profile fence" class="w-full h-[400px] md:h-[500px] object-cover">
                   </div>
 
@@ -580,23 +677,30 @@
           </section>
 
           <!-- Machinery Park (Park Maszynowy) -->
-          <section id="machinery-fleet" class="code-section py-16 md:py-24 bg-white border-t border-[var(--light-border-color)]">
+          <section id="machinery-fleet"
+            class="code-section py-16 md:py-24 bg-white border-t border-[var(--light-border-color)]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div class="text-center mb-12 md:mb-16">
-                <span class="text-sm font-bold uppercase tracking-wider text-[var(--primary-color)] px-4 py-1.5 bg-[var(--primary-color)]/10 rounded-full">Nasz Sprzęt</span>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mt-4 mb-4" style="font-family: var(--font-family-heading)">
+                <span
+                  class="text-sm font-bold uppercase tracking-wider text-[var(--primary-color)] px-4 py-1.5 bg-[var(--primary-color)]/10 rounded-full">Nasz
+                  Sprzęt</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mt-4 mb-4"
+                  style="font-family: var(--font-family-heading)">
                   Park Maszynowy
                 </h2>
                 <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
-                  Dysponujemy nowoczesnym, profesjonalnym sprzętem, który pozwala nam na samodzielną i sprawną realizację każdego etapu prac – od precyzyjnych wykopów po profesjonalny montaż.
+                  Dysponujemy nowoczesnym, profesjonalnym sprzętem, który pozwala nam na samodzielną i sprawną
+                  realizację każdego etapu prac – od precyzyjnych wykopów po profesjonalny montaż.
                 </p>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <!-- 1. Minikoparka -->
-                <div class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
                   <div>
-                    <div class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
+                    <div
+                      class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
                       <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--primary-color)]"></div>
                       <i data-lucide="settings" class="text-white text-2xl"></i>
                     </div>
@@ -604,7 +708,8 @@
                       Minikoparka
                     </h3>
                     <p class="text-[var(--gray-text-color)] text-sm mb-6">
-                      Precyzyjne i sprawne wykopy pod fundamenty ogrodzeń, słupki oraz murki oporowe w każdych warunkach glebowych.
+                      Precyzyjne i sprawne wykopy pod fundamenty ogrodzeń, słupki oraz murki oporowe w każdych warunkach
+                      glebowych.
                     </p>
                   </div>
                   <div class="border-t border-[var(--light-border-color)] pt-4 mt-auto">
@@ -622,9 +727,11 @@
                 </div>
 
                 <!-- 2. Wozidło gąsienicowe -->
-                <div class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
                   <div>
-                    <div class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
+                    <div
+                      class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
                       <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--primary-color)]"></div>
                       <i data-lucide="truck" class="text-white text-2xl"></i>
                     </div>
@@ -632,7 +739,8 @@
                       Wozidło Gąsienicowe
                     </h3>
                     <p class="text-[var(--gray-text-color)] text-sm mb-6">
-                      Błyskawiczny transport urobku, ziemi oraz betonu. Szerokie gąsienice chronią trawnik i podłoże przed zniszczeniem.
+                      Błyskawiczny transport urobku, ziemi oraz betonu. Szerokie gąsienice chronią trawnik i podłoże
+                      przed zniszczeniem.
                     </p>
                   </div>
                   <div class="border-t border-[var(--light-border-color)] pt-4 mt-auto">
@@ -650,9 +758,11 @@
                 </div>
 
                 <!-- 3. Taczka spalinowa -->
-                <div class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
                   <div>
-                    <div class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
+                    <div
+                      class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
                       <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--primary-color)]"></div>
                       <i data-lucide="construction" class="text-white text-2xl"></i>
                     </div>
@@ -660,7 +770,8 @@
                       Taczka Spalinowa
                     </h3>
                     <p class="text-[var(--gray-text-color)] text-sm mb-6">
-                      Niezastąpiona przy przewożeniu kruszywa, betonu i zaprawy murarskiej na ciasnych i gęsto zagospodarowanych posesjach.
+                      Niezastąpiona przy przewożeniu kruszywa, betonu i zaprawy murarskiej na ciasnych i gęsto
+                      zagospodarowanych posesjach.
                     </p>
                   </div>
                   <div class="border-t border-[var(--light-border-color)] pt-4 mt-auto">
@@ -678,9 +789,11 @@
                 </div>
 
                 <!-- 4. Wiertnica glebowa -->
-                <div class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group border border-[var(--light-border-color)] flex flex-col justify-between">
                   <div>
-                    <div class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
+                    <div
+                      class="w-14 h-14 bg-neutral-950 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform relative overflow-hidden">
                       <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--primary-color)]"></div>
                       <i data-lucide="wrench" class="text-white text-2xl"></i>
                     </div>
@@ -688,7 +801,8 @@
                       Wiertnica Glebowa
                     </h3>
                     <p class="text-[var(--gray-text-color)] text-sm mb-6">
-                      Szybkie, mechaniczne wiercenie precyzyjnych otworów w ziemi pod słupki ogrodzeniowe. Gwarancja idealnego pionu.
+                      Szybkie, mechaniczne wiercenie precyzyjnych otworów w ziemi pod słupki ogrodzeniowe. Gwarancja
+                      idealnego pionu.
                     </p>
                   </div>
                   <div class="border-t border-[var(--light-border-color)] pt-4 mt-auto">
@@ -732,8 +846,7 @@
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="images/metal-picket-fence-with-stone-columns-and-wooden-texture-gate.avif"
+                  <img src="images/metal-picket-fence-with-stone-columns-and-wooden-texture-gate.avif"
                     alt="Metal picket fence with stone columns and wooden texture gate"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
                 </div>
@@ -746,36 +859,31 @@
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="images/horizontal-pvc-slat-fence-with-metal-frame.avif"
+                  <img src="images/horizontal-pvc-slat-fence-with-metal-frame.avif"
                     alt="Horizontal PVC slat fence with metal frame"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="images/a-modern-panel-fence-in-anthracite-color.avif"
+                  <img src="images/a-modern-panel-fence-in-anthracite-color.avif"
                     alt="A modern panel fence in anthracite color"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="images/black-vertical-panel-fence-with-concrete-pillars-and-base.avif"
+                  <img src="images/black-vertical-panel-fence-with-concrete-pillars-and-base.avif"
                     alt="Black vertical panel fence with concrete pillars and base"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <img
-                    src="images/concrete-pattern-fence-with-green-thuja.avif"
+                  <img src="images/concrete-pattern-fence-with-green-thuja.avif"
                     alt="Concrete pattern fence with green thuja"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
                 </div>
 
                 <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative">
-                  <img
-                    src="images/man-laying-brick-pavers-in-the-backyard-garden.webp"
+                  <img src="images/man-laying-brick-pavers-in-the-backyard-garden.webp"
                     alt="Man laying brick pavers in the backyard garden"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">>
 
@@ -824,9 +932,9 @@
                       </div>
                       <div>
                         <p class="text-sm text-gray-400">Zadzwoń do nas</p>
-                        <a href=tel:+48
+                        <a href="tel:+48 794 008 854"
                           class="text-xl font-bold text-white hover:text-[var(--accent2-color)] transition-colors">
-                          +48 XXX XXX XXX
+                          +48 794 008 854
                         </a>
                       </div>
                     </div>
@@ -872,8 +980,8 @@
                       <i data-lucide="zap" class="text-[var(--accent2-color)] mr-2"></i>
                       Potrzebujesz szybkiej wyceny?
                     </p>
-                    <a href=tel:+48 class="text-[var(--accent2-color)] font-bold hover:underline">
-                      Zadzwoń teraz: +48 XXX XXX XXX
+                    <a href="tel:+48 794 008 854" class="text-[var(--accent2-color)] font-bold hover:underline">
+                      Zadzwoń teraz: +48 794 008 854
                     </a>
                   </div>
                 </div>
@@ -964,8 +1072,8 @@
                   <ul class=space-y-3>
                     <li class="flex items-start gap-3">
                       <i data-lucide="phone" class="text-[var(--accent2-color)] mt-1"></i>
-                      <a href=tel:+48 class="text-gray-400 hover:text-[var(--accent2-color)] transition-colors">+48 XXX
-                        XXX XXX</a>
+                      <a href="tel:+48 794 008 854"
+                        class="text-gray-400 hover:text-[var(--accent2-color)] transition-colors">+48 794 008 854</a>
                     </li>
                     <li class="flex items-start gap-3">
                       <i data-lucide="mail" class="text-[var(--accent2-color)] mt-1"></i>
@@ -1012,6 +1120,44 @@
     </div>
     <div class=frame-content></div>
   </div>
+
+  <!-- ═══════════════ SERVICE DETAILS MODAL ═══════════════ -->
+  <div id="service-modal"
+    class="hidden-modal fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-label="Szczegóły usługi">
+
+    <!-- Close button -->
+    <button id="modal-close"
+      class="absolute top-4 right-4 text-white/70 hover:text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Zamknij">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Prev -->
+    <button id="modal-prev"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Poprzednie zdjęcie">
+      <i data-lucide="chevron-left" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Next -->
+    <button id="modal-next"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Następne zdjęcie">
+      <i data-lucide="chevron-right" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Modal Content Wrapper -->
+    <div class="modal-content-wrapper max-w-4xl w-full flex flex-col items-center justify-center relative">
+      <!-- Slide Preview Area (Tylko zdjęcie / gradient i ikona) -->
+      <div id="modal-slide-preview"
+        class="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative bg-neutral-900 flex items-center justify-center select-none">
+      </div>
+      <!-- Indicators -->
+      <div id="modal-dots" class="mt-4 flex gap-2 justify-center z-[210]"></div>
+    </div>
+  </div>
+
   <script>
     lucide.createIcons();
 
@@ -1044,6 +1190,224 @@
     backdrop.addEventListener('click', closeMenu);
     navLinks.forEach(link => link.addEventListener('click', closeMenu));
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // ═══════════════ CAROUSEL LOGIC ═══════════════
+    const carouselSection = document.getElementById('realizations-carousel');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    let slideInterval;
+    const intervalTime = 5000;
+
+    function goToSlide(index) {
+      if (!slides.length) return;
+      slides[currentSlide].classList.remove('opacity-100', 'z-10');
+      slides[currentSlide].classList.add('opacity-0', 'pointer-events-none', 'z-0');
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.remove('bg-white');
+        dots[currentSlide].classList.add('bg-white/40');
+      }
+
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.remove('bg-white/40');
+        dots[currentSlide].classList.add('bg-white');
+      }
+    }
+
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function startSlideShow() {
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
+    function stopSlideShow() {
+      clearInterval(slideInterval);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { stopSlideShow(); nextSlide(); startSlideShow(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { stopSlideShow(); prevSlide(); startSlideShow(); });
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => { stopSlideShow(); goToSlide(index); startSlideShow(); });
+    });
+
+    if (carouselSection) {
+      carouselSection.addEventListener('mouseenter', stopSlideShow);
+      carouselSection.addEventListener('mouseleave', startSlideShow);
+
+      // Swipe logic for carousel
+      let touchStartX = 0;
+      let touchEndX = 0;
+      carouselSection.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+      carouselSection.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) { stopSlideShow(); nextSlide(); startSlideShow(); }
+        if (touchEndX - touchStartX > 50) { stopSlideShow(); prevSlide(); startSlideShow(); }
+      });
+    }
+
+    // Init carousel
+    if (slides.length > 0) {
+      slides.forEach(s => s.classList.add('opacity-0', 'pointer-events-none', 'z-0'));
+      slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
+      dots.forEach(d => d.classList.remove('bg-white'));
+      if (dots[currentSlide]) dots[currentSlide].classList.add('bg-white');
+      startSlideShow();
+    }
+
+    // ═══════════════ SERVICE MODAL LOGIC ═══════════════
+    const serviceModal = document.getElementById('service-modal');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const modalPrevBtn = document.getElementById('modal-prev');
+    const modalNextBtn = document.getElementById('modal-next');
+    const modalSlidePreview = document.getElementById('modal-slide-preview');
+    const modalDotsContainer = document.getElementById('modal-dots');
+
+    // Gradients and icons mapping
+    const serviceSlides = {
+      'panelowe': [
+        { gradient: 'bg-gradient-to-br from-gray-700 to-gray-900', icon: 'scan' },
+        { gradient: 'bg-gradient-to-bl from-slate-600 to-gray-800', icon: 'shield-check' },
+        { gradient: 'bg-gradient-to-tr from-zinc-700 to-neutral-900', icon: 'lock' }
+      ],
+      'siatka': [
+        { gradient: 'bg-gradient-to-br from-green-800 to-emerald-950', icon: 'grid-3x3' },
+        { gradient: 'bg-gradient-to-bl from-emerald-700 to-teal-900', icon: 'leaf' },
+        { gradient: 'bg-gradient-to-tr from-green-900 to-zinc-900', icon: 'maximize' }
+      ],
+      'betonowe': [
+        { gradient: 'bg-gradient-to-br from-stone-600 to-stone-900', icon: 'brick-wall' },
+        { gradient: 'bg-gradient-to-bl from-neutral-600 to-zinc-800', icon: 'box' },
+        { gradient: 'bg-gradient-to-tr from-gray-700 to-stone-800', icon: 'layers' }
+      ],
+      'gabionowe': [
+        { gradient: 'bg-gradient-to-br from-slate-700 to-slate-900', icon: 'layers' },
+        { gradient: 'bg-gradient-to-bl from-gray-600 to-zinc-900', icon: 'component' },
+        { gradient: 'bg-gradient-to-tr from-stone-700 to-neutral-800', icon: 'mountain' }
+      ],
+      'sztachetowe': [
+        { gradient: 'bg-gradient-to-br from-amber-800 to-yellow-950', icon: 'align-justify' },
+        { gradient: 'bg-gradient-to-bl from-orange-800 to-amber-950', icon: 'home' },
+        { gradient: 'bg-gradient-to-tr from-yellow-900 to-stone-900', icon: 'tree-pine' }
+      ],
+      'przemysłowe': [
+        { gradient: 'bg-gradient-to-br from-blue-900 to-slate-950', icon: 'shield' },
+        { gradient: 'bg-gradient-to-bl from-indigo-900 to-gray-900', icon: 'factory' },
+        { gradient: 'bg-gradient-to-tr from-cyan-900 to-blue-950', icon: 'building' }
+      ],
+      'tymczasowe': [
+        { gradient: 'bg-gradient-to-br from-yellow-600 to-orange-800', icon: 'construction' },
+        { gradient: 'bg-gradient-to-bl from-amber-600 to-yellow-800', icon: 'alert-triangle' },
+        { gradient: 'bg-gradient-to-tr from-orange-700 to-red-900', icon: 'cone' }
+      ],
+      'bramy': [
+        { gradient: 'bg-gradient-to-br from-zinc-700 to-stone-900', icon: 'door-closed' },
+        { gradient: 'bg-gradient-to-bl from-gray-700 to-zinc-900', icon: 'unlock' },
+        { gradient: 'bg-gradient-to-tr from-slate-700 to-neutral-900', icon: 'move-horizontal' }
+      ],
+      'podmurówka': [
+        { gradient: 'bg-gradient-to-br from-neutral-700 to-neutral-900', icon: 'mountain' },
+        { gradient: 'bg-gradient-to-bl from-stone-600 to-stone-800', icon: 'align-horizontal-space-around' },
+        { gradient: 'bg-gradient-to-tr from-gray-600 to-zinc-800', icon: 'hammer' }
+      ]
+    };
+
+    let activeModalSlides = [];
+    let currentModalSlide = 0;
+
+    function renderModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      const slide = activeModalSlides[currentModalSlide];
+      modalSlidePreview.className = `w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative flex items-center justify-center select-none ${slide.gradient}`;
+      modalSlidePreview.innerHTML = `<i data-lucide="${slide.icon}" class="w-32 h-32 md:w-48 md:h-48 text-white/20"></i>`;
+      lucide.createIcons();
+
+      // Update dots
+      Array.from(modalDotsContainer.children).forEach((dot, index) => {
+        dot.className = index === currentModalSlide
+          ? 'w-2.5 h-2.5 rounded-full bg-white transition-colors'
+          : 'w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors';
+      });
+    }
+
+    function openServiceModal(category) {
+      if (!serviceSlides[category]) return;
+      activeModalSlides = serviceSlides[category];
+      currentModalSlide = 0;
+
+      // Generate dots
+      modalDotsContainer.innerHTML = '';
+      activeModalSlides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Idź do slajdu ${idx + 1}`);
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors';
+        dot.onclick = () => { currentModalSlide = idx; renderModalSlide(); };
+        modalDotsContainer.appendChild(dot);
+      });
+
+      renderModalSlide();
+      serviceModal.classList.remove('hidden-modal');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal() {
+      serviceModal.classList.add('hidden-modal');
+      document.body.style.overflow = '';
+    }
+
+    function nextModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      currentModalSlide = (currentModalSlide + 1) % activeModalSlides.length;
+      renderModalSlide();
+    }
+
+    function prevModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      currentModalSlide = (currentModalSlide - 1 + activeModalSlides.length) % activeModalSlides.length;
+      renderModalSlide();
+    }
+
+    // Bind cards
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.service-link')) return; // ignore link clicks
+        const category = card.getAttribute('data-service-category');
+        openServiceModal(category);
+      });
+    });
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeServiceModal);
+    if (modalNextBtn) modalNextBtn.addEventListener('click', nextModalSlide);
+    if (modalPrevBtn) modalPrevBtn.addEventListener('click', prevModalSlide);
+    if (serviceModal) serviceModal.addEventListener('click', (e) => {
+      if (e.target === serviceModal) closeServiceModal();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!serviceModal || serviceModal.classList.contains('hidden-modal')) return;
+      if (e.key === 'Escape') closeServiceModal();
+      if (e.key === 'ArrowRight') nextModalSlide();
+      if (e.key === 'ArrowLeft') prevModalSlide();
+    });
+
+    // Swipe logic for modal
+    let modalTouchStartX = 0;
+    let modalTouchEndX = 0;
+    if (serviceModal) {
+      serviceModal.addEventListener('touchstart', e => modalTouchStartX = e.changedTouches[0].screenX);
+      serviceModal.addEventListener('touchend', e => {
+        modalTouchEndX = e.changedTouches[0].screenX;
+        if (modalTouchStartX - modalTouchEndX > 50) nextModalSlide();
+        if (modalTouchEndX - modalTouchStartX > 50) prevModalSlide();
+      });
+    }
   </script>
 </body>
 

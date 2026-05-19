@@ -149,39 +149,39 @@
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="panelowe">
-          <i data-lucide="square" class="w-4 h-4"></i> Panelowe
+          <i data-lucide="square" class="w-4 h-4"></i> Ogrodzenia panelowe
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="betonowe">
-          <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i> Betonowe
+          <i data-lucide="rectangle-horizontal" class="w-4 h-4"></i> Ogrodzenia z bloczków
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="siatka">
-          <i data-lucide="grid-3x3" class="w-4 h-4"></i> Siatka
+          <i data-lucide="grid-3x3" class="w-4 h-4"></i> Ogrodzenia z siatki
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="podmurówka">
-          <i data-lucide="layers" class="w-4 h-4"></i> Podmurówka
+          <i data-lucide="layers" class="w-4 h-4"></i> Mury oporowe
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="bramy">
-          <i data-lucide="door-open" class="w-4 h-4"></i> Bramy
+          <i data-lucide="door-open" class="w-4 h-4"></i> Bramy, furtki, przęsła
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="gabionowe">
-          <i data-lucide="layers" class="w-4 h-4"></i> Gabionowe
+          <i data-lucide="layers" class="w-4 h-4"></i> Ogrodzenia gabionowe
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="sztachetowe">
-          <i data-lucide="align-justify" class="w-4 h-4"></i> Sztachetowe
+          <i data-lucide="align-justify" class="w-4 h-4"></i> Ogrodzenia sztachetowe
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="przemysłowe">
-          <i data-lucide="shield" class="w-4 h-4"></i> Przemysłowe
+          <i data-lucide="shield" class="w-4 h-4"></i> Ogrodzenia przemysłowe
         </button>
         <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
                 data-filter="tymczasowe">
-          <i data-lucide="construction" class="w-4 h-4"></i> Tymczasowe
+          <i data-lucide="construction" class="w-4 h-4"></i> Ogrodzenia tymczasowe
         </button>
       </div>
     </div>
@@ -843,6 +843,41 @@
     if (e.key === 'ArrowLeft')  { currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length; showItem(currentIndex); }
     if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % visibleItems.length; showItem(currentIndex); }
   });
+
+  // Touch Swipe Support
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let touchStartY = 0;
+  let touchEndY = 0;
+
+  lightbox.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    
+    // Standard sensitivity threshold of 50px, dominant horizontal movement
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        // Swipe Right -> Show Prev
+        currentIndex = (currentIndex - 1 + visibleItems.length) % visibleItems.length;
+        showItem(currentIndex);
+      } else {
+        // Swipe Left -> Show Next
+        currentIndex = (currentIndex + 1) % visibleItems.length;
+        showItem(currentIndex);
+      }
+    }
+  }
 </script>
 </body>
 </html>

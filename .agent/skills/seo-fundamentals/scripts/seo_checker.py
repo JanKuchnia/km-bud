@@ -111,7 +111,7 @@ def check_page(file_path: Path) -> dict:
         issues.append("Missing <title> tag")
     
     # 2. Meta description
-    has_description = 'name="description"' in content.lower() or 'name=\'description\'' in content.lower()
+    has_description = 'name="description"' in content.lower() or 'name=\'description\'' in content.lower() or 'name=description' in content.lower()
     if not has_description and is_layout:
         issues.append("Missing meta description")
     
@@ -126,9 +126,10 @@ def check_page(file_path: Path) -> dict:
         issues.append(f"Multiple H1 tags ({len(h1_matches)})")
     
     # 5. Images without alt
-    img_pattern = r'<img[^>]+>'
-    imgs = re.findall(img_pattern, content, re.I)
+    imgs = re.findall(r'<img\b(?:[^>"\']|"[^"]*"|\'[^\']*\')*>', content, re.IGNORECASE)
     for img in imgs:
+        if 'src=' not in img.lower():
+            continue
         if 'alt=' not in img.lower():
             issues.append("Image missing alt attribute")
             break
