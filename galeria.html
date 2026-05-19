@@ -58,12 +58,12 @@
 <div class="frame-root">
   <div class="frame-content">
     <!-- ═══════════════ HEADER ═══════════════ -->
-    <header id="global-header" class="code-section bg-[var(--dark-background-color)] shadow-md relative z-50">
+    <header id="global-header" class="code-section bg-[var(--dark-background-color)] shadow-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-32">
+        <div class="flex justify-between items-center h-16">
 
           <a href="index.html" class="flex items-center">
-            <img src="logo_kadr.png" alt="KM-BUD Ogrodzenia" class="h-32 py-2">
+            <img src="logo_kadr.png" alt="KM-BUD Ogrodzenia" class="h-14 py-1.5">
           </a>
 
           <nav class="hidden lg:flex items-center space-x-4">
@@ -167,6 +167,22 @@
                 data-filter="bramy">
           <i data-lucide="door-open" class="w-4 h-4"></i> Bramy
         </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="gabionowe">
+          <i data-lucide="layers" class="w-4 h-4"></i> Gabionowe
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="sztachetowe">
+          <i data-lucide="align-justify" class="w-4 h-4"></i> Sztachetowe
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="przemysłowe">
+          <i data-lucide="shield" class="w-4 h-4"></i> Przemysłowe
+        </button>
+        <button class="filter-btn flex items-center gap-1.5 border border-gray-300 text-gray-700 text-sm font-medium px-4 py-2 rounded-full"
+                data-filter="tymczasowe">
+          <i data-lucide="construction" class="w-4 h-4"></i> Tymczasowe
+        </button>
       </div>
     </div>
 
@@ -237,6 +253,28 @@
             </div>
           </div>
 
+          <!-- Gabionowe 1 (Placeholder) -->
+          <div class="gallery-item" data-category="gabionowe"
+               data-title="Ogrodzenie gabionowe z kruszywem"
+               data-desc="Solidna realizacja ogrodzenia gabionowego wypełnionego naturalnym kruszywem granitowym. Myślenice.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/4] bg-gradient-to-br from-stone-700 to-stone-850 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="layers" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie gabionowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Gabionowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie gabionowe z kruszywem</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
           <!-- Betonowe -->
           <div class="gallery-item" data-category="betonowe"
                data-title="Ogrodzenie betonowe systemowe"
@@ -274,6 +312,28 @@
                 <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Siatka</span>
                   <p class="text-white font-semibold text-sm">Ogrodzenie z siatki zgrzewanej</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Sztachetowe 1 (Placeholder) -->
+          <div class="gallery-item" data-category="sztachetowe"
+               data-title="Ogrodzenie sztachetowe pionowe"
+               data-desc="Nowoczesne metalowe sztachety w układzie pionowym o głębokim matowym wykończeniu. Kraków.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[4/3] bg-gradient-to-br from-amber-800 to-amber-950 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="align-justify" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie sztachetowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Sztachetowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie sztachetowe pionowe</p>
                 </div>
               </div>
               <button onclick="openLightbox(this.closest('.gallery-item'))"
@@ -325,6 +385,28 @@
             </div>
           </div>
 
+          <!-- Przemysłowe 1 (Placeholder) -->
+          <div class="gallery-item" data-category="przemysłowe"
+               data-title="Wysokie ogrodzenie przemysłowe"
+               data-desc="Panelowe ogrodzenie o podwyższonej wytrzymałości z drutu 5mm zabezpieczone antykorozyjnie. Skawina.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[16/9] bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="shield" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie przemysłowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Przemysłowe</span>
+                  <p class="text-white font-semibold text-sm">Wysokie ogrodzenie przemysłowe</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
           <!-- More items -->
           <div class="gallery-item" data-category="panelowe"
                data-title="Panel 3D – czarny"
@@ -361,6 +443,28 @@
                 <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Betonowe</span>
                   <p class="text-white font-semibold text-sm">Ogrodzenie betonowe – dekoracyjne</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Tymczasowe 1 (Placeholder) -->
+          <div class="gallery-item" data-category="tymczasowe"
+               data-title="Ogrodzenie tymczasowe budowlane"
+               data-desc="Przenośne ogrodzenie ażurowe do zabezpieczenia placu budowy. Szybki montaż i demontaż. Kraków.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/2] bg-gradient-to-br from-yellow-700 to-amber-800 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="construction" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Ogrodzenie tymczasowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Tymczasowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie tymczasowe budowlane</p>
                 </div>
               </div>
               <button onclick="openLightbox(this.closest('.gallery-item'))"
@@ -410,6 +514,28 @@
             </div>
           </div>
 
+          <!-- Gabionowe 2 (Placeholder) -->
+          <div class="gallery-item" data-category="gabionowe"
+               data-title="Nowoczesne gabiony z kruszywem"
+               data-desc="Ogrodzenie gabionowe wypełnione naturalnym kamieniem łupanym, stanowiące doskonałą barierę akustyczną. Gdów.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[16/9] bg-gradient-to-br from-zinc-700 to-zinc-900 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="layers" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Gabiony z kruszywem</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Gabionowe</span>
+                  <p class="text-white font-semibold text-sm">Nowoczesne gabiony z kruszywem</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
           <div class="gallery-item" data-category="podmurówka"
                data-title="Podmurówka z pustaków betonowych"
                data-desc="Podmurówka z pustaków betonowych dekoracyjnych. Wielka Wola, 2026.">
@@ -431,6 +557,28 @@
             </div>
           </div>
 
+          <!-- Sztachetowe 2 (Placeholder) -->
+          <div class="gallery-item" data-category="sztachetowe"
+               data-title="Ogrodzenie sztachetowe pionowe"
+               data-desc="Metalowe sztachety w układzie pionowym, malowane proszkowo w kolorze antracytowym. Sułkowice.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/2] bg-gradient-to-br from-orange-800 to-amber-900 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="align-justify" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Sztachety pionowe</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Sztachetowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie sztachetowe pionowe</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
           <div class="gallery-item" data-category="panelowe"
                data-title="Ogrodzenie panelowe – szare"
                data-desc="Panele 3D szare z murowanymi słupkami. Myślenice 2023.">
@@ -445,6 +593,50 @@
                 <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                   <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Panelowe</span>
                   <p class="text-white font-semibold text-sm">Ogrodzenie panelowe – szare</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Przemysłowe 2 (Placeholder) -->
+          <div class="gallery-item" data-category="przemysłowe"
+               data-title="Ogrodzenie panelowe 2D dla firmy"
+               data-desc="Solidny panel 2D (podwójny drut poziomy) przeznaczony do ochrony obiektów logistycznych i przemysłowych. Niepołomice.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[3/4] bg-gradient-to-br from-gray-700 to-slate-900 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="shield" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Panel 2D przemysłowy</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Przemysłowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie panelowe 2D dla firmy</p>
+                </div>
+              </div>
+              <button onclick="openLightbox(this.closest('.gallery-item'))"
+                      class="absolute inset-0 w-full h-full opacity-0 cursor-zoom-in" aria-label="Powiększ zdjęcie"></button>
+            </div>
+          </div>
+
+          <!-- Tymczasowe 2 (Placeholder) -->
+          <div class="gallery-item" data-category="tymczasowe"
+               data-title="Ogrodzenie tymczasowe pełne"
+               data-desc="Pełne panele z blachy trapezowej uniemożliwiające wgląd na teren budowy oraz podnoszące poziom bezpieczeństwa. Kraków.">
+            <div class="relative overflow-hidden rounded-xl bg-gray-200 cursor-zoom-in group shadow-md">
+              <div class="aspect-[4/3] bg-gradient-to-br from-neutral-700 to-yellow-800 flex items-center justify-center">
+                <div class="text-center text-white/60 p-4">
+                  <i data-lucide="construction" class="w-10 h-10 mx-auto mb-2 opacity-40"></i>
+                  <p class="text-xs font-medium opacity-60">Tymczasowe z blachy</p>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end p-4">
+                <div class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                  <span class="inline-block bg-white/20 backdrop-blur text-white text-xs px-2 py-1 rounded-full mb-1">Tymczasowe</span>
+                  <p class="text-white font-semibold text-sm">Ogrodzenie tymczasowe pełne</p>
                 </div>
               </div>
               <button onclick="openLightbox(this.closest('.gallery-item'))"
@@ -584,6 +776,16 @@
       emptyState.classList.toggle('hidden', visible > 0);
     });
   });
+
+  // Apply filter from URL query parameter if present
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterParam = urlParams.get('filter');
+  if (filterParam) {
+    const targetBtn = document.querySelector(`.filter-btn[data-filter="${CSS.escape(filterParam)}"]`);
+    if (targetBtn) {
+      targetBtn.click();
+    }
+  }
 
   /* ── Lightbox ── */
   const lightbox  = document.getElementById('lightbox');
