@@ -10,7 +10,7 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/image_metadata.json": {
-    "mtime": 1779560327.8456488,
+    "mtime": 1779559647.6584547,
     "ast_hash": "91ee7a432882876e2db72b3ed45af002",
     "semantic_hash": ""
   },
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/.agent/scripts/process_photos.py": {
-    "mtime": 1779559973.4597104,
-    "ast_hash": "fd590299732e69886d533c9732b09646",
+    "mtime": 1779559594.2276676,
+    "ast_hash": "047fa27fabf8f099aaadb22a2e2e3e6e",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/.agent/scripts/update_pages.py": {
@@ -145,13 +145,13 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/galeria.html": {
-    "mtime": 1779563159.5222766,
-    "ast_hash": "01e6d68b248e54efd7b6bbbf2cd427c1",
+    "mtime": 1779559652.2808402,
+    "ast_hash": "ef1133a31caa9edd1f37b1eac75df644",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/index.html": {
-    "mtime": 1779562730.5676231,
-    "ast_hash": "ddb4ad32a8071113384aa8bfacb04d67",
+    "mtime": 1779559652.257855,
+    "ast_hash": "b6b9da687ff0e3d2ff4fa7ecaee33d98",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/.agent/ARCHITECTURE.md": {
@@ -984,294 +984,529 @@
     "ast_hash": "b991af4a5357d21629f4c16b89e65d8d",
     "semantic_hash": ""
   },
+  "/home/jankuchnia/Desktop/km-bud/images/man-laying-brick-pavers-in-the-backyard-garden.webp": {
+    "mtime": 1779559145.454779,
+    "ast_hash": "eacca48ae96e0f5f1a567abc184e63bf",
+    "semantic_hash": ""
+  },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-01.webp": {
-    "mtime": 1779559986.0520878,
-    "ast_hash": "078dcacff1492a137f77474fc4aea1db",
+    "mtime": 1779559600.1466439,
+    "ast_hash": "9bacdaf732bd073e73b6a76891174b7c",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-02.webp": {
-    "mtime": 1779559992.647086,
-    "ast_hash": "c322eea4cb63760d08591b10fe34ab02",
+    "mtime": 1779559601.659638,
+    "ast_hash": "dcd6d8c50739b9c4342ed441271fb968",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-03.webp": {
-    "mtime": 1779559997.1574402,
-    "ast_hash": "c322eea4cb63760d08591b10fe34ab02",
+    "mtime": 1779559603.132632,
+    "ast_hash": "dcd6d8c50739b9c4342ed441271fb968",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-04.webp": {
-    "mtime": 1779559998.5005894,
+    "mtime": 1779559604.436627,
     "ast_hash": "85b427deaa16ba843a092127cec3a308",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-05.webp": {
-    "mtime": 1779560014.0027425,
-    "ast_hash": "4013292078594b892c838075dc6699d0",
+    "mtime": 1779559604.8956249,
+    "ast_hash": "2ef23a024f5e8ee8ed849a77a2cade57",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-06.webp": {
-    "mtime": 1779560019.6601884,
-    "ast_hash": "876aceb738cbadcde0586c92009f67de",
+    "mtime": 1779559606.2906194,
+    "ast_hash": "2b581ab3722656efaed0ea55ea1024a4",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-07.webp": {
-    "mtime": 1779560025.299272,
-    "ast_hash": "91c2ab3ffba50e5f927c5e8974c14e58",
+    "mtime": 1779559607.116616,
+    "ast_hash": "39ddb855755dff4f97fdbea8b2c1c826",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-08.webp": {
-    "mtime": 1779560031.163382,
-    "ast_hash": "9424036ca54406b485439702d624b207",
+    "mtime": 1779559607.9776127,
+    "ast_hash": "ec38f9aa9d8275626d4d62d8e25d4fac",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-09.webp": {
-    "mtime": 1779560036.4744062,
-    "ast_hash": "320572920063f1ef23657128a696eb68",
+    "mtime": 1779559608.6656098,
+    "ast_hash": "2533572a7c1b103a91f349602b2e342f",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-10.webp": {
-    "mtime": 1779560042.502029,
-    "ast_hash": "27907960c7315511f31fddcdb6d01df7",
+    "mtime": 1779559609.5226066,
+    "ast_hash": "1ee7ccd9692e8f0c078e0ef33e0a5a64",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-bloczkowe-11.webp": {
-    "mtime": 1779560047.5920608,
-    "ast_hash": "805740f5b6a79f57eb42ac93bb1642b8",
+    "mtime": 1779559610.2256038,
+    "ast_hash": "203fa64eafca455a18291dd44aa2ec5a",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/brama-furtka-01.webp": {
-    "mtime": 1779560056.6618788,
-    "ast_hash": "1a73041758206598e663869014679608",
+    "mtime": 1779559611.3525991,
+    "ast_hash": "d9869148370e5f4b617ddaa1c97cbc01",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/brama-furtka-02.webp": {
-    "mtime": 1779560065.031596,
-    "ast_hash": "ababa0099a38ec5651db5f521d910453",
+    "mtime": 1779559612.4615948,
+    "ast_hash": "ceecdb7ebd4f1e1c6bad5fad28cc7004",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-panelowe-01.webp": {
-    "mtime": 1779560070.4666824,
-    "ast_hash": "ff4ac4b8e8278f290d74e237cd84363e",
+    "mtime": 1779559613.172592,
+    "ast_hash": "25ca37cf41e28603536830d1f1ca0fb2",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-01.webp": {
-    "mtime": 1779560073.2911065,
-    "ast_hash": "ad5c18cdca912afdc9e1a43bd698796c",
+    "mtime": 1779559613.4975908,
+    "ast_hash": "1ed502380d03cf32ce41187ea45f20d1",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-02.webp": {
-    "mtime": 1779560076.8702233,
-    "ast_hash": "768f8f0502810a329976e549206d1d86",
+    "mtime": 1779559613.8915892,
+    "ast_hash": "5ed4c7810631c89e6b172360f08c235f",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-03.webp": {
-    "mtime": 1779560084.993074,
-    "ast_hash": "396564586284695e24160389cfe67f37",
+    "mtime": 1779559615.0735843,
+    "ast_hash": "a7e053aa077fb0f5b76ce332fdbfc444",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-04.webp": {
-    "mtime": 1779560093.278741,
-    "ast_hash": "0c13c536c49bf1df5fdd308e25a00057",
+    "mtime": 1779559616.2525797,
+    "ast_hash": "f7670d80a1431b303d3fc250a8971162",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-05.webp": {
-    "mtime": 1779560097.944381,
-    "ast_hash": "bac7688a61df44a6942f627d92d0af3e",
+    "mtime": 1779559616.8225775,
+    "ast_hash": "135e361764a36dc8405d64df7096b5b6",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-06.webp": {
-    "mtime": 1779560106.4264452,
-    "ast_hash": "39878887fed2d7a8cd13ae36c80748dd",
+    "mtime": 1779559618.0605726,
+    "ast_hash": "4e4a81c3262165a13c3e9be766b8d2b8",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-07.webp": {
-    "mtime": 1779560112.4899826,
-    "ast_hash": "06af2b47d1ae9723a98fc8bb0c42a81b",
+    "mtime": 1779559618.950569,
+    "ast_hash": "3d3269dcdbbc7877917f23d9bf5bb27b",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-08.webp": {
-    "mtime": 1779560118.6061738,
-    "ast_hash": "c9bb192621fcbd79fdb51570be6e7819",
+    "mtime": 1779559619.8395655,
+    "ast_hash": "f84c2535e0ee2b1097433224e52241da",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-09.webp": {
-    "mtime": 1779560124.3509533,
-    "ast_hash": "6469e9ac015b54a6728b7df5751c86b9",
+    "mtime": 1779559620.6455622,
+    "ast_hash": "36c548031789e7aacc85ef323b0892e0",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-10.webp": {
-    "mtime": 1779560130.8353016,
-    "ast_hash": "5266f7a5f38d76feae8301da831f2dec",
+    "mtime": 1779559621.5805585,
+    "ast_hash": "d26ae59a504f8ffc97401e61ab4223fd",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-11.webp": {
-    "mtime": 1779560138.9610248,
-    "ast_hash": "687ff8264816e6fbb45aafaed7ddf3d3",
+    "mtime": 1779559622.5845544,
+    "ast_hash": "4077a5d2c9de4a2faa068592ddb6d0b0",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-12.webp": {
-    "mtime": 1779560146.1878455,
-    "ast_hash": "2585c966a4d80f83ab1cafe034911c7b",
+    "mtime": 1779559623.5535507,
+    "ast_hash": "e0a8a5df1a7a90e10d8b2cad97339194",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-13.webp": {
-    "mtime": 1779560153.3340456,
-    "ast_hash": "4d925bf6366971d46e7dc9946d3dcb49",
+    "mtime": 1779559624.5525467,
+    "ast_hash": "b455f3eddbb72563d36aa9774729d7f1",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-14.webp": {
-    "mtime": 1779560161.603252,
-    "ast_hash": "732d4e4601e1843c94591289b6b687b1",
+    "mtime": 1779559625.6805422,
+    "ast_hash": "c32fe76dffe05d42918746391db1d3d0",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-15.webp": {
-    "mtime": 1779560169.7066665,
-    "ast_hash": "d3203cbe252e2e6a2459e61c847b8e6f",
+    "mtime": 1779559626.6135385,
+    "ast_hash": "23c15ab289a18cf97592b6bf543ddc24",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-16.webp": {
-    "mtime": 1779560176.1801193,
-    "ast_hash": "9eefd2da25967e79eb1adda9e50a384f",
+    "mtime": 1779559627.5665348,
+    "ast_hash": "edcc741f7eccf269952c151b99d078ad",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-17.webp": {
-    "mtime": 1779560181.488143,
-    "ast_hash": "4b91c47be183d4a21bb4762906d6cd91",
+    "mtime": 1779559628.3695314,
+    "ast_hash": "27250a415d67ab3b9ec83921e2f1d1f7",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-18.webp": {
-    "mtime": 1779560188.5799785,
-    "ast_hash": "a18f7ef6daa58b7e76b5d884d934b379",
+    "mtime": 1779559629.3955274,
+    "ast_hash": "f6a96360a3b0becaee56c4621e4dd840",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-19.webp": {
-    "mtime": 1779560194.5384593,
-    "ast_hash": "6d69842640cd9027dd63c497c18d0e97",
+    "mtime": 1779559630.248524,
+    "ast_hash": "479886d446d7e91b130e8f72054824a6",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-20.webp": {
-    "mtime": 1779560200.0008862,
-    "ast_hash": "a68b48f06c9dac2751afc8d07144a284",
+    "mtime": 1779559630.968521,
+    "ast_hash": "b1a75398da626e4e990849b7461bf734",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-21.webp": {
-    "mtime": 1779560206.6407433,
-    "ast_hash": "21c69c18493ba92cd5f524aa0656148f",
+    "mtime": 1779559631.8495176,
+    "ast_hash": "3eef083c7a6d85a42086e4410fa58bb6",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-22.webp": {
-    "mtime": 1779560212.9268804,
-    "ast_hash": "37395314576564e48e871bebad6f812e",
+    "mtime": 1779559632.7075143,
+    "ast_hash": "f7fcc85ed8f76e0414d72ceb2a1bf76b",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-23.webp": {
-    "mtime": 1779560218.9529936,
-    "ast_hash": "4571a0587b8375f9d66835ccb8ce21aa",
+    "mtime": 1779559633.5655107,
+    "ast_hash": "d5ee33d591a18f4444a8b82dccea9112",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-24.webp": {
-    "mtime": 1779560226.3845983,
-    "ast_hash": "e2c2b0c96c7120430cf101904adb9df7",
+    "mtime": 1779559634.3485076,
+    "ast_hash": "e611bbffc4d76c512c93d0531a1c0f83",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-25.webp": {
-    "mtime": 1779560236.312705,
-    "ast_hash": "afcfcdde6933f3fe8e8f6a05b9292cec",
+    "mtime": 1779559635.7035022,
+    "ast_hash": "5782abdbed4e69619c3aa74a34c760b3",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-26.webp": {
-    "mtime": 1779560240.163627,
-    "ast_hash": "e776d8b214ae84b82c6f4e1c9fb65077",
+    "mtime": 1779559636.3244998,
+    "ast_hash": "e25d4082fee54dfbfa03c0af8d4e79e5",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-27.webp": {
-    "mtime": 1779560245.9722803,
-    "ast_hash": "4a6b208ad345b352823360dc02e0d813",
+    "mtime": 1779559637.1124966,
+    "ast_hash": "04ed4ba3d1e10f5df151f3ab6fc1ef40",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-28.webp": {
-    "mtime": 1779560252.308909,
-    "ast_hash": "837f9293562d494f2efb4c07c393321a",
+    "mtime": 1779559637.9634933,
+    "ast_hash": "e3a385616e76ed6a567f934b22d855be",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-29.webp": {
-    "mtime": 1779560263.330625,
-    "ast_hash": "1df7ecf4e273d9856609268c5a756020",
+    "mtime": 1779559639.0454888,
+    "ast_hash": "91c83aaff77d68b9aa75a5154715594d",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-30.webp": {
-    "mtime": 1779560275.175048,
-    "ast_hash": "711134facf00cef1ff10cfbf96a2dd53",
+    "mtime": 1779559640.3684835,
+    "ast_hash": "0e48808e9e27755053704013974c9aaf",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/ogrodzenie-siatkowe-31.webp": {
-    "mtime": 1779560284.0844305,
-    "ast_hash": "525df55dc05587aeb7497920113580dc",
+    "mtime": 1779559641.6114788,
+    "ast_hash": "eabe875f28fb70cbc882640ef3082a68",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-01.webp": {
-    "mtime": 1779560291.5123892,
-    "ast_hash": "e0a9c3779efd3670b55dedf0493c77fe",
+    "mtime": 1779559643.057473,
+    "ast_hash": "ce4df001b6b1dd234b18315b4f466b74",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-02.webp": {
-    "mtime": 1779560298.5755491,
-    "ast_hash": "1df9a805a2a7a36bac76dc4d741a2f6b",
+    "mtime": 1779559644.1154687,
+    "ast_hash": "3706e4c82e9e31eda47aa52135a9962a",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-03.webp": {
-    "mtime": 1779560304.8522933,
-    "ast_hash": "ed7d994f0df94abbaf1665612ec714e7",
+    "mtime": 1779559644.848466,
+    "ast_hash": "8eeb7b14fb14265a83142b5b25ffd6f1",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-04.webp": {
-    "mtime": 1779560311.532262,
-    "ast_hash": "bf75c11dfd4b636c8e12605033641593",
+    "mtime": 1779559645.5964627,
+    "ast_hash": "f6b290660e2303a41747080d1e26de58",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-05.webp": {
-    "mtime": 1779560317.1928275,
-    "ast_hash": "461ec1bf4a80a7ebfc7db23a8dceb07a",
+    "mtime": 1779559646.3484597,
+    "ast_hash": "f34af9321c727699227d4a88557bbfdd",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-06.webp": {
-    "mtime": 1779560323.3067572,
-    "ast_hash": "f4a69aa335b3917aa2cee9778542d97a",
+    "mtime": 1779559647.114457,
+    "ast_hash": "0f1c2a7e4de56c6a6a85930f81c830c0",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/scratch/optimize_new_photos.py": {
-    "mtime": 1779562692.4928155,
-    "ast_hash": "5304553c2f4c330e15fd90b0df41a0c2",
+  "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-07.webp": {
+    "mtime": 1779559647.6574547,
+    "ast_hash": "745524f2bb13e0103f2a4144d8bc3cf3",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/images/wozidlo_gasienicowe.webp": {
-    "mtime": 1779560327.844858,
-    "ast_hash": "036a01e703c40684475a38c45d7005cf",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.04.45 (1)(1).jpeg": {
+    "mtime": 1779559173.0888755,
+    "ast_hash": "3049e2450d68bdd347e4b7f312a5d1d7",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/images/taczka_spalinowa.webp": {
-    "mtime": 1779562703.8554356,
-    "ast_hash": "bcc4b993e7f4d8bab16d242d590da70b",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.04.45 (2)(1).jpeg": {
+    "mtime": 1779559173.089436,
+    "ast_hash": "a86fb541243e95e270fdb7b9f57bfdaf",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/images/wiertnica_glebowa.webp": {
-    "mtime": 1779562709.8237278,
-    "ast_hash": "d8722af055807aa6f2caeb00a18d8f6f",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.04.45 (2).jpeg": {
+    "mtime": 1779559173.09005,
+    "ast_hash": "a86fb541243e95e270fdb7b9f57bfdaf",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/scratch/generate_gallery.js": {
-    "mtime": 1779563136.082324,
-    "ast_hash": "0a46f96b114f1adf7984e904732c2474",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.04.45(1).jpeg": {
+    "mtime": 1779559173.0906408,
+    "ast_hash": "b4ca591820d7f094e9c1e07c5980dde1",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/scratch/update_galeria.js": {
-    "mtime": 1779563154.1102874,
-    "ast_hash": "d251711bb05317571b20f55838705e38",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.09.34 (2).jpeg": {
+    "mtime": 1779559173.091118,
+    "ast_hash": "6b9ac3b8cf718285b00170c7945883ff",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/scratch/gallery_output.html": {
-    "mtime": 1779563141.0313134,
-    "ast_hash": "6e760da4bfae665a4a6326c8195ffd23",
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.10.51 (2)(1).jpeg": {
+    "mtime": 1779559173.0916603,
+    "ast_hash": "acb412295c5d4e7bf180043cc04ddb80",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.12.43 (1).jpeg": {
+    "mtime": 1779559173.092147,
+    "ast_hash": "7c53e95bb0faee0b14cefe4c66cc7583",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.12.43 (2).jpeg": {
+    "mtime": 1779559173.0926354,
+    "ast_hash": "0cba81275e3dfe776d7c62c701868a13",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.12.43 (3).jpeg": {
+    "mtime": 1779559173.0932097,
+    "ast_hash": "96e235ab6523a567aba21145e0c7ed31",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.12.43.jpeg": {
+    "mtime": 1779559173.0936866,
+    "ast_hash": "c9fff169e4df22052d448e168d167846",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bloczkowe/WhatsApp Image 2026-05-21 at 21.12.44 (2).jpeg": {
+    "mtime": 1779559173.0943928,
+    "ast_hash": "dd6baff0ebd193c708ce898d80b2ae37",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bramy i furtki/WhatsApp Image 2026-05-21 at 21.10.47 (1).jpeg": {
+    "mtime": 1779559173.0953739,
+    "ast_hash": "b2554b3d8a4d95a75e6e4a4964f26608",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/bramy i furtki/WhatsApp Image 2026-05-21 at 21.10.48 (1).jpeg": {
+    "mtime": 1779559173.0958776,
+    "ast_hash": "ed6fefb1f86cddb36e3c46a6028b514d",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/panelowe/WhatsApp Image 2026-05-21 at 21.10.50 (4).jpeg": {
+    "mtime": 1779559173.0970736,
+    "ast_hash": "3c257a47a78893167ae8541cc31e53e4",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.09.34 (1).jpeg": {
+    "mtime": 1779559173.0985668,
+    "ast_hash": "f28dd556089a5bc944f683c9a59aea38",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.09.34.jpeg": {
+    "mtime": 1779559173.0993545,
+    "ast_hash": "1db74c7c6e7c4064e92b78495f744890",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.48.jpeg": {
+    "mtime": 1779559173.100021,
+    "ast_hash": "2ef65f2ee8f588ce03f5d45f60fdabd9",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.50 (1).jpeg": {
+    "mtime": 1779559173.100692,
+    "ast_hash": "3189fcbfa33d62a8bd80958de702f75a",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.50 (2).jpeg": {
+    "mtime": 1779559173.1014817,
+    "ast_hash": "c8f5283ce33f0a56bf53de5bdd923855",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.50.jpeg": {
+    "mtime": 1779559173.1019664,
+    "ast_hash": "649fed41ac6e890e6123d72bcc7d1ffe",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (1)(1).jpeg": {
+    "mtime": 1779559173.1024585,
+    "ast_hash": "ba2dd9025f575a80f8f02eee6c2bc289",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (1).jpeg": {
+    "mtime": 1779559173.1030111,
+    "ast_hash": "b4930a35aeeab4a9fe1b57ea7faf56f2",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (2).jpeg": {
+    "mtime": 1779559173.1036553,
+    "ast_hash": "e7d93a6117c80bc466772b0a06c0d165",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (3)(1).jpeg": {
+    "mtime": 1779559173.1041954,
+    "ast_hash": "60e2a923de85ffa5619671219cd25c38",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (3).jpeg": {
+    "mtime": 1779559173.1048353,
+    "ast_hash": "7800ce65cefb10eb240ce8ba66ecd9c0",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (4).jpeg": {
+    "mtime": 1779559173.1052895,
+    "ast_hash": "028e8bb7877983e2d0300fea8270a292",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (5).jpeg": {
+    "mtime": 1779559173.1057096,
+    "ast_hash": "1dc685ba94844fe074c8b5ddbe4b4f1b",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (6).jpeg": {
+    "mtime": 1779559173.1061826,
+    "ast_hash": "b4c51a195c7b602f01f780265c4a9706",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (7).jpeg": {
+    "mtime": 1779559173.1069632,
+    "ast_hash": "3a717498195d48aa1d6eba5411817532",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51 (8).jpeg": {
+    "mtime": 1779559173.1076126,
+    "ast_hash": "5fa6295633d1329a4d4d3b6506ede7a8",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.51(1).jpeg": {
+    "mtime": 1779559173.108023,
+    "ast_hash": "441954a855f211dd9bd02c5048d62303",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.52 (1).jpeg": {
+    "mtime": 1779559173.1082757,
+    "ast_hash": "33104fa07b4fcf37e7532e6df3d78a37",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.10.52.jpeg": {
+    "mtime": 1779559173.1091042,
+    "ast_hash": "ba069b23cc0f6343fae3d7f974c9b991",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.41 (1).jpeg": {
+    "mtime": 1779559173.109689,
+    "ast_hash": "94032e5c0fc3ef6137c33dc810eac10d",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.41 (2).jpeg": {
+    "mtime": 1779559173.110232,
+    "ast_hash": "cee32c132fc9ea2e21ba5b46df1e42e8",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.41 (3).jpeg": {
+    "mtime": 1779559173.1107504,
+    "ast_hash": "ed4de225a388420b323be4b007181dec",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.41.jpeg": {
+    "mtime": 1779559173.1113265,
+    "ast_hash": "b0a591d684ae80bbc3658b31d6c9a713",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.42.jpeg": {
+    "mtime": 1779559173.1118555,
+    "ast_hash": "482738f92f9789e84ab3b471acc11f9d",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.43 (4).jpeg": {
+    "mtime": 1779559173.1124249,
+    "ast_hash": "032aff53b53d46121aa52b7f2db1a5d5",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.43 (5).jpeg": {
+    "mtime": 1779559173.1132069,
+    "ast_hash": "9d895f9f3ef5f3a9d1bbdb600a96b704",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.43 (6).jpeg": {
+    "mtime": 1779559173.113783,
+    "ast_hash": "5dd31f58df68903efdb2754c24870959",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.43 (7).jpeg": {
+    "mtime": 1779559173.1144052,
+    "ast_hash": "459a82366ad35cb71f0657c35a5c6aa4",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.43 (8).jpeg": {
+    "mtime": 1779559173.1150496,
+    "ast_hash": "b34c3e6b04acfce1514d87736ee864c7",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.44 (1).jpeg": {
+    "mtime": 1779559173.1156268,
+    "ast_hash": "13c1bfbc8b3660855c7efdd945c3f78f",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/siatkowe/WhatsApp Image 2026-05-21 at 21.12.44.jpeg": {
+    "mtime": 1779559173.1161387,
+    "ast_hash": "87ee2aba0d1ef2f818c08b73affa2f21",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.10.46.jpeg": {
+    "mtime": 1779559173.117275,
+    "ast_hash": "7f906a04711ada34499e5fb69bed5d6c",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.10.47.jpeg": {
+    "mtime": 1779559173.117814,
+    "ast_hash": "8b321640602c8b4ce56258b39d513d84",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.10.50 (3).jpeg": {
+    "mtime": 1779559173.118305,
+    "ast_hash": "efe3475aad8914888f11476b90408a1d",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.10.50 (5).jpeg": {
+    "mtime": 1779559173.119016,
+    "ast_hash": "41c1bedbdd2a6706f9ec9d00f86e0f99",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.13.25.jpeg": {
+    "mtime": 1779559173.1196222,
+    "ast_hash": "fdde2df9c71f6684fe34762b3d884bd4",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.18.16.jpeg": {
+    "mtime": 1779559173.1202796,
+    "ast_hash": "87bd5b7cfaf7fed4896eb08ad47cc481",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/fotki_km-bud/sprzety/WhatsApp Image 2026-05-21 at 21.18.32.jpeg": {
+    "mtime": 1779559173.1209135,
+    "ast_hash": "6994cd8c33e945a5d4baf5d13823083c",
     "semantic_hash": ""
   }
 }

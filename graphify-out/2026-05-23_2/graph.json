@@ -1192,19 +1192,10 @@
       "norm_label": "process_photos.py"
     },
     {
-      "label": "compress_with_tinypng()",
-      "file_type": "code",
-      "source_file": ".agent/scripts/process_photos.py",
-      "source_location": "L10",
-      "id": "scripts_process_photos_compress_with_tinypng",
-      "community": 378,
-      "norm_label": "compress_with_tinypng()"
-    },
-    {
       "label": "slugify()",
       "file_type": "code",
       "source_file": ".agent/scripts/process_photos.py",
-      "source_location": "L50",
+      "source_location": "L5",
       "id": "scripts_process_photos_slugify",
       "community": 378,
       "norm_label": "slugify()"
@@ -1213,7 +1204,7 @@
       "label": "process_images()",
       "file_type": "code",
       "source_file": ".agent/scripts/process_photos.py",
-      "source_location": "L163",
+      "source_location": "L118",
       "id": "scripts_process_photos_process_images",
       "community": 378,
       "norm_label": "process_images()"
@@ -1935,7 +1926,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
       "source_location": "L15",
       "id": "scripts_react_performance_checker_performancechecker_init",
-      "community": 3,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -2405,159 +2396,6 @@
       "id": "scripts_playwright_runner_rationale_116",
       "community": 22,
       "norm_label": "run basic accessibility check."
-    },
-    {
-      "label": "optimize_new_photos.py",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L1",
-      "id": "scratch_optimize_new_photos_py",
-      "community": 385,
-      "norm_label": "optimize_new_photos.py"
-    },
-    {
-      "label": "compress_with_tinypng()",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L11",
-      "id": "scratch_optimize_new_photos_compress_with_tinypng",
-      "community": 385,
-      "norm_label": "compress_with_tinypng()"
-    },
-    {
-      "label": "optimize_photo()",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L46",
-      "id": "scratch_optimize_new_photos_optimize_photo",
-      "community": 385,
-      "norm_label": "optimize_photo()"
-    },
-    {
-      "label": "generate_gallery.js",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "id": "scratch_generate_gallery_js",
-      "community": 387,
-      "norm_label": "generate_gallery.js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "id": "scratch_generate_gallery_fs",
-      "community": 387,
-      "norm_label": "fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "id": "scratch_generate_gallery_path",
-      "community": 387,
-      "norm_label": "path"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "id": "scratch_generate_gallery_metadata",
-      "community": 387,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "categoryBadges",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "id": "scratch_generate_gallery_categorybadges",
-      "community": 387,
-      "norm_label": "categorybadges"
-    },
-    {
-      "label": "update_galeria.js",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "id": "scratch_update_galeria_js",
-      "community": 386,
-      "norm_label": "update_galeria.js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "id": "scratch_update_galeria_fs",
-      "community": 386,
-      "norm_label": "fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "id": "scratch_update_galeria_path",
-      "community": 386,
-      "norm_label": "path"
-    },
-    {
-      "label": "galeriaHtml",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "id": "scratch_update_galeria_galeriahtml",
-      "community": 386,
-      "norm_label": "galeriahtml"
-    },
-    {
-      "label": "generatedGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "id": "scratch_update_galeria_generatedgrid",
-      "community": 386,
-      "norm_label": "generatedgrid"
-    },
-    {
-      "label": "startIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "id": "scratch_update_galeria_startindex",
-      "community": 386,
-      "norm_label": "startindex"
-    },
-    {
-      "label": "endIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "id": "scratch_update_galeria_endindex",
-      "community": 386,
-      "norm_label": "endindex"
-    },
-    {
-      "label": "beforeGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "id": "scratch_update_galeria_beforegrid",
-      "community": 386,
-      "norm_label": "beforegrid"
-    },
-    {
-      "label": "afterGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "id": "scratch_update_galeria_aftergrid",
-      "community": 386,
-      "norm_label": "aftergrid"
     },
     {
       "label": "ARCHITECTURE.md",
@@ -39350,9 +39188,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_fs"
+      "target": "km_bud_extract_assets_fs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39360,9 +39198,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_path"
+      "target": "km_bud_extract_assets_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39370,9 +39208,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_imgdir"
+      "target": "km_bud_extract_assets_imgdir",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39380,9 +39218,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_slugify"
+      "target": "km_bud_extract_assets_slugify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39390,9 +39228,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L31",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csspath"
+      "target": "km_bud_extract_assets_csspath",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39400,9 +39238,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L33",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csscontent"
+      "target": "km_bud_extract_assets_csscontent",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39410,9 +39248,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L34",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csssizebefore"
+      "target": "km_bud_extract_assets_csssizebefore",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39420,9 +39258,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L41",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_replacements"
+      "target": "km_bud_extract_assets_replacements",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39430,9 +39268,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L121",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_slug"
+      "target": "km_bud_extract_assets_slug",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39440,9 +39278,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L129",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_targetpath"
+      "target": "km_bud_extract_assets_targetpath",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39450,9 +39288,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L138",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_buffer"
+      "target": "km_bud_extract_assets_buffer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39460,9 +39298,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L71",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csssizeafter"
+      "target": "km_bud_extract_assets_csssizeafter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39470,9 +39308,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L84",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlpath"
+      "target": "km_bud_extract_assets_htmlpath",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39480,9 +39318,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L86",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlcontent"
+      "target": "km_bud_extract_assets_htmlcontent",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39490,9 +39328,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L87",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizebefore"
+      "target": "km_bud_extract_assets_htmlsizebefore",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39500,9 +39338,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L97",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_matches"
+      "target": "km_bud_extract_assets_matches",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39510,9 +39348,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L115",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_altmatch"
+      "target": "km_bud_extract_assets_altmatch",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39520,9 +39358,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L149",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_originalsrcpattern"
+      "target": "km_bud_extract_assets_originalsrcpattern",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39530,9 +39368,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_newtag"
+      "target": "km_bud_extract_assets_newtag",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39540,9 +39378,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
       "source_location": "L158",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizeafter"
+      "target": "km_bud_extract_assets_htmlsizeafter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -39992,9 +39830,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_update_js",
-      "target": "km_bud_update_fs"
+      "target": "km_bud_update_fs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40002,9 +39840,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_update_js",
-      "target": "km_bud_update_content"
+      "target": "km_bud_update_content",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40032,9 +39870,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/mcp_config.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_mcp_config_json",
-      "target": "agent_mcp_config_mcpservers"
+      "target": "agent_mcp_config_mcpservers",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40112,9 +39950,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L100",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_bm25"
+      "target": "scripts_core_bm25",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40122,9 +39960,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L163",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_load_csv"
+      "target": "scripts_core_load_csv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40132,9 +39970,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L169",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_search_csv"
+      "target": "scripts_core_search_csv",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40142,9 +39980,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L194",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_detect_domain"
+      "target": "scripts_core_detect_domain",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40152,9 +39990,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L217",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_search"
+      "target": "scripts_core_search",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40162,9 +40000,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py",
       "source_location": "L239",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_core_py",
-      "target": "scripts_core_search_stack"
+      "target": "scripts_core_search_stack",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -40494,9 +40332,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L37",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_designsystemgenerator"
+      "target": "scripts_design_system_designsystemgenerator",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40504,9 +40342,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L242",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_format_ascii_box"
+      "target": "scripts_design_system_format_ascii_box",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40514,9 +40352,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L367",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_format_markdown"
+      "target": "scripts_design_system_format_markdown",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40524,9 +40362,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L462",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_generate_design_system"
+      "target": "scripts_design_system_generate_design_system",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40534,9 +40372,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L491",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_persist_design_system"
+      "target": "scripts_design_system_persist_design_system",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40544,9 +40382,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L542",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_format_master_md"
+      "target": "scripts_design_system_format_master_md",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40554,9 +40392,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L805",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_format_page_override_md"
+      "target": "scripts_design_system_format_page_override_md",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40564,9 +40402,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L914",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_generate_intelligent_overrides"
+      "target": "scripts_design_system_generate_intelligent_overrides",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -40574,9 +40412,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py",
       "source_location": "L1020",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_design_system_py",
-      "target": "scripts_design_system_detect_page_type"
+      "target": "scripts_design_system_detect_page_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -41079,9 +40917,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/search.py",
       "source_location": "L22",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_shared_ui_ux_pro_max_scripts_search_py",
-      "target": "scripts_search_format_output"
+      "target": "scripts_search_format_output",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -41109,9 +40947,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L26",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_get_project_root"
+      "target": "scripts_auto_preview_get_project_root",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41119,9 +40957,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_is_running"
+      "target": "scripts_auto_preview_is_running",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41129,9 +40967,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L36",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_get_start_command"
+      "target": "scripts_auto_preview_get_start_command",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41139,9 +40977,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_start_server"
+      "target": "scripts_auto_preview_start_server",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41149,9 +40987,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L89",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_stop_server"
+      "target": "scripts_auto_preview_stop_server",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41159,9 +40997,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L108",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_status_server"
+      "target": "scripts_auto_preview_status_server",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41169,9 +41007,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/auto_preview.py",
       "source_location": "L133",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_auto_preview_py",
-      "target": "scripts_auto_preview_main"
+      "target": "scripts_auto_preview_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -41337,9 +41175,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_colors"
+      "target": "scripts_checklist_colors",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41347,9 +41185,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L40",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_header"
+      "target": "scripts_checklist_print_header",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41357,9 +41195,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L45",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_step"
+      "target": "scripts_checklist_print_step",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41367,9 +41205,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L48",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_success"
+      "target": "scripts_checklist_print_success",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41377,9 +41215,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_warning"
+      "target": "scripts_checklist_print_warning",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41387,9 +41225,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_error"
+      "target": "scripts_checklist_print_error",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41397,9 +41235,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L72",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_check_script_exists"
+      "target": "scripts_checklist_check_script_exists",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41407,9 +41245,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L76",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_run_script"
+      "target": "scripts_checklist_run_script",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41417,9 +41255,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L128",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_print_summary"
+      "target": "scripts_checklist_print_summary",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41427,9 +41265,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/checklist.py",
       "source_location": "L162",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_checklist_py",
-      "target": "scripts_checklist_main"
+      "target": "scripts_checklist_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41699,9 +41537,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L19",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_get_project_root"
+      "target": "scripts_session_manager_get_project_root",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41709,9 +41547,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L22",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_analyze_package_json"
+      "target": "scripts_session_manager_analyze_package_json",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41719,9 +41557,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L56",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_count_files"
+      "target": "scripts_session_manager_count_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41729,9 +41567,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L67",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_detect_features"
+      "target": "scripts_session_manager_detect_features",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41739,9 +41577,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L82",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_print_status"
+      "target": "scripts_session_manager_print_status",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41749,9 +41587,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/session_manager.py",
       "source_location": "L106",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_session_manager_py",
-      "target": "scripts_session_manager_main"
+      "target": "scripts_session_manager_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -41885,9 +41723,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L33",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_colors"
+      "target": "scripts_verify_all_colors",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41895,9 +41733,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_header"
+      "target": "scripts_verify_all_print_header",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41905,9 +41743,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L48",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_step"
+      "target": "scripts_verify_all_print_step",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41915,9 +41753,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L51",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_success"
+      "target": "scripts_verify_all_print_success",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41925,9 +41763,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_warning"
+      "target": "scripts_verify_all_print_warning",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41935,9 +41773,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L57",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_error"
+      "target": "scripts_verify_all_print_error",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41945,9 +41783,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_run_script"
+      "target": "scripts_verify_all_run_script",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41955,9 +41793,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L202",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_print_final_report"
+      "target": "scripts_verify_all_print_final_report",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -41965,9 +41803,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/scripts/verify_all.py",
       "source_location": "L263",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_scripts_verify_all_py",
-      "target": "scripts_verify_all_main"
+      "target": "scripts_verify_all_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42204,21 +42042,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/scripts/process_photos.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "agent_scripts_process_photos_py",
-      "target": "scripts_process_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".agent/scripts/process_photos.py",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "agent_scripts_process_photos_py",
-      "target": "scripts_process_photos_slugify"
+      "target": "scripts_process_photos_slugify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42226,20 +42054,9 @@
       "source_file": ".agent/scripts/process_photos.py",
       "source_location": "L118",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "agent_scripts_process_photos_py",
-      "target": "scripts_process_photos_process_images"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": ".agent/scripts/process_photos.py",
-      "source_location": "L220",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_process_photos_process_images",
-      "target": "scripts_process_photos_compress_with_tinypng"
+      "target": "scripts_process_photos_process_images",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42247,9 +42064,9 @@
       "source_file": ".agent/scripts/update_pages.py",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "agent_scripts_update_pages_py",
-      "target": "scripts_update_pages_update_pages"
+      "target": "scripts_update_pages_update_pages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42257,9 +42074,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/scripts/api_validator.py",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_scripts_api_validator_py",
-      "target": "scripts_api_validator_find_api_files"
+      "target": "scripts_api_validator_find_api_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42267,9 +42084,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/scripts/api_validator.py",
       "source_location": "L37",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_scripts_api_validator_py",
-      "target": "scripts_api_validator_check_openapi_spec"
+      "target": "scripts_api_validator_check_openapi_spec",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42277,9 +42094,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/scripts/api_validator.py",
       "source_location": "L94",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_scripts_api_validator_py",
-      "target": "scripts_api_validator_check_api_code"
+      "target": "scripts_api_validator_check_api_code",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42287,9 +42104,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/scripts/api_validator.py",
       "source_location": "L162",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_scripts_api_validator_py",
-      "target": "scripts_api_validator_main"
+      "target": "scripts_api_validator_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -42400,9 +42217,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/scripts/schema_validator.py",
       "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_scripts_schema_validator_py",
-      "target": "scripts_schema_validator_find_schema_files"
+      "target": "scripts_schema_validator_find_schema_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42410,9 +42227,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/scripts/schema_validator.py",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_scripts_schema_validator_py",
-      "target": "scripts_schema_validator_validate_prisma_schema"
+      "target": "scripts_schema_validator_validate_prisma_schema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42420,9 +42237,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/scripts/schema_validator.py",
       "source_location": "L94",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_scripts_schema_validator_py",
-      "target": "scripts_schema_validator_main"
+      "target": "scripts_schema_validator_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -42502,9 +42319,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/scripts/accessibility_checker.py",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_scripts_accessibility_checker_py",
-      "target": "scripts_accessibility_checker_find_html_files"
+      "target": "scripts_accessibility_checker_find_html_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42512,9 +42329,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/scripts/accessibility_checker.py",
       "source_location": "L44",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_scripts_accessibility_checker_py",
-      "target": "scripts_accessibility_checker_check_accessibility"
+      "target": "scripts_accessibility_checker_check_accessibility",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42522,9 +42339,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/scripts/accessibility_checker.py",
       "source_location": "L111",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_scripts_accessibility_checker_py",
-      "target": "scripts_accessibility_checker_main"
+      "target": "scripts_accessibility_checker_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -42604,9 +42421,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/scripts/ux_audit.py",
       "source_location": "L98",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_scripts_ux_audit_py",
-      "target": "scripts_ux_audit_uxauditor"
+      "target": "scripts_ux_audit_uxauditor",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42614,9 +42431,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/scripts/ux_audit.py",
       "source_location": "L698",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_scripts_ux_audit_py",
-      "target": "scripts_ux_audit_main"
+      "target": "scripts_ux_audit_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -42739,9 +42556,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/geo-fundamentals/scripts/geo_checker.py",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_geo_fundamentals_scripts_geo_checker_py",
-      "target": "scripts_geo_checker_is_page_file"
+      "target": "scripts_geo_checker_is_page_file",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42749,9 +42566,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/geo-fundamentals/scripts/geo_checker.py",
       "source_location": "L81",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_geo_fundamentals_scripts_geo_checker_py",
-      "target": "scripts_geo_checker_find_web_pages"
+      "target": "scripts_geo_checker_find_web_pages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42759,9 +42576,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/geo-fundamentals/scripts/geo_checker.py",
       "source_location": "L99",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_geo_fundamentals_scripts_geo_checker_py",
-      "target": "scripts_geo_checker_check_page"
+      "target": "scripts_geo_checker_check_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42769,9 +42586,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/geo-fundamentals/scripts/geo_checker.py",
       "source_location": "L222",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_geo_fundamentals_scripts_geo_checker_py",
-      "target": "scripts_geo_checker_main"
+      "target": "scripts_geo_checker_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -42882,9 +42699,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/scripts/i18n_checker.py",
       "source_location": "L53",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_scripts_i18n_checker_py",
-      "target": "scripts_i18n_checker_find_locale_files"
+      "target": "scripts_i18n_checker_find_locale_files",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42892,9 +42709,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/scripts/i18n_checker.py",
       "source_location": "L70",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_scripts_i18n_checker_py",
-      "target": "scripts_i18n_checker_check_locale_completeness"
+      "target": "scripts_i18n_checker_check_locale_completeness",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42902,9 +42719,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/scripts/i18n_checker.py",
       "source_location": "L120",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_scripts_i18n_checker_py",
-      "target": "scripts_i18n_checker_flatten_keys"
+      "target": "scripts_i18n_checker_flatten_keys",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42912,9 +42729,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/scripts/i18n_checker.py",
       "source_location": "L131",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_scripts_i18n_checker_py",
-      "target": "scripts_i18n_checker_check_hardcoded_strings"
+      "target": "scripts_i18n_checker_check_hardcoded_strings",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -42922,9 +42739,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/scripts/i18n_checker.py",
       "source_location": "L199",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_scripts_i18n_checker_py",
-      "target": "scripts_i18n_checker_main"
+      "target": "scripts_i18n_checker_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -43066,9 +42883,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/lint_runner.py",
       "source_location": "L29",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_lint_runner_py",
-      "target": "scripts_lint_runner_detect_project_type"
+      "target": "scripts_lint_runner_detect_project_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43076,9 +42893,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/lint_runner.py",
       "source_location": "L72",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_lint_runner_py",
-      "target": "scripts_lint_runner_run_linter"
+      "target": "scripts_lint_runner_run_linter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43086,9 +42903,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/lint_runner.py",
       "source_location": "L116",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_lint_runner_py",
-      "target": "scripts_lint_runner_main"
+      "target": "scripts_lint_runner_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -43168,9 +42985,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/type_coverage.py",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_type_coverage_py",
-      "target": "scripts_type_coverage_check_typescript_coverage"
+      "target": "scripts_type_coverage_check_typescript_coverage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43178,9 +42995,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/type_coverage.py",
       "source_location": "L74",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_type_coverage_py",
-      "target": "scripts_type_coverage_check_python_coverage"
+      "target": "scripts_type_coverage_check_python_coverage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43188,9 +43005,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/scripts/type_coverage.py",
       "source_location": "L128",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_scripts_type_coverage_py",
-      "target": "scripts_type_coverage_main"
+      "target": "scripts_type_coverage_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -43270,9 +43087,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/scripts/mobile_audit.py",
       "source_location": "L74",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_scripts_mobile_audit_py",
-      "target": "scripts_mobile_audit_mobileauditor"
+      "target": "scripts_mobile_audit_mobileauditor",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43280,9 +43097,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/scripts/mobile_audit.py",
       "source_location": "L631",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_scripts_mobile_audit_py",
-      "target": "scripts_mobile_audit_main"
+      "target": "scripts_mobile_audit_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -43405,9 +43222,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/convert_rules.py",
       "source_location": "L65",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_convert_rules_py",
-      "target": "scripts_convert_rules_parse_frontmatter"
+      "target": "scripts_convert_rules_parse_frontmatter",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43415,9 +43232,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/convert_rules.py",
       "source_location": "L85",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_convert_rules_py",
-      "target": "scripts_convert_rules_parse_rule_file"
+      "target": "scripts_convert_rules_parse_rule_file",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43425,9 +43242,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/convert_rules.py",
       "source_location": "L108",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_convert_rules_py",
-      "target": "scripts_convert_rules_group_rules_by_section"
+      "target": "scripts_convert_rules_group_rules_by_section",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43435,9 +43252,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/convert_rules.py",
       "source_location": "L128",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_convert_rules_py",
-      "target": "scripts_convert_rules_generate_section_file"
+      "target": "scripts_convert_rules_generate_section_file",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43445,9 +43262,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/convert_rules.py",
       "source_location": "L185",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_convert_rules_py",
-      "target": "scripts_convert_rules_main"
+      "target": "scripts_convert_rules_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -43599,9 +43416,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_react_performance_checker_py",
-      "target": "scripts_react_performance_checker_performancechecker"
+      "target": "scripts_react_performance_checker_performancechecker",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43609,9 +43426,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
       "source_location": "L234",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_scripts_react_performance_checker_py",
-      "target": "scripts_react_performance_checker_main"
+      "target": "scripts_react_performance_checker_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -43898,9 +43715,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/performance-profiling/scripts/lighthouse_audit.py",
       "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_performance_profiling_scripts_lighthouse_audit_py",
-      "target": "scripts_lighthouse_audit_run_lighthouse"
+      "target": "scripts_lighthouse_audit_run_lighthouse",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43908,9 +43725,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/performance-profiling/scripts/lighthouse_audit.py",
       "source_location": "L60",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_performance_profiling_scripts_lighthouse_audit_py",
-      "target": "scripts_lighthouse_audit_get_summary"
+      "target": "scripts_lighthouse_audit_get_summary",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -43969,9 +43786,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py",
       "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_seo_fundamentals_scripts_seo_checker_py",
-      "target": "scripts_seo_checker_is_page_file"
+      "target": "scripts_seo_checker_is_page_file",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43979,9 +43796,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py",
       "source_location": "L79",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_seo_fundamentals_scripts_seo_checker_py",
-      "target": "scripts_seo_checker_find_pages"
+      "target": "scripts_seo_checker_find_pages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43989,9 +43806,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py",
       "source_location": "L97",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_seo_fundamentals_scripts_seo_checker_py",
-      "target": "scripts_seo_checker_check_page"
+      "target": "scripts_seo_checker_check_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -43999,9 +43816,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py",
       "source_location": "L150",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_seo_fundamentals_scripts_seo_checker_py",
-      "target": "scripts_seo_checker_main"
+      "target": "scripts_seo_checker_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -44142,9 +43959,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/testing-patterns/scripts/test_runner.py",
       "source_location": "L27",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_testing_patterns_scripts_test_runner_py",
-      "target": "scripts_test_runner_detect_test_framework"
+      "target": "scripts_test_runner_detect_test_framework",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44152,9 +43969,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/testing-patterns/scripts/test_runner.py",
       "source_location": "L79",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_testing_patterns_scripts_test_runner_py",
-      "target": "scripts_test_runner_run_tests"
+      "target": "scripts_test_runner_run_tests",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44162,9 +43979,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/testing-patterns/scripts/test_runner.py",
       "source_location": "L140",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_testing_patterns_scripts_test_runner_py",
-      "target": "scripts_test_runner_main"
+      "target": "scripts_test_runner_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -44244,9 +44061,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L97",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_scan_dependencies"
+      "target": "scripts_security_scan_scan_dependencies",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44254,9 +44071,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L181",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_scan_secrets"
+      "target": "scripts_security_scan_scan_secrets",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44264,9 +44081,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L236",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_scan_code_patterns"
+      "target": "scripts_security_scan_scan_code_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44274,9 +44091,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L296",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_scan_configuration"
+      "target": "scripts_security_scan_scan_configuration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44284,9 +44101,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L372",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_run_full_scan"
+      "target": "scripts_security_scan_run_full_scan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44294,9 +44111,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/scripts/security_scan.py",
       "source_location": "L421",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_scripts_security_scan_py",
-      "target": "scripts_security_scan_main"
+      "target": "scripts_security_scan_main",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -44425,9 +44242,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/webapp-testing/scripts/playwright_runner.py",
       "source_location": "L31",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_webapp_testing_scripts_playwright_runner_py",
-      "target": "scripts_playwright_runner_run_basic_test"
+      "target": "scripts_playwright_runner_run_basic_test",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44435,9 +44252,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/webapp-testing/scripts/playwright_runner.py",
       "source_location": "L115",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_webapp_testing_scripts_playwright_runner_py",
-      "target": "scripts_playwright_runner_run_accessibility_check"
+      "target": "scripts_playwright_runner_run_accessibility_check",
+      "confidence_score": 1.0
     },
     {
       "relation": "rationale_for",
@@ -44482,163 +44299,12 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_optimize_photo"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_optimize_photo",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_fs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_metadata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_categorybadges",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_fs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_galeriahtml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_generatedgrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_startindex",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_endindex",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_beforegrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_aftergrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/ARCHITECTURE.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_architecture_md",
-      "target": "agent_architecture_ag_kit_architecture"
+      "target": "agent_architecture_ag_kit_architecture",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44996,9 +44662,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/backend-specialist.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_backend_specialist_md",
-      "target": "agents_backend_specialist_backend_development_architect"
+      "target": "agents_backend_specialist_backend_development_architect",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45296,9 +44962,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/code-archaeologist.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_code_archaeologist_md",
-      "target": "agents_code_archaeologist_code_archaeologist"
+      "target": "agents_code_archaeologist_code_archaeologist",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45446,9 +45112,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/database-architect.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_database_architect_md",
-      "target": "agents_database_architect_database_architect"
+      "target": "agents_database_architect_database_architect",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45716,9 +45382,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/debugger.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_debugger_md",
-      "target": "agents_debugger_debugger_root_cause_analysis_expert"
+      "target": "agents_debugger_debugger_root_cause_analysis_expert",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45986,9 +45652,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/devops-engineer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_devops_engineer_md",
-      "target": "agents_devops_engineer_devops_engineer"
+      "target": "agents_devops_engineer_devops_engineer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -46276,9 +45942,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/documentation-writer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_documentation_writer_md",
-      "target": "agents_documentation_writer_documentation_writer"
+      "target": "agents_documentation_writer_documentation_writer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -46406,9 +46072,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/explorer-agent.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_explorer_agent_md",
-      "target": "agents_explorer_agent_explorer_agent_advanced_discovery_research"
+      "target": "agents_explorer_agent_explorer_agent_advanced_discovery_research",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -46546,9 +46212,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/frontend-specialist.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_frontend_specialist_md",
-      "target": "agents_frontend_specialist_senior_frontend_architect"
+      "target": "agents_frontend_specialist_senior_frontend_architect",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -47056,9 +46722,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/game-developer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_game_developer_md",
-      "target": "agents_game_developer_game_developer_agent"
+      "target": "agents_game_developer_game_developer_agent",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -47246,9 +46912,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/mobile-developer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_mobile_developer_md",
-      "target": "agents_mobile_developer_mobile_developer"
+      "target": "agents_mobile_developer_mobile_developer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -47666,9 +47332,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/orchestrator.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_orchestrator_md",
-      "target": "agents_orchestrator_orchestrator_native_multi_agent_coordination"
+      "target": "agents_orchestrator_orchestrator_native_multi_agent_coordination",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -48256,9 +47922,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/penetration-tester.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_penetration_tester_md",
-      "target": "agents_penetration_tester_penetration_tester"
+      "target": "agents_penetration_tester_penetration_tester",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -48486,9 +48152,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/performance-optimizer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_performance_optimizer_md",
-      "target": "agents_performance_optimizer_performance_optimizer"
+      "target": "agents_performance_optimizer_performance_optimizer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -48726,9 +48392,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/product-manager.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_product_manager_md",
-      "target": "agents_product_manager_product_manager"
+      "target": "agents_product_manager_product_manager",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -48896,9 +48562,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/product-owner.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_product_owner_md",
-      "target": "agents_product_owner_product_owner"
+      "target": "agents_product_owner_product_owner",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49056,9 +48722,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/project-planner.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_project_planner_md",
-      "target": "agents_project_planner_project_planner_smart_project_planning"
+      "target": "agents_project_planner_project_planner_smart_project_planning",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49466,9 +49132,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/qa-automation-engineer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_qa_automation_engineer_md",
-      "target": "agents_qa_automation_engineer_qa_automation_engineer"
+      "target": "agents_qa_automation_engineer_qa_automation_engineer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49616,9 +49282,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/security-auditor.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_security_auditor_md",
-      "target": "agents_security_auditor_security_auditor"
+      "target": "agents_security_auditor_security_auditor",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49826,9 +49492,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/seo-specialist.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_seo_specialist_md",
-      "target": "agents_seo_specialist_seo_specialist"
+      "target": "agents_seo_specialist_seo_specialist",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -49946,9 +49612,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/agents/test-engineer.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_agents_test_engineer_md",
-      "target": "agents_test_engineer_test_engineer"
+      "target": "agents_test_engineer_test_engineer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50136,9 +49802,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/rules/GEMINI.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_rules_gemini_md",
-      "target": "rules_gemini_gemini_md_ag_kit"
+      "target": "rules_gemini_gemini_md_ag_kit",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50416,9 +50082,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/doc.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_doc_md",
-      "target": "skills_doc_ag_kit_skills"
+      "target": "skills_doc_ag_kit_skills",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50636,9 +50302,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_skill_md",
-      "target": "api_patterns_skill_api_patterns"
+      "target": "api_patterns_skill_api_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50716,9 +50382,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/api-style.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_api_style_md",
-      "target": "api_patterns_api_style_api_style_selection_2025"
+      "target": "api_patterns_api_style_api_style_selection_2025",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50776,9 +50442,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/auth.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_auth_md",
-      "target": "api_patterns_auth_authentication_patterns"
+      "target": "api_patterns_auth_authentication_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50826,9 +50492,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/documentation.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_documentation_md",
-      "target": "api_patterns_documentation_api_documentation_principles"
+      "target": "api_patterns_documentation_api_documentation_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50886,9 +50552,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/graphql.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_graphql_md",
-      "target": "api_patterns_graphql_graphql_principles"
+      "target": "api_patterns_graphql_graphql_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50966,9 +50632,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/rate-limiting.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_rate_limiting_md",
-      "target": "api_patterns_rate_limiting_rate_limiting_principles"
+      "target": "api_patterns_rate_limiting_rate_limiting_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51036,9 +50702,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/response.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_response_md",
-      "target": "api_patterns_response_response_format_principles"
+      "target": "api_patterns_response_response_format_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51116,9 +50782,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/rest.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_rest_md",
-      "target": "api_patterns_rest_rest_principles"
+      "target": "api_patterns_rest_rest_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51176,9 +50842,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/security-testing.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_security_testing_md",
-      "target": "api_patterns_security_testing_api_security_testing"
+      "target": "api_patterns_security_testing_api_security_testing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51296,9 +50962,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/trpc.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_trpc_md",
-      "target": "api_patterns_trpc_trpc_principles"
+      "target": "api_patterns_trpc_trpc_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51376,9 +51042,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/api-patterns/versioning.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_api_patterns_versioning_md",
-      "target": "api_patterns_versioning_versioning_strategies"
+      "target": "api_patterns_versioning_versioning_strategies",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51426,9 +51092,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_skill_md",
-      "target": "app_builder_skill_app_builder_application_building_orchestrator"
+      "target": "app_builder_skill_app_builder_application_building_orchestrator",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51496,9 +51162,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/agent-coordination.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_agent_coordination_md",
-      "target": "app_builder_agent_coordination_agent_coordination"
+      "target": "app_builder_agent_coordination_agent_coordination",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51546,9 +51212,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/feature-building.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_feature_building_md",
-      "target": "app_builder_feature_building_feature_building"
+      "target": "app_builder_feature_building_feature_building",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51636,9 +51302,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/project-detection.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_project_detection_md",
-      "target": "app_builder_project_detection_project_type_detection"
+      "target": "app_builder_project_detection_project_type_detection",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51686,9 +51352,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/scaffolding.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_scaffolding_md",
-      "target": "app_builder_scaffolding_project_scaffolding"
+      "target": "app_builder_scaffolding_project_scaffolding",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51766,9 +51432,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/tech-stack.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_tech_stack_md",
-      "target": "app_builder_tech_stack_tech_stack_selection_2026"
+      "target": "app_builder_tech_stack_tech_stack_selection_2026",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51816,9 +51482,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_skill_md",
-      "target": "templates_skill_project_templates"
+      "target": "templates_skill_project_templates",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51856,9 +51522,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/astro-static/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_astro_static_template_md",
-      "target": "astro_static_template_astro_static_site_template"
+      "target": "astro_static_template_astro_static_site_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -51946,9 +51612,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/chrome-extension/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_chrome_extension_template_md",
-      "target": "chrome_extension_template_chrome_extension_template"
+      "target": "chrome_extension_template_chrome_extension_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52046,9 +51712,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/cli-tool/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_cli_tool_template_md",
-      "target": "cli_tool_template_cli_tool_template"
+      "target": "cli_tool_template_cli_tool_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52156,9 +51822,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/electron-desktop/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_electron_desktop_template_md",
-      "target": "electron_desktop_template_electron_desktop_app_template"
+      "target": "electron_desktop_template_electron_desktop_app_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52256,9 +51922,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/express-api/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_express_api_template_md",
-      "target": "express_api_template_express_js_api_template"
+      "target": "express_api_template_express_js_api_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52346,9 +52012,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/flutter-app/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_flutter_app_template_md",
-      "target": "flutter_app_template_flutter_app_template"
+      "target": "flutter_app_template_flutter_app_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52436,9 +52102,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/monorepo-turborepo/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_monorepo_turborepo_template_md",
-      "target": "monorepo_turborepo_template_turborepo_monorepo_template"
+      "target": "monorepo_turborepo_template_turborepo_monorepo_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52536,9 +52202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/nextjs-fullstack/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_nextjs_fullstack_template_md",
-      "target": "nextjs_fullstack_template_next_js_full_stack_template_2026_edition"
+      "target": "nextjs_fullstack_template_next_js_full_stack_template_2026_edition",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52676,9 +52342,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/nextjs-saas/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_nextjs_saas_template_md",
-      "target": "nextjs_saas_template_next_js_saas_template_updated_2026"
+      "target": "nextjs_saas_template_next_js_saas_template_updated_2026",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52826,9 +52492,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/nextjs-static/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_nextjs_static_template_md",
-      "target": "nextjs_static_template_next_js_static_site_template_modern_edition"
+      "target": "nextjs_static_template_next_js_static_site_template_modern_edition",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53006,9 +52672,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/nuxt-app/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_nuxt_app_template_md",
-      "target": "nuxt_app_template_nuxt_4_full_stack_template_2026_edition"
+      "target": "nuxt_app_template_nuxt_4_full_stack_template_2026_edition",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53166,9 +52832,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/python-fastapi/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_python_fastapi_template_md",
-      "target": "python_fastapi_template_fastapi_api_template"
+      "target": "python_fastapi_template_fastapi_api_template",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53256,9 +52922,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/app-builder/templates/react-native-app/TEMPLATE.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_app_builder_templates_react_native_app_template_md",
-      "target": "react_native_app_template_react_native_app_template_2026_edition"
+      "target": "react_native_app_template_react_native_app_template_2026_edition",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53386,9 +53052,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_skill_md",
-      "target": "architecture_skill_architecture_decision_framework"
+      "target": "architecture_skill_architecture_decision_framework",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53446,9 +53112,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/context-discovery.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_context_discovery_md",
-      "target": "architecture_context_discovery_context_discovery"
+      "target": "architecture_context_discovery_context_discovery",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53496,9 +53162,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/examples.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_examples_md",
-      "target": "architecture_examples_architecture_examples"
+      "target": "architecture_examples_architecture_examples",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53576,9 +53242,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/pattern-selection.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_pattern_selection_md",
-      "target": "architecture_pattern_selection_pattern_selection_guidelines"
+      "target": "architecture_pattern_selection_pattern_selection_guidelines",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53636,9 +53302,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/patterns-reference.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_patterns_reference_md",
-      "target": "architecture_patterns_reference_architecture_patterns_reference"
+      "target": "architecture_patterns_reference_architecture_patterns_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53706,9 +53372,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/architecture/trade-off-analysis.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_architecture_trade_off_analysis_md",
-      "target": "architecture_trade_off_analysis_trade_off_analysis_adr"
+      "target": "architecture_trade_off_analysis_trade_off_analysis_adr",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53786,9 +53452,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/bash-linux/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_bash_linux_skill_md",
-      "target": "bash_linux_skill_bash_linux_patterns"
+      "target": "bash_linux_skill_bash_linux_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54066,9 +53732,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/batch-operations/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_batch_operations_skill_md",
-      "target": "batch_operations_skill_batch_operations_multi_file_changes"
+      "target": "batch_operations_skill_batch_operations_multi_file_changes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54206,9 +53872,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/behavioral-modes/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_behavioral_modes_skill_md",
-      "target": "behavioral_modes_skill_behavioral_modes_adaptive_ai_operating_modes"
+      "target": "behavioral_modes_skill_behavioral_modes_adaptive_ai_operating_modes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54456,9 +54122,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/brainstorming/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_brainstorming_skill_md",
-      "target": "brainstorming_skill_brainstorming_communication_protocol"
+      "target": "brainstorming_skill_brainstorming_communication_protocol",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54706,9 +54372,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/brainstorming/dynamic-questioning.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_brainstorming_dynamic_questioning_md",
-      "target": "brainstorming_dynamic_questioning_dynamic_question_generation"
+      "target": "brainstorming_dynamic_questioning_dynamic_question_generation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54986,9 +54652,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/clean-code/SKILL.md",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_clean_code_skill_md",
-      "target": "clean_code_skill_clean_code_pragmatic_ai_coding_standards"
+      "target": "clean_code_skill_clean_code_pragmatic_ai_coding_standards",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55146,9 +54812,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/code-review-checklist/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_code_review_checklist_skill_md",
-      "target": "code_review_checklist_skill_code_review_checklist"
+      "target": "code_review_checklist_skill_code_review_checklist",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55316,9 +54982,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/code-review-graph/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_code_review_graph_skill_md",
-      "target": "code_review_graph_skill_code_review_graph_token_efficient_codebase_context_via_mcp"
+      "target": "code_review_graph_skill_code_review_graph_token_efficient_codebase_context_via_mcp",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55806,9 +55472,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/context-compression/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_context_compression_skill_md",
-      "target": "context_compression_skill_context_compression_long_session_management"
+      "target": "context_compression_skill_context_compression_long_session_management",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -55996,9 +55662,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/coordinator-mode/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_coordinator_mode_skill_md",
-      "target": "coordinator_mode_skill_coordinator_mode_multi_agent_orchestration"
+      "target": "coordinator_mode_skill_coordinator_mode_multi_agent_orchestration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56276,9 +55942,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_skill_md",
-      "target": "database_design_skill_database_design"
+      "target": "database_design_skill_database_design",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56336,9 +56002,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/database-selection.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_database_selection_md",
-      "target": "database_design_database_selection_database_selection_2025"
+      "target": "database_design_database_selection_database_selection_2025",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56396,9 +56062,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/indexing.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_indexing_md",
-      "target": "database_design_indexing_indexing_principles"
+      "target": "database_design_indexing_indexing_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56466,9 +56132,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/migrations.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_migrations_md",
-      "target": "database_design_migrations_migration_principles"
+      "target": "database_design_migrations_migration_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56546,9 +56212,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/optimization.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_optimization_md",
-      "target": "database_design_optimization_query_optimization"
+      "target": "database_design_optimization_query_optimization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56616,9 +56282,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/orm-selection.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_orm_selection_md",
-      "target": "database_design_orm_selection_orm_selection_2025"
+      "target": "database_design_orm_selection_orm_selection_2025",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56666,9 +56332,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/database-design/schema-design.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_database_design_schema_design_md",
-      "target": "database_design_schema_design_schema_design_principles"
+      "target": "database_design_schema_design_schema_design_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -56766,9 +56432,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/deployment-procedures/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_deployment_procedures_skill_md",
-      "target": "deployment_procedures_skill_deployment_procedures"
+      "target": "deployment_procedures_skill_deployment_procedures",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -57066,9 +56732,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/documentation-templates/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_documentation_templates_skill_md",
-      "target": "documentation_templates_skill_documentation_templates"
+      "target": "documentation_templates_skill_documentation_templates",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -57286,9 +56952,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_skill_md",
-      "target": "frontend_design_skill_frontend_design_system"
+      "target": "frontend_design_skill_frontend_design_system",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -57896,9 +57562,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/animation-guide.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_animation_guide_md",
-      "target": "frontend_design_animation_guide_animation_guidelines_reference"
+      "target": "frontend_design_animation_guide_animation_guidelines_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -58436,9 +58102,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/color-system.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_color_system_md",
-      "target": "frontend_design_color_system_color_system_reference"
+      "target": "frontend_design_color_system_color_system_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -58836,9 +58502,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/decision-trees.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_decision_trees_md",
-      "target": "frontend_design_decision_trees_decision_trees_context_templates"
+      "target": "frontend_design_decision_trees_decision_trees_context_templates",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -59386,9 +59052,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/motion-graphics.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_motion_graphics_md",
-      "target": "frontend_design_motion_graphics_motion_graphics_reference"
+      "target": "frontend_design_motion_graphics_motion_graphics_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -59816,9 +59482,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/typography-system.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_typography_system_md",
-      "target": "frontend_design_typography_system_typography_system_reference"
+      "target": "frontend_design_typography_system_typography_system_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -60366,9 +60032,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/ux-psychology.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_ux_psychology_md",
-      "target": "frontend_design_ux_psychology_ux_psychology_reference"
+      "target": "frontend_design_ux_psychology_ux_psychology_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -61446,9 +61112,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/frontend-design/visual-effects.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_frontend_design_visual_effects_md",
-      "target": "frontend_design_visual_effects_visual_effects_reference"
+      "target": "frontend_design_visual_effects_visual_effects_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62116,9 +61782,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_skill_md",
-      "target": "game_development_skill_game_development"
+      "target": "game_development_skill_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62326,9 +61992,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/2d-games/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_2d_games_skill_md",
-      "target": "2d_games_skill_2d_game_development"
+      "target": "2d_games_skill_2d_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62506,9 +62172,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/3d-games/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_3d_games_skill_md",
-      "target": "3d_games_skill_3d_game_development"
+      "target": "3d_games_skill_3d_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62716,9 +62382,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/game-art/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_game_art_skill_md",
-      "target": "game_art_skill_game_art_principles"
+      "target": "game_art_skill_game_art_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -62956,9 +62622,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/game-audio/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_game_audio_skill_md",
-      "target": "game_audio_skill_game_audio_principles"
+      "target": "game_audio_skill_game_audio_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -63216,9 +62882,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/game-design/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_game_design_skill_md",
-      "target": "game_design_skill_game_design_principles"
+      "target": "game_design_skill_game_design_principles",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -63416,9 +63082,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/mobile-games/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_mobile_games_skill_md",
-      "target": "mobile_games_skill_mobile_game_development"
+      "target": "mobile_games_skill_mobile_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -63566,9 +63232,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/multiplayer/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_multiplayer_skill_md",
-      "target": "multiplayer_skill_multiplayer_game_development"
+      "target": "multiplayer_skill_multiplayer_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -63756,9 +63422,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/pc-games/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_pc_games_skill_md",
-      "target": "pc_games_skill_pc_console_game_development"
+      "target": "pc_games_skill_pc_console_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -63966,9 +63632,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/vr-ar/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_vr_ar_skill_md",
-      "target": "vr_ar_skill_vr_ar_development"
+      "target": "vr_ar_skill_vr_ar_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -64146,9 +63812,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/game-development/web-games/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_game_development_web_games_skill_md",
-      "target": "web_games_skill_web_browser_game_development"
+      "target": "web_games_skill_web_browser_game_development",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -64366,9 +64032,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/geo-fundamentals/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_geo_fundamentals_skill_md",
-      "target": "geo_fundamentals_skill_geo_fundamentals"
+      "target": "geo_fundamentals_skill_geo_fundamentals",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -64536,9 +64202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/i18n-localization/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_i18n_localization_skill_md",
-      "target": "i18n_localization_skill_i18n_localization"
+      "target": "i18n_localization_skill_i18n_localization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -64746,9 +64412,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/intelligent-routing/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_intelligent_routing_skill_md",
-      "target": "intelligent_routing_skill_intelligent_agent_routing"
+      "target": "intelligent_routing_skill_intelligent_agent_routing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -65336,9 +65002,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/lint-and-validate/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_lint_and_validate_skill_md",
-      "target": "lint_and_validate_skill_lint_and_validate_skill"
+      "target": "lint_and_validate_skill_lint_and_validate_skill",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -65416,9 +65082,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mcp-builder/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mcp_builder_skill_md",
-      "target": "mcp_builder_skill_mcp_builder"
+      "target": "mcp_builder_skill_mcp_builder",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -65696,9 +65362,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/memory-system/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_memory_system_skill_md",
-      "target": "memory_system_skill_memory_system_persistent_cross_session_memory"
+      "target": "memory_system_skill_memory_system_persistent_cross_session_memory",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -65886,9 +65552,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_skill_md",
-      "target": "mobile_design_skill_mobile_design_system"
+      "target": "mobile_design_skill_mobile_design_system",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -66286,9 +65952,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/decision-trees.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_decision_trees_md",
-      "target": "mobile_design_decision_trees_mobile_decision_trees"
+      "target": "mobile_design_decision_trees_mobile_decision_trees",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -66776,9 +66442,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-backend.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_backend_md",
-      "target": "mobile_design_mobile_backend_mobile_backend_patterns"
+      "target": "mobile_design_mobile_backend_mobile_backend_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -67416,9 +67082,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-color-system.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_color_system_md",
-      "target": "mobile_design_mobile_color_system_mobile_color_system_reference"
+      "target": "mobile_design_mobile_color_system_mobile_color_system_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -68016,9 +67682,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-debugging.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_debugging_md",
-      "target": "mobile_design_mobile_debugging_mobile_debugging_guide"
+      "target": "mobile_design_mobile_debugging_mobile_debugging_guide",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -68176,9 +67842,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-design-thinking.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_design_thinking_md",
-      "target": "mobile_design_mobile_design_thinking_mobile_design_thinking"
+      "target": "mobile_design_mobile_design_thinking_mobile_design_thinking",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -68496,9 +68162,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-navigation.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_navigation_md",
-      "target": "mobile_design_mobile_navigation_mobile_navigation_reference"
+      "target": "mobile_design_mobile_navigation_mobile_navigation_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -69046,9 +68712,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-performance.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_performance_md",
-      "target": "mobile_design_mobile_performance_mobile_performance_reference"
+      "target": "mobile_design_mobile_performance_mobile_performance_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -69826,9 +69492,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-testing.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_testing_md",
-      "target": "mobile_design_mobile_testing_mobile_testing_patterns"
+      "target": "mobile_design_mobile_testing_mobile_testing_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -70276,9 +69942,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/mobile-typography.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_mobile_typography_md",
-      "target": "mobile_design_mobile_typography_mobile_typography_reference"
+      "target": "mobile_design_mobile_typography_mobile_typography_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -70856,9 +70522,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/platform-android.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_platform_android_md",
-      "target": "mobile_design_platform_android_android_platform_guidelines"
+      "target": "mobile_design_platform_android_android_platform_guidelines",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -71626,9 +71292,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/platform-ios.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_platform_ios_md",
-      "target": "mobile_design_platform_ios_ios_platform_guidelines"
+      "target": "mobile_design_platform_ios_ios_platform_guidelines",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -72296,9 +71962,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_touch_psychology_md",
-      "target": "mobile_design_touch_psychology_touch_psychology_reference"
+      "target": "mobile_design_touch_psychology_touch_psychology_reference",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -72996,9 +72662,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/1-async-eliminating-waterfalls.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_1_async_eliminating_waterfalls_md",
-      "target": "nextjs_react_expert_1_async_eliminating_waterfalls_1_eliminating_waterfalls"
+      "target": "nextjs_react_expert_1_async_eliminating_waterfalls_1_eliminating_waterfalls",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -73306,9 +72972,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/2-bundle-bundle-size-optimization.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_2_bundle_bundle_size_optimization_md",
-      "target": "nextjs_react_expert_2_bundle_bundle_size_optimization_2_bundle_size_optimization"
+      "target": "nextjs_react_expert_2_bundle_bundle_size_optimization_2_bundle_size_optimization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -73536,9 +73202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/3-server-server-side-performance.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_3_server_server_side_performance_md",
-      "target": "nextjs_react_expert_3_server_server_side_performance_3_server_side_performance"
+      "target": "nextjs_react_expert_3_server_server_side_performance_3_server_side_performance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -73896,9 +73562,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/4-client-client-side-data-fetching.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_4_client_client_side_data_fetching_md",
-      "target": "nextjs_react_expert_4_client_client_side_data_fetching_4_client_side_data_fetching"
+      "target": "nextjs_react_expert_4_client_client_side_data_fetching_4_client_side_data_fetching",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -74116,9 +73782,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/5-rerender-re-render-optimization.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_5_rerender_re_render_optimization_md",
-      "target": "nextjs_react_expert_5_rerender_re_render_optimization_5_re_render_optimization"
+      "target": "nextjs_react_expert_5_rerender_re_render_optimization_5_re_render_optimization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -74636,9 +74302,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/6-rendering-rendering-performance.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_6_rendering_rendering_performance_md",
-      "target": "nextjs_react_expert_6_rendering_rendering_performance_6_rendering_performance"
+      "target": "nextjs_react_expert_6_rendering_rendering_performance_6_rendering_performance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -75036,9 +74702,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/7-js-javascript-performance.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_7_js_javascript_performance_md",
-      "target": "nextjs_react_expert_7_js_javascript_performance_7_javascript_performance"
+      "target": "nextjs_react_expert_7_js_javascript_performance_7_javascript_performance",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -75666,9 +75332,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/8-advanced-advanced-patterns.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_8_advanced_advanced_patterns_md",
-      "target": "nextjs_react_expert_8_advanced_advanced_patterns_8_advanced_patterns"
+      "target": "nextjs_react_expert_8_advanced_advanced_patterns_8_advanced_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -75826,9 +75492,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/9-cache-components.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_9_cache_components_md",
-      "target": "nextjs_react_expert_9_cache_components_cache_components_use_cache_cachelife"
+      "target": "nextjs_react_expert_9_cache_components_cache_components_use_cache_cachelife",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -76006,9 +75672,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nextjs_react_expert_skill_md",
-      "target": "nextjs_react_expert_skill_next_js_react_performance_expert"
+      "target": "nextjs_react_expert_skill_next_js_react_performance_expert",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -76276,9 +75942,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nodejs-best-practices/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_nodejs_best_practices_skill_md",
-      "target": "nodejs_best_practices_skill_node_js_best_practices"
+      "target": "nodejs_best_practices_skill_node_js_best_practices",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -76756,9 +76422,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/parallel-agents/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_parallel_agents_skill_md",
-      "target": "parallel_agents_skill_native_parallel_agents"
+      "target": "parallel_agents_skill_native_parallel_agents",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -77016,9 +76682,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/performance-profiling/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_performance_profiling_skill_md",
-      "target": "performance_profiling_skill_performance_profiling"
+      "target": "performance_profiling_skill_performance_profiling",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -77216,9 +76882,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/plan-writing/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_plan_writing_skill_md",
-      "target": "plan_writing_skill_plan_writing"
+      "target": "plan_writing_skill_plan_writing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -77386,9 +77052,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/powershell-windows/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_powershell_windows_skill_md",
-      "target": "powershell_windows_skill_powershell_windows_patterns"
+      "target": "powershell_windows_skill_powershell_windows_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -77626,9 +77292,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/python-patterns/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_python_patterns_skill_md",
-      "target": "python_patterns_skill_python_patterns"
+      "target": "python_patterns_skill_python_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78196,9 +77862,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/red-team-tactics/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_red_team_tactics_skill_md",
-      "target": "red_team_tactics_skill_red_team_tactics"
+      "target": "red_team_tactics_skill_red_team_tactics",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78486,9 +78152,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_use_this_skill_when"
+      "target": "rust_pro_skill_use_this_skill_when",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78496,9 +78162,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L17",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_do_not_use_this_skill_when"
+      "target": "rust_pro_skill_do_not_use_this_skill_when",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78506,9 +78172,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L23",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_instructions"
+      "target": "rust_pro_skill_instructions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78516,9 +78182,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_purpose"
+      "target": "rust_pro_skill_purpose",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78526,9 +78192,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L33",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_capabilities"
+      "target": "rust_pro_skill_capabilities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78536,9 +78202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L135",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_behavioral_traits"
+      "target": "rust_pro_skill_behavioral_traits",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78546,9 +78212,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L147",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_knowledge_base"
+      "target": "rust_pro_skill_knowledge_base",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78556,9 +78222,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L159",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_response_approach"
+      "target": "rust_pro_skill_response_approach",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78566,9 +78232,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/rust-pro/SKILL.md",
       "source_location": "L169",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_rust_pro_skill_md",
-      "target": "rust_pro_skill_example_interactions"
+      "target": "rust_pro_skill_example_interactions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78766,9 +78432,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_seo_fundamentals_skill_md",
-      "target": "seo_fundamentals_skill_seo_fundamentals"
+      "target": "seo_fundamentals_skill_seo_fundamentals",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -78916,9 +78582,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/server-management/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_server_management_skill_md",
-      "target": "server_management_skill_server_management"
+      "target": "server_management_skill_server_management",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -79126,9 +78792,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/simplify-code/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_simplify_code_skill_md",
-      "target": "simplify_code_skill_simplify_code_reduce_unnecessary_complexity"
+      "target": "simplify_code_skill_simplify_code_reduce_unnecessary_complexity",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -79336,9 +79002,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/skillify/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_skillify_skill_md",
-      "target": "skillify_skill_skillify_auto_create_skills_from_workflows"
+      "target": "skillify_skill_skillify_auto_create_skills_from_workflows",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -79466,9 +79132,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/systematic-debugging/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_systematic_debugging_skill_md",
-      "target": "systematic_debugging_skill_systematic_debugging"
+      "target": "systematic_debugging_skill_systematic_debugging",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -79636,9 +79302,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/tailwind-patterns/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_tailwind_patterns_skill_md",
-      "target": "tailwind_patterns_skill_tailwind_css_patterns_v4_2025"
+      "target": "tailwind_patterns_skill_tailwind_css_patterns_v4_2025",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -79996,9 +79662,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/tdd-workflow/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_tdd_workflow_skill_md",
-      "target": "tdd_workflow_skill_tdd_workflow"
+      "target": "tdd_workflow_skill_tdd_workflow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -80196,9 +79862,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/testing-patterns/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_testing_patterns_skill_md",
-      "target": "testing_patterns_skill_testing_patterns"
+      "target": "testing_patterns_skill_testing_patterns",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -80436,9 +80102,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/verify-changes/SKILL.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_verify_changes_skill_md",
-      "target": "verify_changes_skill_verify_changes_prove_code_works"
+      "target": "verify_changes_skill_verify_changes_prove_code_works",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -80616,9 +80282,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_skill_md",
-      "target": "vulnerability_scanner_skill_vulnerability_scanner"
+      "target": "vulnerability_scanner_skill_vulnerability_scanner",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -80996,9 +80662,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/vulnerability-scanner/checklists.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_vulnerability_scanner_checklists_md",
-      "target": "vulnerability_scanner_checklists_security_checklists"
+      "target": "vulnerability_scanner_checklists_security_checklists",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81176,9 +80842,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/web-design-guidelines/SKILL.md",
       "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_web_design_guidelines_skill_md",
-      "target": "web_design_guidelines_skill_web_interface_guidelines"
+      "target": "web_design_guidelines_skill_web_interface_guidelines",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81266,9 +80932,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/webapp-testing/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_skills_webapp_testing_skill_md",
-      "target": "webapp_testing_skill_web_app_testing"
+      "target": "webapp_testing_skill_web_app_testing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81536,9 +81202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/brainstorm.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_brainstorm_md",
-      "target": "workflows_brainstorm_brainstorm_structured_idea_exploration"
+      "target": "workflows_brainstorm_brainstorm_structured_idea_exploration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81626,9 +81292,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/coordinate.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_coordinate_md",
-      "target": "workflows_coordinate_coordinate_advanced_multi_agent_coordination"
+      "target": "workflows_coordinate_coordinate_advanced_multi_agent_coordination",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81706,9 +81372,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/create.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_create_md",
-      "target": "workflows_create_create_create_application"
+      "target": "workflows_create_create_create_application",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81776,9 +81442,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/debug.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_debug_md",
-      "target": "workflows_debug_debug_systematic_problem_investigation"
+      "target": "workflows_debug_debug_systematic_problem_investigation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -81876,9 +81542,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/deploy.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_deploy_md",
-      "target": "workflows_deploy_deploy_production_deployment"
+      "target": "workflows_deploy_deploy_production_deployment",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82056,9 +81722,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/enhance.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_enhance_md",
-      "target": "workflows_enhance_enhance_update_application"
+      "target": "workflows_enhance_enhance_update_application",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82136,9 +81802,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/orchestrate.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_orchestrate_md",
-      "target": "workflows_orchestrate_multi_agent_orchestration"
+      "target": "workflows_orchestrate_multi_agent_orchestration",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82396,9 +82062,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/plan.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_plan_md",
-      "target": "workflows_plan_plan_project_planning_mode"
+      "target": "workflows_plan_plan_project_planning_mode",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82506,9 +82172,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/preview.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_preview_md",
-      "target": "workflows_preview_preview_preview_management"
+      "target": "workflows_preview_preview_preview_management",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82646,9 +82312,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/remember.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_remember_md",
-      "target": "workflows_remember_remember_persistent_memory_management"
+      "target": "workflows_remember_remember_persistent_memory_management",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82736,9 +82402,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/status.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_status_md",
-      "target": "workflows_status_status_show_status"
+      "target": "workflows_status_status_show_status",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82806,9 +82472,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/test.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_test_md",
-      "target": "workflows_test_test_test_generation_and_execution"
+      "target": "workflows_test_test_test_generation_and_execution",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -82986,9 +82652,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/ui-ux-pro-max.md",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_ui_ux_pro_max_md",
-      "target": "workflows_ui_ux_pro_max_ui_ux_pro_max"
+      "target": "workflows_ui_ux_pro_max_ui_ux_pro_max",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -83426,9 +83092,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/workflows/verify.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agent_workflows_verify_md",
-      "target": "workflows_verify_verify_prove_code_works"
+      "target": "workflows_verify_verify_prove_code_works",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -83516,9 +83182,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agents_rules_graphify_md",
-      "target": "rules_graphify_graphify"
+      "target": "rules_graphify_graphify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -83536,9 +83202,9 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agents/workflows/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "home_jankuchnia_pulpit_km_bud_agents_workflows_graphify_md",
-      "target": "workflows_graphify_workflow_graphify"
+      "target": "workflows_graphify_workflow_graphify",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",

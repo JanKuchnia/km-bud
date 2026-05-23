@@ -1935,7 +1935,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
       "source_location": "L15",
       "id": "scripts_react_performance_checker_performancechecker_init",
-      "community": 3,
+      "community": 4,
       "norm_label": ".__init__()"
     },
     {
@@ -2432,132 +2432,6 @@
       "id": "scratch_optimize_new_photos_optimize_photo",
       "community": 385,
       "norm_label": "optimize_photo()"
-    },
-    {
-      "label": "generate_gallery.js",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "id": "scratch_generate_gallery_js",
-      "community": 387,
-      "norm_label": "generate_gallery.js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "id": "scratch_generate_gallery_fs",
-      "community": 387,
-      "norm_label": "fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "id": "scratch_generate_gallery_path",
-      "community": 387,
-      "norm_label": "path"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "id": "scratch_generate_gallery_metadata",
-      "community": 387,
-      "norm_label": "metadata"
-    },
-    {
-      "label": "categoryBadges",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "id": "scratch_generate_gallery_categorybadges",
-      "community": 387,
-      "norm_label": "categorybadges"
-    },
-    {
-      "label": "update_galeria.js",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "id": "scratch_update_galeria_js",
-      "community": 386,
-      "norm_label": "update_galeria.js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "id": "scratch_update_galeria_fs",
-      "community": 386,
-      "norm_label": "fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "id": "scratch_update_galeria_path",
-      "community": 386,
-      "norm_label": "path"
-    },
-    {
-      "label": "galeriaHtml",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "id": "scratch_update_galeria_galeriahtml",
-      "community": 386,
-      "norm_label": "galeriahtml"
-    },
-    {
-      "label": "generatedGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "id": "scratch_update_galeria_generatedgrid",
-      "community": 386,
-      "norm_label": "generatedgrid"
-    },
-    {
-      "label": "startIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "id": "scratch_update_galeria_startindex",
-      "community": 386,
-      "norm_label": "startindex"
-    },
-    {
-      "label": "endIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "id": "scratch_update_galeria_endindex",
-      "community": 386,
-      "norm_label": "endindex"
-    },
-    {
-      "label": "beforeGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "id": "scratch_update_galeria_beforegrid",
-      "community": 386,
-      "norm_label": "beforegrid"
-    },
-    {
-      "label": "afterGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "id": "scratch_update_galeria_aftergrid",
-      "community": 386,
-      "norm_label": "aftergrid"
     },
     {
       "label": "ARCHITECTURE.md",
@@ -44485,9 +44359,9 @@
       "source_file": "scratch/optimize_new_photos.py",
       "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
+      "target": "scratch_optimize_new_photos_compress_with_tinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44495,9 +44369,9 @@
       "source_file": "scratch/optimize_new_photos.py",
       "source_location": "L46",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_optimize_photo"
+      "target": "scratch_optimize_new_photos_optimize_photo",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -44506,128 +44380,8 @@
       "source_file": "scratch/optimize_new_photos.py",
       "source_location": "L62",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "scratch_optimize_new_photos_optimize_photo",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_fs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_metadata",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_categorybadges",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_fs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_galeriahtml",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_generatedgrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_startindex",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_endindex",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_beforegrid",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_aftergrid",
+      "target": "scratch_optimize_new_photos_compress_with_tinypng",
       "confidence_score": 1.0
     },
     {

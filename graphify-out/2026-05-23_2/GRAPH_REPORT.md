@@ -1,11 +1,11 @@
 # Graph Report - km-bud  (2026-05-23)
 
 ## Corpus Check
-- 196 files · ~1,553,691 words
+- 193 files · ~3,355,080 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4371 nodes · 4416 edges · 388 communities (378 shown, 10 thin omitted)
+- 4353 nodes · 4399 edges · 385 communities (377 shown, 8 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -393,14 +393,10 @@
 - [[_COMMUNITY_Community 375|Community 375]]
 - [[_COMMUNITY_Community 376|Community 376]]
 - [[_COMMUNITY_Community 377|Community 377]]
-- [[_COMMUNITY_Community 378|Community 378]]
 - [[_COMMUNITY_Community 379|Community 379]]
 - [[_COMMUNITY_Community 380|Community 380]]
 - [[_COMMUNITY_Community 382|Community 382]]
 - [[_COMMUNITY_Community 383|Community 383]]
-- [[_COMMUNITY_Community 385|Community 385]]
-- [[_COMMUNITY_Community 386|Community 386]]
-- [[_COMMUNITY_Community 387|Community 387]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `5. Re-render Optimization` - 27 edges
@@ -426,7 +422,7 @@
 - `persist_design_system()` --calls--> `path`  [INFERRED]
   /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/extract_assets.js
 
-## Communities (388 total, 10 thin omitted)
+## Communities (385 total, 8 thin omitted)
 
 ### Community 0 - "Design System Generation"
 Cohesion: 0.06
@@ -441,11 +437,11 @@ Cohesion: 0.15
 Nodes (13): 1. Blast Radius Analysis (Primary Use), 2. Risk-Scored Change Analysis, 3. Dead Code Detection, 4. Refactoring Preview, 5. Architecture Visualization, 6. Wiki Generation, code:bash (code-review-graph detect-changes), code:bash (# Surfaces functions/classes that are candidates for removal) (+5 more)
 
 ### Community 3 - "Security and Coverage Scans"
-Cohesion: 0.22
+Cohesion: 0.24
 Nodes (12): path, main(), Validate no hardcoded secrets (OWASP A04).     Checks: API keys, tokens, passwor, Validate dangerous code patterns (OWASP A05).     Checks: Injection risks, XSS,, Validate security configuration (OWASP A02).     Checks: Security headers, CORS,, Execute security validation scans., Validate supply chain security (OWASP A03).     Checks: npm audit, lock file pre, run_full_scan() (+4 more)
 
 ### Community 4 - "React Performance Checker"
-Cohesion: 0.16
+Cohesion: 0.15
 Nodes (9): main(), PerformanceChecker, Check for data fetching in useEffect (Section 4), Check for missing React.memo, useMemo, useCallback (Section 5), Check for unoptimized images (Section 6), Generate final report, Check for sequential await patterns (Section 1), Check for barrel imports (Section 2) (+1 more)
 
 ### Community 5 - "Checklist Runner"
@@ -1924,32 +1920,24 @@ Nodes (3): 2. Audience Decision Tree, code:block2 (TARGET AUDIENCE), Who is your
 Cohesion: 0.67
 Nodes (3): 4. Storage Strategy Selection, code:block7 (WHAT TYPE OF DATA?), Storage Comparison
 
-### Community 386 - "Community 386"
-Cohesion: 0.22
-Nodes (8): afterGrid, beforeGrid, endIndex, fs, galeriaHtml, generatedGrid, path, startIndex
-
-### Community 387 - "Community 387"
-Cohesion: 0.40
-Nodes (4): categoryBadges, fs, metadata, path
-
 ## Knowledge Gaps
-- **2265 isolated node(s):** `command`, `args`, `command`, `args`, `fs` (+2260 more)
+- **2253 isolated node(s):** `command`, `args`, `command`, `args`, `📋 Overview` (+2248 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Community 244`, `Test Runner`?**
+- **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `React Performance Checker`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Test Runner`, `Community 244`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `persist_design_system()` connect `Design System Generation` to `Security and Coverage Scans`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `PerformanceChecker` connect `React Performance Checker` to `Security and Coverage Scans`?**
+- **Why does `UX Psychology Reference` connect `Community 126` to `Community 366`, `Community 207`, `Community 208`, `Community 178`, `Community 115`, `Community 59`, `Community 60`, `Community 157`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?**
   _`path` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `command`, `args`, `command` to the rest of the system?**
-  _2343 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _2331 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Design System Generation` be split into smaller, more focused modules?**
   _Cohesion score 0.06103896103896104 - nodes in this community are weakly interconnected._
 - **Should `Community 26` be split into smaller, more focused modules?**

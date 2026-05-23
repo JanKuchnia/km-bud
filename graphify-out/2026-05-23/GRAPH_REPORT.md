@@ -1,16 +1,16 @@
-# Graph Report - km-bud  (2026-05-23)
+# Graph Report - km-bud  (2026-05-19)
 
 ## Corpus Check
-- 196 files · ~1,553,691 words
+- 191 files · ~192,719 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4371 nodes · 4416 edges · 388 communities (378 shown, 10 thin omitted)
+- 4157 nodes · 4100 edges · 365 communities (357 shown, 8 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `63e3403b`
+- Built from commit: `fc3946dd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -380,132 +380,111 @@
 - [[_COMMUNITY_Community 362|Community 362]]
 - [[_COMMUNITY_Community 363|Community 363]]
 - [[_COMMUNITY_Community 364|Community 364]]
-- [[_COMMUNITY_Community 365|Community 365]]
-- [[_COMMUNITY_Community 366|Community 366]]
-- [[_COMMUNITY_Community 367|Community 367]]
-- [[_COMMUNITY_Community 368|Community 368]]
-- [[_COMMUNITY_Community 369|Community 369]]
-- [[_COMMUNITY_Community 370|Community 370]]
-- [[_COMMUNITY_Community 371|Community 371]]
-- [[_COMMUNITY_Community 372|Community 372]]
-- [[_COMMUNITY_Community 373|Community 373]]
-- [[_COMMUNITY_Community 374|Community 374]]
-- [[_COMMUNITY_Community 375|Community 375]]
-- [[_COMMUNITY_Community 376|Community 376]]
-- [[_COMMUNITY_Community 377|Community 377]]
-- [[_COMMUNITY_Community 378|Community 378]]
-- [[_COMMUNITY_Community 379|Community 379]]
-- [[_COMMUNITY_Community 380|Community 380]]
-- [[_COMMUNITY_Community 382|Community 382]]
-- [[_COMMUNITY_Community 383|Community 383]]
-- [[_COMMUNITY_Community 385|Community 385]]
-- [[_COMMUNITY_Community 386|Community 386]]
-- [[_COMMUNITY_Community 387|Community 387]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `5. Re-render Optimization` - 27 edges
-2. `7. JavaScript Performance` - 27 edges
-3. `path` - 24 edges
-4. `6. Rendering Performance` - 21 edges
-5. `Frontend Design System` - 19 edges
-6. `Orchestrator - Native Multi-Agent Coordination` - 18 edges
-7. `🧠 DEEP DESIGN THINKING (MANDATORY - BEFORE ANY DESIGN)` - 17 edges
-8. `3. Server-Side Performance` - 17 edges
-9. `Intelligent Agent Routing` - 16 edges
-10. `🧩 Skills (45)` - 15 edges
+1. `5. Re-render Optimization` - 26 edges
+2. `7. JavaScript Performance` - 26 edges
+3. `path` - 23 edges
+4. `6. Rendering Performance` - 20 edges
+5. `Frontend Design System` - 18 edges
+6. `🧠 DEEP DESIGN THINKING (MANDATORY - BEFORE ANY DESIGN)` - 17 edges
+7. `Orchestrator - Native Multi-Agent Coordination` - 17 edges
+8. `3. Server-Side Performance` - 16 edges
+9. `🧩 Skills (45)` - 15 edges
+10. `Intelligent Agent Routing` - 15 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Check if this file is likely a public-facing page.` --rationale_for--> `is_page_file()`  [EXTRACTED]
-  .agent/skills/seo-fundamentals/scripts/seo_checker.py → /home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py
-- `Find page files to check.` --rationale_for--> `find_pages()`  [EXTRACTED]
-  .agent/skills/seo-fundamentals/scripts/seo_checker.py → /home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py
-- `Check a single page for SEO issues.` --rationale_for--> `check_page()`  [EXTRACTED]
-  .agent/skills/seo-fundamentals/scripts/seo_checker.py → /home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py
 - `_generate_intelligent_overrides()` --calls--> `search()`  [INFERRED]
-  /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py
+  .agent/.shared/ui-ux-pro-max/scripts/design_system.py → .agent/.shared/ui-ux-pro-max/scripts/core.py
 - `persist_design_system()` --calls--> `path`  [INFERRED]
-  /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/extract_assets.js
+  .agent/.shared/ui-ux-pro-max/scripts/design_system.py → extract_assets.js
+- `get_project_root()` --calls--> `path`  [INFERRED]
+  .agent/scripts/auto_preview.py → extract_assets.js
+- `main()` --calls--> `path`  [INFERRED]
+  .agent/scripts/checklist.py → extract_assets.js
+- `get_project_root()` --calls--> `path`  [INFERRED]
+  .agent/scripts/session_manager.py → extract_assets.js
 
-## Communities (388 total, 10 thin omitted)
+## Communities (365 total, 8 thin omitted)
 
 ### Community 0 - "Design System Generation"
 Cohesion: 0.06
 Nodes (40): BM25, detect_domain(), _load_csv(), BM25 ranking algorithm for text search, Lowercase, split, remove punctuation, filter short words, Build BM25 index from documents, Score all documents against query, Load CSV and return list of dicts (+32 more)
 
 ### Community 1 - "Asset Extraction"
-Cohesion: 0.18
-Nodes (19): altMatch, buffer, cssContent, cssPath, cssSizeAfter, cssSizeBefore, fs, htmlContent (+11 more)
+Cohesion: 0.10
+Nodes (18): altMatch, buffer, cssContent, cssPath, cssSizeAfter, cssSizeBefore, fs, htmlContent (+10 more)
 
 ### Community 2 - "Core Search/BM25"
-Cohesion: 0.15
-Nodes (13): 1. Blast Radius Analysis (Primary Use), 2. Risk-Scored Change Analysis, 3. Dead Code Detection, 4. Refactoring Preview, 5. Architecture Visualization, 6. Wiki Generation, code:bash (code-review-graph detect-changes), code:bash (# Surfaces functions/classes that are candidates for removal) (+5 more)
+Cohesion: 0.04
+Nodes (48): 1. Blast Radius Analysis (Primary Use), 2. Risk-Scored Change Analysis, 3. Dead Code Detection, 4. Refactoring Preview, 5. Architecture Visualization, 6. Wiki Generation, Alternatives Comparison, 🛑 Auto-Bootstrap Protocol (MANDATORY TOOL USE For AI Agents) (+40 more)
 
 ### Community 3 - "Security and Coverage Scans"
-Cohesion: 0.22
+Cohesion: 0.19
 Nodes (12): path, main(), Validate no hardcoded secrets (OWASP A04).     Checks: API keys, tokens, passwor, Validate dangerous code patterns (OWASP A05).     Checks: Injection risks, XSS,, Validate security configuration (OWASP A02).     Checks: Security headers, CORS,, Execute security validation scans., Validate supply chain security (OWASP A03).     Checks: npm audit, lock file pre, run_full_scan() (+4 more)
 
 ### Community 4 - "React Performance Checker"
-Cohesion: 0.16
+Cohesion: 0.17
 Nodes (9): main(), PerformanceChecker, Check for data fetching in useEffect (Section 4), Check for missing React.memo, useMemo, useCallback (Section 5), Check for unoptimized images (Section 6), Generate final report, Check for sequential await patterns (Section 1), Check for barrel imports (Section 2) (+1 more)
 
 ### Community 5 - "Checklist Runner"
-Cohesion: 0.33
+Cohesion: 0.27
 Nodes (13): check_script_exists(), Colors, main(), print_error(), print_header(), print_step(), print_success(), print_summary() (+5 more)
 
 ### Community 6 - "Verify All Script"
-Cohesion: 0.40
+Cohesion: 0.33
 Nodes (11): Colors, main(), print_error(), print_final_report(), print_header(), print_step(), print_success(), print_warning() (+3 more)
 
 ### Community 7 - "Convert Rules"
-Cohesion: 0.29
+Cohesion: 0.25
 Nodes (10): generate_section_file(), group_rules_by_section(), main(), parse_frontmatter(), parse_rule_file(), Group all rules by their section prefix, Generate a merged section file, Main conversion function (+2 more)
 
 ### Community 8 - "i18n Checker"
-Cohesion: 0.33
+Cohesion: 0.29
 Nodes (9): check_hardcoded_strings(), check_locale_completeness(), find_locale_files(), flatten_keys(), main(), Flatten nested dict keys., Check for hardcoded strings in code files., Find translation/locale files. (+1 more)
 
 ### Community 9 - "MCP Config"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): args, command, mcpServers, context7, shadcn, args, command
 
 ### Community 10 - "API Validator"
-Cohesion: 0.39
+Cohesion: 0.36
 Nodes (7): check_api_code(), check_openapi_spec(), find_api_files(), main(), Find API-related files., Check OpenAPI/Swagger specification., Check API code for common issues.
 
 ### Community 11 - "Auto Preview Server"
-Cohesion: 0.61
+Cohesion: 0.54
 Nodes (7): get_project_root(), get_start_command(), is_running(), main(), start_server(), status_server(), stop_server()
 
 ### Community 12 - "GEO Checker"
-Cohesion: 0.39
+Cohesion: 0.36
 Nodes (7): check_page(), find_web_pages(), is_page_file(), main(), Check a single web page for GEO elements., Check if this file is likely a public-facing page., Find public-facing web pages only.
 
 ### Community 13 - "SEO Checker"
-Cohesion: 0.26
+Cohesion: 0.24
 Nodes (10): check_page(), find_pages(), is_page_file(), main(), Check if this file is likely a public-facing page., Check if this file is likely a public-facing page., Find page files to check., Find page files to check. (+2 more)
 
 ### Community 14 - "Session Manager"
-Cohesion: 0.64
+Cohesion: 0.57
 Nodes (6): analyze_package_json(), count_files(), detect_features(), get_project_root(), main(), print_status()
 
 ### Community 17 - "Database Schema Validator"
-Cohesion: 0.48
+Cohesion: 0.47
 Nodes (5): find_schema_files(), main(), Find database schema files., Validate Prisma schema file., validate_prisma_schema()
 
 ### Community 18 - "Accessibility Checker"
-Cohesion: 0.48
+Cohesion: 0.47
 Nodes (5): check_accessibility(), find_html_files(), main(), Find all HTML/JSX/TSX files., Check a single file for accessibility issues.
 
 ### Community 19 - "Lint Runner"
-Cohesion: 0.48
+Cohesion: 0.47
 Nodes (5): detect_project_type(), main(), Detect project type and available linters., Run a single linter and return results., run_linter()
 
 ### Community 20 - "Test Runner"
-Cohesion: 0.48
+Cohesion: 0.47
 Nodes (5): detect_test_framework(), main(), Detect test framework and commands., Run tests and return results., run_tests()
 
 ### Community 21 - "Lighthouse Audit"
-Cohesion: 0.47
+Cohesion: 0.50
 Nodes (4): get_summary(), Run Lighthouse audit on URL., Generate summary based on scores., run_lighthouse()
 
 ### Community 22 - "Playwright Runner"
@@ -513,8 +492,8 @@ Cohesion: 0.40
 Nodes (4): Run basic accessibility check., Run basic browser test on URL., run_accessibility_check(), run_basic_test()
 
 ### Community 25 - "Community 25"
-Cohesion: 0.25
-Nodes (6): 3. Navigation Pattern Selection, 9. Anti-Pattern Decisions, code:block6 (HOW MANY TOP-LEVEL DESTINATIONS?), ❌ Decision Anti-Patterns, Mobile Decision Trees, Navigation by App Type
+Cohesion: 0.04
+Nodes (48): 10. Quick Reference, 1. Framework Selection, 2. State Management Selection, 3. Navigation Pattern Selection, 4. Storage Strategy Selection, 5. Offline Strategy Selection, 6. Authentication Pattern Selection, 7. Project Type Templates (+40 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.04
@@ -525,7 +504,7 @@ Cohesion: 0.04
 Nodes (44): 1. Testing Tool Selection, 2. Testing Pyramid for Mobile, 3. What to Test at Each Level, 4. Platform-Specific Testing, 5. Offline & Network Testing, 6. Performance Testing, 7. Accessibility Testing, 8. CI/CD Integration (+36 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.04
+Cohesion: 0.05
 Nodes (43): Accessibility, Available Domains, Available Stacks, code:bash (python3 --version || python --version), code:bash (python3 .agent/.shared/ui-ux-pro-max/scripts/search.py "<key), code:bash (python3 .agent/.shared/ui-ux-pro-max/scripts/search.py "beau), code:bash (# Get UX guidelines for animation and accessibility), code:bash (python3 .agent/.shared/ui-ux-pro-max/scripts/search.py "layo) (+35 more)
 
 ### Community 29 - "Community 29"
@@ -557,15 +536,15 @@ Cohesion: 0.05
 Nodes (37): 10. Anti-Patterns, 11. Reporting Principles, 1. Security Expert Mindset, 2025 Key Changes, 2. OWASP Top 10:2025, 3. Supply Chain Security (A03), 4. Attack Surface Mapping, 5. Risk Prioritization (+29 more)
 
 ### Community 36 - "Community 36"
-Cohesion: 0.05
+Cohesion: 0.06
 Nodes (35): AG Kit Architecture, 🤖 Agents (20), Architecture & Planning, Backend & API, Cloud & Infrastructure, code:plaintext (.agent/), code:plaintext (User Request → Check `when_to_use` frontmatter → Match? → Lo), code:plaintext (skill-name/) (+27 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.05
+Cohesion: 0.06
 Nodes (34): 3. Server-Side Performance, Authenticate Server Actions Like API Routes, Avoid Duplicate Serialization in RSC Props, code:typescript ('use server'), code:tsx (async function Page() {), code:tsx (export default async function Page() {), code:tsx (async function Header() {), code:tsx (async function Header() {) (+26 more)
 
 ### Community 38 - "Community 38"
-Cohesion: 0.05
+Cohesion: 0.06
 Nodes (35): 10. Component Extraction, 11. Anti-Patterns, 12. Performance Principles, 1. Tailwind v4 Architecture, 2. CSS-Based Configuration, 3. Container Queries (v4 Native), 4. Responsive Design, 5. Dark Mode (+27 more)
 
 ### Community 39 - "Community 39"
@@ -577,11 +556,11 @@ Cohesion: 0.06
 Nodes (30): 1. `after()` for Non-Blocking Logic, 1. Eliminating Waterfalls, 2. `connection()` for Dynamic Intent, code:typescript (async function handleRequest(userId: string, skipProcessing:), code:typescript (const [user, posts, comments] = await Promise.all([), code:tsx (async function Page() {), code:tsx (function Page() {), code:tsx (function Page() {) (+22 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.06
+Cohesion: 0.07
 Nodes (29): API Development, API Style Selection, Architecture, Backend Development Architect, Common Anti-Patterns You Avoid, 🛑 CRITICAL: CLARIFY BEFORE CODING (MANDATORY), Database & Data, Database Selection (2025) (+21 more)
 
 ### Community 42 - "Community 42"
-Cohesion: 0.06
+Cohesion: 0.07
 Nodes (29): 10. Best Practices, 1. Platform Selection, 2. Pre-Deployment Principles, 3. Deployment Workflow Principles, 4. Post-Deployment Verification, 5. Rollback Principles, 6. Zero-Downtime Deployment, 7. Emergency Procedures (+21 more)
 
 ### Community 43 - "Community 43"
@@ -629,15 +608,15 @@ Cohesion: 0.07
 Nodes (26): 1. Deep Audit Approach, 2. Testing Pyramid for Web, 3. E2E Test Principles, 4. Playwright Principles, 5. Visual Testing, 6. API Testing Principles, 7. Test Organization, 8. CI Integration (+18 more)
 
 ### Community 54 - "Community 54"
-Cohesion: 0.07
+Cohesion: 0.08
 Nodes (25): 1. Audio Category System, 2. Sound Design Decisions, 3. Music Integration, 4. Adaptive Audio Decisions, 5. 3D Audio Decisions, 6. Platform Considerations, 7. Mix Hierarchy, 8. Anti-Patterns (+17 more)
 
 ### Community 55 - "Community 55"
-Cohesion: 0.07
+Cohesion: 0.08
 Nodes (25): AG Kit Built-in Agents, Available Agents, Best Practices, code:block1 (Use the security-auditor agent to review authentication), code:block2 (First, use the explorer-agent to discover project structure.), code:block3 (Use the frontend-specialist to analyze React components.), code:block4 (Resume agent [agentId] and continue with additional requirem), code:block5 (Agents: explorer-agent → [domain-agents] → synthesis) (+17 more)
 
 ### Community 56 - "Community 56"
-Cohesion: 0.07
+Cohesion: 0.08
 Nodes (25): Agent Selection Matrix, Available Agents (17 total), ⏸️ CHECKPOINT: User Approval, code:block1 (After PLAN.md is complete, ASK:), code:block2 (□ Security     → security-auditor, penetration-tester), code:block3 (Use the project-planner agent to create PLAN.md), code:block4 (Invoke agents in PARALLEL:), code:block5 (Use the project-planner agent to create PLAN.md:) (+17 more)
 
 ### Community 57 - "Community 57"
@@ -673,11 +652,11 @@ Cohesion: 0.08
 Nodes (23): 10. Anti-Patterns, 1. Testing Pyramid, 2. AAA Pattern, 3. Test Type Selection, 4. Unit Test Principles, 5. Integration Test Principles, 6. Mocking Principles, 7. Test Organization (+15 more)
 
 ### Community 65 - "Community 65"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (22): Always, Anti-Patterns, Attack Surface Categories, By OWASP Top 10 (2025), By Phase, By Vector, code:block1 (1. PRE-ENGAGEMENT), Core Philosophy (+14 more)
 
 ### Community 66 - "Community 66"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (22): 2. Bundle Size Optimization, Avoid Barrel File Imports, code:tsx (import { Check, X, Menu } from 'lucide-react'), code:tsx (function FlagsProvider({ children, flags }: Props) {), code:tsx (import Check from 'lucide-react/dist/esm/icons/check'), code:js (// next.config.js - use optimizePackageImports), code:tsx (function AnimationPlayer({ enabled, setEnabled }: { enabled:), code:tsx (import { Analytics } from '@vercel/analytics/react') (+14 more)
 
 ### Community 67 - "Community 67"
@@ -697,31 +676,31 @@ Cohesion: 0.09
 Nodes (21): 4. Client-Side Data Fetching, code:tsx (function useKeyboardShortcut(key: string, callback: () => vo), code:typescript (const VERSION = 'v2'), code:typescript (// User object has 20+ fields, only store what UI needs), code:tsx (import useSWRSubscription from 'swr/subscription'), code:typescript (useEffect(() => {), code:typescript (useEffect(() => {), code:tsx (function UserList() {) (+13 more)
 
 ### Community 71 - "Community 71"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. Rendering Pipeline, 2. Shader Principles, 3. 3D Physics, 3D Game Development, 4. Camera Systems, 5. Lighting, 6. Level of Detail (LOD), 7. Anti-Patterns (+12 more)
 
 ### Community 72 - "Community 72"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): Anti-Patterns, Before Any Review, Code Patterns (Red Flags), code:block1 (1. UNDERSTAND), code:block2 (Is it actively exploited (EPSS >0.5)?), code:bash (python scripts/security_scan.py <project_path> --output summ), Configuration (A02), Core Philosophy (+12 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. Engine Selection, 2. Platform Features, 3. Controller Support, 4. Performance Optimization, 5. Engine-Specific Principles, 6. Anti-Patterns, code:block1 (What are you building?), code:block2 (Map ACTIONS, not buttons:) (+12 more)
 
 ### Community 74 - "Community 74"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. The Game Loop, 2. Pattern Selection Matrix, 3. Input Abstraction, 4. Performance Budget (60 FPS = 16.67ms), 5. AI Selection by Complexity, 6. Collision Strategy, Anti-Patterns (Universal), code:block1 (INPUT  → Read player actions) (+12 more)
 
 ### Community 75 - "Community 75"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. Core Concepts, 2. When to Use i18n, 3. Implementation Patterns, 4. File Structure, 5. Best Practices, 6. Common Issues, 7. RTL Support, 8. Checklist (+12 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. Process Management Principles, 2. Monitoring Principles, 3. Log Management Principles, 4. Scaling Decisions, 5. Health Check Principles, 6. Security Principles, 7. Troubleshooting Priority, 8. Anti-Patterns (+12 more)
 
 ### Community 77 - "Community 77"
-Cohesion: 0.09
+Cohesion: 0.10
 Nodes (20): 1. Unnecessary Abstractions, 2. Dead Code, 3. Deep Nesting, 4. Over-Parameterized Functions, 5. Premature Optimization, code:block1 (Complexity is a cost. Every abstraction, every indirection, ), code:javascript (// ❌ Before: 4 levels deep), code:typescript (// ❌ Before: 8 parameters) (+12 more)
 
 ### Community 78 - "Community 78"
@@ -733,7 +712,7 @@ Cohesion: 0.10
 Nodes (19): 1. Core Web Vitals, 2. Profiling Workflow, 3. Bundle Analysis, 4. Runtime Profiling, 5. Common Bottlenecks, 6. Quick Win Priorities, 7. Anti-Patterns, By Symptom (+11 more)
 
 ### Community 80 - "Community 80"
-Cohesion: 0.13
+Cohesion: 0.10
 Nodes (19): Async Programming & Concurrency, Behavioral Traits, Capabilities, Do not use this skill when, Error Handling & Safety, Example Interactions, Instructions, Knowledge Base (+11 more)
 
 ### Community 81 - "Community 81"
@@ -741,23 +720,23 @@ Cohesion: 0.10
 Nodes (19): 10. AI-Augmented TDD, 1. The TDD Cycle, 2. The Three Laws of TDD, 3. RED Phase Principles, 4. GREEN Phase Principles, 5. REFACTOR Phase Principles, 6. AAA Pattern, 7. When to Use TDD (+11 more)
 
 ### Community 82 - "Community 82"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (18): Anti-Patterns, code:block1 (What type of game?), code:block2 (Every game has this cycle:), Core Game Development Principles, Core Philosophy, Design Pattern Selection, Engine Selection Principles, Game Developer Agent (+10 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (18): AAA Pattern, Anti-Patterns, code:block1 (/\          E2E (Few)), code:block2 (🔴 RED    → Write failing test), Core Philosophy, Coverage Strategy, Deep Audit Approach, Discovery (+10 more)
 
 ### Community 84 - "Community 84"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (18): Best Practices, code:block1 (❌ Before (raw grep output — 200 lines, ~4,000 tokens):), code:block2 (❌ Before (full research transcript — ~3,000 tokens):), code:markdown (## Session Checkpoint (Turn 35)), code:block4 (What work is DONE and won't be revisited?), code:block5 (From the completed phase, preserve:), code:block6 (Use the Phase Summary format above.), Compression Levels (+10 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (18): 1. Architecture Selection, 2. Synchronization Principles, 3. Network Optimization, 4. Security Principles, 5. Matchmaking, 6. Anti-Patterns, Anti-Cheat, Bandwidth Reduction (+10 more)
 
 ### Community 86 - "Community 86"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (18): Architecture, code:block1 (.agent/memory/), code:markdown (# Memory Index), code:markdown (---), code:block4 (1. Check: Does `.agent/memory/MEMORY.md` exist?), MEMORY.md Index Format, Memory System — Persistent Cross-Session Memory, Memory Taxonomy (+10 more)
 
 ### Community 87 - "Community 87"
@@ -793,23 +772,23 @@ Cohesion: 0.11
 Nodes (17): Behavior, code:block1 (/test                - Run all tests), code:markdown (## 🧪 Tests: [Target]), code:block3 (🧪 Running tests...), code:block4 (/test src/services/auth.service.ts), code:typescript (describe('AuthService', () => {), Examples, For Test Execution (+9 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.11
+Cohesion: 0.12
 Nodes (16): 1. Product Requirement Document (PRD) Schema, 2. Feature Kickoff, Acceptance Criteria (Gherkin-style preferred), Anti-Patterns (What NOT to do), code:markdown (# [Feature Name] PRD), Core Philosophy, 🤝 Interaction with Other Agents, 📝 Output Formats (+8 more)
 
 ### Community 96 - "Community 96"
-Cohesion: 0.11
+Cohesion: 0.12
 Nodes (16): AI & LLM Review Patterns (2025), Anti-Patterns to Flag, Code Quality, Code Review Checklist, code:markdown (// ❌ Vague prompt in code), code:typescript (// ❌ Magic numbers), code:block3 (// Blocking issues use 🔴), Correctness (+8 more)
 
 ### Community 97 - "Community 97"
-Cohesion: 0.11
+Cohesion: 0.12
 Nodes (16): 1. What is GEO?, 2. AI Engine Landscape, 3. RAG Retrieval Factors, 4. Content That Gets Cited, 5. GEO Content Checklist, 6. Entity Building, 7. AI Crawler Access, 8. Measurement (+8 more)
 
 ### Community 98 - "Community 98"
-Cohesion: 0.11
+Cohesion: 0.12
 Nodes (16): 1. Small, Focused Tasks, 2. Clear Verification, 3. Logical Ordering, 4. Dynamic Naming in Project Root, code:block1 (# [Task Name]), Notes, Overview, Plan Structure (Flexible, Not Fixed!) (+8 more)
 
 ### Community 99 - "Community 99"
-Cohesion: 0.11
+Cohesion: 0.12
 Nodes (16): 4-Phase Debugging Process, Anti-Patterns, code:markdown (## Reproduction Steps), code:markdown (## Isolation Questions), code:markdown (## Root Cause Analysis), code:markdown (## Fix Verification), code:markdown (## Before Starting), code:bash (# Recent changes) (+8 more)
 
 ### Community 100 - "Community 100"
@@ -838,38 +817,38 @@ Nodes (15): 8. Advanced Patterns, code:tsx (function Comp() {), code:tsx (let di
 
 ### Community 106 - "Community 106"
 Cohesion: 0.12
-Nodes (16): 🚫 ABSOLUTE RULE: NO STANDARD/CLICHÉ DESIGNS, ⚠️ ASK BEFORE ASSUMING (Context-Aware), code:block1 (🔍 CONTEXT ANALYSIS:), code:block3 (❌ WRONG (Generic):), 🧠 DEEP DESIGN THINKING (MANDATORY - BEFORE ANY DESIGN), 📐 LAYOUT DIVERSIFICATION MANDATE (REQUIRED), ⛔ NO DEFAULT UI LIBRARIES, Phase 2: Design Decision (MANDATORY) (+8 more)
+Nodes (16): 🚫 ABSOLUTE RULE: NO STANDARD/CLICHÉ DESIGNS, ⚠️ ASK BEFORE ASSUMING (Context-Aware), code:markdown (🎨 DESIGN COMMITMENT: [RADICAL STYLE NAME]), code:block4 (🎨 DESIGN COMMITMENT (ANTI-SAFE HARBOR):), 🧠 DEEP DESIGN THINKING (MANDATORY - BEFORE ANY DESIGN), 🎨 DESIGN COMMITMENT (REQUIRED OUTPUT), 📐 LAYOUT DIVERSIFICATION MANDATE (REQUIRED), ⛔ NO DEFAULT UI LIBRARIES (+8 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.12
 Nodes (16): 2. React Native Performance, Animation Performance, code:javascript (// ❌ NEVER DO THIS - AI's favorite mistake), code:javascript (// ✅ CORRECT: All optimizations applied), code:javascript (// Consider FlashList for better performance), code:javascript (// ❌ JS-driven animation (blocks JS thread)), code:javascript (// For animations native driver can't handle, use Reanimated), code:javascript (// ❌ Memory leak: uncleared interval) (+8 more)
 
 ### Community 108 - "Community 108"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 1. Static Analysis, 2. The "Strangler Fig" Pattern, 📝 Archaeologist's Report Format, Code Archaeologist, code:markdown (# 🏺 Artifact Analysis: [Filename]), Core Philosophy, 🕵️ Excavation Toolkit, 🤝 Interaction with Other Agents (+6 more)
 
 ### Community 109 - "Community 109"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 1. The Smoke Suite (P0), 2. The Regression Suite (P1), 3. Visual Regression, 🤖 Automating the "Unhappy Path", Browser Automation, CI/CD, 📜 Coding Standards for Tests, Core Philosophy (+6 more)
 
 ### Community 110 - "Community 110"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): code:block1 (project-name/), code:bash (npx create-next-app@latest {{name}} --typescript --eslint), code:bash (npm install next-auth@beta stripe resend @prisma/client), code:css (@import "tailwindcss";), code:bash (npx prisma db push), code:bash (npm run stripe:listen), code:bash (npm run dev), Database Schema (+6 more)
 
 ### Community 111 - "Community 111"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 1. Platform Considerations, 2. Touch Input Principles, 3. Performance Targets, 4. App Store Requirements, 5. Monetization Models, 6. Anti-Patterns, Android (Google Play), Battery Optimization (+6 more)
 
 ### Community 112 - "Community 112"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 5. Re-render Optimization, Overview, Rule 5.10: Use Lazy State Initialization, Rule 5.11: Use Transitions for Non-Urgent Updates, Rule 5.12: Use useRef for Transient Values, Rule 5.1: Calculate Derived State During Rendering, Rule 5.2: Defer State Reads to Usage Point, Rule 5.3: Do not wrap a simple expression with a primitive result type in useMemo (+6 more)
 
 ### Community 113 - "Community 113"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 7. JavaScript Performance, Overview, Rule 7.10: Use Loop for Min/Max Instead of Sort, Rule 7.11: Use Set/Map for O(1) Lookups, Rule 7.12: Use toSorted() Instead of sort() for Immutability, Rule 7.1: Avoid Layout Thrashing, Rule 7.2: Build Index Maps for Repeated Lookups, Rule 7.3: Cache Property Access in Loops (+6 more)
 
 ### Community 114 - "Community 114"
-Cohesion: 0.12
+Cohesion: 0.13
 Nodes (14): 1. E-E-A-T Framework, 2. Core Web Vitals, 3. Technical SEO Principles, 4. Content SEO Principles, 5. Schema Markup Types, 6. AI Content Guidelines, 7. Ranking Factors (Prioritized), 8. Measurement (+6 more)
 
 ### Community 115 - "Community 115"
@@ -877,67 +856,67 @@ Cohesion: 0.13
 Nodes (15): 2. Visual Perception (Gestalt Principles), code:block14 (❌ Bad: Large, equal gaps between every line of text in a for), code:block15 (❌ Bad: Some links are blue, some are green, and some are jus), code:block16 (❌ Bad: A list of news articles where the text and image of d), code:block17 (❌ Bad: A 3-step setup where the numbers "1", "2", and "3" ar), code:block18 (❌ Bad: A hyper-realistic 3D illustration of a file folder fo), code:block19 (❌ Bad: A popup window that has no shadow or border, blending), code:block20 (❌ Bad: A homepage with 5 buttons of the same size and color.) (+7 more)
 
 ### Community 116 - "Community 116"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (13): Advanced Exploration Modes, 🔍 Audit Mode, Code Patterns, Discovery Flow, Explorer Agent - Advanced Discovery & Research, 🧪 Feasibility Mode, Interactivity Rules:, 🗺️ Mapping Mode (+5 more)
 
 ### Community 117 - "Community 117"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (13): Best Practices (2026 Standards), code:block1 (project-name/), code:bash (npx create-next-app@latest my-app --typescript --tailwind --), code:bash (npm install prisma @prisma/client zod), code:css (@import "tailwindcss";), code:bash (npx prisma init), code:bash (npm run dev --turbo), Directory Structure (+5 more)
 
 ### Community 118 - "Community 118"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (13): Batch Operation Protocol, Batch Operations — Multi-File Changes, code:block1 (What:     [exact text/pattern to find]), code:bash (# Find all affected files FIRST), code:bash (# On Linux/macOS), code:bash (# Confirm no missed instances), Common Batch Patterns, Safety Rules (+5 more)
 
 ### Community 119 - "Community 119"
-Cohesion: 0.13
+Cohesion: 0.14
 Nodes (13): code:block1 (/preview           - Show current status), code:block2 (/preview start), code:block3 (/preview), code:block4 (/preview start), code:bash (python .agent/scripts/auto_preview.py start [port]), Commands, Port Conflict, /preview - Preview Management (+5 more)
 
 ### Community 120 - "Community 120"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (12): API Documentation Principles, Code Comment Principles, code:block1 (What needs documenting?), Core Philosophy, Decision Tree, Documentation Principles, Documentation Type Selection, Documentation Writer (+4 more)
 
 ### Community 121 - "Community 121"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (12): Best Practices (Updated), code:block1 (project-name/), code:bash (npx create-expo-app@latest my-app --template default), code:bash (npx expo install expo-router react-native-safe-area-context ), code:bash (npm install nativewind tailwindcss react-native-reanimated), code:bash (npx expo start -c), Directory Structure, Key Packages & Purpose (+4 more)
 
 ### Community 122 - "Community 122"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (12): code:block1 (What triggers this workflow? (user says X, file type Y, doma), code:markdown (---), code:block3 (.agent/skills/[skill-name]/SKILL.md), Naming Conventions, Quality Checklist, Skill Creation Protocol, Skillify — Auto-Create Skills from Workflows, Step 1: Identify the Pattern (+4 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.15
+Cohesion: 0.17
 Nodes (11): Content SEO Checklist, Content That Gets Cited, Core Philosophy, Core Web Vitals Targets, E-E-A-T Framework, GEO Checklist, SEO Specialist, SEO vs GEO (+3 more)
 
 ### Community 124 - "Community 124"
-Cohesion: 0.15
+Cohesion: 0.17
 Nodes (11): API Security Testing, Authentication Testing, Authorization Testing, BOLA/IDOR Testing, GraphQL Security, Input Validation Testing, JWT Testing, OWASP API Security Top 10 (+3 more)
 
 ### Community 125 - "Community 125"
-Cohesion: 0.15
+Cohesion: 0.17
 Nodes (11): 10. Decision Process Summary, 1. Constraint Analysis (ALWAYS FIRST), Audience → Design Approach, code:block10 (For EVERY design task:), code:block11 (1. DESIGN   → Read frontend-design principles ← YOU ARE HERE), Frontend Design System, Post-Design Workflow, Reference Files (+3 more)
 
 ### Community 126 - "Community 126"
-Cohesion: 0.29
-Nodes (5): 7. Emotion Color Mapping, 8. Psychology Checklist, Before Launch, code:block52 (┌────────────────────────────────────────────────────┐), UX Psychology Reference
+Cohesion: 0.17
+Nodes (11): 3. Trust Building System, 7. Emotion Color Mapping, 8. Psychology Checklist, Before Launch, code:block37 (┌────────────────────────────────────────────────────┐), code:css (/* Trust badge styling */), code:block52 (┌────────────────────────────────────────────────────┐), Trust-Building CSS Patterns (+3 more)
 
 ### Community 127 - "Community 127"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (10): Common Anti-Patterns You Avoid, Design Decision Process (For UI/UX Tasks), Phase 1: Constraint Analysis (ALWAYS FIRST), Quality Control Loop (MANDATORY), Review Checklist, Senior Frontend Architect, 🎭 Spirit Over Checklist (NO SELF-DECEPTION), When You Should Be Used (+2 more)
 
 ### Community 128 - "Community 128"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (10): Agent States, Available Agents, Best Practices, 🔴 Checkpoint Summary (CRITICAL), Integration with Built-in Agents, Orchestrator - Native Multi-Agent Coordination, 🛑 PHASE 0: QUICK CONTEXT CHECK, 📑 Quick Navigation (+2 more)
 
 ### Community 129 - "Community 129"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (10): Best Practices, CLI Design Principles, CLI Tool Template, code:block1 (project-name/), code:bash (npm login), Directory Structure, Key Components, Publishing (+2 more)
 
 ### Community 130 - "Community 130"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (10): 4. Response Format, code:markdown (💡 **Tip**: I am configured with automatic specialist agent s), code:javascript (// Pseudo-code for decision tree), code:markdown (🤖 **Applying knowledge of `@security-auditor` + `@backend-sp), Core Principle, Intelligent Agent Routing, Optional: First-Time Explanation, Summary (+2 more)
 
 ### Community 131 - "Community 131"
-Cohesion: 0.17
+Cohesion: 0.18
 Nodes (10): After Planning, code:block1 (CONTEXT:), code:block2 ([OK] Plan created: docs/PLAN-{slug}.md), code:block3 (/plan e-commerce site with cart), 🔴 CRITICAL RULES, Expected Output, Naming Examples, /plan - Project Planning Mode (+2 more)
 
 ### Community 132 - "Community 132"
@@ -949,23 +928,23 @@ Cohesion: 0.18
 Nodes (11): 7. Android-Specific Patterns, Bottom Sheets, code:block18 (Position: Bottom, above navigation), code:block19 (Types:), code:block20 (Types:), code:block21 (Android uses SwipeRefreshLayout pattern:), code:block22 (Every touchable element needs ripple:), Dialogs (+3 more)
 
 ### Community 134 - "Community 134"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (9): Best Practices, Chrome Extension Template, code:block1 (project-name/), Development Tips, Directory Structure, Manifest V3 Concepts, Permissions, Setup Steps (+1 more)
 
 ### Community 135 - "Community 135"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (9): Best Practices, Build Targets, code:block1 (project-name/), Directory Structure, Electron Desktop App Template, Key Concepts, Process Model, Setup Steps (+1 more)
 
 ### Community 136 - "Community 136"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (9): Best Practices, code:block1 (project-name/), Common Commands, Directory Structure, Key Concepts, Setup Steps, Tech Stack, Turbo Pipeline (+1 more)
 
 ### Community 137 - "Community 137"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (9): code:block1 (When to normalize (separate tables):), code:block2 (For every table:), code:block3 (├── CASCADE → Delete children with parent), Foreign Key ON DELETE, Normalization Decision, Primary Key Selection, Relationship Types, Schema Design Principles (+1 more)
 
 ### Community 138 - "Community 138"
-Cohesion: 0.18
+Cohesion: 0.20
 Nodes (9): Behavior, code:markdown (## 🔍 Debug: [Issue]), code:block2, code:block3 (/debug login not working), /debug - Systematic Problem Investigation, Examples, Key Principles, Output Format (+1 more)
 
 ### Community 139 - "Community 139"
@@ -985,51 +964,51 @@ Cohesion: 0.20
 Nodes (10): 5. Android Navigation Patterns, Back Navigation, Bottom Navigation, code:block10 (Types:), code:block11 (┌───────┬─────────────────────────────┐), code:block12 (Android provides system back:), code:block9 (┌─────────────────────────────────────┐), Navigation Components (+2 more)
 
 ### Community 143 - "Community 143"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): code:block1 (Request: "add payment system"), code:block2 (1. Analyze existing project), code:block3 (1. Detect error), Error Handling, Feature Analysis, Feature Building, Iterative Enhancement Process, Recovery Strategy
 
 ### Community 144 - "Community 144"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): Astro Static Site Template, Best Practices, code:block1 (project-name/), Deployment, Directory Structure, Key Concepts, Setup Steps, Tech Stack
 
 ### Community 145 - "Community 145"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): API Response Format, Best Practices, code:block1 (project-name/), Directory Structure, Express.js API Template, Middleware Stack, Setup Steps, Tech Stack
 
 ### Community 146 - "Community 146"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): Architecture Layers, Best Practices, code:block1 (project_name/), Directory Structure, Flutter App Template, Key Packages, Setup Steps, Tech Stack
 
 ### Community 147 - "Community 147"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): API Structure, Best Practices, code:block1 (project-name/), Directory Structure, FastAPI API Template, Key Concepts, Setup Steps, Tech Stack
 
 ### Community 148 - "Community 148"
-Cohesion: 0.33
-Nodes (4): 9. Typography Checklist, Before Any Text Design, Before Release, Mobile Typography Reference
+Cohesion: 0.22
+Nodes (8): 1. Mobile Typography Fundamentals, 9. Typography Checklist, Before Any Text Design, Before Release, code:block1 (DESKTOP:                        MOBILE:), Mobile Type Rules, Mobile Typography Reference, Why Mobile Type is Different
 
 ### Community 149 - "Community 149"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): 10. Android Checklist, 1. Material Design 3 Philosophy, Android Platform Guidelines, Before Android Release, Before Every Android Screen, code:block1 (MATERIAL AS METAPHOR:), Core Material Principles, Material Design Values
 
 ### Community 150 - "Community 150"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): 10. iOS Checklist, 1. Human Interface Guidelines Philosophy, Before Every iOS Screen, Before iOS Release, code:block1 (CLARITY:), Core Apple Design Principles, iOS Design Values, iOS Platform Guidelines
 
 ### Community 151 - "Community 151"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): code:block1 (https://raw.githubusercontent.com/vercel-labs/web-interface-), code:block2 (1. DESIGN   → Read frontend-design principles), Design Workflow, Guidelines Source, How It Works, Related Skills, Usage, Web Interface Guidelines
 
 ### Community 152 - "Community 152"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): Behavior, /brainstorm - Structured Idea Exploration, code:markdown (## 🧠 Brainstorm: [Topic]), code:block2 (/brainstorm authentication system), Examples, Key Principles, Output Format, Purpose
 
 ### Community 153 - "Community 153"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): code:block1 (CONTEXT:), code:block2 ([OK] Saved to memory), code:block3 (/remember I prefer using bun instead of npm), 🔴 CRITICAL RULES, Expected Output, /remember — Persistent Memory Management, Task, Usage Examples
 
 ### Community 154 - "Community 154"
-Cohesion: 0.20
+Cohesion: 0.22
 Nodes (8): code:block1 (CONTEXT:), code:block2 (## Verification Report), code:block3 (/verify), 🔴 CRITICAL RULES, Expected Output, Task, Usage Examples, /verify — Prove Code Works
 
 ### Community 155 - "Community 155"
@@ -1065,59 +1044,59 @@ Cohesion: 0.22
 Nodes (9): 1. Fitts' Law for Touch, Application Rules, code:block1 (DESKTOP (Mouse/Trackpad):), code:block2 (Touch acquisition time = a + b × log₂(1 + D/W)), code:block3 (┌─────────────────────────────────────┐), Fitts' Law Formula Adapted, Minimum Touch Target Sizes, The Fundamental Difference (+1 more)
 
 ### Community 163 - "Community 163"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): code:block1 (✅ Good fit:), code:block2 (Principles:), code:block3 (Protect against:), GraphQL Principles, Schema Design Principles, Security Considerations, When to Use
 
 ### Community 164 - "Community 164"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): code:block1 (Choose one:), code:block2 (Include:), Common Patterns, Error Response, Pagination Types, Response Format Principles, Selection Questions
 
 ### Community 165 - "Community 165"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): ❌ Anti-Patterns, API Patterns, 📑 Content Map, ✅ Decision Checklist, 🔗 Related Skills, Script, 🎯 Selective Reading Rule
 
 ### Community 166 - "Community 166"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): code:block1 (✅ Perfect fit:), code:block2 (Why tRPC:), code:block3 (Common setups:), Integration Patterns, Key Benefits, tRPC Principles, When to Use
 
 ### Community 167 - "Community 167"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): code:block1 (project-name/), code:json ({), Next.js Full-Stack Structure (2026+ Next.js 16 Optimized), Path Aliases (tsconfig.json), Project Scaffolding, Structure Principles, When to Use What
 
 ### Community 168 - "Community 168"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): Architecture Examples, code:yaml (Requirements:), code:yaml (Requirements:), code:yaml (Requirements:), Example 1: MVP E-commerce (Solo Developer), Example 2: SaaS Product (5-10 Developers), Example 3: Enterprise (100K+ Users)
 
 ### Community 169 - "Community 169"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): ADR Storage, ADR Template, code:markdown (## Architecture Decision Record), code:markdown (# ADR-[XXX]: [Decision Title]), code:block3 (docs/), Decision Framework, Trade-off Analysis & ADR
 
 ### Community 170 - "Community 170"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): code:block1 (For zero-downtime changes:), Migration Philosophy, Migration Principles, Neon (Serverless PostgreSQL), Safe Migration Strategy, Serverless Databases, Turso (Edge SQLite)
 
 ### Community 171 - "Community 171"
-Cohesion: 0.22
-Nodes (7): 1. Master Decision Tree, 4. Typography Decision Tree, code:block1 (┌───────────────────────────────────────────────────────────), code:block4 (WHAT'S THE CONTENT TYPE?), Decision Trees & Context Templates, ⚠️ How to Use This File, Selection Process:
+Cohesion: 0.25
+Nodes (7): 1. Master Decision Tree, 2. Audience Decision Tree, code:block1 (┌───────────────────────────────────────────────────────────), code:block2 (TARGET AUDIENCE), Decision Trees & Context Templates, ⚠️ How to Use This File, Who is your target user?
 
 ### Community 172 - "Community 172"
-Cohesion: 0.40
-Nodes (3): 10. Typography Selection Checklist, Anti-Patterns, Typography System Reference
+Cohesion: 0.25
+Nodes (7): 10. Typography Selection Checklist, 7. Letter Spacing (Tracking), Adjustment Guidelines, Anti-Patterns, code:block11 (Large text (headings): tighter tracking), Principles, Typography System Reference
 
 ### Community 173 - "Community 173"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): Error Handling, Lint and Validate Skill, Node.js / TypeScript, Procedures by Ecosystem, Python, Scripts, The Quality Loop
 
 ### Community 174 - "Community 174"
-Cohesion: 0.40
-Nodes (3): 1. Navigation Selection Decision Tree, code:block1 (WHAT TYPE OF APP?), Mobile Navigation Reference
+Cohesion: 0.25
+Nodes (7): 10. Navigation Checklist, 1. Navigation Selection Decision Tree, Before Every Screen, Before Navigation Architecture, Before Release, code:block1 (WHAT TYPE OF APP?), Mobile Navigation Reference
 
 ### Community 175 - "Community 175"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): After Coordination, code:block1 (CONTEXT:), code:block2 ([OK] Coordination complete), /coordinate — Advanced Multi-Agent Coordination, 🔴 CRITICAL RULES, Expected Output, Task
 
 ### Community 176 - "Community 176"
-Cohesion: 0.22
+Cohesion: 0.25
 Nodes (7): Caution, code:block1 ("To add admin panel:), code:block2 (/enhance add dark mode), /enhance - Update Application, Steps:, Task, Usage Examples
 
 ### Community 177 - "Community 177"
@@ -1169,43 +1148,43 @@ Cohesion: 0.25
 Nodes (8): Avoid Layout Thrashing, code:typescript (function updateElementStyles(element: HTMLElement) {), code:typescript (function layoutThrashing(element: HTMLElement) {), code:typescript (function updateElementStyles(element: HTMLElement) {), code:typescript (function avoidThrashing(element: HTMLElement) {), code:css (.highlighted-box {), code:typescript (function updateElementStyles(element: HTMLElement) {), code:tsx (// Incorrect: interleaving style changes with layout queries)
 
 ### Community 189 - "Community 189"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): code:block1 (Protect against:), code:block2 (Include in headers:), Rate Limiting Principles, Response Headers, Strategy Selection, Why Rate Limit
 
 ### Community 190 - "Community 190"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): App Builder - Application Building Orchestrator, code:block1 (User: "Make an Instagram clone with photo sharing and likes"), 🔗 Related Agents, 🎯 Selective Reading Rule, 📦 Templates (13), Usage Example
 
 ### Community 191 - "Community 191"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): API Patterns, Architecture Patterns Reference, Data Access Patterns, Distributed System Patterns, Domain Logic Patterns, Simplicity Principle
 
 ### Community 192 - "Community 192"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): code:block1 (Index these:), code:block2 (Order matters for composite indexes:), Composite Index Principles, Index Type Selection, Indexing Principles, When to Create Indexes
 
 ### Community 193 - "Community 193"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): code:block1 (What is N+1?), code:block2 (Before optimizing:), N+1 Problem, Optimization Priorities, Query Analysis Mindset, Query Optimization
 
 ### Community 194 - "Community 194"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): 10. Animation Decision Checklist, 7. Hover Effects Principles, Animation Guidelines Reference, Anti-Patterns, Matching Effect to Action, Principles
 
 ### Community 195 - "Community 195"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): 1. The Mobile Performance Mindset, code:block1 (DESKTOP:                          MOBILE:), code:block2 (Every frame must complete in:), Mobile Performance Reference, Performance Budget Concept, Why Mobile Performance is Different
 
 ### Community 196 - "Community 196"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): 10. Decision Checklist, 11. Anti-Patterns to Avoid, ✅ DO:, ❌ DON'T:, ⚠️ How to Use This Skill, Python Patterns
 
 ### Community 197 - "Community 197"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): Before Starting, code:block1 (/create blog site), /create - Create Application, Steps:, Task, Usage Examples
 
 ### Community 198 - "Community 198"
-Cohesion: 0.25
+Cohesion: 0.29
 Nodes (6): code:block1 (=== Project Status ===), Example Output, /status - Show Status, Task, Technical, What It Shows
 
 ### Community 199 - "Community 199"
@@ -1361,39 +1340,39 @@ Cohesion: 0.29
 Nodes (7): 6. FastAPI Principles, async def vs def in FastAPI, code:block11 (Use async def when:), code:block12 (Use dependencies for:), code:python (# FastAPI + Pydantic are tightly integrated:), Dependency Injection, Pydantic v2 Integration
 
 ### Community 237 - "Community 237"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): API Style Selection (2025), code:block1 (Who are the API consumers?), Comparison, Decision Tree, Selection Questions
 
 ### Community 238 - "Community 238"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): API Documentation Principles, code:block1 (Include:), code:block2 (Essentials:), Good Documentation Has, OpenAPI/Swagger Essentials
 
 ### Community 239 - "Community 239"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): code:block1 (Principles:), HTTP Method Selection, Resource Naming Rules, REST Principles, Status Code Selection
 
 ### Community 240 - "Community 240"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): code:block1 (START: What's your MAIN concern?), Main Decision Tree, Pattern Selection Guidelines, Red Flags (Anti-patterns), The 3 Questions (Before ANY Pattern)
 
 ### Community 241 - "Community 241"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): Architecture Decision Framework, Core Principle, 🔗 Related Skills, 🎯 Selective Reading Rule, Validation Checklist
 
 ### Community 242 - "Community 242"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): code:block1 (What are your requirements?), Comparison, Database Selection (2025), Decision Tree, Questions to Ask
 
 ### Community 243 - "Community 243"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): Anti-Patterns, ⚠️ Core Principle, Database Design, Decision Checklist, 🎯 Selective Reading Rule
 
 ### Community 244 - "Community 244"
-Cohesion: 0.48
+Cohesion: 0.47
 Nodes (5): check_python_coverage(), check_typescript_coverage(), main(), Check TypeScript type coverage., Check Python type hints coverage.
 
 ### Community 245 - "Community 245"
-Cohesion: 0.29
+Cohesion: 0.33
 Nodes (5): 🚫 AI MOBILE BACKEND ANTI-PATTERNS, code:block1 (Mobile clients are DIFFERENT from web clients:), 🧠 MOBILE BACKEND MINDSET, Mobile Backend Patterns, These are common AI mistakes when building mobile backends:
 
 ### Community 246 - "Community 246"
@@ -1513,8 +1492,8 @@ Cohesion: 0.33
 Nodes (6): 3. Touch vs Click Psychology, code:block7 (Tap → Immediate visual change (< 50ms)), code:block8 (Problem: Finger occludes target during tap), Expectation Differences, The "Fat Finger" Problem, Touch Feedback Requirements
 
 ### Community 275 - "Community 275"
-Cohesion: 0.17
-Nodes (10): 7. Touch Accessibility, 9. Touch Psychology Checklist, Accessible Touch Patterns, Before Every Screen, Before Release, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations (+2 more)
+Cohesion: 0.33
+Nodes (6): 7. Touch Accessibility, Accessible Touch Patterns, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations, Touch Target Spacing (A11y)
 
 ### Community 276 - "Community 276"
 Cohesion: 0.33
@@ -1529,40 +1508,40 @@ Cohesion: 0.33
 Nodes (6): 9. Testing Principles, Async Testing, code:python (# Use pytest-asyncio for async tests), code:block18 (Common fixtures:), Fixtures Strategy, Testing Strategy
 
 ### Community 279 - "Community 279"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): Authentication Patterns, code:block1 (Important:), JWT Principles, Selection Guide
 
 ### Community 280 - "Community 280"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): code:block1 (Consider:), Decision Factors, Versioning Philosophy, Versioning Strategies
 
 ### Community 281 - "Community 281"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): Agent Coordination, Agent Pipeline, code:block1 (┌───────────────────────────────────────────────────────────), Execution Order
 
 ### Community 282 - "Community 282"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): code:block1 (1. Tokenize user request), Detection Process, Keyword Matrix, Project Type Detection
 
 ### Community 283 - "Community 283"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): Alternative Options, code:yaml (Frontend:), Default Stack (Web App - 2026), Tech Stack Selection (2026)
 
 ### Community 284 - "Community 284"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): code:block1 (MVP              SaaS           Enterprise), Context Discovery, Project Classification Matrix, Question Hierarchy (Ask User FIRST)
 
 ### Community 285 - "Community 285"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): code:block1 (What's the context?), Comparison, Decision Tree, ORM Selection (2025)
 
 ### Community 286 - "Community 286"
-Cohesion: 0.33
+Cohesion: 0.40
 Nodes (4): 9. Color System Checklist, Before Choosing Colors, Before Release, Mobile Color System Reference
 
 ### Community 287 - "Community 287"
-Cohesion: 0.17
-Nodes (12): code:bash (# Recommended: isolated environment), code:bash (# Auto-detect all supported tools), code:bash (cd /your/project), code:bash (# Keep graph current as you work), code:bash (code-review-graph update), Installation, Prerequisites, Step 1: Install the Package (+4 more)
+Cohesion: 0.40
+Nodes (4): 9. Touch Psychology Checklist, Before Every Screen, Before Release, Touch Psychology Reference
 
 ### Community 288 - "Community 288"
 Cohesion: 0.40
@@ -1681,11 +1660,11 @@ Cohesion: 0.40
 Nodes (5): 8. Error Handling Principles, code:block15 (In FastAPI:), code:block16 (Include:), Error Response Philosophy, Exception Strategy
 
 ### Community 317 - "Community 317"
-Cohesion: 0.40
+Cohesion: 0.50
 Nodes (3): Project Templates, 🎯 Selective Reading Rule, Usage
 
 ### Community 318 - "Community 318"
-Cohesion: 0.40
+Cohesion: 0.50
 Nodes (3): 10. Effect Selection Checklist, Anti-Patterns, Visual Effects Reference
 
 ### Community 319 - "Community 319"
@@ -1773,8 +1752,8 @@ Cohesion: 0.67
 Nodes (3): Conflict Resolution, Disagreement Between Agents, Same File Edits
 
 ### Community 340 - "Community 340"
-Cohesion: 0.25
-Nodes (6): Alternatives Comparison, 🛑 Auto-Bootstrap Protocol (MANDATORY TOOL USE For AI Agents), Best Practices, Code Review Graph — Token-Efficient Codebase Context via MCP, Known Limitations, Overview
+Cohesion: 0.67
+Nodes (3): 4. Typography Decision Tree, code:block4 (WHAT'S THE CONTENT TYPE?), Selection Process:
 
 ### Community 341 - "Community 341"
 Cohesion: 0.67
@@ -1856,101 +1835,25 @@ Nodes (3): code:typescript (function validateUsers(users: User[]) {), code:types
 Cohesion: 0.67
 Nodes (3): code:typescript (const allowedIds = ['a', 'b', 'c', ...]), code:typescript (const allowedIds = new Set(['a', 'b', 'c', ...])), Use Set/Map for O(1) Lookups
 
-### Community 361 - "Community 361"
-Cohesion: 0.29
-Nodes (7): 10. Quick Reference, code:block16 (OTA needed?           → React Native + Expo), code:block17 (Simple app?          → Zustand / Provider), code:block18 (Secrets?             → SecureStore / Keychain), Framework Quick Pick, State Quick Pick, Storage Quick Pick
-
-### Community 362 - "Community 362"
-Cohesion: 0.29
-Nodes (7): 2. State Management Selection, code:block3 (WHAT'S YOUR STATE COMPLEXITY?), code:block4 (WHAT'S YOUR STATE COMPLEXITY?), code:block5 (❌ DON'T:), Flutter State Decision, React Native State Decision, State Management Anti-Patterns
-
-### Community 365 - "Community 365"
-Cohesion: 0.29
-Nodes (7): 7. Project Type Templates, code:block12 (RECOMMENDED STACK:), code:block13 (RECOMMENDED STACK:), code:block14 (RECOMMENDED STACK:), E-Commerce App, Productivity/SaaS App, Social/Content App
-
-### Community 366 - "Community 366"
-Cohesion: 0.33
-Nodes (6): 3. Trust Building System, code:block37 (┌────────────────────────────────────────────────────┐), code:css (/* Trust badge styling */), Trust-Building CSS Patterns, Trust Signal Categories, Trust Signal Placement
-
-### Community 367 - "Community 367"
-Cohesion: 0.33
-Nodes (6): 1. Framework Selection, code:block1 (WHAT ARE YOU BUILDING?), code:block2 (CHOOSE NATIVE WHEN:), Framework Comparison, Master Decision Tree, When to Choose Native
-
-### Community 368 - "Community 368"
-Cohesion: 0.40
-Nodes (5): code:block7 (# Build artifacts), code:bash (# Register additional repos), Configuration, Ignore File, Multi-Repo Setup
-
-### Community 369 - "Community 369"
-Cohesion: 0.50
-Nodes (4): code:block1 (Layer 1: PARSE    → Tree-sitter builds ASTs from 19 language), How It Works (4 Layers), Supported Languages (19), What the Graph Contains
-
-### Community 370 - "Community 370"
-Cohesion: 0.50
-Nodes (4): code:block15 (1. Start fresh session for each distinct task), Complementary Skills, Integration with AG Kit, Recommended Session Architecture
-
-### Community 371 - "Community 371"
-Cohesion: 0.50
-Nodes (4): ⚠️ Evaluate first if:, ✅ Install it if:, ❌ Skip it if:, When to Use vs When to Skip
-
-### Community 372 - "Community 372"
-Cohesion: 0.50
-Nodes (4): 7. Letter Spacing (Tracking), Adjustment Guidelines, code:block11 (Large text (headings): tighter tracking), Principles
-
-### Community 373 - "Community 373"
-Cohesion: 0.50
-Nodes (4): 5. Offline Strategy Selection, code:block8 (HOW CRITICAL IS OFFLINE?), code:block9 (1. CACHE-FIRST (Simple)), Offline Implementation Patterns
-
-### Community 374 - "Community 374"
-Cohesion: 0.50
-Nodes (4): 6. Authentication Pattern Selection, Auth Token Storage, code:block10 (WHAT AUTH TYPE NEEDED?), code:block11 (❌ NEVER store tokens in:)
-
-### Community 375 - "Community 375"
-Cohesion: 0.50
-Nodes (4): 8. Decision Checklist, Before Starting ANY Project, code:block15 (If project details are vague, ASK:), Questions to Ask User
-
-### Community 376 - "Community 376"
-Cohesion: 0.50
-Nodes (4): 10. Navigation Checklist, Before Every Screen, Before Navigation Architecture, Before Release
-
-### Community 377 - "Community 377"
-Cohesion: 0.50
-Nodes (4): 1. Mobile Typography Fundamentals, code:block1 (DESKTOP:                        MOBILE:), Mobile Type Rules, Why Mobile Type is Different
-
-### Community 379 - "Community 379"
-Cohesion: 0.67
-Nodes (3): 2. Audience Decision Tree, code:block2 (TARGET AUDIENCE), Who is your target user?
-
-### Community 380 - "Community 380"
-Cohesion: 0.67
-Nodes (3): 4. Storage Strategy Selection, code:block7 (WHAT TYPE OF DATA?), Storage Comparison
-
-### Community 386 - "Community 386"
-Cohesion: 0.22
-Nodes (8): afterGrid, beforeGrid, endIndex, fs, galeriaHtml, generatedGrid, path, startIndex
-
-### Community 387 - "Community 387"
-Cohesion: 0.40
-Nodes (4): categoryBadges, fs, metadata, path
-
 ## Knowledge Gaps
-- **2265 isolated node(s):** `command`, `args`, `command`, `args`, `fs` (+2260 more)
+- **2285 isolated node(s):** `fs`, `content`, `fs`, `imgDir`, `cssPath` (+2280 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Community 244`, `Test Runner`?**
-  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **Why does `persist_design_system()` connect `Design System Generation` to `Security and Coverage Scans`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
-- **Why does `PerformanceChecker` connect `React Performance Checker` to `Security and Coverage Scans`?**
+- **Why does `UX Psychology Reference` connect `Community 126` to `Community 207`, `Community 208`, `Community 178`, `Community 115`, `Community 59`, `Community 60`, `Community 157`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?**
   _`path` has 22 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `command`, `args`, `command` to the rest of the system?**
-  _2343 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `fs`, `content`, `fs` to the rest of the system?**
+  _2363 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Design System Generation` be split into smaller, more focused modules?**
-  _Cohesion score 0.06103896103896104 - nodes in this community are weakly interconnected._
-- **Should `Community 26` be split into smaller, more focused modules?**
-  _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05520614954577219 - nodes in this community are weakly interconnected._
+- **Should `Asset Extraction` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._

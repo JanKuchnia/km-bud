@@ -145,13 +145,13 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/galeria.html": {
-    "mtime": 1779563159.5222766,
-    "ast_hash": "01e6d68b248e54efd7b6bbbf2cd427c1",
+    "mtime": 1779560331.8219473,
+    "ast_hash": "130f9e1b3a43f4c774c9624b887d0fcf",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/index.html": {
-    "mtime": 1779562730.5676231,
-    "ast_hash": "ddb4ad32a8071113384aa8bfacb04d67",
+    "mtime": 1779562346.7755039,
+    "ast_hash": "3a186589a1523eefe769b66799a50162",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/.agent/ARCHITECTURE.md": {
@@ -1239,39 +1239,9 @@
     "ast_hash": "f4a69aa335b3917aa2cee9778542d97a",
     "semantic_hash": ""
   },
-  "/home/jankuchnia/Desktop/km-bud/scratch/optimize_new_photos.py": {
-    "mtime": 1779562692.4928155,
-    "ast_hash": "5304553c2f4c330e15fd90b0df41a0c2",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/images/wozidlo_gasienicowe.webp": {
+  "/home/jankuchnia/Desktop/km-bud/images/sprzet-budowlany-07.webp": {
     "mtime": 1779560327.844858,
     "ast_hash": "036a01e703c40684475a38c45d7005cf",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/images/taczka_spalinowa.webp": {
-    "mtime": 1779562703.8554356,
-    "ast_hash": "bcc4b993e7f4d8bab16d242d590da70b",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/images/wiertnica_glebowa.webp": {
-    "mtime": 1779562709.8237278,
-    "ast_hash": "d8722af055807aa6f2caeb00a18d8f6f",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/scratch/generate_gallery.js": {
-    "mtime": 1779563136.082324,
-    "ast_hash": "0a46f96b114f1adf7984e904732c2474",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/scratch/update_galeria.js": {
-    "mtime": 1779563154.1102874,
-    "ast_hash": "d251711bb05317571b20f55838705e38",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/scratch/gallery_output.html": {
-    "mtime": 1779563141.0313134,
-    "ast_hash": "6e760da4bfae665a4a6326c8195ffd23",
     "semantic_hash": ""
   }
 }
