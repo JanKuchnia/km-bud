@@ -98,6 +98,53 @@ switch ($action) {
         handleDeleteReview($db);
         break;
 
+    // Services CRUD
+    case 'add_service':
+        handleAddService($db);
+        break;
+
+    case 'edit_service':
+        handleEditService($db);
+        break;
+
+    case 'delete_service':
+        handleDeleteService($db);
+        break;
+
+    case 'reorder_services':
+        handleReorderServices($db);
+        break;
+
+    // Service Slides CRUD
+    case 'add_service_slide':
+        handleAddServiceSlide($db, $config);
+        break;
+
+    case 'delete_service_slide':
+        handleDeleteServiceSlide($db);
+        break;
+
+    case 'reorder_service_slides':
+        handleReorderServiceSlides($db);
+        break;
+
+    // Equipment CRUD
+    case 'add_equipment':
+        handleAddEquipment($db, $config);
+        break;
+
+    case 'edit_equipment':
+        handleEditEquipment($db, $config);
+        break;
+
+    case 'delete_equipment':
+        handleDeleteEquipment($db);
+        break;
+
+    case 'reorder_equipment':
+        handleReorderEquipment($db);
+        break;
+
     default:
         sendResponse(false, 'Nieprawidłowa akcja.', [], 400);
 }
@@ -684,5 +731,501 @@ function handleDeleteReview(PDO $db) {
         sendResponse(true, 'Opinia została trwale usunięta.');
     } catch (PDOException $e) {
         sendResponse(false, 'Błąd bazy danych podczas usuwania: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Add Service
+ */
+function handleAddService(PDO $db) {
+    $name = trim($_POST['name'] ?? '');
+    $slug = trim($_POST['slug'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    $icon = trim($_POST['icon'] ?? 'image');
+
+    if (empty($name) || empty($slug) || empty($description)) {
+        sendResponse(false, 'Nazwa, slug i opis są wymagane.');
+    }
+
+    $slug = strtolower(preg_replace('/[^a-z0-9-]+/', '-', translatePolishChars($slug)));
+    $slug = trim($slug, '-');
+
+    $slugCheck = $db->prepare("SELECT id FROM services WHERE slug = ?");
+    $slugCheck->execute([$slug]);
+    if ($slugCheck->fetch()) {
+        sendResponse(false, 'Usługa z tym identyfikatorem (slug) już istnieje.');
+    }
+
+    $sortOrderStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM services");
+    $nextSort = (int) $sortOrderStmt->fetchColumn();
+
+    try {
+        $stmt = $db->prepare("INSERT INTO services (name, slug, description, icon, sort_order) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$name, $slug, $description, $icon, $nextSort]);
+        
+        sendResponse(true, 'Usługa została pomyślnie dodana.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd zapisu: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Edit Service
+ */
+function handleEditService(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    $name = trim($_POST['name'] ?? '');
+    $slug = trim($_POST['slug'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    $icon = trim($_POST['icon'] ?? 'image');
+
+    if ($id <= 0 || empty($name) || empty($slug) || empty($description)) {
+        sendResponse(false, 'Brak wymaganych danych do edycji usługi.');
+    }
+
+    $slug = strtolower(preg_replace('/[^a-z0-9-]+/', '-', translatePolishChars($slug)));
+    $slug = trim($slug, '-');
+
+    $slugCheck = $db->prepare("SELECT id FROM services WHERE slug = ? AND id != ?");
+    $slugCheck->execute([$slug, $id]);
+    if ($slugCheck->fetch()) {
+        sendResponse(false, 'Usługa z tym identyfikatorem (slug) już istnieje.');
+    }
+
+    try {
+        $stmt = $db->prepare("UPDATE services SET name = ?, slug = ?, description = ?, icon = ? WHERE id = ?");
+        $stmt->execute([$name, $slug, $description, $icon, $id]);
+        sendResponse(true, 'Usługa została zaktualizowana.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd zapisu: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Delete Service
+ */
+function handleDeleteService(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    if ($id <= 0) {
+        sendResponse(false, 'Brak identyfikatora usługi.');
+    }
+
+    try {
+        // Fetch slide images first to delete from disk
+        $stmt = $db->prepare("SELECT image FROM service_slides WHERE service_id = ? AND image IS NOT NULL");
+        $stmt->execute([$id]);
+        $slides = $stmt->fetchAll();
+
+        $db->beginTransaction();
+
+        $stmtDel = $db->prepare("DELETE FROM services WHERE id = ?");
+        $stmtDel->execute([$id]);
+
+        $db->commit();
+
+        // Delete slide images from disk
+        foreach ($slides as $slide) {
+            $filepath = __DIR__ . '/../' . $slide['image'];
+            if (file_exists($filepath)) {
+                unlink($filepath);
+            }
+        }
+
+        sendResponse(true, 'Usługa została pomyślnie usunięta.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Reorder Services
+ */
+function handleReorderServices(PDO $db) {
+    $json = json_decode(file_get_contents('php://input'), true);
+    $order = $json['order'] ?? [];
+
+    if (empty($order)) {
+        sendResponse(false, 'Brak danych kolejności.');
+    }
+
+    try {
+        $db->beginTransaction();
+        $stmt = $db->prepare("UPDATE services SET sort_order = ? WHERE id = ?");
+        foreach ($order as $index => $id) {
+            $stmt->execute([$index + 1, (int) $id]);
+        }
+        $db->commit();
+        sendResponse(true, 'Kolejność usług została zapisana.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd zapisu: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Add Service Slide
+ */
+function handleAddServiceSlide(PDO $db, array $config) {
+    $serviceId = (int) ($_POST['service_id'] ?? 0);
+    $slideType = trim($_POST['slide_type'] ?? 'image'); // 'image' or 'gradient'
+    $gradient = trim($_POST['gradient'] ?? '');
+    $icon = trim($_POST['icon'] ?? '');
+
+    if ($serviceId <= 0) {
+        sendResponse(false, 'Nieprawidłowy identyfikator usługi.');
+    }
+
+    $imagePath = null;
+
+    if ($slideType === 'image') {
+        if (!isset($_FILES['slide_photo']) || $_FILES['slide_photo']['error'] !== UPLOAD_ERR_OK) {
+            sendResponse(false, 'Nie wybrano pliku zdjęcia lub wystąpił błąd.');
+        }
+
+        $file = $_FILES['slide_photo'];
+
+        if ($file['size'] > $config['upload']['max_size']) {
+            sendResponse(false, 'Plik jest zbyt duży. Maksymalny rozmiar to 10MB.');
+        }
+
+        // Validate mime type
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mimeType = finfo_file($finfo, $file['tmp_name']);
+        finfo_close($finfo);
+
+        if (!in_array($mimeType, $config['upload']['allowed_types'])) {
+            sendResponse(false, 'Dopuszczalne formaty to: JPEG, PNG, WebP.');
+        }
+
+        $uploadDir = __DIR__ . '/../images/';
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        // Generate unique filename
+        $filename = 'service-slide-' . time() . '-' . uniqid() . '.webp';
+        $targetPath = $uploadDir . $filename;
+        $tempPath = $file['tmp_name'];
+
+        // Compress
+        $optimized = false;
+        $apiKey = $config['tinypng']['api_key'] ?? '';
+        if (!empty($apiKey)) {
+            $optimized = compressWithTinyPNG($tempPath, $targetPath, $apiKey);
+        }
+        if (!$optimized) {
+            $optimized = compressWithGD($tempPath, $targetPath, $config['upload']['quality'], $config['upload']['max_dimension']);
+        }
+
+        if (!$optimized) {
+            sendResponse(false, 'Błąd przetwarzania obrazu.');
+        }
+
+        $imagePath = 'images/' . $filename;
+    } else {
+        if (empty($gradient) || empty($icon)) {
+            sendResponse(false, 'Gradient i ikona są wymagane dla slajdu bezgraficznego.');
+        }
+    }
+
+    $sortStmt = $db->prepare("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM service_slides WHERE service_id = ?");
+    $sortStmt->execute([$serviceId]);
+    $nextSort = (int) $sortStmt->fetchColumn();
+
+    try {
+        $stmt = $db->prepare("INSERT INTO service_slides (service_id, image, gradient, icon, sort_order) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$serviceId, $imagePath, $gradient ?: null, $icon ?: null, $nextSort]);
+        sendResponse(true, 'Slajd został dodany.');
+    } catch (PDOException $e) {
+        if ($imagePath && file_exists(__DIR__ . '/../' . $imagePath)) {
+            unlink(__DIR__ . '/../' . $imagePath);
+        }
+        sendResponse(false, 'Błąd zapisu slajdu: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Delete Service Slide
+ */
+function handleDeleteServiceSlide(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    if ($id <= 0) {
+        sendResponse(false, 'Brak identyfikatora slajdu.');
+    }
+
+    $stmt = $db->prepare("SELECT image FROM service_slides WHERE id = ?");
+    $stmt->execute([$id]);
+    $slide = $stmt->fetch();
+
+    if (!$slide) {
+        sendResponse(false, 'Slajd nie istnieje.');
+    }
+
+    try {
+        $db->beginTransaction();
+
+        $stmtDel = $db->prepare("DELETE FROM service_slides WHERE id = ?");
+        $stmtDel->execute([$id]);
+
+        $db->commit();
+
+        if ($slide['image']) {
+            $filepath = __DIR__ . '/../' . $slide['image'];
+            if (file_exists($filepath)) {
+                unlink($filepath);
+            }
+        }
+
+        sendResponse(true, 'Slajd został usunięty.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Reorder Service Slides
+ */
+function handleReorderServiceSlides(PDO $db) {
+    $json = json_decode(file_get_contents('php://input'), true);
+    $order = $json['order'] ?? [];
+
+    if (empty($order)) {
+        sendResponse(false, 'Brak danych kolejności.');
+    }
+
+    try {
+        $db->beginTransaction();
+        $stmt = $db->prepare("UPDATE service_slides SET sort_order = ? WHERE id = ?");
+        foreach ($order as $index => $id) {
+            $stmt->execute([$index + 1, (int) $id]);
+        }
+        $db->commit();
+        sendResponse(true, 'Kolejność slajdów została zapisana.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd zapisu kolejności: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Add Equipment (Park Maszynowy)
+ */
+function handleAddEquipment(PDO $db, array $config) {
+    $name = trim($_POST['name'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    $badge = trim($_POST['badge'] ?? '');
+    $spec1 = trim($_POST['spec_1'] ?? '');
+    $spec2 = trim($_POST['spec_2'] ?? '');
+    $icon = trim($_POST['icon'] ?? 'wrench');
+
+    if (empty($name) || empty($description)) {
+        sendResponse(false, 'Nazwa i opis sprzętu są wymagane.');
+    }
+
+    if (!isset($_FILES['equipment_photo']) || $_FILES['equipment_photo']['error'] !== UPLOAD_ERR_OK) {
+        sendResponse(false, 'Przesłanie pliku zdjęcia jest wymagane.');
+    }
+
+    $file = $_FILES['equipment_photo'];
+
+    if ($file['size'] > $config['upload']['max_size']) {
+        sendResponse(false, 'Plik jest zbyt duży. Maksymalny rozmiar to 10MB.');
+    }
+
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mimeType = finfo_file($finfo, $file['tmp_name']);
+    finfo_close($finfo);
+
+    if (!in_array($mimeType, $config['upload']['allowed_types'])) {
+        sendResponse(false, 'Niedozwolony format. Dopuszczalne formaty: JPEG, PNG, WebP.');
+    }
+
+    $uploadDir = __DIR__ . '/../images/';
+    $filename = 'sprzet-' . time() . '-' . uniqid() . '.webp';
+    $targetPath = $uploadDir . $filename;
+    $tempPath = $file['tmp_name'];
+
+    $optimized = false;
+    $apiKey = $config['tinypng']['api_key'] ?? '';
+    if (!empty($apiKey)) {
+        $optimized = compressWithTinyPNG($tempPath, $targetPath, $apiKey);
+    }
+    if (!$optimized) {
+        $optimized = compressWithGD($tempPath, $targetPath, $config['upload']['quality'], $config['upload']['max_dimension']);
+    }
+
+    if (!$optimized) {
+        sendResponse(false, 'Błąd zapisu i optymalizacji zdjęcia.');
+    }
+
+    $sortStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM equipment");
+    $nextSort = (int) $sortStmt->fetchColumn();
+
+    try {
+        $stmt = $db->prepare("
+            INSERT INTO equipment (name, image, icon, description, badge, spec_1, spec_2, sort_order)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ");
+        $stmt->execute([$name, $filename, $icon, $description, $badge ?: null, $spec1 ?: null, $spec2 ?: null, $nextSort]);
+        sendResponse(true, 'Sprzęt został dodany do parku maszynowego.');
+    } catch (PDOException $e) {
+        if (file_exists($targetPath)) {
+            unlink($targetPath);
+        }
+        sendResponse(false, 'Błąd zapisu sprzętu: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Edit Equipment
+ */
+function handleEditEquipment(PDO $db, array $config) {
+    $id = (int) ($_POST['id'] ?? 0);
+    $name = trim($_POST['name'] ?? '');
+    $description = trim($_POST['description'] ?? '');
+    $badge = trim($_POST['badge'] ?? '');
+    $spec1 = trim($_POST['spec_1'] ?? '');
+    $spec2 = trim($_POST['spec_2'] ?? '');
+    $icon = trim($_POST['icon'] ?? 'wrench');
+
+    if ($id <= 0 || empty($name) || empty($description)) {
+        sendResponse(false, 'Brak wymaganych danych do edycji.');
+    }
+
+    // Fetch existing image to delete if a new one is uploaded
+    $stmtExist = $db->prepare("SELECT image FROM equipment WHERE id = ?");
+    $stmtExist->execute([$id]);
+    $existing = $stmtExist->fetch();
+    if (!$existing) {
+        sendResponse(false, 'Sprzęt nie został znaleziony.');
+    }
+
+    $filename = $existing['image'];
+    $uploadedNewImage = false;
+
+    if (isset($_FILES['equipment_photo']) && $_FILES['equipment_photo']['error'] === UPLOAD_ERR_OK) {
+        $file = $_FILES['equipment_photo'];
+        
+        if ($file['size'] > $config['upload']['max_size']) {
+            sendResponse(false, 'Plik jest zbyt duży. Maksymalny rozmiar to 10MB.');
+        }
+
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        $mimeType = finfo_file($finfo, $file['tmp_name']);
+        finfo_close($finfo);
+
+        if (!in_array($mimeType, $config['upload']['allowed_types'])) {
+            sendResponse(false, 'Dopuszczalne formaty: JPEG, PNG, WebP.');
+        }
+
+        $uploadDir = __DIR__ . '/../images/';
+        $newFilename = 'sprzet-' . time() . '-' . uniqid() . '.webp';
+        $targetPath = $uploadDir . $newFilename;
+        $tempPath = $file['tmp_name'];
+
+        $optimized = false;
+        $apiKey = $config['tinypng']['api_key'] ?? '';
+        if (!empty($apiKey)) {
+            $optimized = compressWithTinyPNG($tempPath, $targetPath, $apiKey);
+        }
+        if (!$optimized) {
+            $optimized = compressWithGD($tempPath, $targetPath, $config['upload']['quality'], $config['upload']['max_dimension']);
+        }
+
+        if ($optimized) {
+            $filename = $newFilename;
+            $uploadedNewImage = true;
+        } else {
+            sendResponse(false, 'Błąd zapisu nowego zdjęcia.');
+        }
+    }
+
+    try {
+        $stmt = $db->prepare("
+            UPDATE equipment 
+            SET name = ?, image = ?, icon = ?, description = ?, badge = ?, spec_1 = ?, spec_2 = ?
+            WHERE id = ?
+        ");
+        $stmt->execute([$name, $filename, $icon, $description, $badge ?: null, $spec1 ?: null, $spec2 ?: null, $id]);
+
+        // If a new photo was uploaded and successfully saved, delete the old file
+        if ($uploadedNewImage) {
+            $oldPath = __DIR__ . '/../images/' . $existing['image'];
+            if (file_exists($oldPath)) {
+                unlink($oldPath);
+            }
+        }
+
+        sendResponse(true, 'Dane sprzętu zostały pomyślnie zaktualizowane.');
+    } catch (PDOException $e) {
+        if ($uploadedNewImage && file_exists(__DIR__ . '/../images/' . $filename)) {
+            unlink(__DIR__ . '/../images/' . $filename);
+        }
+        sendResponse(false, 'Błąd zapisu w bazie danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Delete Equipment
+ */
+function handleDeleteEquipment(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    if ($id <= 0) {
+        sendResponse(false, 'Brak identyfikatora.');
+    }
+
+    $stmt = $db->prepare("SELECT image FROM equipment WHERE id = ?");
+    $stmt->execute([$id]);
+    $equip = $stmt->fetch();
+
+    if (!$equip) {
+        sendResponse(false, 'Sprzęt nie istnieje.');
+    }
+
+    $filepath = __DIR__ . '/../images/' . $equip['image'];
+
+    try {
+        $db->beginTransaction();
+
+        $stmtDel = $db->prepare("DELETE FROM equipment WHERE id = ?");
+        $stmtDel->execute([$id]);
+
+        $db->commit();
+
+        if (file_exists($filepath)) {
+            unlink($filepath);
+        }
+
+        sendResponse(true, 'Sprzęt został usunięty z bazy danych.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Reorder Equipment
+ */
+function handleReorderEquipment(PDO $db) {
+    $json = json_decode(file_get_contents('php://input'), true);
+    $order = $json['order'] ?? [];
+
+    if (empty($order)) {
+        sendResponse(false, 'Brak danych kolejności.');
+    }
+
+    try {
+        $db->beginTransaction();
+        $stmt = $db->prepare("UPDATE equipment SET sort_order = ? WHERE id = ?");
+        foreach ($order as $index => $id) {
+            $stmt->execute([$index + 1, (int) $id]);
+        }
+        $db->commit();
+        sendResponse(true, 'Kolejność sprzętu została zapisana.');
+    } catch (PDOException $e) {
+        $db->rollBack();
+        sendResponse(false, 'Błąd zapisu: ' . $e->getMessage());
     }
 }

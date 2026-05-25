@@ -24,6 +24,39 @@ $carouselPhotos = $db->query("
 // Fetch categories for services
 $categories = $db->query("SELECT * FROM categories ORDER BY sort_order")->fetchAll();
 
+// Fetch services
+$services = $db->query("SELECT * FROM services ORDER BY sort_order")->fetchAll();
+
+// Fetch all service slides
+$allSlides = $db->query("
+    SELECT ss.*, s.slug AS service_slug 
+    FROM service_slides ss
+    JOIN services s ON ss.service_id = s.id
+    ORDER BY ss.sort_order
+")->fetchAll();
+
+// Group slides by service slug for JS
+$serviceSlides = [];
+foreach ($services as $service) {
+    $serviceSlides[$service['slug']] = [];
+}
+foreach ($allSlides as $slide) {
+    $slug = $slide['service_slug'];
+    if (isset($serviceSlides[$slug])) {
+        if ($slide['image']) {
+            $serviceSlides[$slug][] = ['image' => $slide['image']];
+        } else {
+            $serviceSlides[$slug][] = [
+                'gradient' => $slide['gradient'],
+                'icon' => $slide['icon']
+            ];
+        }
+    }
+}
+
+// Fetch equipment for park maszynowy
+$equipment = $db->query("SELECT * FROM equipment ORDER BY sort_order")->fetchAll();
+
 // Fetch 8 photos for homepage grid
 $previewPhotos = $db->query("
     SELECT p.filename, p.title 
@@ -152,33 +185,20 @@ require_once __DIR__ . '/includes/header.php';
 
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 <?php
-                $descMap = [
-                    'panelowe' => 'Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów przemysłowych.',
-                    'siatka' => 'Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny leśne.',
-                    'betonowe' => 'Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i design.',
-                    'gabionowe' => 'Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną izolację akustyczną.',
-                    'sztachetowe' => 'Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z trwałością.',
-                    'przemysłowe' => 'Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu zabezpieczenia.',
-                    'tymczasowe' => 'Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu budowy.',
-                    'bramy' => 'Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu ogrodzenia.',
-                    'podmurówka' => 'Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki ogrodzeniowe.'
-                ];
-                
-                foreach ($categories as $cat):
-                    $slug = htmlspecialchars($cat['slug']);
-                    $desc = $descMap[$slug] ?? "Profesjonalne wykonawstwo, doradztwo i precyzyjny montaż ogrodzeń w kategorii {$cat['name']}.";
+                foreach ($services as $serv):
+                    $slug = htmlspecialchars($serv['slug']);
                 ?>
                     <div data-service-category="<?= $slug ?>"
                       class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
                       <div
                         class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                        <i data-lucide="<?= htmlspecialchars($cat['icon']) ?>" class="text-white text-2xl"></i>
+                        <i data-lucide="<?= htmlspecialchars($serv['icon']) ?>" class="text-white text-2xl"></i>
                       </div>
                       <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                        <?= htmlspecialchars($cat['name']) ?>
+                        <?= htmlspecialchars($serv['name']) ?>
                       </h3>
                       <p class="text-[var(--gray-text-color)] mb-4">
-                        <?= htmlspecialchars($desc) ?>
+                        <?= htmlspecialchars($serv['description']) ?>
                       </p>
                       <a href="galeria.php?filter=<?= $slug ?>"
                         class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
@@ -376,17 +396,20 @@ require_once __DIR__ . '/includes/header.php';
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                <!-- 1. Minikoparka -->
+                <?php foreach ($equipment as $item): ?>
+                <!-- Machine card -->
                 <div
                   class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
                   <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
                     <div
                       class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
-                      </div>
-                    <img src="images/sprzet-budowlany-01.webp" alt="Minikoparka KM-BUD"
+                    </div>
+                    <img src="images/<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>"
                       class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <?php if (!empty($item['badge'])): ?>
                     <span
-                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Wykopy</span>
+                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10"><?= htmlspecialchars($item['badge']) ?></span>
+                    <?php endif; ?>
                   </div>
                   <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
                     <div
@@ -394,192 +417,44 @@ require_once __DIR__ . '/includes/header.php';
                       <div
                         class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
-                        <i data-lucide="shovel" class="text-white text-xl"></i>
+                        <i data-lucide="<?= htmlspecialchars($item['icon']) ?>" class="text-white text-xl"></i>
                       </div>
                     </div>
                     <div>
                       <h3
                         class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
-                        Minikoparka
+                        <?= htmlspecialchars($item['name']) ?>
                       </h3>
                       <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
-                        Precyzyjne i sprawne wykopy pod fundamenty ogrodzeń, słupki oraz murki oporowe w każdych
-                        warunkach glebowych.
+                        <?= htmlspecialchars($item['description']) ?>
                       </p>
                     </div>
+                    <?php if (!empty($item['spec_1']) || !empty($item['spec_2'])): ?>
                     <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
                       <span
                         class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
                         techniczna</span>
                       <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
+                        <?php if (!empty($item['spec_1'])): ?>
                         <li class="flex items-center gap-2.5">
                           <span
                             class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Praca w trudnodostępnych miejscach</span>
+                          <span class="font-medium"><?= htmlspecialchars($item['spec_1']) ?></span>
                         </li>
+                        <?php endif; ?>
+                        <?php if (!empty($item['spec_2'])): ?>
                         <li class="flex items-center gap-2.5">
                           <span
                             class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Precyzyjne i równe wykopy liniowe</span>
+                          <span class="font-medium"><?= htmlspecialchars($item['spec_2']) ?></span>
                         </li>
+                        <?php endif; ?>
                       </ul>
                     </div>
+                    <?php endif; ?>
                   </div>
                 </div>
-
-                <!-- 2. Wozidło gąsienicowe -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
-                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
-                      </div>
-                    <img src="images/wozidlo_gasienicowe.webp" alt="Wozidło Gąsienicowe KM-BUD"
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
-                    <span
-                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Transport</span>
-                  </div>
-                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
-                    <div
-                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
-                      <div
-                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
-                        <i data-lucide="tractor" class="text-white text-xl"></i>
-                      </div>
-                    </div>
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
-                        Wozidło Gąsienicowe
-                      </h3>
-                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
-                        Błyskawiczny transport urobku, ziemi oraz betonu. Szerokie gąsienice chronią trawnik i podłoże
-                        przed zniszczeniem.
-                      </p>
-                    </div>
-                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
-                      <span
-                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
-                        techniczna</span>
-                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Zminimalizowany nacisk na podłoże</span>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Wydajny transport ciężkich materiałów</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3. Taczka spalinowa -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
-                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
-                      </div>
-                    <img src="images/taczka_spalinowa.webp" alt="Taczka Spalinowa KM-BUD"
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
-                    <span
-                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Wąskie
-                      przejścia</span>
-                  </div>
-                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
-                    <div
-                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
-                      <div
-                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
-                        <i data-lucide="truck" class="text-white text-xl"></i>
-                      </div>
-                    </div>
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
-                        Taczka Spalinowa
-                      </h3>
-                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
-                        Niezastąpiona przy przewożeniu kruszywa, betonu i zaprawy murarskiej na ciasnych i gęsto
-                        zagospodarowanych posesjach.
-                      </p>
-                    </div>
-                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
-                      <span
-                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
-                        techniczna</span>
-                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Wyjątkowa zwrotność i kompaktowość</span>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Szybki załadunek i rozładunek</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 4. Wiertnica glebowa -->
-                <div
-                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
-                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
-                      </div>
-                    <img src="images/wiertnica_glebowa.webp" alt="Wiertnica Glebowa KM-BUD"
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
-                    <span
-                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Odwierty</span>
-                  </div>
-                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
-                    <div
-                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
-                      <div
-                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
-                        <i data-lucide="drill" class="text-white text-xl"></i>
-                      </div>
-                    </div>
-                    <div>
-                      <h3
-                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
-                        Wiertnica Glebowa
-                      </h3>
-                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
-                        Szybkie, mechaniczne wiercenie precyzyjnych otworów w ziemi pod słupki ogrodzeniowe. Gwarancja
-                        idealnego pionu.
-                      </p>
-                    </div>
-                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
-                      <span
-                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
-                        techniczna</span>
-                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Równomierna, idealna głębokość wiercenia</span>
-                        </li>
-                        <li class="flex items-center gap-2.5">
-                          <span
-                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
-                          <span class="font-medium">Drastyczne przyspieszenie tempa montażu</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <?php endforeach; ?>
               </div>
             </div>
           </section>
@@ -1007,47 +882,7 @@ require_once __DIR__ . '/includes/header.php';
     const modalSlidePreview = document.getElementById('modal-slide-preview');
     const modalDotsContainer = document.getElementById('modal-dots');
 
-    // Gradients and icons mapping
-    // Service category image slides
-    const serviceSlides = {
-      'panelowe': [
-        { image: 'images/ogrodzenie-panelowe-01.webp' },
-        { image: 'images/ogrodzenie-siatkowe-04.webp' }
-      ],
-      'siatka': [
-        { image: 'images/ogrodzenie-siatkowe-01.webp' },
-        { image: 'images/ogrodzenie-siatkowe-02.webp' },
-        { image: 'images/ogrodzenie-siatkowe-03.webp' }
-      ],
-      'betonowe': [
-        { image: 'images/ogrodzenie-bloczkowe-01.webp' },
-        { image: 'images/ogrodzenie-bloczkowe-02.webp' },
-        { image: 'images/ogrodzenie-bloczkowe-03.webp' }
-      ],
-      'gabionowe': [
-        { image: 'images/ogrodzenie-bloczkowe-06.webp' },
-        { gradient: 'bg-gradient-to-br from-slate-700 to-slate-900', icon: 'layers' }
-      ],
-      'sztachetowe': [
-        { image: 'images/ogrodzenie-bloczkowe-09.webp' },
-        { gradient: 'bg-gradient-to-br from-amber-800 to-yellow-950', icon: 'align-justify' }
-      ],
-      'przemysłowe': [
-        { image: 'images/ogrodzenie-panelowe-01.webp' },
-        { image: 'images/ogrodzenie-siatkowe-09.webp' }
-      ],
-      'tymczasowe': [
-        { gradient: 'bg-gradient-to-br from-yellow-600 to-orange-800', icon: 'construction' }
-      ],
-      'bramy': [
-        { image: 'images/brama-furtka-01.webp' },
-        { image: 'images/brama-furtka-02.webp' }
-      ],
-      'podmurówka': [
-        { image: 'images/ogrodzenie-bloczkowe-05.webp' },
-        { image: 'images/ogrodzenie-siatkowe-04.webp' }
-      ]
-    };
+    const serviceSlides = <?= json_encode($serviceSlides, JSON_UNESCAPED_SLASHES) ?>;
 
     let activeModalSlides = [];
     let currentModalSlide = 0;

@@ -1265,8 +1265,8 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/index.php": {
-    "mtime": 1779734756.1025584,
-    "ast_hash": "5b89bc27e706a8585efad776f8bce280",
+    "mtime": 1779708962.236571,
+    "ast_hash": "5b73f831e92010b9550dda423bb3731a",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/config/config.php": {
@@ -1300,13 +1300,13 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/api.php": {
-    "mtime": 1779734777.3344784,
-    "ast_hash": "819e4e75af3eff55e43c5e33d5a2bdc2",
+    "mtime": 1779703941.6899047,
+    "ast_hash": "5a69c7117bfdbd897c5191d616d82581",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/index.php": {
-    "mtime": 1779735059.7501476,
-    "ast_hash": "01cbd5ab3b355198c5e31b8e4ab004fc",
+    "mtime": 1779734155.370358,
+    "ast_hash": "0f3835bd8816b1b5a41bf9182dec532e",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/includes/auth.php": {
@@ -1327,16 +1327,6 @@
   "/home/jankuchnia/Desktop/km-bud/config/last_reviews_sync.txt": {
     "mtime": 1779704075.9546902,
     "ast_hash": "02a5a87ea6c502588145ca4ac82a5a19",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/migrate.php": {
-    "mtime": 1779734666.9269273,
-    "ast_hash": "e8d999a61568baa521ebacbea00e2d27",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/admin/includes/create_services_and_equipment_tables.sql": {
-    "mtime": 1779734661.4859538,
-    "ast_hash": "f8583d427709878ffb0a2a94b6d211f7",
     "semantic_hash": ""
   }
 }

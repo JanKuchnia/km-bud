@@ -30,6 +30,21 @@ $totalCategories = count($categories);
 $reviews = $db->query("SELECT * FROM google_reviews ORDER BY id DESC")->fetchAll();
 $totalReviews = count($reviews);
 
+// Fetch services
+$services = $db->query("SELECT * FROM services ORDER BY sort_order")->fetchAll();
+$totalServices = count($services);
+
+// Fetch equipment
+$equipment = $db->query("SELECT * FROM equipment ORDER BY sort_order")->fetchAll();
+$totalEquipment = count($equipment);
+
+// Fetch slides by service_id
+$allServiceSlides = $db->query("SELECT * FROM service_slides ORDER BY sort_order")->fetchAll();
+$slidesByService = [];
+foreach ($allServiceSlides as $slide) {
+    $slidesByService[$slide['service_id']][] = $slide;
+}
+
 // Lucide standard icons list for dropdown selection
 $lucideIcons = [
     'rectangle-horizontal' => 'Prostokąt',
@@ -118,6 +133,16 @@ $lucideIcons = [
                 class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale">
                 <i data-lucide="star" class="w-5 h-5"></i>
                 Opinie Google
+            </button>
+            <button onclick="switchTab('services')" id="tab-btn-services"
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale">
+                <i data-lucide="grid-2x2" class="w-5 h-5"></i>
+                Usługi
+            </button>
+            <button onclick="switchTab('equipment')" id="tab-btn-equipment"
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale">
+                <i data-lucide="shovel" class="w-5 h-5"></i>
+                Park Maszynowy
             </button>
             <a href="../galeria.php" target="_blank"
                 class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white transition-all duration-200 active-spring-scale">
@@ -506,6 +531,208 @@ $lucideIcons = [
 
             </div>
 
+            <!-- ─────────────────────────────────────────────────────────────
+            TAB: SERVICES
+            ───────────────────────────────────────────────────────────── -->
+            <div id="tab-content-services" class="hidden space-y-6 lg:space-y-8 animate-fade-in">
+                <!-- Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 flex-shrink-0">
+                            <i data-lucide="grid-2x2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800"><?= $totalServices ?></p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Liczba usług</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-slate-200/60 p-3 sm:p-4 rounded-2xl shadow-sm flex items-center justify-between col-span-1">
+                        <button onclick="openModal('add-service')"
+                            class="w-full h-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-red-600/10 active-spring-scale transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                            Dodaj nową usługę
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Services List Grid -->
+                <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm">
+                    <h3 class="text-base font-bold text-slate-800 mb-2">Zarządzaj usługami</h3>
+                    <p class="text-xs text-slate-400 mb-6">Uporządkuj kolejność usług na stronie głównej przy użyciu metody złap i upuść (drag & drop).</p>
+
+                    <div class="overflow-x-auto responsive-table-container rounded-2xl border border-slate-100/80">
+                        <table class="w-full min-w-[650px]">
+                            <thead>
+                                <tr class="text-left border-b border-slate-100 text-slate-400 text-xs font-bold uppercase tracking-wider pb-3">
+                                    <th class="pb-3 pl-4 w-12"></th>
+                                    <th class="pb-3">Usługa</th>
+                                    <th class="pb-3">Slug</th>
+                                    <th class="pb-3 text-center">Ikona</th>
+                                    <th class="pb-3">Opis</th>
+                                    <th class="pb-3 text-center">Slajdy modala</th>
+                                    <th class="pb-3 text-right pr-4">Akcje</th>
+                                </tr>
+                            </thead>
+                            <tbody id="services-sortable-list" class="divide-y divide-slate-100">
+                                <?php foreach ($services as $serv): 
+                                    $slideCount = count($slidesByService[$serv['id']] ?? []);
+                                ?>
+                                    <tr data-id="<?= $serv['id'] ?>" class="text-sm text-slate-750 hover:bg-slate-50/55 transition-colors">
+                                        <td class="py-4 pl-4 cursor-grab active:cursor-grabbing text-slate-350 hover:text-slate-550 drag-handle-service">
+                                            <i data-lucide="grip-vertical" class="w-5 h-5"></i>
+                                        </td>
+                                        <td class="py-4 font-bold text-slate-800"><?= htmlspecialchars($serv['name']) ?></td>
+                                        <td class="py-4"><span class="font-mono text-xs bg-slate-50 px-2.5 py-1 rounded w-fit border border-slate-200/40"><?= htmlspecialchars($serv['slug']) ?></span></td>
+                                        <td class="py-4 text-center">
+                                            <div class="w-9 h-9 bg-slate-100 rounded-lg flex items-center justify-center text-slate-650 mx-auto"
+                                                 title="<?= htmlspecialchars($serv['icon']) ?>">
+                                                <i data-lucide="<?= htmlspecialchars($serv['icon']) ?>" class="w-4 h-4"></i>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 max-w-xs truncate" title="<?= htmlspecialchars($serv['description']) ?>"><?= htmlspecialchars($serv['description']) ?></td>
+                                        <td class="py-4 text-center">
+                                            <span class="inline-flex items-center gap-1 bg-red-50 text-red-600 border border-red-100 font-semibold px-2.5 py-1 rounded-full text-xs">
+                                                <i data-lucide="images" class="w-3.5 h-3.5"></i>
+                                                <?= $slideCount ?>
+                                            </span>
+                                        </td>
+                                        <td class="py-4 pr-4 text-right">
+                                            <div class="flex items-center justify-end gap-1">
+                                                <button onclick="openSlideManager(<?= htmlspecialchars(json_encode($serv)) ?>, <?= htmlspecialchars(json_encode($slidesByService[$serv['id']] ?? [])) ?>)"
+                                                        class="p-2.5 sm:p-2 bg-slate-50 text-slate-600 hover:text-red-600 hover:bg-red-50 border border-slate-200/60 hover:border-red-200/50 rounded-xl transition-all active-spring-scale flex items-center gap-1.5 text-xs font-bold"
+                                                        title="Zarządzaj slajdami galerii usługi">
+                                                    <i data-lucide="image-plus" class="w-4 h-4"></i>
+                                                    Zarządzaj slajdami
+                                                </button>
+                                                <button onclick="openEditServiceModal(<?= htmlspecialchars(json_encode($serv)) ?>)"
+                                                        class="p-2.5 sm:p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all active-spring-scale"
+                                                        title="Edytuj usługę">
+                                                    <i data-lucide="edit-3" class="w-4 h-4"></i>
+                                                </button>
+                                                <button onclick="confirmDeleteService(<?= $serv['id'] ?>)"
+                                                        class="p-2.5 sm:p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all active-spring-scale"
+                                                        title="Usuń">
+                                                    <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─────────────────────────────────────────────────────────────
+            TAB: EQUIPMENT (PARK MASZYNOWY)
+            ───────────────────────────────────────────────────────────── -->
+            <div id="tab-content-equipment" class="hidden space-y-6 lg:space-y-8 animate-fade-in">
+                <!-- Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 flex-shrink-0">
+                            <i data-lucide="shovel" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800"><?= $totalEquipment ?></p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Liczba maszyn i pojazdów</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-slate-200/60 p-3 sm:p-4 rounded-2xl shadow-sm flex items-center justify-between col-span-1">
+                        <button onclick="openModal('add-equipment')"
+                            class="w-full h-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-red-600/10 active-spring-scale transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
+                            <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                            Dodaj nowy sprzęt
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Machinery Grid -->
+                <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm">
+                    <div class="mb-6">
+                        <h3 class="text-base font-bold text-slate-800">Sprzęt budowlany i park maszynowy</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Uporządkuj kolejność wyświetlania maszyn na publicznej stronie głównej przy użyciu Drag & Drop.</p>
+                    </div>
+
+                    <?php if ($totalEquipment === 0): ?>
+                        <div class="text-center py-20 text-slate-400">
+                            <i data-lucide="wrench" class="w-12 h-12 mx-auto mb-4 opacity-30"></i>
+                            <p class="text-base font-medium">Brak sprzętu w parku maszynowym. Kliknij przycisk powyżej, aby dodać pierwsze wozidło lub koparkę.</p>
+                        </div>
+                    <?php else: ?>
+                        <div id="equipment-sortable-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                            <?php foreach ($equipment as $item): ?>
+                                <div data-id="<?= $item['id'] ?>"
+                                     class="equipment-card bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative">
+                                    
+                                    <!-- Image Preview area with category badge -->
+                                    <div class="relative aspect-[4/3] bg-slate-100 overflow-hidden">
+                                        <img src="../images/<?= htmlspecialchars($item['image']) ?>" 
+                                             alt="<?= htmlspecialchars($item['name']) ?>"
+                                             class="w-full h-full object-cover">
+                                        <?php if (!empty($item['badge'])): ?>
+                                        <span class="absolute top-3 left-3 bg-red-650 text-white font-bold text-[9px] uppercase tracking-wider px-2.5 py-1 rounded-full">
+                                            <?= htmlspecialchars($item['badge']) ?>
+                                        </span>
+                                        <?php endif; ?>
+                                        <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-sm text-white font-semibold text-[9px] uppercase tracking-wider px-2 py-1 rounded-md">
+                                            <i data-lucide="<?= htmlspecialchars($item['icon']) ?>" class="w-3.5 h-3.5 inline"></i>
+                                        </span>
+                                    </div>
+
+                                    <!-- Content detail -->
+                                    <div class="p-4 flex-grow flex flex-col justify-between">
+                                        <div>
+                                            <h4 class="font-bold text-slate-800 text-sm truncate"><?= htmlspecialchars($item['name']) ?></h4>
+                                            <p class="text-slate-400 text-xs mt-1.5 line-clamp-3 leading-relaxed">
+                                                <?= htmlspecialchars($item['description']) ?>
+                                            </p>
+                                            
+                                            <?php if (!empty($item['spec_1']) || !empty($item['spec_2'])): ?>
+                                            <div class="mt-3 pt-3 border-t border-slate-100 space-y-1">
+                                                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wide block">Specyfikacja:</span>
+                                                <?php if (!empty($item['spec_1'])): ?>
+                                                    <span class="text-[10px] text-slate-655 flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-red-500"></i> <?= htmlspecialchars($item['spec_1']) ?></span>
+                                                <?php endif; ?>
+                                                <?php if (!empty($item['spec_2'])): ?>
+                                                    <span class="text-[10px] text-slate-655 flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-red-500"></i> <?= htmlspecialchars($item['spec_2']) ?></span>
+                                                <?php endif; ?>
+                                            </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+
+                                    <!-- Grab Drag Header + Action buttons -->
+                                    <div class="px-4 py-3 border-t border-slate-100 bg-slate-50 flex items-center justify-between">
+                                        <!-- Drag handle -->
+                                        <div class="drag-handle-equipment cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 transition-colors p-1"
+                                             title="Chwyć, aby przenieść">
+                                            <i data-lucide="grip-vertical" class="w-5 h-5"></i>
+                                        </div>
+                                        
+                                        <!-- Edit and delete actions -->
+                                        <div class="flex items-center gap-1">
+                                            <button onclick="openEditEquipmentModal(<?= htmlspecialchars(json_encode($item)) ?>)"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all active-spring-scale"
+                                                    title="Edytuj maszynę">
+                                                <i data-lucide="edit-3" class="w-4 h-4"></i>
+                                            </button>
+                                            <button onclick="confirmDeleteEquipment(<?= $item['id'] ?>)"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all active-spring-scale"
+                                                    title="Usuń">
+                                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -839,6 +1066,339 @@ $lucideIcons = [
         </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: ADD SERVICE
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-add-service" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Dodaj nową usługę</h3>
+                <button onclick="closeModal('add-service')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <form id="add-service-form" onsubmit="submitServiceForm(event)" class="px-8 py-6 space-y-5">
+                <div>
+                    <label for="serv-name" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Nazwa usługi</label>
+                    <input type="text" id="serv-name" required placeholder="np. Ogrodzenia panelowe"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+                <div>
+                    <label for="serv-slug" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Slug (identyfikator)</label>
+                    <input type="text" id="serv-slug" required placeholder="np. panelowe"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    <p class="text-[10px] text-slate-400 mt-1">Unikalny slug bez spacji (np. 'panelowe', 'gabionowe').</p>
+                </div>
+                <div>
+                    <label for="serv-icon" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Ikona Lucide</label>
+                    <select id="serv-icon" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-855 focus:outline-none focus:border-red-500 transition-all duration-300">
+                        <?php foreach ($lucideIcons as $iconName => $iconLabel): ?>
+                            <option value="<?= $iconName ?>"><?= $iconLabel ?> (<?= $iconName ?>)</option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
+                    <label for="serv-description" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Opis usługi</label>
+                    <textarea id="serv-description" required rows="3" placeholder="Krótki opis usługi wyświetlany w karcie..."
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('add-service')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-655 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                        Dodaj usługę
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: EDIT SERVICE
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-edit-service" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Edytuj usługę</h3>
+                <button onclick="closeModal('edit-service')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <form id="edit-service-form" onsubmit="submitEditServiceForm(event)" class="px-8 py-6 space-y-5">
+                <input type="hidden" id="edit-serv-id">
+                <div>
+                    <label for="edit-serv-name" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Nazwa usługi</label>
+                    <input type="text" id="edit-serv-name" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+                <div>
+                    <label for="edit-serv-slug" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Slug (identyfikator)</label>
+                    <input type="text" id="edit-serv-slug" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+                <div>
+                    <label for="edit-serv-icon" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Ikona Lucide</label>
+                    <select id="edit-serv-icon" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-855 focus:outline-none focus:border-red-500 transition-all duration-300">
+                        <?php foreach ($lucideIcons as $iconName => $iconLabel): ?>
+                            <option value="<?= $iconName ?>"><?= $iconLabel ?> (<?= $iconName ?>)</option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div>
+                    <label for="edit-serv-description" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Opis usługi</label>
+                    <textarea id="edit-serv-description" required rows="3"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('edit-service')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-655 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                        Zapisz zmiany
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: SERVICE SLIDES MANAGER
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-service-slide-manager" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300 my-8">
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                    <h3 class="text-base font-bold text-slate-800">Zarządzanie slajdami modala</h3>
+                    <p id="slide-manager-serv-name" class="text-xs text-slate-400 mt-0.5">Dodawaj, usuwaj i sortuj zdjęcia w modalu szczegółowym</p>
+                </div>
+                <button onclick="closeModal('service-slide-manager')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-8 space-y-6">
+                <!-- List of existing slides -->
+                <div>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wide block mb-3">Istniejące slajdy (Przeciągnij by przenieść)</span>
+                    <div id="slide-manager-list" class="space-y-3 max-h-60 overflow-y-auto custom-scrollbar pr-2">
+                        <!-- Loaded dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Add new slide form wrapper -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+                    <span class="text-xs font-bold text-slate-750 uppercase tracking-wide block mb-4">Dodaj nowy slajd</span>
+                    <form id="add-slide-form" onsubmit="submitAddSlideForm(event)" class="space-y-4">
+                        <input type="hidden" id="slide-manager-serv-id">
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="slide-type" class="block text-slate-650 text-xs font-semibold mb-1">Typ slajdu</label>
+                                <select id="slide-type" onchange="toggleSlideTypeFields(this.value)"
+                                    class="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-red-500">
+                                    <option value="image">Zdjęcie z galerii</option>
+                                    <option value="gradient">Bezgraficzny z ikoną</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Image upload fields -->
+                        <div id="slide-image-fields" class="space-y-2">
+                            <label class="block text-slate-650 text-xs font-semibold">Wybierz zdjęcie</label>
+                            <input type="file" id="slide-photo-input" accept="image/jpeg, image/png, image/webp"
+                                class="w-full bg-white border border-slate-200 rounded-xl py-2 px-3 text-sm focus:outline-none focus:border-red-500">
+                        </div>
+
+                        <!-- Gradient fields -->
+                        <div id="slide-gradient-fields" class="hidden grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="slide-gradient" class="block text-slate-655 text-xs font-semibold mb-1">Gradient tła</label>
+                                <select id="slide-gradient"
+                                    class="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-red-500">
+                                    <option value="bg-gradient-to-br from-slate-700 to-slate-900">Szary/Ciemny (Slate)</option>
+                                    <option value="bg-gradient-to-br from-amber-800 to-yellow-950">Brązowy/Złoty (Amber)</option>
+                                    <option value="bg-gradient-to-br from-yellow-600 to-orange-800">Pomarańczowy (Tymczasowy)</option>
+                                    <option value="bg-gradient-to-br from-blue-700 to-indigo-950">Niebieski (Blue)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="slide-icon" class="block text-slate-655 text-xs font-semibold mb-1">Ikona Lucide</label>
+                                <select id="slide-icon"
+                                    class="w-full bg-white border border-slate-200 rounded-xl py-2.5 px-3 text-sm focus:outline-none focus:border-red-500">
+                                    <?php foreach ($lucideIcons as $iconName => $iconLabel): ?>
+                                        <option value="<?= $iconName ?>"><?= $iconLabel ?> (<?= $iconName ?>)</option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end pt-2">
+                            <button type="submit" id="add-slide-submit"
+                                class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 px-5 rounded-xl text-xs active-spring-scale flex items-center gap-1.5 transition-colors">
+                                <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                                Dodaj slajd
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="px-8 py-4 border-t border-slate-100 bg-slate-50 flex justify-end">
+                <button onclick="closeModal('service-slide-manager')"
+                    class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all active-spring-scale shadow-md">
+                    Gotowe i zamknij
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: ADD EQUIPMENT
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-add-equipment" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Dodaj nową maszynę do parku</h3>
+                <button onclick="closeModal('add-equipment')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <form id="add-equipment-form" onsubmit="submitEquipmentForm(event)" class="px-8 py-6 space-y-5">
+                <div>
+                    <label class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Zdjęcie maszyny</label>
+                    <input type="file" id="equip-photo" required accept="image/jpeg, image/png, image/webp"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2 px-3 text-sm focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label for="equip-name" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Nazwa maszyny / pojazdu</label>
+                    <input type="text" id="equip-name" required placeholder="np. Minikoparka JCB"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="equip-badge" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Etykieta (Badge)</label>
+                        <input type="text" id="equip-badge" placeholder="np. Wykopy, Transport"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label for="equip-icon" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Ikona Lucide</label>
+                        <select id="equip-icon" required
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-855 focus:outline-none focus:border-red-500 transition-all duration-300">
+                            <?php foreach ($lucideIcons as $iconName => $iconLabel): ?>
+                                <option value="<?= $iconName ?>"><?= $iconLabel ?> (<?= $iconName ?>)</option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="equip-spec-1" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Specyfikacja 1</label>
+                        <input type="text" id="equip-spec-1" placeholder="np. Praca w ciasnych miejscach"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label for="equip-spec-2" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Specyfikacja 2</label>
+                        <input type="text" id="equip-spec-2" placeholder="np. Głębokość kopania 2.5m"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                </div>
+                <div>
+                    <label for="equip-description" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Opis zastosowania</label>
+                    <textarea id="equip-description" required rows="3" placeholder="Zastosowanie maszyny w terenie..."
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('add-equipment')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-655 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                        Dodaj sprzęt
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: EDIT EQUIPMENT
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-edit-equipment" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Edytuj sprzęt</h3>
+                <button onclick="closeModal('edit-equipment')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <form id="edit-equipment-form" onsubmit="submitEditEquipmentForm(event)" class="px-8 py-6 space-y-5">
+                <input type="hidden" id="edit-equip-id">
+                
+                <div class="aspect-[16/9] w-full max-h-48 rounded-xl overflow-hidden shadow-sm bg-slate-100 border border-slate-200">
+                    <img id="edit-equip-img-preview" src="" class="w-full h-full object-cover">
+                </div>
+
+                <div>
+                    <label class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Zmień zdjęcie (Opcjonalnie)</label>
+                    <input type="file" id="edit-equip-photo" accept="image/jpeg, image/png, image/webp"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-2 px-3 text-sm focus:outline-none focus:border-red-500">
+                </div>
+                <div>
+                    <label for="edit-equip-name" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Nazwa maszyny</label>
+                    <input type="text" id="edit-equip-name" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="edit-equip-badge" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Etykieta (Badge)</label>
+                        <input type="text" id="edit-equip-badge"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label for="edit-equip-icon" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Ikona Lucide</label>
+                        <select id="edit-equip-icon" required
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-855 focus:outline-none focus:border-red-500 transition-all duration-300">
+                            <?php foreach ($lucideIcons as $iconName => $iconLabel): ?>
+                                <option value="<?= $iconName ?>"><?= $iconLabel ?> (<?= $iconName ?>)</option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="edit-equip-spec-1" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Specyfikacja 1</label>
+                        <input type="text" id="edit-equip-spec-1"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                    <div>
+                        <label for="edit-equip-spec-2" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Specyfikacja 2</label>
+                        <input type="text" id="edit-equip-spec-2"
+                            class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                    </div>
+                </div>
+                <div>
+                    <label for="edit-equip-description" class="block text-slate-655 text-xs font-bold uppercase tracking-wider mb-2">Opis zastosowania</label>
+                    <textarea id="edit-equip-description" required rows="3"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('edit-equipment')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-655 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md">
+                        Zapisz zmiany
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- CSRF Token -->
     <input type="hidden" id="csrf-token" value="<?= htmlspecialchars(getCSRFToken()) ?>">
 
@@ -880,17 +1440,23 @@ $lucideIcons = [
             // Close mobile sidebar first
             closeSidebar();
 
-            const tabs = ['photos', 'categories', 'reviews'];
+            const tabs = ['photos', 'categories', 'reviews', 'services', 'equipment'];
             tabs.forEach(t => {
-                document.getElementById(`tab-content-${t}`).classList.add('hidden');
-                document.getElementById(`tab-btn-${t}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale";
+                const contentEl = document.getElementById(`tab-content-${t}`);
+                const btnEl = document.getElementById(`tab-btn-${t}`);
+                if (contentEl) contentEl.classList.add('hidden');
+                if (btnEl) btnEl.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale";
             });
 
-            document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
-            document.getElementById(`tab-btn-${tabId}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white active-spring-scale";
+            const activeContent = document.getElementById(`tab-content-${tabId}`);
+            const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+            if (activeContent) activeContent.classList.remove('hidden');
+            if (activeBtn) activeBtn.className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white active-spring-scale";
 
             const title = document.getElementById('tab-title');
             const subtitle = document.getElementById('tab-subtitle');
+
+            if (!title || !subtitle) return;
 
             if (tabId === 'photos') {
                 title.textContent = 'Zdjęcia';
@@ -898,9 +1464,15 @@ $lucideIcons = [
             } else if (tabId === 'categories') {
                 title.textContent = 'Kategorie';
                 subtitle.textContent = 'Organizuj podziały na typy ogrodzeń';
-            } else {
+            } else if (tabId === 'reviews') {
                 title.textContent = 'Opinie klientów';
                 subtitle.textContent = 'Zarządzaj opiniami z Google Maps oraz własnymi referencjami';
+            } else if (tabId === 'services') {
+                title.textContent = 'Usługi';
+                subtitle.textContent = 'Zarządzaj ofertą usług i slajdami modala szczegółowego';
+            } else if (tabId === 'equipment') {
+                title.textContent = 'Park Maszynowy';
+                subtitle.textContent = 'Zarządzaj flotą maszyn i pojazdów budowlanych';
             }
         }
 
@@ -1336,6 +1908,459 @@ $lucideIcons = [
                 console.error(err);
                 alert('Błąd sieci.');
             }
+        }
+
+        // ──────────────────────────────────────────
+        // Services CRUD JS
+        // ──────────────────────────────────────────
+        async function submitServiceForm(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('name', document.getElementById('serv-name').value);
+            formData.append('slug', document.getElementById('serv-slug').value);
+            formData.append('icon', document.getElementById('serv-icon').value);
+            formData.append('description', document.getElementById('serv-description').value);
+
+            try {
+                const response = await fetch('api.php?action=add_service', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    alert('Usługa została pomyślnie dodana!');
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Wystąpił błąd podczas dodawania usługi.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd połączenia z serwerem.');
+            }
+        }
+
+        function openEditServiceModal(serv) {
+            document.getElementById('edit-serv-id').value = serv.id;
+            document.getElementById('edit-serv-name').value = serv.name;
+            document.getElementById('edit-serv-slug').value = serv.slug;
+            document.getElementById('edit-serv-icon').value = serv.icon;
+            document.getElementById('edit-serv-description').value = serv.description;
+            openModal('edit-service');
+        }
+
+        async function submitEditServiceForm(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', document.getElementById('edit-serv-id').value);
+            formData.append('name', document.getElementById('edit-serv-name').value);
+            formData.append('slug', document.getElementById('edit-serv-slug').value);
+            formData.append('icon', document.getElementById('edit-serv-icon').value);
+            formData.append('description', document.getElementById('edit-serv-description').value);
+
+            try {
+                const response = await fetch('api.php?action=edit_service', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Wystąpił błąd podczas aktualizacji usługi.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd połączenia z serwerem.');
+            }
+        }
+
+        async function confirmDeleteService(id) {
+            if (!confirm('UWAGA: Czy na pewno chcesz trwale usunąć tę usługę? Spowoduje to bezpowrotne usunięcie usługi oraz wszystkich powiązanych z nią slajdów i ich plików z serwera!')) return;
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', id);
+
+            try {
+                const response = await fetch('api.php?action=delete_service', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Wystąpił błąd podczas usuwania usługi.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd połączenia z serwerem.');
+            }
+        }
+
+        // ──────────────────────────────────────────
+        // Service Slides Manager
+        // ──────────────────────────────────────────
+        let activeSlidesSortable = null;
+
+        function openSlideManager(serv, slides) {
+            document.getElementById('slide-manager-serv-id').value = serv.id;
+            document.getElementById('slide-manager-serv-name').textContent = serv.name;
+            
+            const listContainer = document.getElementById('slide-manager-list');
+            listContainer.innerHTML = '';
+            
+            if (slides.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="text-center py-8 text-slate-400 text-xs">
+                        <i data-lucide="image-off" class="w-8 h-8 mx-auto mb-2 opacity-35"></i>
+                        Brak slajdów dla tej usługi. Dodaj swój pierwszy slajd poniżej.
+                    </div>
+                `;
+            } else {
+                slides.forEach(slide => {
+                    let previewHtml = '';
+                    if (slide.image) {
+                        previewHtml = `
+                            <div class="w-16 h-12 rounded-lg bg-slate-100 overflow-hidden border border-slate-200 flex-shrink-0">
+                                <img src="../${slide.image}" class="w-full h-full object-cover">
+                            </div>
+                        `;
+                    } else {
+                        previewHtml = `
+                            <div class="w-16 h-12 rounded-lg bg-gradient-to-br ${slide.gradient} overflow-hidden border border-slate-700/35 flex-shrink-0 flex items-center justify-center text-white">
+                                <i data-lucide="${slide.icon}" class="w-5 h-5"></i>
+                            </div>
+                        `;
+                    }
+
+                    const itemHtml = `
+                        <div data-id="${slide.id}" class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl hover:shadow-sm transition-all group drag-handle-slide cursor-grab active:cursor-grabbing">
+                            <div class="flex items-center gap-3">
+                                <div class="text-slate-350 hover:text-slate-500">
+                                    <i data-lucide="grip-vertical" class="w-4 h-4"></i>
+                                </div>
+                                ${previewHtml}
+                                <div>
+                                    <p class="text-xs font-bold text-slate-800">${slide.image ? 'Zdjęcie z galerii' : 'Slajd bezgraficzny'}</p>
+                                    <p class="text-[9px] font-mono text-slate-400 truncate max-w-[220px]">${slide.image ? slide.image : 'Gradient z ikoną Lucide'}</p>
+                                </div>
+                            </div>
+                            <button type="button" onclick="deleteSlide(${slide.id}, ${serv.id}, event)"
+                                    class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                                    title="Usuń slajd">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    `;
+                    listContainer.insertAdjacentHTML('beforeend', itemHtml);
+                });
+            }
+            
+            lucide.createIcons();
+            openModal('service-slide-manager');
+
+            // Initialize Sortable for slide list
+            if (activeSlidesSortable) {
+                activeSlidesSortable.destroy();
+            }
+            
+            if (slides.length > 0) {
+                activeSlidesSortable = Sortable.create(listContainer, {
+                    handle: '.drag-handle-slide',
+                    ghostClass: 'sortable-ghost',
+                    animation: 200,
+                    onEnd: async function() {
+                        const newOrder = Array.from(listContainer.children).map(item => item.dataset.id);
+                        try {
+                            const response = await fetch('api.php?action=reorder_service_slides', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({
+                                    csrf_token: document.getElementById('csrf-token').value,
+                                    order: newOrder
+                                })
+                            });
+                            const res = await response.json();
+                            if (!res.success) {
+                                alert(res.message || 'Błąd zapisu kolejności slajdów.');
+                            }
+                        } catch (err) {
+                            console.error(err);
+                            alert('Błąd połączenia sieciowego podczas zapisu kolejności.');
+                        }
+                    }
+                });
+            }
+        }
+
+        function toggleSlideTypeFields(value) {
+            const imgFields = document.getElementById('slide-image-fields');
+            const gradFields = document.getElementById('slide-gradient-fields');
+            if (value === 'image') {
+                imgFields.classList.remove('hidden');
+                gradFields.classList.add('hidden');
+            } else {
+                imgFields.classList.add('hidden');
+                gradFields.classList.remove('hidden');
+            }
+        }
+
+        async function submitAddSlideForm(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('add-slide-submit');
+            const originalHtml = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i data-lucide="loader" class="w-3.5 h-3.5 animate-spin"></i> Dodawanie...`;
+            lucide.createIcons();
+
+            const serviceId = document.getElementById('slide-manager-serv-id').value;
+            const slideType = document.getElementById('slide-type').value;
+
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('service_id', serviceId);
+            formData.append('slide_type', slideType);
+
+            if (slideType === 'image') {
+                const fileEl = document.getElementById('slide-photo-input');
+                if (!fileEl.files || fileEl.files.length === 0) {
+                    alert('Proszę wybrać plik zdjęcia do przesłania.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalHtml;
+                    lucide.createIcons();
+                    return;
+                }
+                formData.append('slide_photo', fileEl.files[0]);
+            } else {
+                formData.append('gradient', document.getElementById('slide-gradient').value);
+                formData.append('icon', document.getElementById('slide-icon').value);
+            }
+
+            try {
+                const response = await fetch('api.php?action=add_service_slide', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd dodawania slajdu.');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalHtml;
+                    lucide.createIcons();
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalHtml;
+                lucide.createIcons();
+            }
+        }
+
+        async function deleteSlide(id, serviceId, event) {
+            if (event) event.stopPropagation();
+            if (!confirm('Czy na pewno chcesz bezpowrotnie usunąć ten slajd? Jeśli zawierał zdjęcie, zostanie ono skasowane z serwera.')) return;
+
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', id);
+
+            try {
+                const response = await fetch('api.php?action=delete_service_slide', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd podczas usuwania slajdu.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        // ──────────────────────────────────────────
+        // Equipment (Park Maszynowy) CRUD JS
+        // ──────────────────────────────────────────
+        async function submitEquipmentForm(e) {
+            e.preventDefault();
+            
+            const fileInput = document.getElementById('equip-photo');
+            if (!fileInput.files || fileInput.files.length === 0) {
+                alert('Dodanie zdjęcia sprzętu jest obowiązkowe.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('equipment_photo', fileInput.files[0]);
+            formData.append('name', document.getElementById('equip-name').value);
+            formData.append('badge', document.getElementById('equip-badge').value);
+            formData.append('icon', document.getElementById('equip-icon').value);
+            formData.append('spec_1', document.getElementById('equip-spec-1').value);
+            formData.append('spec_2', document.getElementById('equip-spec-2').value);
+            formData.append('description', document.getElementById('equip-description').value);
+
+            try {
+                const response = await fetch('api.php?action=add_equipment', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    alert('Sprzęt został pomyślnie dodany do parku maszynowego!');
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd zapisu danych sprzętu.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd połączenia z serwerem.');
+            }
+        }
+
+        function openEditEquipmentModal(item) {
+            document.getElementById('edit-equip-id').value = item.id;
+            document.getElementById('edit-equip-name').value = item.name;
+            document.getElementById('edit-equip-badge').value = item.badge || '';
+            document.getElementById('edit-equip-icon').value = item.icon;
+            document.getElementById('edit-equip-spec-1').value = item.spec_1 || '';
+            document.getElementById('edit-equip-spec-2').value = item.spec_2 || '';
+            document.getElementById('edit-equip-description').value = item.description;
+            document.getElementById('edit-equip-img-preview').src = '../images/' + item.image;
+            openModal('edit-equipment');
+        }
+
+        async function submitEditEquipmentForm(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', document.getElementById('edit-equip-id').value);
+            formData.append('name', document.getElementById('edit-equip-name').value);
+            formData.append('badge', document.getElementById('edit-equip-badge').value);
+            formData.append('icon', document.getElementById('edit-equip-icon').value);
+            formData.append('spec_1', document.getElementById('edit-equip-spec-1').value);
+            formData.append('spec_2', document.getElementById('edit-equip-spec-2').value);
+            formData.append('description', document.getElementById('edit-equip-description').value);
+
+            const fileInput = document.getElementById('edit-equip-photo');
+            if (fileInput.files && fileInput.files[0]) {
+                formData.append('equipment_photo', fileInput.files[0]);
+            }
+
+            try {
+                const response = await fetch('api.php?action=edit_equipment', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Wystąpił błąd podczas aktualizacji danych sprzętu.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd połączenia z serwerem.');
+            }
+        }
+
+        async function confirmDeleteEquipment(id) {
+            if (!confirm('UWAGA: Czy na pewno chcesz trwale usunąć ten sprzęt z parku maszynowego? Plik zdjęcia zostanie skasowany z dysku.')) return;
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', id);
+
+            try {
+                const response = await fetch('api.php?action=delete_equipment', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Wystąpił błąd podczas usuwania sprzętu.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        // ──────────────────────────────────────────
+        // Drag and Drop (SortableJS) for Services and Equipment
+        // ──────────────────────────────────────────
+        const servicesSortable = document.getElementById('services-sortable-list');
+        if (servicesSortable) {
+            Sortable.create(servicesSortable, {
+                handle: '.drag-handle-service',
+                ghostClass: 'sortable-ghost',
+                animation: 250,
+                onEnd: async function() {
+                    const newOrder = Array.from(servicesSortable.children).map(row => row.dataset.id);
+                    try {
+                        const response = await fetch('api.php?action=reorder_services', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                csrf_token: document.getElementById('csrf-token').value,
+                                order: newOrder
+                            })
+                        });
+                        const res = await response.json();
+                        if (!res.success) {
+                            alert(res.message || 'Błąd zapisu kolejności usług.');
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        alert('Błąd połączenia sieciowego podczas zapisu kolejności usług.');
+                    }
+                }
+            });
+        }
+
+        const equipmentSortable = document.getElementById('equipment-sortable-grid');
+        if (equipmentSortable) {
+            Sortable.create(equipmentSortable, {
+                handle: '.drag-handle-equipment',
+                ghostClass: 'sortable-ghost',
+                animation: 250,
+                onEnd: async function() {
+                    const newOrder = Array.from(equipmentSortable.children).map(card => card.dataset.id);
+                    try {
+                        const response = await fetch('api.php?action=reorder_equipment', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                csrf_token: document.getElementById('csrf-token').value,
+                                order: newOrder
+                            })
+                        });
+                        const res = await response.json();
+                        if (!res.success) {
+                            alert(res.message || 'Błąd zapisu kolejności sprzętu.');
+                        }
+                    } catch (err) {
+                        console.error(err);
+                        alert('Błąd połączenia sieciowego podczas zapisu kolejności sprzętu.');
+                    }
+                }
+            });
         }
     </script>
 </body>

@@ -256,15 +256,6 @@
       "norm_label": "index.php"
     },
     {
-      "label": "migrate.php",
-      "file_type": "code",
-      "source_file": "migrate.php",
-      "source_location": "L1",
-      "id": "migrate_php",
-      "community": 401,
-      "norm_label": "migrate.php"
-    },
-    {
       "label": "mcp_config.json",
       "file_type": "code",
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/mcp_config.json",
@@ -2545,7 +2536,7 @@
       "label": "handleUpload()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L159",
+      "source_location": "L112",
       "id": "admin_api_handleupload",
       "community": 388,
       "norm_label": "handleupload()"
@@ -2554,7 +2545,7 @@
       "label": "handleUpdatePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L293",
+      "source_location": "L246",
       "id": "admin_api_handleupdatephoto",
       "community": 388,
       "norm_label": "handleupdatephoto()"
@@ -2563,7 +2554,7 @@
       "label": "handleDeletePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L328",
+      "source_location": "L281",
       "id": "admin_api_handledeletephoto",
       "community": 388,
       "norm_label": "handledeletephoto()"
@@ -2572,7 +2563,7 @@
       "label": "handleReorderPhotos()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L368",
+      "source_location": "L321",
       "id": "admin_api_handlereorderphotos",
       "community": 388,
       "norm_label": "handlereorderphotos()"
@@ -2581,7 +2572,7 @@
       "label": "handleAddCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L396",
+      "source_location": "L349",
       "id": "admin_api_handleaddcategory",
       "community": 388,
       "norm_label": "handleaddcategory()"
@@ -2590,7 +2581,7 @@
       "label": "handleEditCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L439",
+      "source_location": "L392",
       "id": "admin_api_handleeditcategory",
       "community": 388,
       "norm_label": "handleeditcategory()"
@@ -2599,7 +2590,7 @@
       "label": "handleDeleteCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L472",
+      "source_location": "L425",
       "id": "admin_api_handledeletecategory",
       "community": 388,
       "norm_label": "handledeletecategory()"
@@ -2608,7 +2599,7 @@
       "label": "compressWithGD()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L501",
+      "source_location": "L454",
       "id": "admin_api_compresswithgd",
       "community": 388,
       "norm_label": "compresswithgd()"
@@ -2617,7 +2608,7 @@
       "label": "compressWithTinyPNG()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L562",
+      "source_location": "L515",
       "id": "admin_api_compresswithtinypng",
       "community": 388,
       "norm_label": "compresswithtinypng()"
@@ -2626,7 +2617,7 @@
       "label": "translatePolishChars()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L620",
+      "source_location": "L573",
       "id": "admin_api_translatepolishchars",
       "community": 388,
       "norm_label": "translatepolishchars()"
@@ -2635,7 +2626,7 @@
       "label": "handleFetchGoogleReviews()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L637",
+      "source_location": "L590",
       "id": "admin_api_handlefetchgooglereviews",
       "community": 388,
       "norm_label": "handlefetchgooglereviews()"
@@ -2644,7 +2635,7 @@
       "label": "handleAddReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L646",
+      "source_location": "L599",
       "id": "admin_api_handleaddreview",
       "community": 388,
       "norm_label": "handleaddreview()"
@@ -2653,7 +2644,7 @@
       "label": "handleEditReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L675",
+      "source_location": "L628",
       "id": "admin_api_handleeditreview",
       "community": 388,
       "norm_label": "handleeditreview()"
@@ -2662,7 +2653,7 @@
       "label": "handleToggleReviewVisibility()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L702",
+      "source_location": "L655",
       "id": "admin_api_handletogglereviewvisibility",
       "community": 388,
       "norm_label": "handletogglereviewvisibility()"
@@ -2671,109 +2662,10 @@
       "label": "handleDeleteReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L722",
+      "source_location": "L675",
       "id": "admin_api_handledeletereview",
       "community": 388,
       "norm_label": "handledeletereview()"
-    },
-    {
-      "label": "handleAddService()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L740",
-      "id": "admin_api_handleaddservice",
-      "community": 388,
-      "norm_label": "handleaddservice()"
-    },
-    {
-      "label": "handleEditService()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L775",
-      "id": "admin_api_handleeditservice",
-      "community": 388,
-      "norm_label": "handleeditservice()"
-    },
-    {
-      "label": "handleDeleteService()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L807",
-      "id": "admin_api_handledeleteservice",
-      "community": 388,
-      "norm_label": "handledeleteservice()"
-    },
-    {
-      "label": "handleReorderServices()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L844",
-      "id": "admin_api_handlereorderservices",
-      "community": 388,
-      "norm_label": "handlereorderservices()"
-    },
-    {
-      "label": "handleAddServiceSlide()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L869",
-      "id": "admin_api_handleaddserviceslide",
-      "community": 388,
-      "norm_label": "handleaddserviceslide()"
-    },
-    {
-      "label": "handleDeleteServiceSlide()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L951",
-      "id": "admin_api_handledeleteserviceslide",
-      "community": 388,
-      "norm_label": "handledeleteserviceslide()"
-    },
-    {
-      "label": "handleReorderServiceSlides()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L990",
-      "id": "admin_api_handlereorderserviceslides",
-      "community": 388,
-      "norm_label": "handlereorderserviceslides()"
-    },
-    {
-      "label": "handleAddEquipment()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L1015",
-      "id": "admin_api_handleaddequipment",
-      "community": 388,
-      "norm_label": "handleaddequipment()"
-    },
-    {
-      "label": "handleEditEquipment()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L1084",
-      "id": "admin_api_handleeditequipment",
-      "community": 388,
-      "norm_label": "handleeditequipment()"
-    },
-    {
-      "label": "handleDeleteEquipment()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L1173",
-      "id": "admin_api_handledeleteequipment",
-      "community": 388,
-      "norm_label": "handledeleteequipment()"
-    },
-    {
-      "label": "handleReorderEquipment()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L1211",
-      "id": "admin_api_handlereorderequipment",
-      "community": 388,
-      "norm_label": "handlereorderequipment()"
     },
     {
       "label": "index.php",
@@ -27738,7 +27630,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_touch_psychology_md",
-      "community": 390,
+      "community": 275,
       "norm_label": "touch-psychology.md"
     },
     {
@@ -27747,7 +27639,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "mobile_design_touch_psychology_touch_psychology_reference",
-      "community": 390,
+      "community": 275,
       "norm_label": "touch psychology reference"
     },
     {
@@ -28278,7 +28170,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L482",
       "id": "mobile_design_touch_psychology_9_touch_psychology_checklist",
-      "community": 390,
+      "community": 275,
       "norm_label": "9. touch psychology checklist"
     },
     {
@@ -28287,7 +28179,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L484",
       "id": "mobile_design_touch_psychology_before_every_screen",
-      "community": 390,
+      "community": 275,
       "norm_label": "before every screen"
     },
     {
@@ -28296,7 +28188,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L494",
       "id": "mobile_design_touch_psychology_before_release",
-      "community": 390,
+      "community": 275,
       "norm_label": "before release"
     },
     {
@@ -39320,7 +39212,7 @@
       "file_type": "document",
       "source_file": ".agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
-      "community": 390,
+      "community": 275,
       "norm_label": "touch-psychology.md",
       "id": "agent_skills_mobile_design_touch_psychology_md"
     },
@@ -44927,9 +44819,9 @@
       "source_file": "includes/google_reviews_helper.php",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "includes_google_reviews_helper_php",
-      "target": "includes_google_reviews_helper_syncgooglereviews"
+      "target": "includes_google_reviews_helper_syncgooglereviews",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45103,116 +44995,6 @@
       "target": "admin_api_handledeletereview"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L740",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleaddservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L775",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleeditservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L807",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handledeleteservice",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L844",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handlereorderservices",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L869",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleaddserviceslide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L951",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handledeleteserviceslide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L990",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handlereorderserviceslides",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1015",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleaddequipment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1084",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleeditequipment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1173",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handledeleteequipment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1211",
-      "weight": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handlereorderequipment",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -45349,127 +45131,6 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "admin/api.php",
-      "source_location": "L747",
-      "weight": 1.0,
-      "source": "admin_api_handleaddservice",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L783",
-      "weight": 1.0,
-      "source": "admin_api_handleeditservice",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L810",
-      "weight": 1.0,
-      "source": "admin_api_handledeleteservice",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L849",
-      "weight": 1.0,
-      "source": "admin_api_handlereorderservices",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L876",
-      "weight": 1.0,
-      "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L954",
-      "weight": 1.0,
-      "source": "admin_api_handledeleteserviceslide",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L995",
-      "weight": 1.0,
-      "source": "admin_api_handlereorderserviceslides",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1024",
-      "weight": 1.0,
-      "source": "admin_api_handleaddequipment",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1094",
-      "weight": 1.0,
-      "source": "admin_api_handleeditequipment",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1176",
-      "weight": 1.0,
-      "source": "admin_api_handledeleteequipment",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1216",
-      "weight": 1.0,
-      "source": "admin_api_handlereorderequipment",
-      "target": "admin_api_sendresponse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
       "source_location": "L130",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -45530,94 +45191,6 @@
       "confidence_score": 1.0,
       "source": "admin_api_compresswithtinypng",
       "target": "admin_api_compresswithgd"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L918",
-      "weight": 1.0,
-      "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_compresswithgd",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1056",
-      "weight": 1.0,
-      "source": "admin_api_handleaddequipment",
-      "target": "admin_api_compresswithgd",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1134",
-      "weight": 1.0,
-      "source": "admin_api_handleeditequipment",
-      "target": "admin_api_compresswithgd",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L915",
-      "weight": 1.0,
-      "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_compresswithtinypng",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1053",
-      "weight": 1.0,
-      "source": "admin_api_handleaddequipment",
-      "target": "admin_api_compresswithtinypng",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L1131",
-      "weight": 1.0,
-      "source": "admin_api_handleeditequipment",
-      "target": "admin_api_compresswithtinypng",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L750",
-      "weight": 1.0,
-      "source": "admin_api_handleaddservice",
-      "target": "admin_api_translatepolishchars",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L786",
-      "weight": 1.0,
-      "source": "admin_api_handleeditservice",
-      "target": "admin_api_translatepolishchars",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84854,5 +84427,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0830d476689bbafa3cb1f92bed937563bbc478df"
+  "built_at_commit": "3459d50c956f0fa38a3fbe7f6809c85181d97478"
 }
