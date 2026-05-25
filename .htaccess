@@ -1,0 +1,19 @@
+# KM-BUD htaccess config
+
+RewriteEngine On
+RewriteBase /
+
+# Redirect starych URL-i HTML na PHP
+RewriteRule ^index\.html$ index.php [R=301,L]
+RewriteRule ^galeria\.html$ galeria.php [R=301,L]
+
+# Zabezpieczenie config/ przed bezpośrednim dostępem
+<FilesMatch "config\.php$">
+    Deny from all
+</FilesMatch>
+
+# Opcjonalne zabezpieczenie install.php po instalacji
+# Można odkomentować po instalacji
+# <FilesMatch "install\.php$">
+#     Deny from all
+# </FilesMatch>

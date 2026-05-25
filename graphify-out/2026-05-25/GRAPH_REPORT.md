@@ -1,16 +1,16 @@
-# Graph Report - km-bud  (2026-05-25)
+# Graph Report - km-bud  (2026-05-23)
 
 ## Corpus Check
-- 208 files · ~1,566,988 words
+- 196 files · ~1,553,691 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4400 nodes · 4448 edges · 401 communities (391 shown, 10 thin omitted)
+- 4371 nodes · 4416 edges · 388 communities (378 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5725885c`
+- Built from commit: `63e3403b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -401,9 +401,6 @@
 - [[_COMMUNITY_Community 385|Community 385]]
 - [[_COMMUNITY_Community 386|Community 386]]
 - [[_COMMUNITY_Community 387|Community 387]]
-- [[_COMMUNITY_Community 388|Community 388]]
-- [[_COMMUNITY_Community 389|Community 389]]
-- [[_COMMUNITY_Community 390|Community 390]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `5. Re-render Optimization` - 27 edges
@@ -429,7 +426,7 @@
 - `persist_design_system()` --calls--> `path`  [INFERRED]
   /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/extract_assets.js
 
-## Communities (401 total, 10 thin omitted)
+## Communities (388 total, 10 thin omitted)
 
 ### Community 0 - "Design System Generation"
 Cohesion: 0.06
@@ -444,11 +441,11 @@ Cohesion: 0.15
 Nodes (13): 1. Blast Radius Analysis (Primary Use), 2. Risk-Scored Change Analysis, 3. Dead Code Detection, 4. Refactoring Preview, 5. Architecture Visualization, 6. Wiki Generation, code:bash (code-review-graph detect-changes), code:bash (# Surfaces functions/classes that are candidates for removal) (+5 more)
 
 ### Community 3 - "Security and Coverage Scans"
-Cohesion: 0.24
+Cohesion: 0.22
 Nodes (12): path, main(), Validate no hardcoded secrets (OWASP A04).     Checks: API keys, tokens, passwor, Validate dangerous code patterns (OWASP A05).     Checks: Injection risks, XSS,, Validate security configuration (OWASP A02).     Checks: Security headers, CORS,, Execute security validation scans., Validate supply chain security (OWASP A03).     Checks: npm audit, lock file pre, run_full_scan() (+4 more)
 
 ### Community 4 - "React Performance Checker"
-Cohesion: 0.15
+Cohesion: 0.16
 Nodes (9): main(), PerformanceChecker, Check for data fetching in useEffect (Section 4), Check for missing React.memo, useMemo, useCallback (Section 5), Check for unoptimized images (Section 6), Generate final report, Check for sequential await patterns (Section 1), Check for barrel imports (Section 2) (+1 more)
 
 ### Community 5 - "Checklist Runner"
@@ -1516,8 +1513,8 @@ Cohesion: 0.33
 Nodes (6): 3. Touch vs Click Psychology, code:block7 (Tap → Immediate visual change (< 50ms)), code:block8 (Problem: Finger occludes target during tap), Expectation Differences, The "Fat Finger" Problem, Touch Feedback Requirements
 
 ### Community 275 - "Community 275"
-Cohesion: 0.33
-Nodes (6): 7. Touch Accessibility, Accessible Touch Patterns, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations, Touch Target Spacing (A11y)
+Cohesion: 0.17
+Nodes (10): 7. Touch Accessibility, 9. Touch Psychology Checklist, Accessible Touch Patterns, Before Every Screen, Before Release, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations (+2 more)
 
 ### Community 276 - "Community 276"
 Cohesion: 0.33
@@ -1935,18 +1932,6 @@ Nodes (8): afterGrid, beforeGrid, endIndex, fs, galeriaHtml, generatedGrid, path
 Cohesion: 0.40
 Nodes (4): categoryBadges, fs, metadata, path
 
-### Community 388 - "Community 388"
-Cohesion: 0.36
-Nodes (11): compressWithGD(), compressWithTinyPNG(), handleAddCategory(), handleDeleteCategory(), handleDeletePhoto(), handleEditCategory(), handleReorderPhotos(), handleUpdatePhoto() (+3 more)
-
-### Community 389 - "Community 389"
-Cohesion: 0.47
-Nodes (3): isLoggedIn(), logoutAdmin(), requireAuth()
-
-### Community 390 - "Community 390"
-Cohesion: 0.33
-Nodes (4): 9. Touch Psychology Checklist, Before Every Screen, Before Release, Touch Psychology Reference
-
 ## Knowledge Gaps
 - **2265 isolated node(s):** `command`, `args`, `command`, `args`, `fs` (+2260 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -1955,9 +1940,11 @@ Nodes (4): 9. Touch Psychology Checklist, Before Every Screen, Before Release, T
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `React Performance Checker`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Test Runner`, `Community 244`?**
+- **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Community 244`, `Test Runner`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `persist_design_system()` connect `Design System Generation` to `Security and Coverage Scans`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+- **Why does `PerformanceChecker` connect `React Performance Checker` to `Security and Coverage Scans`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?**
   _`path` has 22 INFERRED edges - model-reasoned connections that need verification._
@@ -1967,5 +1954,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.06103896103896104 - nodes in this community are weakly interconnected._
 - **Should `Community 26` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `Community 27` be split into smaller, more focused modules?**
-  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._

@@ -1,0 +1,1252 @@
+<?php
+/**
+ * KM-BUD Ogrodzenia — Strona Główna
+ * Visual output IDENTICAL to index.html
+ */
+
+$currentPage     = 'index';
+$pageTitle       = 'KM-BUD Ogrodzenia - Montaż Ogrodzeń Myślenice | Konrad Małucha';
+$pageDescription = 'Profesjonalny montaż ogrodzeń w Myślenicach i okolicach. Ogrodzenia panelowe, betonowe, podmurówki. Szybkie terminy, solidne wykonanie. Zadzwoń: lokalna firma budowlana KM-BUD.';
+$ogTitle         = 'KM-BUD Ogrodzenia - Solidne Ogrodzenia Myślenice | Montaż od A do Z';
+$ogDescription   = 'Profesjonalny montaż ogrodzeń w Myślenicach i okolicach Małopolski. Ogrodzenia panelowe, betonowe, z siatki. Darmowa wycena. Lokalna firma z doświadczeniem.';
+
+$extraHead = '
+  <style>
+    #service-modal {
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #service-modal.hidden-modal {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #service-modal.hidden-modal .modal-content-wrapper {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+
+    #service-modal:not(.hidden-modal) .modal-content-wrapper {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .modal-content-wrapper {
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+    }
+  </style>';
+
+require_once __DIR__ . '/includes/header.php';
+?>
+
+        <div id="main-content" class="transition-all duration-300">
+          <section id=hero class="code-section relative min-h-[90vh] flex items-center">
+
+            <div class="absolute inset-0 z-0">
+              <img src="images/ogrodzenie-bloczkowe-01.webp" alt="Kompleksowe Ogrodzenia KM-BUD"
+                class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-r from-[#080808]/85 via-[#080808]/60 to-transparent"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-16">
+              <div class=max-w-2xl>
+
+                <div
+                  class="inline-flex items-center gap-2 bg-[var(--accent2-color)] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                  <i data-lucide="map-pin"></i>
+                  <span>Myślenice i okolice</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+                  style=font-family:var(--font-family-heading)>
+                  Solidne ogrodzenia na lata – doradzimy, pomierzymy, zamontujemy wszystko od A do Z.
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                  Działamy na terenie Myślenic i okolic. Szybkie terminy, solidne
+                  wykonanie. Zaufaj doświadczonej firmie z Małopolski.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                  <a href="tel:+48 794 008 854"
+                    class="inline-flex items-center justify-center gap-3 bg-[var(--accent2-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all transform hover:scale-105 shadow-lg">
+                    <i data-lucide="phone"></i>
+                    Zadzwoń teraz
+                  </a>
+                  <a href="#contact"
+                    class="inline-flex items-center justify-center gap-3 bg-white text-[var(--dark-text-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    <i data-lucide="calculator"></i>
+                    Darmowa wycena
+                  </a>
+                </div>
+
+                <div class="mt-10 flex flex-wrap items-center gap-6 text-gray-300 text-sm">
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="circle-check" class="text-[var(--accent3-color)] text-lg"></i>
+                    <span>15 lat doświadczenia</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="circle-check" class="text-[var(--accent3-color)] text-lg"></i>
+                    <span>500+ realizacji</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <i data-lucide="circle-check" class="text-[var(--accent3-color)] text-lg"></i>
+                    <span>Gwarancja jakości</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0">
+              <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-12 md:h-20">
+                <path d="M0 100V75C360 100 720 50 1080 75C1260 87 1380 95 1440 80V100H0Z" fill="white" />
+              </svg>
+            </div>
+          </section>
+          <section id=services-overview class="code-section py-16 md:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+              <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4"
+                  style=font-family:var(--font-family-heading)>
+                  Nasze usługi
+                </h2>
+                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
+                  Oferujemy kompleksowe usługi związane z ogrodzeniami – od projektu po
+                  montaż. Sprawdź, co możemy dla Ciebie zrobić.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- 1. Ogrodzenia panelowe -->
+                <div data-service-category="panelowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="scan" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia panelowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów
+                    przemysłowych.
+                  </p>
+                  <a href="galeria.php?filter=panelowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 2. Ogrodzenia siatkowe -->
+                <div data-service-category="siatka"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="grid-3x3" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia z siatki
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny
+                    leśne.
+                  </p>
+                  <a href="galeria.php?filter=siatka"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 3. Ogrodzenia frontowe z bloczków -->
+                <div data-service-category="betonowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="brick-wall" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia z bloczków
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i
+                    design.
+                  </p>
+                  <a href="galeria.php?filter=betonowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 4. Ogrodzenia gabionowe -->
+                <div data-service-category="gabionowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="layers" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia gabionowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną
+                    izolację akustyczną.
+                  </p>
+                  <a href="galeria.php?filter=gabionowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 5. Ogrodzenia sztachetowe -->
+                <div data-service-category="sztachetowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="align-justify" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia sztachetowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z
+                    trwałością.
+                  </p>
+                  <a href="galeria.php?filter=sztachetowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 6. Ogrodzenia przemysłowe -->
+                <div data-service-category="przemysłowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="shield" class="text-white text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia przemysłowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu
+                    zabezpieczenia.
+                  </p>
+                  <a href="galeria.php?filter=przemysłowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 7. Ogrodzenia tymczasowe -->
+                <div data-service-category="tymczasowe"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="construction" class="text-white text-2xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Ogrodzenia tymczasowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu
+                    budowy.
+                  </p>
+                  <a href="galeria.php?filter=tymczasowe"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 8. Bramy, furtki, przęsła -->
+                <div data-service-category="bramy"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="door-closed" class="text-white text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Bramy, furtki, przęsła
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu
+                    ogrodzenia.
+                  </p>
+                  <a href="galeria.php?filter=bramy"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+                <!-- 9. Mury oporowe -->
+                <div data-service-category="podmurówka"
+                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                  <div
+                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                    <i data-lucide="mountain" class="text-white text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                    Mury oporowe
+                  </h3>
+                  <p class="text-[var(--gray-text-color)] mb-4">
+                    Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki
+                    ogrodzeniowe.
+                  </p>
+                  <a href="galeria.php?filter=podmurówka"
+                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                    Zobacz zdjęcia <i data-lucide="camera"></i>
+                  </a>
+                </div>
+
+              </div>
+
+              <div class="text-center mt-12">
+                <a href="#contact"
+                  class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all shadow-lg hover:shadow-xl">
+                  <i data-lucide="phone"></i>
+                  Skontaktuj się po darmową wycenę
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section id=why-choose-us class="code-section py-16 md:py-24 bg-[var(--light-background-color)]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                <div class="relative w-full h-[400px] md:h-[500px]">
+                  <!-- Carousel Container -->
+                  <div id="realizations-carousel"
+                    class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-950">
+                    <!-- Slides Container -->
+                    <div class="relative w-full h-full">
+                      <!-- Slide 1 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10"
+                        data-slide-index="0">
+                        <img src="images/ogrodzenie-bloczkowe-01.webp"
+                          alt="Nowoczesne ogrodzenie frontowe z bloczków łupanych Joniec"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                      <!-- Slide 2 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                        data-slide-index="1">
+                        <img src="images/ogrodzenie-siatkowe-01.webp"
+                          alt="Trwałe i precyzyjne ogrodzenie z siatki plecionej"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                      <!-- Slide 3 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                        data-slide-index="2">
+                        <img src="images/brama-furtka-01.webp" alt="Solidna brama przesuwna stalowa z automatyką"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                      <!-- Slide 4 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                        data-slide-index="3">
+                        <img src="images/ogrodzenie-panelowe-01.webp"
+                          alt="Estetyczne i klasyczne ogrodzenie panelowe 3D"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                      <!-- Slide 5 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                        data-slide-index="4">
+                        <img src="images/ogrodzenie-bloczkowe-05.webp"
+                          alt="Modułowe ogrodzenie betonowe o podwyższonej trwałości"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                      <!-- Slide 6 -->
+                      <div
+                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
+                        data-slide-index="5">
+                        <img src="images/ogrodzenie-siatkowe-05.webp"
+                          alt="Ogrodzenie siatkowe z solidną podmurówką systemową"
+                          class="w-full h-full object-cover object-center">
+                      </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button id="carousel-prev"
+                      class="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+                      <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="carousel-next"
+                      class="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-neutral-950/40 hover:bg-[var(--primary-color)] text-white w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]">
+                      <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+
+                    <!-- Carousel Indicators (Dots) -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="0" aria-label="Idź do slajdu 1"></button>
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="1" aria-label="Idź do slajdu 2"></button>
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="2" aria-label="Idź do slajdu 3"></button>
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="3" aria-label="Idź do slajdu 4"></button>
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="4" aria-label="Idź do slajdu 5"></button>
+                      <button
+                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
+                        data-dot-index="5" aria-label="Idź do slajdu 6"></button>
+                    </div>
+                  </div>
+
+                  <!-- 15 lat badge (overlay) -->
+                  <div
+                    class="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-6 max-w-xs hidden md:block z-30">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-[var(--accent3-color)] rounded-full flex items-center justify-center">
+                        <i data-lucide="award" class="text-white text-xl"></i>
+                      </div>
+                      <div>
+                        <p class="text-2xl font-bold text-[var(--dark-text-color)]">
+                          15 lat
+                        </p>
+                        <p class="text-sm text-[var(--gray-text-color)]">doświadczenia</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4"
+                    style=font-family:var(--font-family-heading)>
+                    Dlaczego KM-BUD?
+                  </h2>
+                  <p class="text-lg text-[var(--gray-text-color)] mb-8">
+                    Jesteśmy lokalną firmą z Myślenic z wieloletnim doświadczeniem w
+                    branży ogrodzeń. Stawiamy na jakość i zadowolenie klientów.
+                  </p>
+
+                  <div class=space-y-5>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 bg-[var(--primary-color)] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <i data-lucide="check" class="text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-[var(--dark-text-color)]">
+                          Doświadczenie i profesjonalizm
+                        </h3>
+                        <p class=text-[var(--gray-text-color)]>
+                          500+ zrealizowanych projektów na terenie Małopolski. Znamy się
+                          na tym, co robimy.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 bg-[var(--primary-color)] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <i data-lucide="check" class="text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-[var(--dark-text-color)]">
+                          Lokalna firma
+                        </h3>
+                        <p class=text-[var(--gray-text-color)]>
+                          Działamy w Myślenicach i okolicach. Znamy lokalne warunki
+                          gruntowe i potrzeby klientów.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 bg-[var(--primary-color)] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <i data-lucide="check" class="text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-[var(--dark-text-color)]">
+                          Szybkie terminy realizacji
+                        </h3>
+                        <p class=text-[var(--gray-text-color)]>
+                          Rozumiemy, że czas ma znaczenie. Realizujemy zlecenia terminowo
+                          i sprawnie.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="w-10 h-10 bg-[var(--primary-color)] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                        <i data-lucide="check" class="text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-[var(--dark-text-color)]">
+                          Gwarancja jakości
+                        </h3>
+                        <p class=text-[var(--gray-text-color)]>
+                          Używamy najwyższej jakości materiałów. Oferujemy gwarancję na
+                          nasze realizacje.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class=mt-8>
+                    <a href="#why-choose-us"
+                      class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all shadow-lg hover:shadow-xl">
+                      <i data-lucide="user"></i>
+                      Poznaj nas lepiej
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Machinery Park (Park Maszynowy) -->
+          <section id="machinery-fleet"
+            class="code-section py-16 md:py-24 bg-white border-t border-[var(--light-border-color)]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12 md:mb-16">
+                <span
+                  class="text-sm font-bold uppercase tracking-wider text-[var(--primary-color)] px-4 py-1.5 bg-[var(--primary-color)]/10 rounded-full">Nasz
+                  Sprzęt</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mt-4 mb-4"
+                  style="font-family: var(--font-family-heading)">
+                  Park Maszynowy
+                </h2>
+                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
+                  Dysponujemy nowoczesnym, profesjonalnym sprzętem, który pozwala nam na samodzielną i sprawną
+                  realizację każdego etapu prac – od precyzyjnych wykopów po profesjonalny montaż.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- 1. Minikoparka -->
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
+                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
+                      </div>
+                    <img src="images/sprzet-budowlany-01.webp" alt="Minikoparka KM-BUD"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <span
+                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Wykopy</span>
+                  </div>
+                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
+                    <div
+                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
+                      <div
+                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
+                        <i data-lucide="shovel" class="text-white text-xl"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
+                        Minikoparka
+                      </h3>
+                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
+                        Precyzyjne i sprawne wykopy pod fundamenty ogrodzeń, słupki oraz murki oporowe w każdych
+                        warunkach glebowych.
+                      </p>
+                    </div>
+                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
+                      <span
+                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
+                        techniczna</span>
+                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Praca w trudnodostępnych miejscach</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Precyzyjne i równe wykopy liniowe</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. Wozidło gąsienicowe -->
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
+                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
+                      </div>
+                    <img src="images/wozidlo_gasienicowe.webp" alt="Wozidło Gąsienicowe KM-BUD"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <span
+                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Transport</span>
+                  </div>
+                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
+                    <div
+                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
+                      <div
+                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
+                        <i data-lucide="tractor" class="text-white text-xl"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
+                        Wozidło Gąsienicowe
+                      </h3>
+                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
+                        Błyskawiczny transport urobku, ziemi oraz betonu. Szerokie gąsienice chronią trawnik i podłoże
+                        przed zniszczeniem.
+                      </p>
+                    </div>
+                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
+                      <span
+                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
+                        techniczna</span>
+                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Zminimalizowany nacisk na podłoże</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Wydajny transport ciężkich materiałów</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. Taczka spalinowa -->
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
+                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
+                      </div>
+                    <img src="images/taczka_spalinowa.webp" alt="Taczka Spalinowa KM-BUD"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <span
+                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Wąskie
+                      przejścia</span>
+                  </div>
+                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
+                    <div
+                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
+                      <div
+                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
+                        <i data-lucide="truck" class="text-white text-xl"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
+                        Taczka Spalinowa
+                      </h3>
+                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
+                        Niezastąpiona przy przewożeniu kruszywa, betonu i zaprawy murarskiej na ciasnych i gęsto
+                        zagospodarowanych posesjach.
+                      </p>
+                    </div>
+                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
+                      <span
+                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
+                        techniczna</span>
+                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Wyjątkowa zwrotność i kompaktowość</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Szybki załadunek i rozładunek</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. Wiertnica glebowa -->
+                <div
+                  class="bg-[var(--light-background-color)] rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 group border border-[var(--light-border-color)] flex flex-col justify-between relative">
+                  <div class="relative h-48 w-full overflow-hidden bg-neutral-900">
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500 z-10">
+                      </div>
+                    <img src="images/wiertnica_glebowa.webp" alt="Wiertnica Glebowa KM-BUD"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out">
+                    <span
+                      class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-[var(--primary-color)] font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-20 border border-[var(--primary-color)]/10">Odwierty</span>
+                  </div>
+                  <div class="p-6 pt-8 md:p-8 md:pt-10 flex-grow flex flex-col justify-between relative">
+                    <div
+                      class="absolute -top-7 left-6 w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-[var(--light-border-color)] group-hover:border-[var(--primary-color)]/30 group-hover:scale-115 transition-all duration-500 z-30">
+                      <div
+                        class="w-10 h-10 bg-neutral-950 rounded-xl flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-1 h-full bg-[var(--primary-color)]"></div>
+                        <i data-lucide="drill" class="text-white text-xl"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="text-xl font-bold text-[var(--dark-text-color)] mb-3 group-hover:text-[var(--primary-color)] transition-colors duration-300 font-heading">
+                        Wiertnica Glebowa
+                      </h3>
+                      <p class="text-[var(--gray-text-color)] text-sm leading-relaxed mb-6">
+                        Szybkie, mechaniczne wiercenie precyzyjnych otworów w ziemi pod słupki ogrodzeniowe. Gwarancja
+                        idealnego pionu.
+                      </p>
+                    </div>
+                    <div class="border-t border-[var(--light-border-color)] pt-5 mt-auto">
+                      <span
+                        class="text-[10px] font-bold uppercase tracking-wider text-[var(--gray-text-color)]/60 block mb-3">Specyfikacja
+                        techniczna</span>
+                      <ul class="space-y-2.5 text-xs text-[var(--gray-text-color)]">
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Równomierna, idealna głębokość wiercenia</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                          <span
+                            class="w-2 h-2 rounded-full bg-[var(--primary-color)] opacity-80 shadow-sm flex-shrink-0"></span>
+                          <span class="font-medium">Drastyczne przyspieszenie tempa montażu</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="code-section py-16 md:py-24 bg-white">
+            <span id="gallery-preview"></span>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mb-4"
+                  style=font-family:var(--font-family-heading)>
+                  Nasze realizacje
+                </h2>
+                <p class="text-lg text-[var(--gray-text-color)] max-w-2xl mx-auto">
+                  Zobacz przykłady naszych projektów. Każde ogrodzenie wykonujemy z
+                  najwyższą starannością.
+                </p>
+              </div>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-bloczkowe-02.webp" alt="Ogrodzenie frontowe z bloczków"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-siatkowe-02.webp" alt="Ogrodzenie z siatki plecionej"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/brama-furtka-02.webp" alt="Nowoczesna furtka wejściowa"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-panelowe-01.webp" alt="Klasyczny panel ogrodzeniowy 3D"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-bloczkowe-03.webp" alt="Ogrodzenie z bloczków gładkich"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-siatkowe-03.webp" alt="Solidne ogrodzenie siatkowe"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-bloczkowe-04.webp" alt="Ogrodzenie modułowe betonowe"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                    <span
+                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
+                      galerię</span>
+                  </div>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                  onclick="window.location.href='galeria.php'">
+                  <img src="images/ogrodzenie-siatkowe-04.webp" alt="Ogrodzenie z siatki zgrzewanej"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                  <div
+                    class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center transition-all duration-300">
+                    <span class="text-white font-bold text-3xl">+44</span>
+                    <span class="text-white/80 text-xs font-semibold mt-1">zobacz więcej</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-10">
+                <a href="galeria.php"
+                  class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-[var(--primary-button-hover-bg-color)] transition-all shadow-lg hover:shadow-xl">
+                  <i data-lucide="images"></i>
+                  Zobacz więcej realizacji
+                </a>
+              </div>
+            </div>
+          </section>
+          <section id=contact class="code-section py-16 md:py-24 bg-[var(--dark-background-color)] relative overflow-hidden">
+
+            <div class="absolute inset-0 opacity-5">
+              <div class="absolute inset-0"
+                style="background-image:url(data:image/svg+xml,%3Csvg\ width=\'60\'\ height=\'60\'\ viewBox=\'0\ 0\ 60\ 60\'\ xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg\ fill=\'none\'\ fill-rule=\'evenodd\'%3E%3Cg\ fill=\'%23ffffff\'\ fill-opacity=\'1\'%3E%3Cpath\ d=\'M36\ 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6\ 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6\ 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E)">
+              </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+                <div>
+                  <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+                    style=font-family:var(--font-family-heading)>
+                    Skontaktuj się z nami
+                  </h2>
+                  <p class="text-lg text-gray-300 mb-8">
+                    Potrzebujesz wyceny ogrodzenia? Zadzwoń do nas lub wypełnij formularz.
+                    Odpowiemy najszybciej jak to możliwe.
+                  </p>
+
+                  <div class=space-y-6>
+
+                    <div class="flex items-center gap-4">
+                      <div class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center">
+                        <i data-lucide="phone" class="text-white text-xl"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-400">Zadzwoń do nas</p>
+                        <a href="tel:+48 794 008 854"
+                          class="text-xl font-bold text-white hover:text-[var(--accent2-color)] transition-colors">
+                          +48 794 008 854
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center">
+                        <i data-lucide="mail" class="text-white text-xl"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-400">Napisz e-mail</p>
+                        <a href=mailto:km-bud.olszowice@wp.pl
+                          class="text-xl font-bold text-white hover:text-[var(--accent2-color)] transition-colors">
+                          km-bud.olszowice@wp.pl
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center">
+                        <i data-lucide="map-pin" class="text-white text-xl"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-400">Lokalizacja</p>
+                        <p class="text-xl font-bold text-white">
+                          Olszowice. Cicha 1
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                      <div class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center">
+                        <i data-lucide="clock" class="text-white text-xl"></i>
+                      </div>
+                      <div>
+                        <p class="text-sm text-gray-400">Godziny pracy</p>
+                        <p class="text-xl font-bold text-white">Pon - Pt: 8:00 - 18:00</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm">
+                    <p class="text-white font-semibold mb-2">
+                      <i data-lucide="zap" class="text-[var(--accent2-color)] mr-2"></i>
+                      Potrzebujesz szybkiej wyceny?
+                    </p>
+                    <a href="tel:+48 794 008 854" class="text-[var(--accent2-color)] font-bold hover:underline">
+                      Zadzwoń teraz: +48 794 008 854
+                    </a>
+                  </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-3 md:p-4 shadow-2xl overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d164767.886712533!2d19.831215376487254!3d49.81430035941124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47166944282277e9%3A0xc5766a0c557c53a0!2sKM-BUD%20OGRODZENIA!5e0!3m2!1spl!2spl!4v1773869189053!5m2!1spl!2spl"
+                    width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="rounded-xl w-full"></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div> <!-- Close #main-content -->
+      </div> <!-- Close the [font-family:var(--font-family-body)] opened in header.php -->
+      <div> <!-- Wrapper for footer -->
+<?php require_once __DIR__ . '/includes/footer.php'; ?>
+      </div> <!-- Close wrapper for footer -->
+    </div> <!-- Close frame-content opened in header.php -->
+    <div class="frame-content"></div>
+  </div> <!-- Close frame-root opened in header.php -->
+
+  <!-- ═══════════════ SERVICE DETAILS MODAL ═══════════════ -->
+  <div id="service-modal"
+    class="hidden-modal fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex items-center justify-center p-4"
+    role="dialog" aria-modal="true" aria-label="Szczegóły usługi">
+
+    <!-- Close button -->
+    <button id="modal-close"
+      class="absolute top-4 right-4 text-white/70 hover:text-white w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Zamknij">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Prev -->
+    <button id="modal-prev"
+      class="absolute left-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Poprzednie zdjęcie">
+      <i data-lucide="chevron-left" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Next -->
+    <button id="modal-next"
+      class="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors z-[210]"
+      aria-label="Następne zdjęcie">
+      <i data-lucide="chevron-right" class="w-7 h-7"></i>
+    </button>
+
+    <!-- Modal Content Wrapper -->
+    <div class="modal-content-wrapper max-w-4xl w-full flex flex-col items-center justify-center relative">
+      <!-- Slide Preview Area (Tylko zdjęcie / gradient i ikona) -->
+      <div id="modal-slide-preview"
+        class="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative bg-neutral-900 flex items-center justify-center select-none">
+      </div>
+      <!-- Indicators -->
+      <div id="modal-dots" class="mt-4 flex gap-2 justify-center z-[210]"></div>
+
+      <!-- Gallery link button (Option A) -->
+      <div class="mt-8 text-center z-[210]">
+        <a id="modal-gallery-btn" href="#"
+          class="inline-flex items-center justify-center gap-2 bg-[var(--primary-color)] text-white px-8 py-3.5 rounded-[var(--button-rounded-radius)] font-bold text-base hover:bg-[var(--primary-button-hover-bg-color)] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 duration-200">
+          Przejdź do galerii <i data-lucide="images"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+    const navLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      document.body.style.overflow = 'hidden';
+      mobileMenuButton.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('translate-x-full');
+      mobileMenu.classList.remove('translate-x-0');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      backdrop.classList.remove('opacity-100');
+      document.body.style.overflow = '';
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+    }
+
+    mobileMenuButton.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    backdrop.addEventListener('click', closeMenu);
+    navLinks.forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // ═══════════════ CAROUSEL LOGIC ═══════════════
+    const carouselSection = document.getElementById('realizations-carousel');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    let slideInterval;
+    const intervalTime = 5000;
+
+    function goToSlide(index) {
+      if (!slides.length) return;
+      slides[currentSlide].classList.remove('opacity-100', 'z-10');
+      slides[currentSlide].classList.add('opacity-0', 'pointer-events-none', 'z-0');
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.remove('bg-white');
+        dots[currentSlide].classList.add('bg-white/40');
+      }
+
+      currentSlide = (index + slides.length) % slides.length;
+
+      slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.remove('bg-white/40');
+        dots[currentSlide].classList.add('bg-white');
+      }
+    }
+
+    function nextSlide() { goToSlide(currentSlide + 1); }
+    function prevSlide() { goToSlide(currentSlide - 1); }
+
+    function startSlideShow() {
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
+    function stopSlideShow() {
+      clearInterval(slideInterval);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => { stopSlideShow(); nextSlide(); startSlideShow(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { stopSlideShow(); prevSlide(); startSlideShow(); });
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => { stopSlideShow(); goToSlide(index); startSlideShow(); });
+    });
+
+    if (carouselSection) {
+      carouselSection.addEventListener('mouseenter', stopSlideShow);
+      carouselSection.addEventListener('mouseleave', startSlideShow);
+
+      // Swipe logic for carousel
+      let touchStartX = 0;
+      let touchEndX = 0;
+      carouselSection.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX);
+      carouselSection.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 50) { stopSlideShow(); nextSlide(); startSlideShow(); }
+        if (touchEndX - touchStartX > 50) { stopSlideShow(); prevSlide(); startSlideShow(); }
+      });
+    }
+
+    // Init carousel
+    if (slides.length > 0) {
+      slides.forEach(s => s.classList.add('opacity-0', 'pointer-events-none', 'z-0'));
+      slides[currentSlide].classList.remove('opacity-0', 'pointer-events-none', 'z-0');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
+      dots.forEach(d => d.classList.remove('bg-white'));
+      if (dots[currentSlide]) dots[currentSlide].classList.add('bg-white');
+      startSlideShow();
+    }
+
+    // ═══════════════ SERVICE MODAL LOGIC ═══════════════
+    const serviceModal = document.getElementById('service-modal');
+    const modalCloseBtn = document.getElementById('modal-close');
+    const modalPrevBtn = document.getElementById('modal-prev');
+    const modalNextBtn = document.getElementById('modal-next');
+    const modalSlidePreview = document.getElementById('modal-slide-preview');
+    const modalDotsContainer = document.getElementById('modal-dots');
+
+    // Gradients and icons mapping
+    // Service category image slides
+    const serviceSlides = {
+      'panelowe': [
+        { image: 'images/ogrodzenie-panelowe-01.webp' },
+        { image: 'images/ogrodzenie-siatkowe-04.webp' }
+      ],
+      'siatka': [
+        { image: 'images/ogrodzenie-siatkowe-01.webp' },
+        { image: 'images/ogrodzenie-siatkowe-02.webp' },
+        { image: 'images/ogrodzenie-siatkowe-03.webp' }
+      ],
+      'betonowe': [
+        { image: 'images/ogrodzenie-bloczkowe-01.webp' },
+        { image: 'images/ogrodzenie-bloczkowe-02.webp' },
+        { image: 'images/ogrodzenie-bloczkowe-03.webp' }
+      ],
+      'gabionowe': [
+        { image: 'images/ogrodzenie-bloczkowe-06.webp' },
+        { gradient: 'bg-gradient-to-br from-slate-700 to-slate-900', icon: 'layers' }
+      ],
+      'sztachetowe': [
+        { image: 'images/ogrodzenie-bloczkowe-09.webp' },
+        { gradient: 'bg-gradient-to-br from-amber-800 to-yellow-950', icon: 'align-justify' }
+      ],
+      'przemysłowe': [
+        { image: 'images/ogrodzenie-panelowe-01.webp' },
+        { image: 'images/ogrodzenie-siatkowe-09.webp' }
+      ],
+      'tymczasowe': [
+        { gradient: 'bg-gradient-to-br from-yellow-600 to-orange-800', icon: 'construction' }
+      ],
+      'bramy': [
+        { image: 'images/brama-furtka-01.webp' },
+        { image: 'images/brama-furtka-02.webp' }
+      ],
+      'podmurówka': [
+        { image: 'images/ogrodzenie-bloczkowe-05.webp' },
+        { image: 'images/ogrodzenie-siatkowe-04.webp' }
+      ]
+    };
+
+    let activeModalSlides = [];
+    let currentModalSlide = 0;
+
+    function renderModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      const slide = activeModalSlides[currentModalSlide];
+
+      if (slide.image) {
+        modalSlidePreview.className = "w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative select-none bg-neutral-900";
+        modalSlidePreview.innerHTML = `<img src="${slide.image}" alt="Realizacja KM-BUD" class="w-full h-full object-cover animate-fade-in">`;
+      } else {
+        modalSlidePreview.className = `w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative flex items-center justify-center select-none ${slide.gradient}`;
+        modalSlidePreview.innerHTML = `<i data-lucide="${slide.icon}" class="w-32 h-32 md:w-48 md:h-48 text-white/20"></i>`;
+        lucide.createIcons();
+      }
+
+      // Update dots
+      Array.from(modalDotsContainer.children).forEach((dot, index) => {
+        dot.className = index === currentModalSlide
+          ? 'w-2.5 h-2.5 rounded-full bg-white transition-colors'
+          : 'w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors';
+      });
+    }
+
+    function openServiceModal(category) {
+      if (!serviceSlides[category]) return;
+      activeModalSlides = serviceSlides[category];
+      currentModalSlide = 0;
+
+      // Update gallery button href dynamically
+      const galleryBtn = document.getElementById('modal-gallery-btn');
+      if (galleryBtn) {
+        galleryBtn.href = `galeria.php?filter=${category}`;
+      }
+
+      // Generate dots
+      modalDotsContainer.innerHTML = '';
+      activeModalSlides.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Idź do slajdu ${idx + 1}`);
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/60 transition-colors';
+        dot.onclick = () => { currentModalSlide = idx; renderModalSlide(); };
+        modalDotsContainer.appendChild(dot);
+      });
+
+      renderModalSlide();
+      serviceModal.classList.remove('hidden-modal');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeServiceModal() {
+      serviceModal.classList.add('hidden-modal');
+      document.body.style.overflow = '';
+    }
+
+    function nextModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      currentModalSlide = (currentModalSlide + 1) % activeModalSlides.length;
+      renderModalSlide();
+    }
+
+    function prevModalSlide() {
+      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      currentModalSlide = (currentModalSlide - 1 + activeModalSlides.length) % activeModalSlides.length;
+      renderModalSlide();
+    }
+
+    // Bind cards and links to open modal
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.service-link')) {
+          e.preventDefault(); // Prevent direct navigation, open modal instead
+        }
+        const category = card.getAttribute('data-service-category');
+        openServiceModal(category);
+      });
+    });
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeServiceModal);
+    if (modalNextBtn) modalNextBtn.addEventListener('click', nextModalSlide);
+    if (modalPrevBtn) modalPrevBtn.addEventListener('click', prevModalSlide);
+    if (serviceModal) serviceModal.addEventListener('click', (e) => {
+      if (e.target === serviceModal) closeServiceModal();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!serviceModal || serviceModal.classList.contains('hidden-modal')) return;
+      if (e.key === 'Escape') closeServiceModal();
+      if (e.key === 'ArrowRight') nextModalSlide();
+      if (e.key === 'ArrowLeft') prevModalSlide();
+    });
+
+    // Swipe logic for modal
+    let modalTouchStartX = 0;
+    let modalTouchEndX = 0;
+    if (serviceModal) {
+      serviceModal.addEventListener('touchstart', e => modalTouchStartX = e.changedTouches[0].screenX);
+      serviceModal.addEventListener('touchend', e => {
+        modalTouchEndX = e.changedTouches[0].screenX;
+        if (modalTouchStartX - modalTouchEndX > 50) nextModalSlide();
+        if (modalTouchEndX - modalTouchStartX > 50) prevModalSlide();
+      });
+    }
+  </script>
+</body>
+
+</html>
