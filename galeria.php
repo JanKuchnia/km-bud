@@ -90,8 +90,7 @@ require_once __DIR__ . '/includes/header.php';
           <p class="text-[var(--accent2-color)] text-sm font-semibold tracking-widest uppercase mb-3">Nasze prace</p>
           <h1 class="text-white text-4xl sm:text-5xl font-bold mb-4">Galeria Realizacji</h1>
           <p class="text-white/60 text-lg max-w-2xl mx-auto">
-            Każde ogrodzenie to osobna historia. Przeglądaj nasze dotychczasowe montaże – panelowe, betonowe, z siatki i
-            podmurówki.
+            Każde ogrodzenie to osobna historia. Przeglądaj nasze dotychczasowe montaże.
           </p>
         </div>
       </section>

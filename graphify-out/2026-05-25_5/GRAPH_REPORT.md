@@ -1,16 +1,16 @@
 # Graph Report - km-bud  (2026-05-25)
 
 ## Corpus Check
-- 206 files · ~1,556,947 words
+- 209 files · ~1,570,156 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4435 nodes · 4505 edges · 402 communities (392 shown, 10 thin omitted)
+- 4419 nodes · 4490 edges · 402 communities (392 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4376c475`
+- Built from commit: `0830d476`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -408,8 +408,8 @@
 ## God Nodes (most connected - your core abstractions)
 1. `5. Re-render Optimization` - 27 edges
 2. `7. JavaScript Performance` - 27 edges
-3. `sendResponse()` - 24 edges
-4. `path` - 24 edges
+3. `path` - 24 edges
+4. `sendResponse()` - 24 edges
 5. `6. Rendering Performance` - 21 edges
 6. `Frontend Design System` - 19 edges
 7. `Orchestrator - Native Multi-Agent Coordination` - 18 edges
@@ -1516,8 +1516,8 @@ Cohesion: 0.33
 Nodes (6): 3. Touch vs Click Psychology, code:block7 (Tap → Immediate visual change (< 50ms)), code:block8 (Problem: Finger occludes target during tap), Expectation Differences, The "Fat Finger" Problem, Touch Feedback Requirements
 
 ### Community 275 - "Community 275"
-Cohesion: 0.17
-Nodes (10): 7. Touch Accessibility, 9. Touch Psychology Checklist, Accessible Touch Patterns, Before Every Screen, Before Release, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations (+2 more)
+Cohesion: 0.33
+Nodes (6): 7. Touch Accessibility, Accessible Touch Patterns, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations, Touch Target Spacing (A11y)
 
 ### Community 276 - "Community 276"
 Cohesion: 0.33
@@ -1944,11 +1944,11 @@ Cohesion: 0.47
 Nodes (3): isLoggedIn(), logoutAdmin(), requireAuth()
 
 ### Community 390 - "Community 390"
-Cohesion: 0.12
-Nodes (15): Agent Assignments & Task Breakdown, Automated Tests, Baseline Performance Analysis, Component 1: Critical CSS & Font Optimization, Component 2: Tailwind Compilation & Optimization, Component 3: Render-Blocking Resources Mitigation, Key Bottlenecks Identified, Manual Verification (+7 more)
+Cohesion: 0.33
+Nodes (4): 9. Touch Psychology Checklist, Before Every Screen, Before Release, Touch Psychology Reference
 
 ## Knowledge Gaps
-- **2275 isolated node(s):** `command`, `args`, `command`, `args`, `📋 Overview` (+2270 more)
+- **2265 isolated node(s):** `command`, `args`, `command`, `args`, `📋 Overview` (+2260 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -1956,16 +1956,16 @@ Nodes (15): Agent Assignments & Task Breakdown, Automated Tests, Baseline Perfor
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `React Performance Checker`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Test Runner`, `Community 244`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
-- **Why does `UX Psychology Reference` connect `Community 126` to `Community 366`, `Community 207`, `Community 208`, `Community 178`, `Community 115`, `Community 59`, `Community 60`, `Community 157`?**
-  _High betweenness centrality (0.001) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **Why does `persist_design_system()` connect `Design System Generation` to `Security and Coverage Scans`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?**
   _`path` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `command`, `args`, `command` to the rest of the system?**
-  _2353 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _2343 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Design System Generation` be split into smaller, more focused modules?**
   _Cohesion score 0.06103896103896104 - nodes in this community are weakly interconnected._
 - **Should `Community 26` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
+- **Should `Community 27` be split into smaller, more focused modules?**
+  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._

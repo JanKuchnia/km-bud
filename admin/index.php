@@ -45,6 +45,50 @@ foreach ($allServiceSlides as $slide) {
     $slidesByService[$slide['service_id']][] = $slide;
 }
 
+// Automatically fetch photos from gallery and append to corresponding service slides
+$galleryPhotos = $db->query("
+    SELECT p.id AS photo_id, p.filename, c.slug AS category_slug 
+    FROM photos p 
+    JOIN categories c ON p.category_id = c.id 
+    ORDER BY p.sort_order, p.id DESC
+")->fetchAll();
+
+$serviceIdBySlug = [];
+foreach ($services as $serv) {
+    $serviceIdBySlug[$serv['slug']] = $serv['id'];
+}
+
+foreach ($galleryPhotos as $photo) {
+    $slug = $photo['category_slug'];
+    if (isset($serviceIdBySlug[$slug])) {
+        $serviceId = $serviceIdBySlug[$slug];
+        $imagePath = 'images/' . $photo['filename'];
+        
+        // Prevent duplicate entries
+        $exists = false;
+        if (isset($slidesByService[$serviceId])) {
+            foreach ($slidesByService[$serviceId] as $existingSlide) {
+                if (isset($existingSlide['image']) && $existingSlide['image'] === $imagePath) {
+                    $exists = true;
+                    break;
+                }
+            }
+        }
+        if (!$exists) {
+            $slidesByService[$serviceId][] = [
+                'id' => 'gallery_' . $photo['photo_id'],
+                'service_id' => $serviceId,
+                'image' => $imagePath,
+                'gradient' => null,
+                'icon' => null,
+                'sort_order' => 9999,
+                'is_gallery_auto' => true
+            ];
+        }
+    }
+}
+
+
 // Lucide standard icons list for dropdown selection
 $lucideIcons = [
     'rectangle-horizontal' => 'Prostokąt',
@@ -2038,23 +2082,27 @@ $lucideIcons = [
                         `;
                     }
 
+                    const actionHtml = slide.is_gallery_auto
+                        ? `<span class="text-[9px] font-bold text-slate-500 bg-slate-100 border border-slate-200 px-2 py-1 rounded-md" title="Zarządzaj tym zdjęciem w zakładce Zdjęcia">Galeria (Auto)</span>`
+                        : `<button type="button" onclick="deleteSlide(${slide.id}, ${serv.id}, event)"
+                                    class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                                    title="Usuń slajd">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>`;
+
                     const itemHtml = `
                         <div data-id="${slide.id}" class="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-xl hover:shadow-sm transition-all group drag-handle-slide cursor-grab active:cursor-grabbing">
-                            <div class="flex items-center gap-3">
+                            <div class="flex items-center gap-3 font-sans">
                                 <div class="text-slate-350 hover:text-slate-500">
                                     <i data-lucide="grip-vertical" class="w-4 h-4"></i>
                                 </div>
                                 ${previewHtml}
                                 <div>
-                                    <p class="text-xs font-bold text-slate-800">${slide.image ? 'Zdjęcie z galerii' : 'Slajd bezgraficzny'}</p>
+                                    <p class="text-xs font-bold text-slate-800">${slide.image ? (slide.is_gallery_auto ? 'Zdjęcie z galerii (Automatyczne)' : 'Zdjęcie z galerii') : 'Slajd bezgraficzny'}</p>
                                     <p class="text-[9px] font-mono text-slate-400 truncate max-w-[220px]">${slide.image ? slide.image : 'Gradient z ikoną Lucide'}</p>
                                 </div>
                             </div>
-                            <button type="button" onclick="deleteSlide(${slide.id}, ${serv.id}, event)"
-                                    class="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                                    title="Usuń slajd">
-                                <i data-lucide="trash-2" class="w-4 h-4"></i>
-                            </button>
+                            ${actionHtml}
                         </div>
                     `;
                     listContainer.insertAdjacentHTML('beforeend', itemHtml);
@@ -2075,7 +2123,13 @@ $lucideIcons = [
                     ghostClass: 'sortable-ghost',
                     animation: 200,
                     onEnd: async function() {
-                        const newOrder = Array.from(listContainer.children).map(item => item.dataset.id);
+                        // Filter out virtual gallery slides so reordering only updates actual db service_slides entries
+                        const newOrder = Array.from(listContainer.children)
+                            .map(item => item.dataset.id)
+                            .filter(id => !String(id).startsWith('gallery_'));
+
+                        if (newOrder.length === 0) return; // Nothing to reorder
+
                         try {
                             const response = await fetch('api.php?action=reorder_service_slides', {
                                 method: 'POST',

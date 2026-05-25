@@ -4,6 +4,222 @@
   "graph": {},
   "nodes": [
     {
+      "label": "extract_assets.js",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L1",
+      "id": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "community": 1,
+      "norm_label": "extract_assets.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L1",
+      "id": "km_bud_extract_assets_fs",
+      "community": 1,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L2",
+      "id": "km_bud_extract_assets_path",
+      "community": 3,
+      "norm_label": "path"
+    },
+    {
+      "label": "imgDir",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L5",
+      "id": "km_bud_extract_assets_imgdir",
+      "community": 1,
+      "norm_label": "imgdir"
+    },
+    {
+      "label": "slugify()",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L14",
+      "id": "km_bud_extract_assets_slugify",
+      "community": 1,
+      "norm_label": "slugify()"
+    },
+    {
+      "label": "cssPath",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L31",
+      "id": "km_bud_extract_assets_csspath",
+      "community": 1,
+      "norm_label": "csspath"
+    },
+    {
+      "label": "cssContent",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L33",
+      "id": "km_bud_extract_assets_csscontent",
+      "community": 1,
+      "norm_label": "csscontent"
+    },
+    {
+      "label": "cssSizeBefore",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L34",
+      "id": "km_bud_extract_assets_csssizebefore",
+      "community": 1,
+      "norm_label": "csssizebefore"
+    },
+    {
+      "label": "replacements",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L41",
+      "id": "km_bud_extract_assets_replacements",
+      "community": 1,
+      "norm_label": "replacements"
+    },
+    {
+      "label": "slug",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L49",
+      "id": "km_bud_extract_assets_slug",
+      "community": 1,
+      "norm_label": "slug"
+    },
+    {
+      "label": "targetPath",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L51",
+      "id": "km_bud_extract_assets_targetpath",
+      "community": 1,
+      "norm_label": "targetpath"
+    },
+    {
+      "label": "buffer",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L54",
+      "id": "km_bud_extract_assets_buffer",
+      "community": 1,
+      "norm_label": "buffer"
+    },
+    {
+      "label": "cssSizeAfter",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L71",
+      "id": "km_bud_extract_assets_csssizeafter",
+      "community": 1,
+      "norm_label": "csssizeafter"
+    },
+    {
+      "label": "htmlPath",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L84",
+      "id": "km_bud_extract_assets_htmlpath",
+      "community": 1,
+      "norm_label": "htmlpath"
+    },
+    {
+      "label": "htmlContent",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L86",
+      "id": "km_bud_extract_assets_htmlcontent",
+      "community": 1,
+      "norm_label": "htmlcontent"
+    },
+    {
+      "label": "htmlSizeBefore",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L87",
+      "id": "km_bud_extract_assets_htmlsizebefore",
+      "community": 1,
+      "norm_label": "htmlsizebefore"
+    },
+    {
+      "label": "matches",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L97",
+      "id": "km_bud_extract_assets_matches",
+      "community": 1,
+      "norm_label": "matches"
+    },
+    {
+      "label": "altMatch",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L115",
+      "id": "km_bud_extract_assets_altmatch",
+      "community": 1,
+      "norm_label": "altmatch"
+    },
+    {
+      "label": "originalSrcPattern",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L149",
+      "id": "km_bud_extract_assets_originalsrcpattern",
+      "community": 1,
+      "norm_label": "originalsrcpattern"
+    },
+    {
+      "label": "newTag",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L150",
+      "id": "km_bud_extract_assets_newtag",
+      "community": 1,
+      "norm_label": "newtag"
+    },
+    {
+      "label": "htmlSizeAfter",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L158",
+      "id": "km_bud_extract_assets_htmlsizeafter",
+      "community": 1,
+      "norm_label": "htmlsizeafter"
+    },
+    {
+      "label": "update.js",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
+      "source_location": "L1",
+      "id": "home_jankuchnia_pulpit_km_bud_update_js",
+      "community": 23,
+      "norm_label": "update.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
+      "source_location": "L1",
+      "id": "km_bud_update_fs",
+      "community": 23,
+      "norm_label": "fs"
+    },
+    {
+      "label": "content",
+      "file_type": "code",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
+      "source_location": "L2",
+      "id": "km_bud_update_content",
+      "community": 23,
+      "norm_label": "content"
+    },
+    {
       "label": "image_metadata.json",
       "file_type": "code",
       "source_file": "image_metadata.json",
@@ -11,6 +227,15 @@
       "id": "image_metadata_json",
       "community": 384,
       "norm_label": "image_metadata.json"
+    },
+    {
+      "label": "install.php",
+      "file_type": "code",
+      "source_file": "install.php",
+      "source_location": "L1",
+      "id": "install_php",
+      "community": 400,
+      "norm_label": "install.php"
     },
     {
       "label": "galeria.php",
@@ -29,6 +254,15 @@
       "id": "index_php",
       "community": 399,
       "norm_label": "index.php"
+    },
+    {
+      "label": "migrate.php",
+      "file_type": "code",
+      "source_file": "migrate.php",
+      "source_location": "L1",
+      "id": "migrate_php",
+      "community": 401,
+      "norm_label": "migrate.php"
     },
     {
       "label": "mcp_config.json",
@@ -2236,6 +2470,15 @@
       "norm_label": "getdb()"
     },
     {
+      "label": "header.php",
+      "file_type": "code",
+      "source_file": "includes/header.php",
+      "source_location": "L1",
+      "id": "includes_header_php",
+      "community": 398,
+      "norm_label": "header.php"
+    },
+    {
       "label": "footer.php",
       "file_type": "code",
       "source_file": "includes/footer.php",
@@ -2261,15 +2504,6 @@
       "id": "includes_google_reviews_helper_syncgooglereviews",
       "community": 388,
       "norm_label": "syncgooglereviews()"
-    },
-    {
-      "label": "header.php",
-      "file_type": "code",
-      "source_file": "includes/header.php",
-      "source_location": "L1",
-      "id": "includes_header_php",
-      "community": 398,
-      "norm_label": "header.php"
     },
     {
       "label": "logout.php",
@@ -27504,7 +27738,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_touch_psychology_md",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md"
     },
     {
@@ -27513,7 +27747,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "mobile_design_touch_psychology_touch_psychology_reference",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch psychology reference"
     },
     {
@@ -28044,7 +28278,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L482",
       "id": "mobile_design_touch_psychology_9_touch_psychology_checklist",
-      "community": 275,
+      "community": 390,
       "norm_label": "9. touch psychology checklist"
     },
     {
@@ -28053,7 +28287,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L484",
       "id": "mobile_design_touch_psychology_before_every_screen",
-      "community": 275,
+      "community": 390,
       "norm_label": "before every screen"
     },
     {
@@ -28062,7 +28296,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L494",
       "id": "mobile_design_touch_psychology_before_release",
-      "community": 275,
+      "community": 390,
       "norm_label": "before release"
     },
     {
@@ -37561,384 +37795,6 @@
       "norm_label": "workflow: graphify"
     },
     {
-      "label": "PLAN-performance.md",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L1",
-      "id": "docs_plan_performance_md",
-      "community": 390,
-      "norm_label": "plan-performance.md"
-    },
-    {
-      "label": "PLAN-performance.md \u2014 Performance Optimization Plan",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L1",
-      "id": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "community": 390,
-      "norm_label": "plan-performance.md \u2014 performance optimization plan"
-    },
-    {
-      "label": "Baseline Performance Analysis",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L5",
-      "id": "docs_plan_performance_baseline_performance_analysis",
-      "community": 390,
-      "norm_label": "baseline performance analysis"
-    },
-    {
-      "label": "Key Bottlenecks Identified",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L12",
-      "id": "docs_plan_performance_key_bottlenecks_identified",
-      "community": 390,
-      "norm_label": "key bottlenecks identified"
-    },
-    {
-      "label": "Proposed Technical Changes",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L20",
-      "id": "docs_plan_performance_proposed_technical_changes",
-      "community": 390,
-      "norm_label": "proposed technical changes"
-    },
-    {
-      "label": "Component 1: Critical CSS & Font Optimization",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L22",
-      "id": "docs_plan_performance_component_1_critical_css_font_optimization",
-      "community": 390,
-      "norm_label": "component 1: critical css & font optimization"
-    },
-    {
-      "label": "Component 2: Tailwind Compilation & Optimization",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L27",
-      "id": "docs_plan_performance_component_2_tailwind_compilation_optimization",
-      "community": 390,
-      "norm_label": "component 2: tailwind compilation & optimization"
-    },
-    {
-      "label": "Component 3: Render-Blocking Resources Mitigation",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L32",
-      "id": "docs_plan_performance_component_3_render_blocking_resources_mitigation",
-      "community": 390,
-      "norm_label": "component 3: render-blocking resources mitigation"
-    },
-    {
-      "label": "Agent Assignments & Task Breakdown",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L39",
-      "id": "docs_plan_performance_agent_assignments_task_breakdown",
-      "community": 390,
-      "norm_label": "agent assignments & task breakdown"
-    },
-    {
-      "label": "Phase 1: Research & Setup",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L41",
-      "id": "docs_plan_performance_phase_1_research_setup",
-      "community": 390,
-      "norm_label": "phase 1: research & setup"
-    },
-    {
-      "label": "Phase 2: CSS & Font Decoupling (P0)",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L45",
-      "id": "docs_plan_performance_phase_2_css_font_decoupling_p0",
-      "community": 390,
-      "norm_label": "phase 2: css & font decoupling (p0)"
-    },
-    {
-      "label": "Phase 3: Tailwind Production Optimization (P0)",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L50",
-      "id": "docs_plan_performance_phase_3_tailwind_production_optimization_p0",
-      "community": 390,
-      "norm_label": "phase 3: tailwind production optimization (p0)"
-    },
-    {
-      "label": "Phase 4: Verification & Performance Auditing",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L54",
-      "id": "docs_plan_performance_phase_4_verification_performance_auditing",
-      "community": 390,
-      "norm_label": "phase 4: verification & performance auditing"
-    },
-    {
-      "label": "Verification Plan",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L60",
-      "id": "docs_plan_performance_verification_plan",
-      "community": 390,
-      "norm_label": "verification plan"
-    },
-    {
-      "label": "Automated Tests",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L62",
-      "id": "docs_plan_performance_automated_tests",
-      "community": 390,
-      "norm_label": "automated tests"
-    },
-    {
-      "label": "Manual Verification",
-      "file_type": "document",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L67",
-      "id": "docs_plan_performance_manual_verification",
-      "community": 390,
-      "norm_label": "manual verification"
-    },
-    {
-      "label": "extract_assets.js",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "extract_assets.js",
-      "id": "home_jankuchnia_pulpit_km_bud_extract_assets_js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "fs",
-      "id": "km_bud_extract_assets_fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L2",
-      "community": 3,
-      "norm_label": "path",
-      "id": "km_bud_extract_assets_path"
-    },
-    {
-      "label": "imgDir",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L5",
-      "community": 1,
-      "norm_label": "imgdir",
-      "id": "km_bud_extract_assets_imgdir"
-    },
-    {
-      "label": "slugify()",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L14",
-      "community": 1,
-      "norm_label": "slugify()",
-      "id": "km_bud_extract_assets_slugify"
-    },
-    {
-      "label": "cssPath",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L31",
-      "community": 1,
-      "norm_label": "csspath",
-      "id": "km_bud_extract_assets_csspath"
-    },
-    {
-      "label": "cssContent",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L33",
-      "community": 1,
-      "norm_label": "csscontent",
-      "id": "km_bud_extract_assets_csscontent"
-    },
-    {
-      "label": "cssSizeBefore",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L34",
-      "community": 1,
-      "norm_label": "csssizebefore",
-      "id": "km_bud_extract_assets_csssizebefore"
-    },
-    {
-      "label": "replacements",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L41",
-      "community": 1,
-      "norm_label": "replacements",
-      "id": "km_bud_extract_assets_replacements"
-    },
-    {
-      "label": "slug",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L49",
-      "community": 1,
-      "norm_label": "slug",
-      "id": "km_bud_extract_assets_slug"
-    },
-    {
-      "label": "targetPath",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L51",
-      "community": 1,
-      "norm_label": "targetpath",
-      "id": "km_bud_extract_assets_targetpath"
-    },
-    {
-      "label": "buffer",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L54",
-      "community": 1,
-      "norm_label": "buffer",
-      "id": "km_bud_extract_assets_buffer"
-    },
-    {
-      "label": "cssSizeAfter",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L71",
-      "community": 1,
-      "norm_label": "csssizeafter",
-      "id": "km_bud_extract_assets_csssizeafter"
-    },
-    {
-      "label": "htmlPath",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L84",
-      "community": 1,
-      "norm_label": "htmlpath",
-      "id": "km_bud_extract_assets_htmlpath"
-    },
-    {
-      "label": "htmlContent",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L86",
-      "community": 1,
-      "norm_label": "htmlcontent",
-      "id": "km_bud_extract_assets_htmlcontent"
-    },
-    {
-      "label": "htmlSizeBefore",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L87",
-      "community": 1,
-      "norm_label": "htmlsizebefore",
-      "id": "km_bud_extract_assets_htmlsizebefore"
-    },
-    {
-      "label": "matches",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L97",
-      "community": 1,
-      "norm_label": "matches",
-      "id": "km_bud_extract_assets_matches"
-    },
-    {
-      "label": "altMatch",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L115",
-      "community": 1,
-      "norm_label": "altmatch",
-      "id": "km_bud_extract_assets_altmatch"
-    },
-    {
-      "label": "originalSrcPattern",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L149",
-      "community": 1,
-      "norm_label": "originalsrcpattern",
-      "id": "km_bud_extract_assets_originalsrcpattern"
-    },
-    {
-      "label": "newTag",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L150",
-      "community": 1,
-      "norm_label": "newtag",
-      "id": "km_bud_extract_assets_newtag"
-    },
-    {
-      "label": "htmlSizeAfter",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L158",
-      "community": 1,
-      "norm_label": "htmlsizeafter",
-      "id": "km_bud_extract_assets_htmlsizeafter"
-    },
-    {
-      "label": "update.js",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
-      "source_location": "L1",
-      "community": 23,
-      "norm_label": "update.js",
-      "id": "home_jankuchnia_pulpit_km_bud_update_js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
-      "source_location": "L1",
-      "community": 23,
-      "norm_label": "fs",
-      "id": "km_bud_update_fs"
-    },
-    {
-      "label": "content",
-      "file_type": "code",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
-      "source_location": "L2",
-      "community": 23,
-      "norm_label": "content",
-      "id": "km_bud_update_content"
-    },
-    {
-      "label": "install.php",
-      "file_type": "code",
-      "source_file": "install.php",
-      "source_location": "L1",
-      "community": 400,
-      "norm_label": "install.php",
-      "id": "install_php"
-    },
-    {
-      "label": "migrate.php",
-      "file_type": "code",
-      "source_file": "migrate.php",
-      "source_location": "L1",
-      "community": 401,
-      "norm_label": "migrate.php",
-      "id": "migrate_php"
-    },
-    {
       "label": "optimize_new_photos.py",
       "file_type": "code",
       "source_file": "scratch/optimize_new_photos.py",
@@ -39464,7 +39320,7 @@
       "file_type": "document",
       "source_file": ".agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md",
       "id": "agent_skills_mobile_design_touch_psychology_md"
     },
@@ -39920,6 +39776,688 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_imgdir"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_slugify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_csspath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_csscontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_csssizebefore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_replacements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L121",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_slug"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_targetpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_buffer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_csssizeafter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_htmlpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_htmlcontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_htmlsizebefore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_matches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_altmatch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_originalsrcpattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_newtag"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
+      "source_location": "L158",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
+      "target": "km_bud_extract_assets_htmlsizeafter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_fs"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/.shared/ui-ux-pro-max/scripts/design_system.py",
+      "source_location": "L504",
+      "weight": 1.0,
+      "source": "scripts_design_system_persist_design_system",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/scripts/auto_preview.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "scripts_auto_preview_get_project_root",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/scripts/checklist.py",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "scripts_checklist_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/scripts/session_manager.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "scripts_session_manager_get_project_root",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/scripts/verify_all.py",
+      "source_location": "L280",
+      "weight": 1.0,
+      "source": "scripts_verify_all_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/api-patterns/scripts/api_validator.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "scripts_api_validator_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/database-design/scripts/schema_validator.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "scripts_schema_validator_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/frontend-design/scripts/accessibility_checker.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "scripts_accessibility_checker_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/frontend-design/scripts/ux_audit.py",
+      "source_location": "L686",
+      "weight": 1.0,
+      "source": "scripts_ux_audit_uxauditor_audit_directory",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/geo-fundamentals/scripts/geo_checker.py",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "scripts_geo_checker_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/i18n-localization/scripts/i18n_checker.py",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "scripts_i18n_checker_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/lint-and-validate/scripts/lint_runner.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "scripts_lint_runner_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/lint-and-validate/scripts/type_coverage.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "scripts_type_coverage_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/mobile-design/scripts/mobile_audit.py",
+      "source_location": "L618",
+      "weight": 1.0,
+      "source": "scripts_mobile_audit_mobileauditor_audit_directory",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/nextjs-react-expert/scripts/convert_rules.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "scripts_convert_rules_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scripts_react_performance_checker_performancechecker_init",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/seo-fundamentals/scripts/seo_checker.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "scripts_seo_checker_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/testing-patterns/scripts/test_runner.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "scripts_test_runner_main",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "scripts_security_scan_scan_dependencies",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "scripts_security_scan_scan_secrets",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
+      "source_location": "L253",
+      "weight": 1.0,
+      "source": "scripts_security_scan_scan_code_patterns",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
+      "source_location": "L322",
+      "weight": 1.0,
+      "source": "scripts_security_scan_scan_configuration",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_imgdir"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_slugify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_csspath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_csscontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_csssizebefore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_replacements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L121",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_slug"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_targetpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_buffer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_csssizeafter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_htmlpath"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L86",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_htmlcontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_htmlsizebefore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_matches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_altmatch"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_originalsrcpattern"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_newtag"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "extract_assets.js",
+      "source_location": "L158",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "extract_assets_js",
+      "target": "km_bud_extract_assets_htmlsizeafter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_update_js",
+      "target": "km_bud_update_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "home_jankuchnia_pulpit_km_bud_update_js",
+      "target": "km_bud_update_content"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "update.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_js",
+      "target": "km_bud_update_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "update.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_js",
+      "target": "km_bud_update_content"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -40856,17 +41394,6 @@
       "target": "scripts_design_system_persist_design_system"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/.shared/ui-ux-pro-max/scripts/design_system.py",
-      "source_location": "L504",
-      "weight": 1.0,
-      "source": "scripts_design_system_persist_design_system",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/.shared/ui-ux-pro-max/scripts/design_system.py",
@@ -41088,17 +41615,6 @@
       "confidence_score": 1.0,
       "source": "scripts_auto_preview_start_server",
       "target": "scripts_auto_preview_get_project_root"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/scripts/auto_preview.py",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "scripts_auto_preview_get_project_root",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -41600,17 +42116,6 @@
       "target": "scripts_checklist_print_summary"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/scripts/checklist.py",
-      "source_location": "L178",
-      "weight": 1.0,
-      "source": "scripts_checklist_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/scripts/checklist.py",
@@ -41690,17 +42195,6 @@
       "confidence_score": 1.0,
       "source": "scripts_session_manager_main",
       "target": "scripts_session_manager_get_project_root"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/scripts/session_manager.py",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "scripts_session_manager_get_project_root",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -42129,17 +42623,6 @@
       "target": "scripts_verify_all_print_final_report"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/scripts/verify_all.py",
-      "source_location": "L280",
-      "weight": 1.0,
-      "source": "scripts_verify_all_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/scripts/verify_all.py",
@@ -42334,17 +42817,6 @@
       "target": "scripts_api_validator_check_api_code"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/api-patterns/scripts/api_validator.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "source": "scripts_api_validator_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/api-patterns/scripts/api_validator.py",
@@ -42447,17 +42919,6 @@
       "target": "scripts_schema_validator_validate_prisma_schema"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/database-design/scripts/schema_validator.py",
-      "source_location": "L95",
-      "weight": 1.0,
-      "source": "scripts_schema_validator_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/database-design/scripts/schema_validator.py",
@@ -42558,17 +43019,6 @@
       "confidence_score": 1.0,
       "source": "agent_skills_frontend_design_scripts_accessibility_checker_py",
       "target": "scripts_accessibility_checker_check_accessibility"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/frontend-design/scripts/accessibility_checker.py",
-      "source_location": "L112",
-      "weight": 1.0,
-      "source": "scripts_accessibility_checker_main",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -42693,17 +43143,6 @@
       "confidence_score": 1.0,
       "source": "scripts_ux_audit_main",
       "target": "scripts_ux_audit_uxauditor_audit_directory"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/frontend-design/scripts/ux_audit.py",
-      "source_location": "L686",
-      "weight": 1.0,
-      "source": "scripts_ux_audit_uxauditor_audit_directory",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "calls",
@@ -42858,17 +43297,6 @@
       "confidence_score": 1.0,
       "source": "agent_skills_geo_fundamentals_scripts_geo_checker_py",
       "target": "scripts_geo_checker_check_page"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/geo-fundamentals/scripts/geo_checker.py",
-      "source_location": "L224",
-      "weight": 1.0,
-      "source": "scripts_geo_checker_main",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -43055,17 +43483,6 @@
       "target": "scripts_i18n_checker_check_hardcoded_strings"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/i18n-localization/scripts/i18n_checker.py",
-      "source_location": "L201",
-      "weight": 1.0,
-      "source": "scripts_i18n_checker_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/i18n-localization/scripts/i18n_checker.py",
@@ -43168,17 +43585,6 @@
       "target": "scripts_lint_runner_run_linter"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/lint-and-validate/scripts/lint_runner.py",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "scripts_lint_runner_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/lint-and-validate/scripts/lint_runner.py",
@@ -43279,17 +43685,6 @@
       "confidence_score": 1.0,
       "source": "agent_skills_lint_and_validate_scripts_type_coverage_py",
       "target": "scripts_type_coverage_check_python_coverage"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/lint-and-validate/scripts/type_coverage.py",
-      "source_location": "L130",
-      "weight": 1.0,
-      "source": "scripts_type_coverage_main",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -43414,17 +43809,6 @@
       "confidence_score": 1.0,
       "source": "scripts_mobile_audit_main",
       "target": "scripts_mobile_audit_mobileauditor_audit_directory"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/mobile-design/scripts/mobile_audit.py",
-      "source_location": "L618",
-      "weight": 1.0,
-      "source": "scripts_mobile_audit_mobileauditor_audit_directory",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "calls",
@@ -43632,17 +44016,6 @@
       "target": "scripts_convert_rules_main"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/nextjs-react-expert/scripts/convert_rules.py",
-      "source_location": "L188",
-      "weight": 1.0,
-      "source": "scripts_convert_rules_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/nextjs-react-expert/scripts/convert_rules.py",
@@ -43782,17 +44155,6 @@
       "confidence_score": 1.0,
       "source": "agent_skills_nextjs_react_expert_scripts_react_performance_checker_py",
       "target": "scripts_react_performance_checker_performancechecker"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/nextjs-react-expert/scripts/react_performance_checker.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "scripts_react_performance_checker_performancechecker_init",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "calls",
@@ -44197,17 +44559,6 @@
       "target": "scripts_seo_checker_check_page"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/seo-fundamentals/scripts/seo_checker.py",
-      "source_location": "L150",
-      "weight": 1.0,
-      "source": "scripts_seo_checker_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/seo-fundamentals/scripts/seo_checker.py",
@@ -44310,17 +44661,6 @@
       "target": "scripts_test_runner_run_tests"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/testing-patterns/scripts/test_runner.py",
-      "source_location": "L141",
-      "weight": 1.0,
-      "source": "scripts_test_runner_main",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/testing-patterns/scripts/test_runner.py",
@@ -44401,17 +44741,6 @@
       "target": "scripts_security_scan_scan_dependencies"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
-      "source_location": "L117",
-      "weight": 1.0,
-      "source": "scripts_security_scan_scan_dependencies",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
@@ -44430,17 +44759,6 @@
       "confidence_score": 1.0,
       "source": "scripts_security_scan_rationale_182",
       "target": "scripts_security_scan_scan_secrets"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
-      "source_location": "L198",
-      "weight": 1.0,
-      "source": "scripts_security_scan_scan_secrets",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -44463,17 +44781,6 @@
       "target": "scripts_security_scan_scan_code_patterns"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
-      "source_location": "L253",
-      "weight": 1.0,
-      "source": "scripts_security_scan_scan_code_patterns",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
@@ -44492,17 +44799,6 @@
       "confidence_score": 1.0,
       "source": "scripts_security_scan_rationale_297",
       "target": "scripts_security_scan_scan_configuration"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": ".agent/skills/vulnerability-scanner/scripts/security_scan.py",
-      "source_location": "L322",
-      "weight": 1.0,
-      "source": "scripts_security_scan_scan_configuration",
-      "target": "km_bud_extract_assets_path"
     },
     {
       "relation": "contains",
@@ -44812,9 +45108,9 @@
       "source_file": "admin/api.php",
       "source_location": "L740",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleaddservice"
+      "target": "admin_api_handleaddservice",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44822,9 +45118,9 @@
       "source_file": "admin/api.php",
       "source_location": "L775",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleeditservice"
+      "target": "admin_api_handleeditservice",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44832,9 +45128,9 @@
       "source_file": "admin/api.php",
       "source_location": "L807",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeleteservice"
+      "target": "admin_api_handledeleteservice",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44842,9 +45138,9 @@
       "source_file": "admin/api.php",
       "source_location": "L844",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handlereorderservices"
+      "target": "admin_api_handlereorderservices",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44852,9 +45148,9 @@
       "source_file": "admin/api.php",
       "source_location": "L869",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleaddserviceslide"
+      "target": "admin_api_handleaddserviceslide",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44862,9 +45158,9 @@
       "source_file": "admin/api.php",
       "source_location": "L951",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeleteserviceslide"
+      "target": "admin_api_handledeleteserviceslide",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44872,9 +45168,9 @@
       "source_file": "admin/api.php",
       "source_location": "L990",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handlereorderserviceslides"
+      "target": "admin_api_handlereorderserviceslides",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44882,9 +45178,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1015",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleaddequipment"
+      "target": "admin_api_handleaddequipment",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44892,9 +45188,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1084",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleeditequipment"
+      "target": "admin_api_handleeditequipment",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44902,9 +45198,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1173",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeleteequipment"
+      "target": "admin_api_handledeleteequipment",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44912,9 +45208,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1211",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handlereorderequipment"
+      "target": "admin_api_handlereorderequipment",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45055,9 +45351,9 @@
       "source_file": "admin/api.php",
       "source_location": "L747",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddservice",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45066,9 +45362,9 @@
       "source_file": "admin/api.php",
       "source_location": "L783",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditservice",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45077,9 +45373,9 @@
       "source_file": "admin/api.php",
       "source_location": "L810",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeleteservice",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45088,9 +45384,9 @@
       "source_file": "admin/api.php",
       "source_location": "L849",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handlereorderservices",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45099,9 +45395,9 @@
       "source_file": "admin/api.php",
       "source_location": "L876",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45110,9 +45406,9 @@
       "source_file": "admin/api.php",
       "source_location": "L954",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeleteserviceslide",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45121,9 +45417,9 @@
       "source_file": "admin/api.php",
       "source_location": "L995",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handlereorderserviceslides",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45132,9 +45428,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1024",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddequipment",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45143,9 +45439,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1094",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditequipment",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45154,9 +45450,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1176",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeleteequipment",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45165,9 +45461,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1216",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handlereorderequipment",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45242,9 +45538,9 @@
       "source_file": "admin/api.php",
       "source_location": "L918",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45253,9 +45549,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1056",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddequipment",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45264,9 +45560,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1134",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditequipment",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45275,9 +45571,9 @@
       "source_file": "admin/api.php",
       "source_location": "L915",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddserviceslide",
-      "target": "admin_api_compresswithtinypng"
+      "target": "admin_api_compresswithtinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45286,9 +45582,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1053",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddequipment",
-      "target": "admin_api_compresswithtinypng"
+      "target": "admin_api_compresswithtinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45297,9 +45593,9 @@
       "source_file": "admin/api.php",
       "source_location": "L1131",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditequipment",
-      "target": "admin_api_compresswithtinypng"
+      "target": "admin_api_compresswithtinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45308,9 +45604,9 @@
       "source_file": "admin/api.php",
       "source_location": "L750",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddservice",
-      "target": "admin_api_translatepolishchars"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45319,9 +45615,9 @@
       "source_file": "admin/api.php",
       "source_location": "L786",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditservice",
-      "target": "admin_api_translatepolishchars"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84318,596 +84614,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "docs_plan_performance_md",
-      "target": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_baseline_performance_analysis",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_proposed_technical_changes",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L39",
-      "weight": 1.0,
-      "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_agent_assignments_task_breakdown",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L60",
-      "weight": 1.0,
-      "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_verification_plan",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "docs_plan_performance_baseline_performance_analysis",
-      "target": "docs_plan_performance_key_bottlenecks_identified",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_1_critical_css_font_optimization",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_2_tailwind_compilation_optimization",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_3_render_blocking_resources_mitigation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_1_research_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_2_css_font_decoupling_p0",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_3_tailwind_production_optimization_p0",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_4_verification_performance_auditing",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "source": "docs_plan_performance_verification_plan",
-      "target": "docs_plan_performance_automated_tests",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/PLAN-performance.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "source": "docs_plan_performance_verification_plan",
-      "target": "docs_plan_performance_manual_verification",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_imgdir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_slugify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csspath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csscontent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csssizebefore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_replacements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L121",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_slug"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L129",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_targetpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L138",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_buffer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_csssizeafter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlcontent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizebefore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_matches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L115",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_altmatch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L149",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_originalsrcpattern"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L150",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_newtag"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/extract_assets.js",
-      "source_location": "L158",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizeafter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_imgdir"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_slugify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_csspath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_csscontent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_csssizebefore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_replacements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L121",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_slug"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L129",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_targetpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L138",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_buffer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_csssizeafter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_htmlpath"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L86",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_htmlcontent"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L87",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizebefore"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L97",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_matches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L115",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_altmatch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L149",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_originalsrcpattern"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L150",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_newtag"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "extract_assets.js",
-      "source_location": "L158",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "extract_assets_js",
-      "target": "km_bud_extract_assets_htmlsizeafter"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_update_js",
-      "target": "km_bud_update_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "/home/jankuchnia/Pulpit/km-bud/update.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "home_jankuchnia_pulpit_km_bud_update_js",
-      "target": "km_bud_update_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "update.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_js",
-      "target": "km_bud_update_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "update.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_js",
-      "target": "km_bud_update_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "scratch/optimize_new_photos.py",
       "source_location": "L11",
       "weight": 1.0,
@@ -85148,5 +84854,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4376c475e666b055f808ae30958aa060781b7791"
+  "built_at_commit": "0830d476689bbafa3cb1f92bed937563bbc478df"
 }

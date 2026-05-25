@@ -54,6 +54,35 @@ foreach ($allSlides as $slide) {
     }
 }
 
+// Automatically fetch photos from gallery and append to corresponding service slides
+$galleryPhotos = $db->query("
+    SELECT p.filename, p.title, c.slug AS category_slug 
+    FROM photos p 
+    JOIN categories c ON p.category_id = c.id 
+    ORDER BY p.sort_order, p.id DESC
+")->fetchAll();
+
+foreach ($galleryPhotos as $photo) {
+    $slug = $photo['category_slug'];
+    if (isset($serviceSlides[$slug])) {
+        $imagePath = 'images/' . $photo['filename'];
+        // Check if slide already exists to prevent duplicate entries
+        $exists = false;
+        foreach ($serviceSlides[$slug] as $existingSlide) {
+            if (isset($existingSlide['image']) && $existingSlide['image'] === $imagePath) {
+                $exists = true;
+                break;
+            }
+        }
+        if (!$exists) {
+            $serviceSlides[$slug][] = [
+                'image' => $imagePath
+            ];
+        }
+    }
+}
+
+
 // Fetch equipment for park maszynowy
 $equipment = $db->query("SELECT * FROM equipment ORDER BY sort_order")->fetchAll();
 
