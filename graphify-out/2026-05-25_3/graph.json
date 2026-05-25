@@ -2479,24 +2479,6 @@
       "norm_label": "footer.php"
     },
     {
-      "label": "google_reviews_helper.php",
-      "file_type": "code",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L1",
-      "id": "includes_google_reviews_helper_php",
-      "community": 388,
-      "norm_label": "google_reviews_helper.php"
-    },
-    {
-      "label": "syncGoogleReviews()",
-      "file_type": "code",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L7",
-      "id": "includes_google_reviews_helper_syncgooglereviews",
-      "community": 388,
-      "norm_label": "syncgooglereviews()"
-    },
-    {
       "label": "logout.php",
       "file_type": "code",
       "source_file": "admin/logout.php",
@@ -2635,7 +2617,7 @@
       "label": "handleAddReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L599",
+      "source_location": "L675",
       "id": "admin_api_handleaddreview",
       "community": 388,
       "norm_label": "handleaddreview()"
@@ -2644,7 +2626,7 @@
       "label": "handleEditReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L628",
+      "source_location": "L704",
       "id": "admin_api_handleeditreview",
       "community": 388,
       "norm_label": "handleeditreview()"
@@ -2653,7 +2635,7 @@
       "label": "handleToggleReviewVisibility()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L655",
+      "source_location": "L731",
       "id": "admin_api_handletogglereviewvisibility",
       "community": 388,
       "norm_label": "handletogglereviewvisibility()"
@@ -2662,7 +2644,7 @@
       "label": "handleDeleteReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L675",
+      "source_location": "L751",
       "id": "admin_api_handledeletereview",
       "community": 388,
       "norm_label": "handledeletereview()"
@@ -27630,7 +27612,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_touch_psychology_md",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md"
     },
     {
@@ -27639,7 +27621,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "mobile_design_touch_psychology_touch_psychology_reference",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch psychology reference"
     },
     {
@@ -28170,7 +28152,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L482",
       "id": "mobile_design_touch_psychology_9_touch_psychology_checklist",
-      "community": 275,
+      "community": 390,
       "norm_label": "9. touch psychology checklist"
     },
     {
@@ -28179,7 +28161,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L484",
       "id": "mobile_design_touch_psychology_before_every_screen",
-      "community": 275,
+      "community": 390,
       "norm_label": "before every screen"
     },
     {
@@ -28188,7 +28170,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L494",
       "id": "mobile_design_touch_psychology_before_release",
-      "community": 275,
+      "community": 390,
       "norm_label": "before release"
     },
     {
@@ -39212,7 +39194,7 @@
       "file_type": "document",
       "source_file": ".agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md",
       "id": "agent_skills_mobile_design_touch_psychology_md"
     },
@@ -44816,27 +44798,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "includes_google_reviews_helper_php",
-      "target": "includes_google_reviews_helper_syncgooglereviews",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "admin/api.php",
-      "source_location": "L592",
-      "weight": 1.0,
-      "source": "admin_api_handlefetchgooglereviews",
-      "target": "includes_google_reviews_helper_syncgooglereviews"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "admin/api.php",
       "source_location": "L24",
       "weight": 1.0,
@@ -44950,9 +44911,9 @@
       "source_file": "admin/api.php",
       "source_location": "L590",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handlefetchgooglereviews"
+      "target": "admin_api_handlefetchgooglereviews",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44960,9 +44921,9 @@
       "source_file": "admin/api.php",
       "source_location": "L675",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleaddreview"
+      "target": "admin_api_handleaddreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44970,9 +44931,9 @@
       "source_file": "admin/api.php",
       "source_location": "L704",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleeditreview"
+      "target": "admin_api_handleeditreview",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44980,9 +44941,9 @@
       "source_file": "admin/api.php",
       "source_location": "L731",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handletogglereviewvisibility"
+      "target": "admin_api_handletogglereviewvisibility",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44990,9 +44951,9 @@
       "source_file": "admin/api.php",
       "source_location": "L751",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeletereview"
+      "target": "admin_api_handledeletereview",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45078,9 +45039,9 @@
       "source_file": "admin/api.php",
       "source_location": "L595",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handlefetchgooglereviews",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45089,9 +45050,9 @@
       "source_file": "admin/api.php",
       "source_location": "L682",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddreview",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45100,9 +45061,9 @@
       "source_file": "admin/api.php",
       "source_location": "L712",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditreview",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45111,9 +45072,9 @@
       "source_file": "admin/api.php",
       "source_location": "L736",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handletogglereviewvisibility",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45122,9 +45083,9 @@
       "source_file": "admin/api.php",
       "source_location": "L754",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeletereview",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",

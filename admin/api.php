@@ -78,6 +78,26 @@ switch ($action) {
         handleDeleteCategory($db);
         break;
 
+    case 'fetch_google_reviews':
+        handleFetchGoogleReviews($db, $config);
+        break;
+
+    case 'add_review':
+        handleAddReview($db);
+        break;
+
+    case 'edit_review':
+        handleEditReview($db);
+        break;
+
+    case 'toggle_review_visibility':
+        handleToggleReviewVisibility($db);
+        break;
+
+    case 'delete_review':
+        handleDeleteReview($db);
+        break;
+
     default:
         sendResponse(false, 'Nieprawidłowa akcja.', [], 400);
 }
@@ -558,4 +578,111 @@ function translatePolishChars(string $str): string {
         'Ó' => 'O', 'Ś' => 'S', 'Ź' => 'Z', 'Ż' => 'Z'
     ];
     return strtr($str, $chars);
+}
+
+// ─────────────────────────────────────────────────────────────
+// REVIEWS CRUD HANDLERS
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Asynchronously fetch Google Reviews and save to database
+ */
+function handleFetchGoogleReviews(PDO $db, array $config) {
+    require_once __DIR__ . '/../includes/google_reviews_helper.php';
+    $res = syncGoogleReviews($db, $config);
+    sendResponse($res['success'], $res['message'], ['imported' => $res['imported'] ?? 0]);
+}
+
+/**
+ * Add Review manually
+ */
+function handleAddReview(PDO $db) {
+    $author = trim($_POST['author_name'] ?? '');
+    $text = trim($_POST['review_text'] ?? '');
+    $rating = (int) ($_POST['rating'] ?? 5);
+    $time = trim($_POST['review_time'] ?? 'niedawno');
+
+    if (empty($author) || empty($text)) {
+        sendResponse(false, 'Nazwa autora i treść opinii są wymagane.');
+    }
+
+    if ($rating < 1 || $rating > 5) {
+        $rating = 5;
+    }
+
+    try {
+        $stmt = $db->prepare("
+            INSERT INTO google_reviews (author_name, rating, review_text, review_time, is_manual)
+            VALUES (?, ?, ?, ?, 1)
+        ");
+        $stmt->execute([$author, $rating, $text, $time]);
+        sendResponse(true, 'Opinia została pomyślnie dodana.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Edit Review
+ */
+function handleEditReview(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    $author = trim($_POST['author_name'] ?? '');
+    $text = trim($_POST['review_text'] ?? '');
+    $rating = (int) ($_POST['rating'] ?? 5);
+    $time = trim($_POST['review_time'] ?? 'niedawno');
+
+    if ($id <= 0 || empty($author) || empty($text)) {
+        sendResponse(false, 'Niepełne dane do edycji opinii.');
+    }
+
+    try {
+        $stmt = $db->prepare("
+            UPDATE google_reviews 
+            SET author_name = ?, rating = ?, review_text = ?, review_time = ?
+            WHERE id = ?
+        ");
+        $stmt->execute([$author, $rating, $text, $time, $id]);
+        sendResponse(true, 'Opinia została zaktualizowana.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Toggle visibility of review on public site
+ */
+function handleToggleReviewVisibility(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    $visible = (int) ($_POST['is_visible'] ?? 1);
+
+    if ($id <= 0) {
+        sendResponse(false, 'Brak identyfikatora opinii.');
+    }
+
+    try {
+        $stmt = $db->prepare("UPDATE google_reviews SET is_visible = ? WHERE id = ?");
+        $stmt->execute([$visible, $id]);
+        sendResponse(true, 'Pomyślnie zmieniono widoczność opinii.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd zapisu widoczności: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Delete Review
+ */
+function handleDeleteReview(PDO $db) {
+    $id = (int) ($_POST['id'] ?? 0);
+    if ($id <= 0) {
+        sendResponse(false, 'Brak identyfikatora opinii.');
+    }
+
+    try {
+        $stmt = $db->prepare("DELETE FROM google_reviews WHERE id = ?");
+        $stmt->execute([$id]);
+        sendResponse(true, 'Opinia została trwale usunięta.');
+    } catch (PDOException $e) {
+        sendResponse(false, 'Błąd bazy danych podczas usuwania: ' . $e->getMessage());
+    }
 }

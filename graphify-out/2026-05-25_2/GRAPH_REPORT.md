@@ -1,16 +1,16 @@
 # Graph Report - km-bud  (2026-05-25)
 
 ## Corpus Check
-- 207 files · ~1,563,664 words
+- 208 files · ~1,566,988 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4407 nodes · 4460 edges · 400 communities (390 shown, 10 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
+- 4400 nodes · 4448 edges · 401 communities (391 shown, 10 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 25 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3459d50c`
+- Built from commit: `5725885c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -403,6 +403,7 @@
 - [[_COMMUNITY_Community 387|Community 387]]
 - [[_COMMUNITY_Community 388|Community 388]]
 - [[_COMMUNITY_Community 389|Community 389]]
+- [[_COMMUNITY_Community 390|Community 390]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `5. Re-render Optimization` - 27 edges
@@ -423,12 +424,12 @@
   .agent/skills/seo-fundamentals/scripts/seo_checker.py → /home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py
 - `Check a single page for SEO issues.` --rationale_for--> `check_page()`  [EXTRACTED]
   .agent/skills/seo-fundamentals/scripts/seo_checker.py → /home/jankuchnia/Pulpit/km-bud/.agent/skills/seo-fundamentals/scripts/seo_checker.py
-- `handleFetchGoogleReviews()` --calls--> `syncGoogleReviews()`  [INFERRED]
-  admin/api.php → includes/google_reviews_helper.php
 - `_generate_intelligent_overrides()` --calls--> `search()`  [INFERRED]
   /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py
+- `persist_design_system()` --calls--> `path`  [INFERRED]
+  /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/extract_assets.js
 
-## Communities (400 total, 10 thin omitted)
+## Communities (401 total, 10 thin omitted)
 
 ### Community 0 - "Design System Generation"
 Cohesion: 0.06
@@ -1515,8 +1516,8 @@ Cohesion: 0.33
 Nodes (6): 3. Touch vs Click Psychology, code:block7 (Tap → Immediate visual change (< 50ms)), code:block8 (Problem: Finger occludes target during tap), Expectation Differences, The "Fat Finger" Problem, Touch Feedback Requirements
 
 ### Community 275 - "Community 275"
-Cohesion: 0.17
-Nodes (10): 7. Touch Accessibility, 9. Touch Psychology Checklist, Accessible Touch Patterns, Before Every Screen, Before Release, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations (+2 more)
+Cohesion: 0.33
+Nodes (6): 7. Touch Accessibility, Accessible Touch Patterns, code:block16 (Users with motor impairments may:), code:block17 (WCAG 2.2 Success Criterion 2.5.8:), Motor Impairment Considerations, Touch Target Spacing (A11y)
 
 ### Community 276 - "Community 276"
 Cohesion: 0.33
@@ -1935,15 +1936,19 @@ Cohesion: 0.40
 Nodes (4): categoryBadges, fs, metadata, path
 
 ### Community 388 - "Community 388"
-Cohesion: 0.21
-Nodes (17): compressWithGD(), compressWithTinyPNG(), handleAddCategory(), handleAddReview(), handleDeleteCategory(), handleDeletePhoto(), handleDeleteReview(), handleEditCategory() (+9 more)
+Cohesion: 0.36
+Nodes (11): compressWithGD(), compressWithTinyPNG(), handleAddCategory(), handleDeleteCategory(), handleDeletePhoto(), handleEditCategory(), handleReorderPhotos(), handleUpdatePhoto() (+3 more)
 
 ### Community 389 - "Community 389"
 Cohesion: 0.47
 Nodes (3): isLoggedIn(), logoutAdmin(), requireAuth()
 
+### Community 390 - "Community 390"
+Cohesion: 0.33
+Nodes (4): 9. Touch Psychology Checklist, Before Every Screen, Before Release, Touch Psychology Reference
+
 ## Knowledge Gaps
-- **2265 isolated node(s):** `command`, `args`, `command`, `args`, `📋 Overview` (+2260 more)
+- **2265 isolated node(s):** `command`, `args`, `command`, `args`, `fs` (+2260 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 

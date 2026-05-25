@@ -26,6 +26,10 @@ $photos = $db->query("
 $totalPhotos = count($photos);
 $totalCategories = count($categories);
 
+// Fetch all reviews
+$reviews = $db->query("SELECT * FROM google_reviews ORDER BY id DESC")->fetchAll();
+$totalReviews = count($reviews);
+
 // Lucide standard icons list for dropdown selection
 $lucideIcons = [
     'rectangle-horizontal' => 'Prostokąt',
@@ -55,6 +59,7 @@ $lucideIcons = [
     <!-- Sortable.js for Drag and Drop sorting -->
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <link rel="icon" href="../logo.ico">
+    <link rel="stylesheet" href="assets/admin.css">
     <style>
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
@@ -78,7 +83,17 @@ $lucideIcons = [
     <!-- ─────────────────────────────────────────────────────────────
     SIDEBAR (DARK THEME)
     ───────────────────────────────────────────────────────────── -->
-    <aside class="w-64 bg-slate-900 border-r border-slate-800 flex flex-col flex-shrink-0 z-30">
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div id="sidebar-overlay" onclick="closeSidebar()" class="hidden fixed inset-0 bg-black/60 z-35 backdrop-blur-xs lg:hidden transition-opacity duration-300 opacity-0"></div>
+
+    <aside id="sidebar" class="fixed lg:static inset-y-0 left-0 w-64 bg-slate-900 border-r border-slate-800 flex flex-col flex-shrink-0 z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+        <!-- Close Button for Mobile Sidebar -->
+        <div class="lg:hidden absolute top-4 right-4 z-50">
+            <button onclick="closeSidebar()" class="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-xl transition-all" title="Zamknij menu">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
         <!-- Brand Header -->
         <div class="h-20 flex items-center justify-center border-b border-slate-800 px-6">
             <a href="../index.php" class="flex items-center gap-2">
@@ -90,17 +105,22 @@ $lucideIcons = [
         <!-- Sidebar Navigation -->
         <nav class="flex-grow py-6 px-4 space-y-2">
             <button onclick="switchTab('photos')" id="tab-btn-photos"
-                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white">
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white active-spring-scale">
                 <i data-lucide="image" class="w-5 h-5"></i>
                 Zdjęcia
             </button>
             <button onclick="switchTab('categories')" id="tab-btn-categories"
-                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white">
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale">
                 <i data-lucide="folder-tree" class="w-5 h-5"></i>
                 Kategorie
             </button>
+            <button onclick="switchTab('reviews')" id="tab-btn-reviews"
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale">
+                <i data-lucide="star" class="w-5 h-5"></i>
+                Opinie Google
+            </button>
             <a href="../galeria.php" target="_blank"
-                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white transition-all duration-200">
+                class="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-400 hover:bg-slate-800 hover:text-white transition-all duration-200 active-spring-scale">
                 <i data-lucide="external-link" class="w-5 h-5"></i>
                 Podgląd strony
             </a>
@@ -109,7 +129,7 @@ $lucideIcons = [
         <!-- Sidebar Footer -->
         <div class="p-4 border-t border-slate-800">
             <a href="logout.php"
-                class="w-full flex items-center justify-center gap-2 bg-slate-850 border border-slate-800 hover:bg-red-950/20 hover:border-red-500/20 hover:text-red-400 text-slate-400 py-3 rounded-xl text-xs font-bold transition-all duration-200">
+                class="w-full flex items-center justify-center gap-2 bg-slate-850 border border-slate-800 hover:bg-red-950/20 hover:border-red-500/20 hover:text-red-400 text-slate-400 py-3 rounded-xl text-xs font-bold transition-all duration-200 active-spring-scale">
                 <i data-lucide="log-out" class="w-4 h-4"></i>
                 Wyloguj panel
             </a>
@@ -121,20 +141,26 @@ $lucideIcons = [
     ───────────────────────────────────────────────────────────── -->
     <main class="flex-grow flex flex-col min-w-0 overflow-hidden bg-slate-50">
         <!-- Top bar Header -->
-        <header class="h-20 border-b border-slate-200 bg-white flex items-center justify-between px-8 flex-shrink-0">
-            <div>
-                <h2 id="tab-title" class="text-xl font-bold text-slate-850">Zdjęcia</h2>
-                <p id="tab-subtitle" class="text-xs text-slate-400 mt-0.5">Zarządzaj zdjęciami w galerii realizacji</p>
+        <header class="h-20 border-b border-slate-200 bg-white flex items-center justify-between px-4 sm:px-6 lg:px-8 flex-shrink-0">
+            <div class="flex items-center gap-3">
+                <!-- Hamburger toggle button for Mobile -->
+                <button onclick="openSidebar()" class="lg:hidden p-2 text-slate-500 hover:text-slate-850 hover:bg-slate-100 rounded-xl transition-all active-spring-scale" title="Otwórz menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <div>
+                    <h2 id="tab-title" class="text-lg sm:text-xl font-bold text-slate-850 truncate max-w-[180px] sm:max-w-none">Zdjęcia</h2>
+                    <p id="tab-subtitle" class="text-[10px] sm:text-xs text-slate-400 mt-0.5 truncate max-w-[200px] sm:max-w-none">Zarządzaj zdjęciami w galerii realizacji</p>
+                </div>
             </div>
             <div class="flex items-center gap-4">
-                <span class="text-xs font-semibold bg-slate-100 text-slate-600 px-3 py-1.5 rounded-full">
+                <span class="hidden sm:inline-block text-xs font-semibold bg-slate-100 text-slate-600 px-3 py-1.5 rounded-full">
                     Wersja PHP 1.0 (XAMPP local)
                 </span>
             </div>
         </header>
 
         <!-- Dynamic Content Scroll Wrapper -->
-        <div class="flex-grow overflow-y-auto p-8 custom-scrollbar">
+        <div class="flex-grow overflow-y-auto p-4 sm:p-6 lg:p-8 custom-scrollbar">
 
             <!-- ─────────────────────────────────────────────────────────────
             TAB: PHOTOS
@@ -142,29 +168,29 @@ $lucideIcons = [
             <div id="tab-content-photos" class="space-y-8 animate-fade-in">
                 
                 <!-- Quick Stats -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div class="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm flex items-center gap-4">
-                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-red-600 flex-shrink-0">
                             <i data-lucide="images" class="w-6 h-6"></i>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-slate-800"><?= $totalPhotos ?></p>
-                            <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Wszystkich zdjęć</p>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800"><?= $totalPhotos ?></p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Wszystkich zdjęć</p>
                         </div>
                     </div>
-                    <div class="bg-white border border-slate-200/60 p-6 rounded-2xl shadow-sm flex items-center gap-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 flex-shrink-0">
                             <i data-lucide="folder" class="w-6 h-6"></i>
                         </div>
                         <div>
-                            <p class="text-2xl font-black text-slate-800"><?= $totalCategories ?></p>
-                            <p class="text-xs font-medium text-slate-400 uppercase tracking-wider">Kategorii</p>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800"><?= $totalCategories ?></p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Kategorii</p>
                         </div>
                     </div>
                     <!-- Action box -->
-                    <div class="bg-white border border-slate-200/60 p-4 rounded-2xl shadow-sm flex items-center justify-between col-span-1">
+                    <div class="bg-white border border-slate-200/60 p-3 sm:p-4 rounded-2xl shadow-sm flex items-center justify-between col-span-1">
                         <button onclick="openModal('add-photo')"
-                            class="w-full h-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-red-600/10 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                            class="w-full h-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-md hover:shadow-red-600/10 active-spring-scale transition-all flex items-center justify-center gap-2 text-sm sm:text-base">
                             <i data-lucide="plus-circle" class="w-5 h-5"></i>
                             Dodaj nowe zdjęcie
                         </button>
@@ -172,7 +198,7 @@ $lucideIcons = [
                 </div>
 
                 <!-- Photos Grid Container -->
-                <div class="bg-white border border-slate-200/60 rounded-3xl p-6 shadow-sm">
+                <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm">
                     <div class="flex items-center justify-between mb-6">
                         <div>
                             <h3 class="text-base font-bold text-slate-800">Zdjęcia w galerii</h3>
@@ -224,14 +250,14 @@ $lucideIcons = [
                                         </div>
                                         
                                         <!-- Edit and delete actions -->
-                                        <div class="flex items-center gap-1.5">
+                                        <div class="flex items-center gap-1">
                                             <button onclick="openEditPhotoModal(<?= htmlspecialchars(json_encode($photo)) ?>)"
-                                                    class="p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all active-spring-scale"
                                                     title="Edytuj">
                                                 <i data-lucide="edit-3" class="w-4 h-4"></i>
                                             </button>
                                             <button onclick="confirmDeletePhoto(<?= $photo['id'] ?>)"
-                                                    class="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all active-spring-scale"
                                                     title="Usuń">
                                                 <i data-lucide="trash-2" class="w-4 h-4"></i>
                                             </button>
@@ -250,11 +276,11 @@ $lucideIcons = [
             <!-- ─────────────────────────────────────────────────────────────
             TAB: CATEGORIES
             ───────────────────────────────────────────────────────────── -->
-            <div id="tab-content-categories" class="hidden space-y-8 animate-fade-in">
+            <div id="tab-content-categories" class="hidden space-y-6 lg:space-y-8 animate-fade-in">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
                     <!-- Left: Create Category Form -->
-                    <div class="bg-white border border-slate-200/60 rounded-3xl p-6 shadow-sm h-fit">
+                    <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm h-fit">
                         <h3 class="text-base font-bold text-slate-800 mb-5">Dodaj nową kategorię</h3>
                         
                         <form id="add-category-form" onsubmit="submitCategory(event)" class="space-y-4">
@@ -282,7 +308,7 @@ $lucideIcons = [
                             </div>
 
                             <button type="submit"
-                                class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 rounded-xl transition-all shadow-md hover:shadow-red-600/10 active:scale-[0.98] flex items-center justify-center gap-2">
+                                class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3.5 rounded-xl transition-all shadow-md hover:shadow-red-600/10 active-spring-scale flex items-center justify-center gap-2">
                                 <i data-lucide="plus-circle" class="w-5 h-5"></i>
                                 Dodaj kategorię
                             </button>
@@ -290,39 +316,39 @@ $lucideIcons = [
                     </div>
 
                     <!-- Right: Categories List Table -->
-                    <div class="bg-white border border-slate-200/60 rounded-3xl p-6 shadow-sm lg:col-span-2">
+                    <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm lg:col-span-2">
                         <h3 class="text-base font-bold text-slate-800 mb-5">Lista istniejących kategorii</h3>
 
-                        <div class="overflow-x-auto">
+                        <div class="overflow-x-auto responsive-table-container rounded-2xl border border-slate-100/80">
                             <table class="w-full min-w-[500px]">
                                 <thead>
                                     <tr class="text-left border-b border-slate-100 text-slate-400 text-xs font-bold uppercase tracking-wider pb-3">
-                                        <th class="pb-3">Kategoria</th>
+                                        <th class="pb-3 pl-4">Kategoria</th>
                                         <th class="pb-3">Slug (identyfikator)</th>
                                         <th class="pb-3 text-center">Ikona</th>
-                                        <th class="pb-3 text-right">Akcje</th>
+                                        <th class="pb-3 text-right pr-4">Akcje</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-100">
                                     <?php foreach ($categories as $cat): ?>
                                         <tr class="text-sm text-slate-750">
-                                            <td class="py-4 font-bold text-slate-800"><?= htmlspecialchars($cat['name']) ?></td>
-                                            <td class="py-4 font-mono text-xs bg-slate-50 px-2.5 py-1 rounded w-fit"><?= htmlspecialchars($cat['slug']) ?></td>
+                                            <td class="py-4 pl-4 font-bold text-slate-800"><?= htmlspecialchars($cat['name']) ?></td>
+                                            <td class="py-4"><span class="font-mono text-xs bg-slate-50 px-2.5 py-1 rounded w-fit border border-slate-200/40"><?= htmlspecialchars($cat['slug']) ?></span></td>
                                             <td class="py-4 text-center">
                                                 <div class="w-9 h-9 bg-slate-100 rounded-lg flex items-center justify-center text-slate-650 mx-auto"
                                                      title="<?= htmlspecialchars($cat['icon']) ?>">
                                                     <i data-lucide="<?= htmlspecialchars($cat['icon']) ?>" class="w-4 h-4"></i>
                                                 </div>
                                             </td>
-                                            <td class="py-4 text-right">
-                                                <div class="flex items-center justify-end gap-1.5">
+                                            <td class="py-4 pr-4 text-right">
+                                                <div class="flex items-center justify-end gap-1">
                                                     <button onclick="openEditCategoryModal(<?= htmlspecialchars(json_encode($cat)) ?>)"
-                                                            class="p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
+                                                            class="p-2.5 sm:p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all active-spring-scale"
                                                             title="Edytuj">
                                                         <i data-lucide="edit-3" class="w-4 h-4"></i>
                                                     </button>
                                                     <button onclick="confirmDeleteCategory(<?= $cat['id'] ?>)"
-                                                            class="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all"
+                                                            class="p-2.5 sm:p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all active-spring-scale"
                                                             title="Usuń">
                                                         <i data-lucide="trash-2" class="w-4 h-4"></i>
                                                     </button>
@@ -335,6 +361,147 @@ $lucideIcons = [
                         </div>
 
                     </div>
+                </div>
+
+            </div>
+
+            <!-- ─────────────────────────────────────────────────────────────
+            TAB: REVIEWS
+            ───────────────────────────────────────────────────────────── -->
+            <div id="tab-content-reviews" class="hidden space-y-6 lg:space-y-8 animate-fade-in">
+                
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 flex-shrink-0">
+                            <i data-lucide="star" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800"><?= $totalReviews ?></p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Wszystkich opinii</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border border-slate-200/60 p-4 sm:p-6 rounded-2xl shadow-sm flex items-center gap-4">
+                        <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 flex-shrink-0">
+                            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-black text-slate-800">
+                                <?php
+                                $visibleCount = 0;
+                                foreach ($reviews as $rev) {
+                                    if ($rev['is_visible']) $visibleCount++;
+                                }
+                                echo $visibleCount;
+                                ?>
+                            </p>
+                            <p class="text-[10px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">Wyświetlanych na stronie</p>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="bg-white border border-slate-200/60 p-3 sm:p-4 rounded-2xl shadow-sm flex flex-col sm:flex-row items-center justify-center gap-3 col-span-1">
+                        <button onclick="fetchGoogleReviews()" id="fetch-btn"
+                            class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl shadow-sm active-spring-scale transition-all flex items-center justify-center gap-2 text-xs">
+                            <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+                            Pobierz z Google
+                        </button>
+                        <button onclick="openModal('add-review')"
+                            class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-4 rounded-xl shadow-md hover:shadow-red-600/10 active-spring-scale transition-all flex items-center justify-center gap-2 text-xs">
+                            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                            Dodaj ręcznie
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Reviews Grid -->
+                <div class="bg-white border border-slate-200/60 rounded-3xl p-4 sm:p-6 shadow-sm">
+                    <h3 class="text-base font-bold text-slate-800 mb-6">Opinie i referencje</h3>
+
+                    <?php if ($totalReviews === 0): ?>
+                        <div class="text-center py-20 text-slate-400">
+                            <i data-lucide="message-square-off" class="w-12 h-12 mx-auto mb-4 opacity-30"></i>
+                            <p class="text-base font-medium">Brak opinii w bazie danych. Kliknij przycisk powyżej, aby dodać lub pobrać opinie.</p>
+                        </div>
+                    <?php else: ?>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <?php foreach ($reviews as $rev): ?>
+                                <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 flex flex-col justify-between hover:shadow-md transition-shadow relative">
+                                    
+                                    <!-- Top author details -->
+                                    <div>
+                                        <div class="flex items-start justify-between gap-2 mb-4">
+                                            <div class="flex items-center gap-3">
+                                                <!-- Avatar -->
+                                                <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-650 font-bold overflow-hidden border border-slate-200 flex-shrink-0">
+                                                    <?php if (!empty($rev['author_photo'])): ?>
+                                                        <img src="<?= htmlspecialchars($rev['author_photo']) ?>" alt="<?= htmlspecialchars($rev['author_name']) ?>" class="w-full h-full object-cover">
+                                                    <?php else: ?>
+                                                        <?= mb_substr(htmlspecialchars($rev['author_name']), 0, 1) ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold text-slate-800 text-sm truncate max-w-[120px] sm:max-w-[150px]"><?= htmlspecialchars($rev['author_name']) ?></h4>
+                                                    <p class="text-[10px] text-slate-400"><?= htmlspecialchars($rev['review_time']) ?></p>
+                                                </div>
+                                            </div>
+
+                                            <!-- Source Badge -->
+                                            <?php if ($rev['is_manual']): ?>
+                                                <span class="bg-slate-100 text-slate-600 font-bold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-md border border-slate-200 flex items-center gap-1 flex-shrink-0">
+                                                    <i data-lucide="edit-2" class="w-2.5 h-2.5"></i>
+                                                    Ręczna
+                                                </span>
+                                            <?php else: ?>
+                                                <span class="bg-blue-50 text-blue-600 font-bold text-[9px] uppercase tracking-wider px-2 py-0.5 rounded-md border border-blue-100 flex items-center gap-1 flex-shrink-0">
+                                                    <i data-lucide="globe" class="w-2.5 h-2.5"></i>
+                                                    Google
+                                                </span>
+                                            <?php endif; ?>
+                                        </div>
+
+                                        <!-- Rating Stars -->
+                                        <div class="flex items-center gap-0.5 mb-3 text-amber-400">
+                                            <?php for ($i = 1; $i <= 5; $i++): ?>
+                                                <i data-lucide="star" class="w-4 h-4 <?= $i <= $rev['rating'] ? 'fill-amber-400' : 'text-slate-200' ?>"></i>
+                                            <?php endfor; ?>
+                                        </div>
+
+                                        <!-- Testimonial body -->
+                                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-4 italic mb-4">
+                                            "<?= htmlspecialchars($rev['review_text']) ?>"
+                                        </p>
+                                    </div>
+
+                                    <!-- Actions bottom -->
+                                    <div class="border-t border-slate-100 pt-4 flex items-center justify-between">
+                                        <!-- Visibility Toggle -->
+                                        <button onclick="toggleReviewVisibility(<?= $rev['id'] ?>, <?= $rev['is_visible'] ? 0 : 1 ?>)"
+                                                class="flex items-center gap-1.5 px-3 py-2 sm:py-1.5 rounded-lg text-xs font-semibold transition-all active-spring-scale <?= $rev['is_visible'] ? 'bg-emerald-50 text-emerald-600 hover:bg-emerald-100' : 'bg-slate-100 text-slate-400 hover:bg-slate-200' ?>">
+                                            <i data-lucide="<?= $rev['is_visible'] ? 'eye' : 'eye-off' ?>" class="w-4 h-4"></i>
+                                            <?= $rev['is_visible'] ? 'Widoczna' : 'Ukryta' ?>
+                                        </button>
+
+                                        <!-- Edit and delete actions -->
+                                        <div class="flex items-center gap-1">
+                                            <button onclick="openEditReviewModal(<?= htmlspecialchars(json_encode($rev)) ?>)"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all active-spring-scale"
+                                                    title="Edytuj">
+                                                <i data-lucide="edit-3" class="w-4 h-4"></i>
+                                            </button>
+                                            <button onclick="confirmDeleteReview(<?= $rev['id'] ?>)"
+                                                    class="p-2.5 sm:p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all active-spring-scale"
+                                                    title="Usuń">
+                                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
             </div>
@@ -547,6 +714,131 @@ $lucideIcons = [
         </div>
     </div>
 
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: ADD REVIEW
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-add-review" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Dodaj opinię ręcznie</h3>
+                <button onclick="closeModal('add-review')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="add-review-form" onsubmit="submitReview(event)" class="px-8 py-6 space-y-5">
+                
+                <div>
+                    <label for="review-author" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Autor opinii (imię i nazwisko)</label>
+                    <input type="text" id="review-author" required placeholder="np. Jan Kowalski"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 placeholder-slate-450 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+
+                <div>
+                    <label for="review-rating" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Ocena (gwiazdki)</label>
+                    <select id="review-rating" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-850 focus:outline-none focus:border-red-500 transition-all duration-300">
+                        <option value="5" selected>5 gwiazdek (Znakomita)</option>
+                        <option value="4">4 gwiazdki (Bardzo dobra)</option>
+                        <option value="3">3 gwiazdki (Przeciętna)</option>
+                        <option value="2">2 gwiazdki (Słaba)</option>
+                        <option value="1">1 gwiazdka (Bardzo słaba)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="review-time" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Czas dodania opinii</label>
+                    <input type="text" id="review-time" required placeholder="np. tydzień temu, miesiąc temu"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 placeholder-slate-450 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+
+                <div>
+                    <label for="review-text" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Treść opinii</label>
+                    <textarea id="review-text" rows="4" required placeholder="Napisz treść rekomendacji lub skopiuj z SMS/e-mail..."
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 placeholder-slate-450 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('add-review')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-650 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit"
+                        class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md flex items-center gap-2">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        Zapisz opinię
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────────────────────────
+    MODAL: EDIT REVIEW
+    ───────────────────────────────────────────────────────────── -->
+    <div id="modal-edit-review" class="hidden fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden border border-slate-100 flex flex-col justify-between transform transition-all duration-300">
+            
+            <div class="px-8 py-6 border-b border-slate-100 flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-800">Edycja opinii</h3>
+                <button onclick="closeModal('edit-review')" class="text-slate-400 hover:text-slate-600 transition-colors p-1">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Form -->
+            <form id="edit-review-form" onsubmit="submitEditReview(event)" class="px-8 py-6 space-y-5">
+                <input type="hidden" id="edit-review-id">
+
+                <div>
+                    <label for="edit-review-author" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Autor opinii</label>
+                    <input type="text" id="edit-review-author" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+
+                <div>
+                    <label for="edit-review-rating" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Ocena (gwiazdki)</label>
+                    <select id="edit-review-rating" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-855 focus:outline-none focus:border-red-500 transition-all duration-300">
+                        <option value="5">5 gwiazdek</option>
+                        <option value="4">4 gwiazdki</option>
+                        <option value="3">3 gwiazdki</option>
+                        <option value="2">2 gwiazdki</option>
+                        <option value="1">1 gwiazdka</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="edit-review-time" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Czas dodania opinii</label>
+                    <input type="text" id="edit-review-time" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300">
+                </div>
+
+                <div>
+                    <label for="edit-review-text" class="block text-slate-650 text-xs font-bold uppercase tracking-wider mb-2">Treść opinii</label>
+                    <textarea id="edit-review-text" rows="4" required
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 text-slate-800 focus:outline-none focus:border-red-500 transition-all duration-300 resize-none"></textarea>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
+                    <button type="button" onclick="closeModal('edit-review')"
+                        class="bg-slate-100 hover:bg-slate-200 text-slate-650 font-bold py-3 px-6 rounded-xl transition-all">
+                        Anuluj
+                    </button>
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-md flex items-center gap-2">
+                        <i data-lucide="check" class="w-5 h-5"></i>
+                        Zapisz zmiany
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
     <!-- CSRF Token -->
     <input type="hidden" id="csrf-token" value="<?= htmlspecialchars(getCSRFToken()) ?>">
 
@@ -557,17 +849,45 @@ $lucideIcons = [
         lucide.createIcons();
 
         // ──────────────────────────────────────────
+        // Mobile Sidebar functions
+        // ──────────────────────────────────────────
+        function openSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            sidebar.classList.remove('-translate-x-full');
+            overlay.classList.remove('hidden');
+            setTimeout(() => {
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+            }, 10);
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.remove('opacity-100');
+            overlay.classList.add('opacity-0');
+            setTimeout(() => {
+                overlay.classList.add('hidden');
+            }, 300);
+        }
+
+        // ──────────────────────────────────────────
         // Tab switching
         // ──────────────────────────────────────────
         function switchTab(tabId) {
-            const tabs = ['photos', 'categories'];
+            // Close mobile sidebar first
+            closeSidebar();
+
+            const tabs = ['photos', 'categories', 'reviews'];
             tabs.forEach(t => {
                 document.getElementById(`tab-content-${t}`).classList.add('hidden');
-                document.getElementById(`tab-btn-${t}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white";
+                document.getElementById(`tab-btn-${t}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 text-slate-400 hover:bg-slate-800 hover:text-white active-spring-scale";
             });
 
             document.getElementById(`tab-content-${tabId}`).classList.remove('hidden');
-            document.getElementById(`tab-btn-${tabId}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white";
+            document.getElementById(`tab-btn-${tabId}`).className = "w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all duration-200 bg-red-600 text-white active-spring-scale";
 
             const title = document.getElementById('tab-title');
             const subtitle = document.getElementById('tab-subtitle');
@@ -575,9 +895,12 @@ $lucideIcons = [
             if (tabId === 'photos') {
                 title.textContent = 'Zdjęcia';
                 subtitle.textContent = 'Zarządzaj zdjęciami w galerii realizacji';
-            } else {
+            } else if (tabId === 'categories') {
                 title.textContent = 'Kategorie';
                 subtitle.textContent = 'Organizuj podziały na typy ogrodzeń';
+            } else {
+                title.textContent = 'Opinie klientów';
+                subtitle.textContent = 'Zarządzaj opiniami z Google Maps oraz własnymi referencjami';
             }
         }
 
@@ -856,6 +1179,158 @@ $lucideIcons = [
                     window.location.reload();
                 } else {
                     alert(res.message || 'Błąd podczas usuwania kategorii.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        // ──────────────────────────────────────────
+        // Reviews CRUD JS
+        // ──────────────────────────────────────────
+        async function fetchGoogleReviews() {
+            const btn = document.getElementById('fetch-btn');
+            const originalHtml = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader" class="w-4 h-4 animate-spin"></i> Pobieranie...`;
+            lucide.createIcons();
+
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+
+            try {
+                const response = await fetch('api.php?action=fetch_google_reviews', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                
+                alert(res.message);
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    btn.disabled = false;
+                    btn.innerHTML = originalHtml;
+                    lucide.createIcons();
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci podczas pobierania opinii Google.');
+                btn.disabled = false;
+                btn.innerHTML = originalHtml;
+                lucide.createIcons();
+            }
+        }
+
+        async function submitReview(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('author_name', document.getElementById('review-author').value);
+            formData.append('rating', document.getElementById('review-rating').value);
+            formData.append('review_time', document.getElementById('review-time').value);
+            formData.append('review_text', document.getElementById('review-text').value);
+
+            try {
+                const response = await fetch('api.php?action=add_review', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                
+                if (res.success) {
+                    alert('Opinia została pomyślnie dodana!');
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd tworzenia opinii.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        function openEditReviewModal(rev) {
+            document.getElementById('edit-review-id').value = rev.id;
+            document.getElementById('edit-review-author').value = rev.author_name;
+            document.getElementById('edit-review-rating').value = rev.rating;
+            document.getElementById('edit-review-time').value = rev.review_time;
+            document.getElementById('edit-review-text').value = rev.review_text;
+            openModal('edit-review');
+        }
+
+        async function submitEditReview(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', document.getElementById('edit-review-id').value);
+            formData.append('author_name', document.getElementById('edit-review-author').value);
+            formData.append('rating', document.getElementById('edit-review-rating').value);
+            formData.append('review_time', document.getElementById('edit-review-time').value);
+            formData.append('review_text', document.getElementById('edit-review-text').value);
+
+            try {
+                const response = await fetch('api.php?action=edit_review', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd zapisu opinii.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        async function toggleReviewVisibility(id, visibleState) {
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', id);
+            formData.append('is_visible', visibleState);
+
+            try {
+                const response = await fetch('api.php?action=toggle_review_visibility', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd zapisu widoczności.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Błąd sieci.');
+            }
+        }
+
+        async function confirmDeleteReview(id) {
+            if (!confirm('Czy na pewno chcesz trwale usunąć tę opinię? Ta operacja jest nieodwracalna.')) return;
+            
+            const formData = new FormData();
+            formData.append('csrf_token', document.getElementById('csrf-token').value);
+            formData.append('id', id);
+
+            try {
+                const response = await fetch('api.php?action=delete_review', {
+                    method: 'POST',
+                    body: formData
+                });
+                const res = await response.json();
+                if (res.success) {
+                    window.location.reload();
+                } else {
+                    alert(res.message || 'Błąd podczas usuwania opinii.');
                 }
             } catch (err) {
                 console.error(err);

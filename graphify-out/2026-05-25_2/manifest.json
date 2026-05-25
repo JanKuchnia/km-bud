@@ -1239,6 +1239,11 @@
     "ast_hash": "f4a69aa335b3917aa2cee9778542d97a",
     "semantic_hash": ""
   },
+  "/home/jankuchnia/Desktop/km-bud/scratch/optimize_new_photos.py": {
+    "mtime": 1779562692.4928155,
+    "ast_hash": "5304553c2f4c330e15fd90b0df41a0c2",
+    "semantic_hash": ""
+  },
   "/home/jankuchnia/Desktop/km-bud/images/wozidlo_gasienicowe.webp": {
     "mtime": 1779560327.844858,
     "ast_hash": "036a01e703c40684475a38c45d7005cf",
@@ -1254,9 +1259,24 @@
     "ast_hash": "d8722af055807aa6f2caeb00a18d8f6f",
     "semantic_hash": ""
   },
+  "/home/jankuchnia/Desktop/km-bud/scratch/generate_gallery.js": {
+    "mtime": 1779563136.082324,
+    "ast_hash": "0a46f96b114f1adf7984e904732c2474",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/scratch/update_galeria.js": {
+    "mtime": 1779563154.1102874,
+    "ast_hash": "d251711bb05317571b20f55838705e38",
+    "semantic_hash": ""
+  },
+  "/home/jankuchnia/Desktop/km-bud/scratch/gallery_output.html": {
+    "mtime": 1779563141.0313134,
+    "ast_hash": "6e760da4bfae665a4a6326c8195ffd23",
+    "semantic_hash": ""
+  },
   "/home/jankuchnia/Desktop/km-bud/install.php": {
-    "mtime": 1779700169.1196818,
-    "ast_hash": "9527193cae1f9a0d8463f1549b8cc373",
+    "mtime": 1779696911.6006217,
+    "ast_hash": "62e9937454862f8890d050152b51b66b",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/galeria.php": {
@@ -1265,13 +1285,13 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/index.php": {
-    "mtime": 1779708962.236571,
-    "ast_hash": "5b73f831e92010b9550dda423bb3731a",
+    "mtime": 1779697636.9973457,
+    "ast_hash": "a22981c2e4ac4df212ada59a73454bf0",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/config/config.php": {
-    "mtime": 1779703892.6410434,
-    "ast_hash": "1ecbf6d2bf4ac228ef24f5a3379b425d",
+    "mtime": 1779696641.2494464,
+    "ast_hash": "227c48d6ad3eeabe32a4bf52dcfbaaa1",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/includes/db.php": {
@@ -1300,33 +1320,18 @@
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/api.php": {
-    "mtime": 1779703941.6899047,
-    "ast_hash": "5a69c7117bfdbd897c5191d616d82581",
+    "mtime": 1779697670.5791852,
+    "ast_hash": "e154cd40f95fb41851a3cb8dada5d0e5",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/index.php": {
-    "mtime": 1779734155.370358,
-    "ast_hash": "0f3835bd8816b1b5a41bf9182dec532e",
+    "mtime": 1779697688.4820988,
+    "ast_hash": "743c650c2e56c17cd14490567a0fe6d0",
     "semantic_hash": ""
   },
   "/home/jankuchnia/Desktop/km-bud/admin/includes/auth.php": {
     "mtime": 1779697646.9342988,
     "ast_hash": "b14fccc66fa12a7951eab41493c269b0",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/admin/includes/add_reviews_table.sql": {
-    "mtime": 1779702943.2346866,
-    "ast_hash": "833de3b0cf79c3acec557b8029036a99",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/includes/google_reviews_helper.php": {
-    "mtime": 1779703933.2129285,
-    "ast_hash": "bc0d55051fdaee2489d1fcd4f0b16d0d",
-    "semantic_hash": ""
-  },
-  "/home/jankuchnia/Desktop/km-bud/config/last_reviews_sync.txt": {
-    "mtime": 1779704075.9546902,
-    "ast_hash": "02a5a87ea6c502588145ca4ac82a5a19",
     "semantic_hash": ""
   }
 }

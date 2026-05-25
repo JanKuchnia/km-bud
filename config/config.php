@@ -20,6 +20,10 @@ return [
     'tinypng' => [
         'api_key' => '0Zyzzv1z4CYLWP96YTyfQzfpdYZNn0PD',
     ],
+    'google_places' => [
+        'api_key'  => 'AIzaSyBQajUsVxRQLvlwLmGgPI-c-ebLqVm7LfM', // Set your Google Places API Key here to enable auto-import
+        'place_id' => 'ChIJ6XciKERpFkcRoFN8VQxqdsU', // KM-BUD Place ID
+    ],
     'upload' => [
         'max_size'      => 10 * 1024 * 1024,  // 10MB
         'allowed_types' => ['image/jpeg', 'image/png', 'image/webp'],

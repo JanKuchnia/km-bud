@@ -1,8 +1,41 @@
 <?php
-/**
- * KM-BUD Ogrodzenia — Strona Główna
- * Visual output IDENTICAL to index.html
- */
+require_once __DIR__ . '/includes/db.php';
+$db = getDB();
+
+// Automatic background Google Reviews sync (runs at most once every 24 hours)
+$lastSyncFile = __DIR__ . '/config/last_reviews_sync.txt';
+$syncInterval = 86400; // 24 hours
+
+if (!file_exists($lastSyncFile) || (time() - filemtime($lastSyncFile) > $syncInterval)) {
+    require_once __DIR__ . '/includes/google_reviews_helper.php';
+    $config = require __DIR__ . '/config/config.php';
+    syncGoogleReviews($db, $config);
+    @file_put_contents($lastSyncFile, time());
+}
+
+// Fetch 6 carousel photos
+$carouselPhotos = $db->query("
+    SELECT p.filename, p.title 
+    FROM photos p 
+    ORDER BY p.sort_order, p.id DESC 
+    LIMIT 6
+")->fetchAll();
+
+// Fetch categories for services
+$categories = $db->query("SELECT * FROM categories ORDER BY sort_order")->fetchAll();
+
+// Fetch 8 photos for homepage grid
+$previewPhotos = $db->query("
+    SELECT p.filename, p.title 
+    FROM photos p 
+    ORDER BY p.sort_order, p.id DESC 
+    LIMIT 8
+")->fetchAll();
+
+$totalPhotos = (int) $db->query("SELECT COUNT(*) FROM photos")->fetchColumn();
+
+// Fetch visible reviews
+$reviews = $db->query("SELECT * FROM google_reviews WHERE is_visible = 1 ORDER BY id DESC")->fetchAll();
 
 $currentPage     = 'index';
 $pageTitle       = 'KM-BUD Ogrodzenia - Montaż Ogrodzeń Myślenice | Konrad Małucha';
@@ -118,187 +151,41 @@ require_once __DIR__ . '/includes/header.php';
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-
-                <!-- 1. Ogrodzenia panelowe -->
-                <div data-service-category="panelowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="scan" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia panelowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów
-                    przemysłowych.
-                  </p>
-                  <a href="galeria.php?filter=panelowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 2. Ogrodzenia siatkowe -->
-                <div data-service-category="siatka"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="grid-3x3" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia z siatki
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny
-                    leśne.
-                  </p>
-                  <a href="galeria.php?filter=siatka"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 3. Ogrodzenia frontowe z bloczków -->
-                <div data-service-category="betonowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="brick-wall" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia z bloczków
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i
-                    design.
-                  </p>
-                  <a href="galeria.php?filter=betonowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 4. Ogrodzenia gabionowe -->
-                <div data-service-category="gabionowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="layers" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia gabionowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną
-                    izolację akustyczną.
-                  </p>
-                  <a href="galeria.php?filter=gabionowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 5. Ogrodzenia sztachetowe -->
-                <div data-service-category="sztachetowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="align-justify" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia sztachetowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z
-                    trwałością.
-                  </p>
-                  <a href="galeria.php?filter=sztachetowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 6. Ogrodzenia przemysłowe -->
-                <div data-service-category="przemysłowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="shield" class="text-white text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia przemysłowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu
-                    zabezpieczenia.
-                  </p>
-                  <a href="galeria.php?filter=przemysłowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 7. Ogrodzenia tymczasowe -->
-                <div data-service-category="tymczasowe"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="construction" class="text-white text-2xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Ogrodzenia tymczasowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu
-                    budowy.
-                  </p>
-                  <a href="galeria.php?filter=tymczasowe"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 8. Bramy, furtki, przęsła -->
-                <div data-service-category="bramy"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="door-closed" class="text-white text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Bramy, furtki, przęsła
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu
-                    ogrodzenia.
-                  </p>
-                  <a href="galeria.php?filter=bramy"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
-                <!-- 9. Mury oporowe -->
-                <div data-service-category="podmurówka"
-                  class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
-                  <div
-                    class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <i data-lucide="mountain" class="text-white text-xl"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
-                    Mury oporowe
-                  </h3>
-                  <p class="text-[var(--gray-text-color)] mb-4">
-                    Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki
-                    ogrodzeniowe.
-                  </p>
-                  <a href="galeria.php?filter=podmurówka"
-                    class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
-                    Zobacz zdjęcia <i data-lucide="camera"></i>
-                  </a>
-                </div>
-
+                <?php
+                $descMap = [
+                    'panelowe' => 'Trwałe i uniwersalne systemy panelowe. Idealne do nowoczesnych posesji prywatnych oraz obiektów przemysłowych.',
+                    'siatka' => 'Ekonomiczne i solidne ogrodzenia z siatki zgrzewanej lub plecionej. Doskonałe na działki i tereny leśne.',
+                    'betonowe' => 'Reprezentacyjne ogrodzenia z bloczków betonowych gładkich i łupanych. Ponadczasowa solidność i design.',
+                    'gabionowe' => 'Nowoczesne kosze stalowe wypełnione kamieniem naturalnym. Zapewniają prestiżowy wygląd i świetną izolację akustyczną.',
+                    'sztachetowe' => 'Klasyczne i nowoczesne ogrodzenia ze sztachet metalowych lub kompozytowych. Estetyka połączona z trwałością.',
+                    'przemysłowe' => 'Wytrzymałe systemy ogrodzeniowe dla firm, magazynów i fabryk. Gwarancja najwyższego poziomu zabezpieczenia.',
+                    'tymczasowe' => 'Mobilne ogrodzenia budowlane i ażurowe. Szybki montaż, stabilność i pełne bezpieczeństwo placu budowy.',
+                    'bramy' => 'Kompleksowe systemy wjazdowe z pełną automatyką. Perfekcyjne dopasowanie do każdego stylu ogrodzenia.',
+                    'podmurówka' => 'Prefabrykowane i wylewane konstrukcje stabilizujące grunt. Solidny fundament pod podmurówki ogrodzeniowe.'
+                ];
+                
+                foreach ($categories as $cat):
+                    $slug = htmlspecialchars($cat['slug']);
+                    $desc = $descMap[$slug] ?? "Profesjonalne wykonawstwo, doradztwo i precyzyjny montaż ogrodzeń w kategorii {$cat['name']}.";
+                ?>
+                    <div data-service-category="<?= $slug ?>"
+                      class="service-card cursor-pointer bg-[var(--light-background-color)] rounded-2xl p-6 md:p-8 hover:shadow-xl hover:border-[var(--primary-color)]/30 transition-all duration-300 group border border-[var(--light-border-color)]">
+                      <div
+                        class="w-14 h-14 bg-[var(--primary-color)] rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="<?= htmlspecialchars($cat['icon']) ?>" class="text-white text-2xl"></i>
+                      </div>
+                      <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-3">
+                        <?= htmlspecialchars($cat['name']) ?>
+                      </h3>
+                      <p class="text-[var(--gray-text-color)] mb-4">
+                        <?= htmlspecialchars($desc) ?>
+                      </p>
+                      <a href="galeria.php?filter=<?= $slug ?>"
+                        class="service-link text-[var(--primary-color)] font-semibold hover:underline inline-flex items-center gap-2">
+                        Zobacz zdjęcia <i data-lucide="camera"></i>
+                      </a>
+                    </div>
+                <?php endforeach; ?>
               </div>
 
               <div class="text-center mt-12">
@@ -321,53 +208,28 @@ require_once __DIR__ . '/includes/header.php';
                     class="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-950">
                     <!-- Slides Container -->
                     <div class="relative w-full h-full">
-                      <!-- Slide 1 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10"
-                        data-slide-index="0">
-                        <img src="images/ogrodzenie-bloczkowe-01.webp"
-                          alt="Nowoczesne ogrodzenie frontowe z bloczków łupanych Joniec"
-                          class="w-full h-full object-cover object-center">
-                      </div>
-                      <!-- Slide 2 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
-                        data-slide-index="1">
-                        <img src="images/ogrodzenie-siatkowe-01.webp"
-                          alt="Trwałe i precyzyjne ogrodzenie z siatki plecionej"
-                          class="w-full h-full object-cover object-center">
-                      </div>
-                      <!-- Slide 3 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
-                        data-slide-index="2">
-                        <img src="images/brama-furtka-01.webp" alt="Solidna brama przesuwna stalowa z automatyką"
-                          class="w-full h-full object-cover object-center">
-                      </div>
-                      <!-- Slide 4 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
-                        data-slide-index="3">
-                        <img src="images/ogrodzenie-panelowe-01.webp"
-                          alt="Estetyczne i klasyczne ogrodzenie panelowe 3D"
-                          class="w-full h-full object-cover object-center">
-                      </div>
-                      <!-- Slide 5 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
-                        data-slide-index="4">
-                        <img src="images/ogrodzenie-bloczkowe-05.webp"
-                          alt="Modułowe ogrodzenie betonowe o podwyższonej trwałości"
-                          class="w-full h-full object-cover object-center">
-                      </div>
-                      <!-- Slide 6 -->
-                      <div
-                        class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0"
-                        data-slide-index="5">
-                        <img src="images/ogrodzenie-siatkowe-05.webp"
-                          alt="Ogrodzenie siatkowe z solidną podmurówką systemową"
-                          class="w-full h-full object-cover object-center">
-                      </div>
+                      <?php if (!empty($carouselPhotos)): ?>
+                        <?php foreach ($carouselPhotos as $index => $cPhoto): ?>
+                          <div
+                            class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out <?= $index === 0 ? 'opacity-100 z-10' : 'opacity-0 pointer-events-none z-0' ?>"
+                            data-slide-index="<?= $index ?>">
+                            <img src="images/<?= htmlspecialchars($cPhoto['filename']) ?>"
+                              alt="<?= htmlspecialchars($cPhoto['title']) ?>"
+                              class="w-full h-full object-cover object-center animate-fade-in">
+                          </div>
+                        <?php endforeach; ?>
+                      <?php else: ?>
+                        <!-- Fallback static slides -->
+                        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-100 z-10" data-slide-index="0">
+                          <img src="images/ogrodzenie-bloczkowe-01.webp" alt="Nowoczesne ogrodzenie frontowe z bloczków łupanych Joniec" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="1">
+                          <img src="images/ogrodzenie-siatkowe-01.webp" alt="Trwałe i precyzyjne ogrodzenie z siatki plecionej" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="carousel-slide absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out opacity-0 pointer-events-none z-0" data-slide-index="2">
+                          <img src="images/brama-furtka-01.webp" alt="Solidna brama przesuwna stalowa z automatyką" class="w-full h-full object-cover object-center">
+                        </div>
+                      <?php endif; ?>
                     </div>
 
                     <!-- Navigation Arrows -->
@@ -382,24 +244,14 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- Carousel Indicators (Dots) -->
                     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="0" aria-label="Idź do slajdu 1"></button>
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="1" aria-label="Idź do slajdu 2"></button>
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="2" aria-label="Idź do slajdu 3"></button>
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="3" aria-label="Idź do slajdu 4"></button>
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="4" aria-label="Idź do slajdu 5"></button>
-                      <button
-                        class="carousel-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white transition-all duration-300"
-                        data-dot-index="5" aria-label="Idź do slajdu 6"></button>
+                      <?php 
+                      $dotCount = !empty($carouselPhotos) ? count($carouselPhotos) : 3;
+                      for ($d = 0; $d < $dotCount; $d++): 
+                      ?>
+                        <button
+                          class="carousel-dot w-2 h-2 rounded-full <?= $d === 0 ? 'bg-white' : 'bg-white/40 hover:bg-white' ?> transition-all duration-300"
+                          data-dot-index="<?= $d ?>" aria-label="Idź do slajdu <?= $d + 1 ?>"></button>
+                      <?php endfor; ?>
                     </div>
                   </div>
 
@@ -746,93 +598,43 @@ require_once __DIR__ . '/includes/header.php';
                 </p>
               </div>
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-bloczkowe-02.webp" alt="Ogrodzenie frontowe z bloczków"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
+                <?php if (!empty($previewPhotos)): ?>
+                  <?php 
+                  $count = count($previewPhotos);
+                  foreach ($previewPhotos as $index => $photo): 
+                      $isLastCard = ($index === 7 && $totalPhotos > 8);
+                  ?>
+                    <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
+                      onclick="window.location.href='galeria.php'">
+                      <img src="images/<?= htmlspecialchars($photo['filename']) ?>" alt="<?= htmlspecialchars($photo['title']) ?>"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                      
+                      <?php if ($isLastCard): ?>
+                        <!-- Show +X overlay on the last card -->
+                        <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center transition-all duration-300">
+                          <span class="text-white font-bold text-3xl">+<?= $totalPhotos - 7 ?></span>
+                          <span class="text-white/80 text-xs font-semibold mt-1">zobacz więcej</span>
+                        </div>
+                      <?php else: ?>
+                        <!-- Standard hover state -->
+                        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                          <span class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ galerię</span>
+                        </div>
+                      <?php endif; ?>
+                    </div>
+                  <?php endforeach; ?>
+                <?php else: ?>
+                  <!-- Premium Empty-State Container if database is empty -->
+                  <div class="col-span-full bg-white rounded-2xl p-8 md:p-12 text-center border border-[var(--light-border-color)] shadow-sm">
+                    <div class="w-16 h-16 bg-[var(--primary-color)]/10 text-[var(--primary-color)] rounded-full flex items-center justify-center mx-auto mb-4">
+                      <i data-lucide="images" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[var(--dark-text-color)] mb-2">Aktualizacja Galerii</h3>
+                    <p class="text-[var(--gray-text-color)] max-w-md mx-auto">
+                      Trwają prace nad aktualizacją galerii naszych najnowszych realizacji. Zapraszamy do sprawdzenia nas wkrótce!
+                    </p>
                   </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-siatkowe-02.webp" alt="Ogrodzenie z siatki plecionej"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/brama-furtka-02.webp" alt="Nowoczesna furtka wejściowa"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-panelowe-01.webp" alt="Klasyczny panel ogrodzeniowy 3D"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-bloczkowe-03.webp" alt="Ogrodzenie z bloczków gładkich"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-siatkowe-03.webp" alt="Solidne ogrodzenie siatkowe"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-bloczkowe-04.webp" alt="Ogrodzenie modułowe betonowe"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                    <span
-                      class="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold border border-white/40 px-4 py-2 rounded-full text-sm backdrop-blur-sm">Powiększ
-                      galerię</span>
-                  </div>
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group cursor-pointer relative"
-                  onclick="window.location.href='galeria.php'">
-                  <img src="images/ogrodzenie-siatkowe-04.webp" alt="Ogrodzenie z siatki zgrzewanej"
-                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                  <div
-                    class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center transition-all duration-300">
-                    <span class="text-white font-bold text-3xl">+44</span>
-                    <span class="text-white/80 text-xs font-semibold mt-1">zobacz więcej</span>
-                  </div>
-                </div>
+                <?php endif; ?>
               </div>
 
               <div class="text-center mt-10">
@@ -844,6 +646,111 @@ require_once __DIR__ . '/includes/header.php';
               </div>
             </div>
           </section>
+          <!-- ═══════════════ TESTIMONIALS (GOOGLE REVIEWS) ═══════════════ -->
+          <section id="testimonials" class="code-section py-16 md:py-24 bg-[var(--light-background-color)] overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
+                <div>
+                  <span class="text-sm font-bold uppercase tracking-wider text-[var(--primary-color)] px-4 py-1.5 bg-[var(--primary-color)]/10 rounded-full">
+                    Opinie Naszych Klientów
+                  </span>
+                  <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--dark-text-color)] mt-4 mb-2"
+                    style="font-family: var(--font-family-heading)">
+                    Co mówią o nas w Google?
+                  </h2>
+                  <p class="text-lg text-[var(--gray-text-color)] max-w-2xl">
+                    Duma z zadowolenia naszych klientów to siła napędowa KM-BUD. Sprawdź zweryfikowane opinie z naszej wizytówki Google.
+                  </p>
+                </div>
+                
+                <!-- Sleek Asymmetric Navigation Arrows -->
+                <div id="reviews-nav" class="flex gap-3 self-start md:self-end">
+                  <button id="reviews-prev" aria-label="Poprzednie opinie" class="w-12 h-12 rounded-xl border border-[var(--light-border-color)] bg-white text-[var(--dark-text-color)] hover:bg-neutral-50 hover:border-neutral-300 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-50 disabled:pointer-events-none group">
+                    <i data-lucide="chevron-left" class="w-5 h-5 group-hover:-translate-x-0.5 transition-transform"></i>
+                  </button>
+                  <button id="reviews-next" aria-label="Następne opinie" class="w-12 h-12 rounded-xl border border-[var(--light-border-color)] bg-white text-[var(--dark-text-color)] hover:bg-neutral-50 hover:border-neutral-300 active:scale-95 transition-all flex items-center justify-center shadow-sm disabled:opacity-50 disabled:pointer-events-none group">
+                    <i data-lucide="chevron-right" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Reviews Slider Window Container -->
+              <div class="relative overflow-hidden w-full -mx-4 px-4 py-2">
+                <!-- Reviews Track Container -->
+                <div id="reviews-track" class="flex transition-transform duration-500 ease-out select-none cursor-grab active:cursor-grabbing will-change-transform">
+                  <?php 
+                  $reviewsToDisplay = !empty($reviews) ? array_slice($reviews, 0, 8) : [
+                      ['author_name' => 'Marcin K.', 'rating' => 5, 'review_time' => '2 miesiące temu', 'review_text' => 'Firma KM-BUD robiła u mnie ogrodzenie panelowe z podmurówką. Wszystko sprawnie, terminowo i bardzo solidnie. Ekipa z profesjonalnym sprzętem, dbają o porządek. Szczerze polecam!', 'is_manual' => 0],
+                      ['author_name' => 'Anna Nowak', 'rating' => 5, 'review_time' => '1 miesiąc temu', 'review_text' => 'Ogrodzenie z bloczków betonowych wykonane z dbałością o najmniejszy szczegół. Bardzo miły kontakt, doradztwo techniczne na najwyższym poziomie. Na pewno wrócimy przy kolejnym etapie prac.', 'is_manual' => 0],
+                      ['author_name' => 'Tomasz Myślenice', 'rating' => 5, 'review_time' => '3 tygodnie temu', 'review_text' => 'Błyskawiczny montaż bramy przesuwnej z automatyką. Wszystko działa bez zarzutu, wykonane estetycznie i profesjonalnie. Sprzęt budowlany robi wrażenie, praca idzie błyskawicznie.', 'is_manual' => 0]
+                  ];
+
+                  foreach ($reviewsToDisplay as $index => $rev):
+                      $colors = ['bg-blue-600 text-white', 'bg-red-600 text-white', 'bg-amber-600 text-white', 'bg-emerald-600 text-white', 'bg-purple-600 text-white', 'bg-slate-600 text-white'];
+                      $avatarBg = $colors[$index % count($colors)];
+                  ?>
+                    <!-- Slide Item wrapper -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3 md:px-4 flex">
+                      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-[var(--light-border-color)] hover:shadow-xl transition-all duration-300 flex flex-col justify-between w-full h-full">
+                        <div>
+                          <!-- Quote indicator and Stars -->
+                          <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-0.5 text-amber-400">
+                              <?php for ($s = 1; $s <= 5; $s++): ?>
+                                <i data-lucide="star" class="w-4 h-4 <?= $s <= $rev['rating'] ? 'fill-amber-400' : 'text-slate-200' ?>"></i>
+                              <?php endfor; ?>
+                            </div>
+                            <i data-lucide="quote" class="w-8 h-8 text-red-600/10"></i>
+                          </div>
+
+                          <p class="text-[var(--gray-text-color)] text-sm leading-relaxed italic mb-6">
+                            "<?= htmlspecialchars($rev['review_text']) ?>"
+                          </p>
+                        </div>
+
+                        <!-- Author Details -->
+                        <div class="border-t border-[var(--light-border-color)] pt-4 flex items-center justify-between mt-auto">
+                          <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full <?= $avatarBg ?> flex items-center justify-center font-bold text-sm shadow-sm overflow-hidden flex-shrink-0">
+                              <?php if (!empty($rev['author_photo'])): ?>
+                                <img src="<?= htmlspecialchars($rev['author_photo']) ?>" alt="<?= htmlspecialchars($rev['author_name']) ?>" class="w-full h-full object-cover" draggable="false">
+                              <?php else: ?>
+                                <?= mb_substr(htmlspecialchars($rev['author_name']), 0, 1) ?>
+                              <?php endif; ?>
+                            </div>
+                            <div>
+                              <h4 class="font-bold text-[var(--dark-text-color)] text-sm leading-tight"><?= htmlspecialchars($rev['author_name']) ?></h4>
+                              <span class="text-[10px] text-[var(--gray-text-color)]/60"><?= htmlspecialchars($rev['review_time']) ?></span>
+                            </div>
+                          </div>
+
+                          <!-- Verified Badge -->
+                          <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-600 px-2.5 py-1 rounded-full text-[9px] font-bold border border-blue-100 uppercase tracking-wider">
+                            <i data-lucide="check" class="w-2.5 h-2.5"></i>
+                            Zweryfikowano
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="text-center mt-12">
+                <a href="https://www.google.com/maps/place/KM-BUD+Konrad+Ma%C5%82ucha/@49.8829631,20.0039234,17z/data=!4m8!3m7!1s0x471641d4c849e7b3:0xee14ded7cc4fb7fc!8m2!3d49.8829631!4d20.0039234!9m1!1b1!16s%2Fg%2F11wdfn6j9x?entry=ttu" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 bg-white text-[var(--dark-text-color)] border border-[var(--light-border-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-gray-50 hover:shadow transition-all shadow-sm">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#EA4335"/>
+                  </svg>
+                  Zobacz lub napisz opinię w Google
+                </a>
+              </div>
+
+            </div>
+          </section>
+
           <section id=contact class="code-section py-16 md:py-24 bg-[var(--dark-background-color)] relative overflow-hidden">
 
             <div class="absolute inset-0 opacity-5">
@@ -1245,6 +1152,166 @@ require_once __DIR__ . '/includes/header.php';
         if (modalTouchStartX - modalTouchEndX > 50) nextModalSlide();
         if (modalTouchEndX - modalTouchStartX > 50) prevModalSlide();
       });
+    }
+
+    // ═══════════════ REVIEWS SLIDER LOGIC ═══════════════
+    const reviewsTrack = document.getElementById('reviews-track');
+    const reviewsPrevBtn = document.getElementById('reviews-prev');
+    const reviewsNextBtn = document.getElementById('reviews-next');
+    
+    if (reviewsTrack && reviewsPrevBtn && reviewsNextBtn) {
+      const slides = Array.from(reviewsTrack.children);
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+      
+      let isDragging = false;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      let dragOffset = 0;
+      
+      function getVisibleCards() {
+        if (window.innerWidth >= 1024) return 3; // Desktop
+        if (window.innerWidth >= 768) return 2;  // Tablet
+        return 1;                                // Mobile
+      }
+      
+      function getSlideWidthPercent() {
+        return 100 / getVisibleCards();
+      }
+      
+      function getMaxSlideIndex() {
+        return Math.max(0, totalSlides - getVisibleCards());
+      }
+      
+      function updateSliderPosition(withTransition = true) {
+        const slideWidthPercent = getSlideWidthPercent();
+        
+        // Boundaries checks
+        if (currentSlide < 0) currentSlide = 0;
+        const maxIndex = getMaxSlideIndex();
+        if (currentSlide > maxIndex) currentSlide = maxIndex;
+        
+        const translatePercent = -currentSlide * slideWidthPercent;
+        currentTranslate = translatePercent;
+        prevTranslate = translatePercent;
+        
+        if (withTransition) {
+          reviewsTrack.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+        } else {
+          reviewsTrack.style.transition = 'none';
+        }
+        
+        reviewsTrack.style.transform = `translateX(${translatePercent}%)`;
+        
+        // Update navigation button disabled states
+        reviewsPrevBtn.disabled = currentSlide === 0;
+        reviewsNextBtn.disabled = currentSlide >= maxIndex;
+      }
+      
+      // Arrow navigation
+      reviewsNextBtn.addEventListener('click', () => {
+        const maxIndex = getMaxSlideIndex();
+        if (currentSlide < maxIndex) {
+          currentSlide++;
+          updateSliderPosition();
+        }
+      });
+      
+      reviewsPrevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSliderPosition();
+        }
+      });
+      
+      // Swipe and drag gestures
+      function touchStart(event) {
+        isDragging = true;
+        startX = getPositionX(event);
+        reviewsTrack.style.transition = 'none';
+        reviewsTrack.style.cursor = 'grabbing';
+      }
+      
+      function touchMove(event) {
+        if (!isDragging) return;
+        const currentX = getPositionX(event);
+        const diffX = currentX - startX;
+        
+        // Calculate dynamic translation in relative percentage
+        const trackWidth = reviewsTrack.offsetWidth;
+        if (trackWidth === 0) return;
+        
+        const diffPercent = (diffX / trackWidth) * 100;
+        
+        // Add elastic drag resistance at margins
+        let nextTranslate = prevTranslate + diffPercent;
+        const maxIndex = getMaxSlideIndex();
+        const slideWidthPercent = getSlideWidthPercent();
+        const minBound = 0;
+        const maxBound = -maxIndex * slideWidthPercent;
+        
+        if (nextTranslate > minBound) {
+          nextTranslate = minBound + (nextTranslate - minBound) * 0.3;
+        } else if (nextTranslate < maxBound) {
+          nextTranslate = maxBound + (nextTranslate - maxBound) * 0.3;
+        }
+        
+        reviewsTrack.style.transform = `translateX(${nextTranslate}%)`;
+        dragOffset = diffX;
+      }
+      
+      function touchEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        reviewsTrack.style.cursor = 'grab';
+        
+        const threshold = 50; // swipe threshold in px
+        
+        if (Math.abs(dragOffset) > threshold) {
+          if (dragOffset < 0) {
+            // Swiped left -> Next
+            const maxIndex = getMaxSlideIndex();
+            if (currentSlide < maxIndex) {
+              currentSlide++;
+            }
+          } else {
+            // Swiped right -> Prev
+            if (currentSlide > 0) {
+              currentSlide--;
+            }
+          }
+        }
+        
+        dragOffset = 0;
+        updateSliderPosition();
+      }
+      
+      function getPositionX(event) {
+        return event.type.includes('mouse') ? event.clientX : event.touches[0].clientX;
+      }
+      
+      // Event bindings for Touch
+      reviewsTrack.addEventListener('touchstart', touchStart, { passive: true });
+      reviewsTrack.addEventListener('touchmove', touchMove, { passive: true });
+      reviewsTrack.addEventListener('touchend', touchEnd);
+      
+      // Event bindings for Mouse drag (Desktop experience)
+      reviewsTrack.addEventListener('mousedown', touchStart);
+      reviewsTrack.addEventListener('mousemove', touchMove);
+      reviewsTrack.addEventListener('mouseup', touchEnd);
+      reviewsTrack.addEventListener('mouseleave', touchEnd);
+      
+      // Prevent browser default behaviors
+      reviewsTrack.addEventListener('dragstart', (e) => e.preventDefault());
+      
+      // Resize support
+      window.addEventListener('resize', () => {
+        updateSliderPosition(false);
+      });
+      
+      // Initialize layout
+      updateSliderPosition(false);
     }
   </script>
 </body>

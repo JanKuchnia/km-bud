@@ -2434,6 +2434,159 @@
       "norm_label": "run basic accessibility check."
     },
     {
+      "label": "optimize_new_photos.py",
+      "file_type": "code",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L1",
+      "id": "scratch_optimize_new_photos_py",
+      "community": 385,
+      "norm_label": "optimize_new_photos.py"
+    },
+    {
+      "label": "compress_with_tinypng()",
+      "file_type": "code",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L11",
+      "id": "scratch_optimize_new_photos_compress_with_tinypng",
+      "community": 385,
+      "norm_label": "compress_with_tinypng()"
+    },
+    {
+      "label": "optimize_photo()",
+      "file_type": "code",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L46",
+      "id": "scratch_optimize_new_photos_optimize_photo",
+      "community": 385,
+      "norm_label": "optimize_photo()"
+    },
+    {
+      "label": "generate_gallery.js",
+      "file_type": "code",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L1",
+      "id": "scratch_generate_gallery_js",
+      "community": 387,
+      "norm_label": "generate_gallery.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L1",
+      "id": "scratch_generate_gallery_fs",
+      "community": 387,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L2",
+      "id": "scratch_generate_gallery_path",
+      "community": 387,
+      "norm_label": "path"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L5",
+      "id": "scratch_generate_gallery_metadata",
+      "community": 387,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "categoryBadges",
+      "file_type": "code",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L8",
+      "id": "scratch_generate_gallery_categorybadges",
+      "community": 387,
+      "norm_label": "categorybadges"
+    },
+    {
+      "label": "update_galeria.js",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L1",
+      "id": "scratch_update_galeria_js",
+      "community": 386,
+      "norm_label": "update_galeria.js"
+    },
+    {
+      "label": "fs",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L1",
+      "id": "scratch_update_galeria_fs",
+      "community": 386,
+      "norm_label": "fs"
+    },
+    {
+      "label": "path",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L2",
+      "id": "scratch_update_galeria_path",
+      "community": 386,
+      "norm_label": "path"
+    },
+    {
+      "label": "galeriaHtml",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L8",
+      "id": "scratch_update_galeria_galeriahtml",
+      "community": 386,
+      "norm_label": "galeriahtml"
+    },
+    {
+      "label": "generatedGrid",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L9",
+      "id": "scratch_update_galeria_generatedgrid",
+      "community": 386,
+      "norm_label": "generatedgrid"
+    },
+    {
+      "label": "startIndex",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L15",
+      "id": "scratch_update_galeria_startindex",
+      "community": 386,
+      "norm_label": "startindex"
+    },
+    {
+      "label": "endIndex",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L16",
+      "id": "scratch_update_galeria_endindex",
+      "community": 386,
+      "norm_label": "endindex"
+    },
+    {
+      "label": "beforeGrid",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L24",
+      "id": "scratch_update_galeria_beforegrid",
+      "community": 386,
+      "norm_label": "beforegrid"
+    },
+    {
+      "label": "afterGrid",
+      "file_type": "code",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L25",
+      "id": "scratch_update_galeria_aftergrid",
+      "community": 386,
+      "norm_label": "aftergrid"
+    },
+    {
       "label": "config.php",
       "file_type": "code",
       "source_file": "config/config.php",
@@ -2479,24 +2632,6 @@
       "norm_label": "footer.php"
     },
     {
-      "label": "google_reviews_helper.php",
-      "file_type": "code",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L1",
-      "id": "includes_google_reviews_helper_php",
-      "community": 388,
-      "norm_label": "google_reviews_helper.php"
-    },
-    {
-      "label": "syncGoogleReviews()",
-      "file_type": "code",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L7",
-      "id": "includes_google_reviews_helper_syncgooglereviews",
-      "community": 388,
-      "norm_label": "syncgooglereviews()"
-    },
-    {
       "label": "logout.php",
       "file_type": "code",
       "source_file": "admin/logout.php",
@@ -2536,7 +2671,7 @@
       "label": "handleUpload()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L112",
+      "source_location": "L92",
       "id": "admin_api_handleupload",
       "community": 388,
       "norm_label": "handleupload()"
@@ -2545,7 +2680,7 @@
       "label": "handleUpdatePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L246",
+      "source_location": "L226",
       "id": "admin_api_handleupdatephoto",
       "community": 388,
       "norm_label": "handleupdatephoto()"
@@ -2554,7 +2689,7 @@
       "label": "handleDeletePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L281",
+      "source_location": "L261",
       "id": "admin_api_handledeletephoto",
       "community": 388,
       "norm_label": "handledeletephoto()"
@@ -2563,7 +2698,7 @@
       "label": "handleReorderPhotos()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L321",
+      "source_location": "L301",
       "id": "admin_api_handlereorderphotos",
       "community": 388,
       "norm_label": "handlereorderphotos()"
@@ -2572,7 +2707,7 @@
       "label": "handleAddCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L349",
+      "source_location": "L329",
       "id": "admin_api_handleaddcategory",
       "community": 388,
       "norm_label": "handleaddcategory()"
@@ -2581,7 +2716,7 @@
       "label": "handleEditCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L392",
+      "source_location": "L372",
       "id": "admin_api_handleeditcategory",
       "community": 388,
       "norm_label": "handleeditcategory()"
@@ -2590,7 +2725,7 @@
       "label": "handleDeleteCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L425",
+      "source_location": "L405",
       "id": "admin_api_handledeletecategory",
       "community": 388,
       "norm_label": "handledeletecategory()"
@@ -2599,7 +2734,7 @@
       "label": "compressWithGD()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L454",
+      "source_location": "L434",
       "id": "admin_api_compresswithgd",
       "community": 388,
       "norm_label": "compresswithgd()"
@@ -2608,7 +2743,7 @@
       "label": "compressWithTinyPNG()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L515",
+      "source_location": "L495",
       "id": "admin_api_compresswithtinypng",
       "community": 388,
       "norm_label": "compresswithtinypng()"
@@ -2617,55 +2752,10 @@
       "label": "translatePolishChars()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L573",
+      "source_location": "L553",
       "id": "admin_api_translatepolishchars",
       "community": 388,
       "norm_label": "translatepolishchars()"
-    },
-    {
-      "label": "handleFetchGoogleReviews()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L590",
-      "id": "admin_api_handlefetchgooglereviews",
-      "community": 388,
-      "norm_label": "handlefetchgooglereviews()"
-    },
-    {
-      "label": "handleAddReview()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L599",
-      "id": "admin_api_handleaddreview",
-      "community": 388,
-      "norm_label": "handleaddreview()"
-    },
-    {
-      "label": "handleEditReview()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L628",
-      "id": "admin_api_handleeditreview",
-      "community": 388,
-      "norm_label": "handleeditreview()"
-    },
-    {
-      "label": "handleToggleReviewVisibility()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L655",
-      "id": "admin_api_handletogglereviewvisibility",
-      "community": 388,
-      "norm_label": "handletogglereviewvisibility()"
-    },
-    {
-      "label": "handleDeleteReview()",
-      "file_type": "code",
-      "source_file": "admin/api.php",
-      "source_location": "L675",
-      "id": "admin_api_handledeletereview",
-      "community": 388,
-      "norm_label": "handledeletereview()"
     },
     {
       "label": "index.php",
@@ -27630,7 +27720,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "home_jankuchnia_pulpit_km_bud_agent_skills_mobile_design_touch_psychology_md",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md"
     },
     {
@@ -27639,7 +27729,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
       "id": "mobile_design_touch_psychology_touch_psychology_reference",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch psychology reference"
     },
     {
@@ -28170,7 +28260,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L482",
       "id": "mobile_design_touch_psychology_9_touch_psychology_checklist",
-      "community": 275,
+      "community": 390,
       "norm_label": "9. touch psychology checklist"
     },
     {
@@ -28179,7 +28269,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L484",
       "id": "mobile_design_touch_psychology_before_every_screen",
-      "community": 275,
+      "community": 390,
       "norm_label": "before every screen"
     },
     {
@@ -28188,7 +28278,7 @@
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L494",
       "id": "mobile_design_touch_psychology_before_release",
-      "community": 275,
+      "community": 390,
       "norm_label": "before release"
     },
     {
@@ -37687,159 +37777,6 @@
       "norm_label": "workflow: graphify"
     },
     {
-      "label": "optimize_new_photos.py",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L1",
-      "community": 385,
-      "norm_label": "optimize_new_photos.py",
-      "id": "scratch_optimize_new_photos_py"
-    },
-    {
-      "label": "compress_with_tinypng()",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L11",
-      "community": 385,
-      "norm_label": "compress_with_tinypng()",
-      "id": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "label": "optimize_photo()",
-      "file_type": "code",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L46",
-      "community": 385,
-      "norm_label": "optimize_photo()",
-      "id": "scratch_optimize_new_photos_optimize_photo"
-    },
-    {
-      "label": "generate_gallery.js",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "community": 387,
-      "norm_label": "generate_gallery.js",
-      "id": "scratch_generate_gallery_js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "community": 387,
-      "norm_label": "fs",
-      "id": "scratch_generate_gallery_fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "community": 387,
-      "norm_label": "path",
-      "id": "scratch_generate_gallery_path"
-    },
-    {
-      "label": "metadata",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "community": 387,
-      "norm_label": "metadata",
-      "id": "scratch_generate_gallery_metadata"
-    },
-    {
-      "label": "categoryBadges",
-      "file_type": "code",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "community": 387,
-      "norm_label": "categorybadges",
-      "id": "scratch_generate_gallery_categorybadges"
-    },
-    {
-      "label": "update_galeria.js",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "community": 386,
-      "norm_label": "update_galeria.js",
-      "id": "scratch_update_galeria_js"
-    },
-    {
-      "label": "fs",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "community": 386,
-      "norm_label": "fs",
-      "id": "scratch_update_galeria_fs"
-    },
-    {
-      "label": "path",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "community": 386,
-      "norm_label": "path",
-      "id": "scratch_update_galeria_path"
-    },
-    {
-      "label": "galeriaHtml",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "community": 386,
-      "norm_label": "galeriahtml",
-      "id": "scratch_update_galeria_galeriahtml"
-    },
-    {
-      "label": "generatedGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "community": 386,
-      "norm_label": "generatedgrid",
-      "id": "scratch_update_galeria_generatedgrid"
-    },
-    {
-      "label": "startIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "community": 386,
-      "norm_label": "startindex",
-      "id": "scratch_update_galeria_startindex"
-    },
-    {
-      "label": "endIndex",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "community": 386,
-      "norm_label": "endindex",
-      "id": "scratch_update_galeria_endindex"
-    },
-    {
-      "label": "beforeGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "community": 386,
-      "norm_label": "beforegrid",
-      "id": "scratch_update_galeria_beforegrid"
-    },
-    {
-      "label": "afterGrid",
-      "file_type": "code",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "community": 386,
-      "norm_label": "aftergrid",
-      "id": "scratch_update_galeria_aftergrid"
-    },
-    {
       "label": "update.js",
       "file_type": "code",
       "source_file": "update.js",
@@ -39212,7 +39149,7 @@
       "file_type": "document",
       "source_file": ".agent/skills/mobile-design/touch-psychology.md",
       "source_location": "L1",
-      "community": 275,
+      "community": 390,
       "norm_label": "touch-psychology.md",
       "id": "agent_skills_mobile_design_touch_psychology_md"
     },
@@ -44806,33 +44743,163 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "includes/db.php",
-      "source_location": "L6",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "includes_db_php",
-      "target": "includes_db_getdb"
+      "source": "scratch_optimize_new_photos_py",
+      "target": "scratch_optimize_new_photos_compress_with_tinypng"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "includes/google_reviews_helper.php",
-      "source_location": "L7",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L46",
       "weight": 1.0,
-      "source": "includes_google_reviews_helper_php",
-      "target": "includes_google_reviews_helper_syncgooglereviews",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "scratch_optimize_new_photos_py",
+      "target": "scratch_optimize_new_photos_optimize_photo"
     },
     {
       "relation": "calls",
       "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "admin/api.php",
-      "source_location": "L592",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/optimize_new_photos.py",
+      "source_location": "L62",
       "weight": 1.0,
-      "source": "admin_api_handlefetchgooglereviews",
-      "target": "includes_google_reviews_helper_syncgooglereviews"
+      "confidence_score": 1.0,
+      "source": "scratch_optimize_new_photos_optimize_photo",
+      "target": "scratch_optimize_new_photos_compress_with_tinypng"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_generate_gallery_js",
+      "target": "scratch_generate_gallery_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_generate_gallery_js",
+      "target": "scratch_generate_gallery_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_generate_gallery_js",
+      "target": "scratch_generate_gallery_metadata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/generate_gallery.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_generate_gallery_js",
+      "target": "scratch_generate_gallery_categorybadges"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_fs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_path"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_galeriahtml"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_generatedgrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_startindex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_endindex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_beforegrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_galeria.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_galeria_js",
+      "target": "scratch_update_galeria_aftergrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "includes/db.php",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "includes_db_php",
+      "target": "includes_db_getdb",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44840,9 +44907,9 @@
       "source_file": "admin/api.php",
       "source_location": "L24",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44850,9 +44917,9 @@
       "source_file": "admin/api.php",
       "source_location": "L92",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleupload"
+      "target": "admin_api_handleupload",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44860,9 +44927,9 @@
       "source_file": "admin/api.php",
       "source_location": "L226",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleupdatephoto"
+      "target": "admin_api_handleupdatephoto",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44870,9 +44937,9 @@
       "source_file": "admin/api.php",
       "source_location": "L261",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeletephoto"
+      "target": "admin_api_handledeletephoto",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44880,9 +44947,9 @@
       "source_file": "admin/api.php",
       "source_location": "L301",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handlereorderphotos"
+      "target": "admin_api_handlereorderphotos",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44890,9 +44957,9 @@
       "source_file": "admin/api.php",
       "source_location": "L329",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleaddcategory"
+      "target": "admin_api_handleaddcategory",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44900,9 +44967,9 @@
       "source_file": "admin/api.php",
       "source_location": "L372",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handleeditcategory"
+      "target": "admin_api_handleeditcategory",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44910,9 +44977,9 @@
       "source_file": "admin/api.php",
       "source_location": "L405",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_handledeletecategory"
+      "target": "admin_api_handledeletecategory",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44920,9 +44987,9 @@
       "source_file": "admin/api.php",
       "source_location": "L434",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44930,9 +44997,9 @@
       "source_file": "admin/api.php",
       "source_location": "L495",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_compresswithtinypng"
+      "target": "admin_api_compresswithtinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -44940,59 +45007,9 @@
       "source_file": "admin/api.php",
       "source_location": "L553",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_php",
-      "target": "admin_api_translatepolishchars"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L590",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handlefetchgooglereviews"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L675",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleaddreview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L704",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handleeditreview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L731",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handletogglereviewvisibility"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L751",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_php",
-      "target": "admin_api_handledeletereview"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45001,9 +45018,9 @@
       "source_file": "admin/api.php",
       "source_location": "L94",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleupload",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45012,9 +45029,9 @@
       "source_file": "admin/api.php",
       "source_location": "L234",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleupdatephoto",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45023,9 +45040,9 @@
       "source_file": "admin/api.php",
       "source_location": "L264",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeletephoto",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45034,9 +45051,9 @@
       "source_file": "admin/api.php",
       "source_location": "L307",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handlereorderphotos",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45045,9 +45062,9 @@
       "source_file": "admin/api.php",
       "source_location": "L335",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddcategory",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45056,9 +45073,9 @@
       "source_file": "admin/api.php",
       "source_location": "L379",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditcategory",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45067,64 +45084,9 @@
       "source_file": "admin/api.php",
       "source_location": "L408",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handledeletecategory",
-      "target": "admin_api_sendresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L595",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_handlefetchgooglereviews",
-      "target": "admin_api_sendresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L682",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_handleaddreview",
-      "target": "admin_api_sendresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L712",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_handleeditreview",
-      "target": "admin_api_sendresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L736",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_handletogglereviewvisibility",
-      "target": "admin_api_sendresponse"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "admin/api.php",
-      "source_location": "L754",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "admin_api_handledeletereview",
-      "target": "admin_api_sendresponse"
+      "target": "admin_api_sendresponse",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45133,9 +45095,9 @@
       "source_file": "admin/api.php",
       "source_location": "L130",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleupload",
-      "target": "admin_api_translatepolishchars"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45144,9 +45106,9 @@
       "source_file": "admin/api.php",
       "source_location": "L152",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleupload",
-      "target": "admin_api_compresswithtinypng"
+      "target": "admin_api_compresswithtinypng",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45155,9 +45117,9 @@
       "source_file": "admin/api.php",
       "source_location": "L157",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleupload",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45166,9 +45128,9 @@
       "source_file": "admin/api.php",
       "source_location": "L339",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleaddcategory",
-      "target": "admin_api_translatepolishchars"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45177,9 +45139,9 @@
       "source_file": "admin/api.php",
       "source_location": "L382",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_handleeditcategory",
-      "target": "admin_api_translatepolishchars"
+      "target": "admin_api_translatepolishchars",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45188,9 +45150,9 @@
       "source_file": "admin/api.php",
       "source_location": "L543",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_api_compresswithtinypng",
-      "target": "admin_api_compresswithgd"
+      "target": "admin_api_compresswithgd",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45198,9 +45160,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_includes_auth_php",
-      "target": "includes_auth_isloggedin"
+      "target": "includes_auth_isloggedin",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45208,9 +45170,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L37",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_includes_auth_php",
-      "target": "includes_auth_requireauth"
+      "target": "includes_auth_requireauth",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45218,9 +45180,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_includes_auth_php",
-      "target": "includes_auth_logoutadmin"
+      "target": "includes_auth_logoutadmin",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45228,9 +45190,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L62",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_includes_auth_php",
-      "target": "includes_auth_getcsrftoken"
+      "target": "includes_auth_getcsrftoken",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -45238,9 +45200,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L72",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "admin_includes_auth_php",
-      "target": "includes_auth_validatecsrftoken"
+      "target": "includes_auth_validatecsrftoken",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45249,9 +45211,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L26",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "includes_auth_isloggedin",
-      "target": "includes_auth_logoutadmin"
+      "target": "includes_auth_logoutadmin",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -45260,9 +45222,9 @@
       "source_file": "admin/includes/auth.php",
       "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "includes_auth_requireauth",
-      "target": "includes_auth_isloggedin"
+      "target": "includes_auth_isloggedin",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84187,157 +84149,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_py",
-      "target": "scratch_optimize_new_photos_optimize_photo"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/optimize_new_photos.py",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_optimize_new_photos_optimize_photo",
-      "target": "scratch_optimize_new_photos_compress_with_tinypng"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_metadata"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/generate_gallery.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_generate_gallery_js",
-      "target": "scratch_generate_gallery_categorybadges"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_fs"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_path"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_galeriahtml"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_generatedgrid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_startindex"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_endindex"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_beforegrid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/update_galeria.js",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scratch_update_galeria_js",
-      "target": "scratch_update_galeria_aftergrid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": ".github/instructions/codacy.instructions.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -84427,5 +84238,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3459d50c956f0fa38a3fbe7f6809c85181d97478"
+  "built_at_commit": "5725885ccee7f45b87c2999df2cdaf4d8e73803d"
 }
