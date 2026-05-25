@@ -60,10 +60,10 @@ $extraHead       = $extraHead ?? '';
       <header id="global-header"
         class="code-section bg-black/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.2)] border-b border-white/5 sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-20 lg:h-28 transition-all duration-300">
+          <div class="flex justify-between items-center h-28 lg:h-36 transition-all duration-300">
 
             <a href="index.php" class="flex items-center transition-transform hover:scale-105 duration-300">
-              <img src="logo_kadr.png" alt="KM-BUD Ogrodzenia" class="h-16 lg:h-24 py-2">
+              <img src="logo_kadr.png" alt="KM-BUD Ogrodzenia" class="h-24 lg:h-32 py-2">
             </a>
 
             <nav class="hidden lg:flex items-center space-x-2">
