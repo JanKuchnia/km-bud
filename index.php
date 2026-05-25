@@ -614,7 +614,7 @@ require_once __DIR__ . '/includes/header.php';
 
               <!-- Call to Action -->
               <div class="text-center mt-12">
-                <a href="https://www.google.com/maps/place/KM-BUD+Konrad+Ma%C5%82ucha/@49.8829631,20.0039234,17z/data=!4m8!3m7!1s0x471641d4c849e7b3:0xee14ded7cc4fb7fc!8m2!3d49.8829631!4d20.0039234!9m1!1b1!16s%2Fg%2F11wdfn6j9x?entry=ttu" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.google.com/maps/place/KM-BUD+OGRODZENIA/@49.9213,19.936891,11z/data=!4m6!3m5!1s0x47166944282277e9:0xc5766a0c557c53a0!8m2!3d49.9212996!4d19.9368911!16s%2Fg%2F11gvzf5y80?hl=pl&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer"
                   class="inline-flex items-center justify-center gap-2 bg-white text-[var(--dark-text-color)] border border-[var(--light-border-color)] px-8 py-4 rounded-[var(--button-rounded-radius)] font-bold text-lg hover:bg-gray-50 hover:shadow transition-all shadow-sm">
                   <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#EA4335"/>
