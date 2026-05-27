@@ -249,13 +249,16 @@ function handleUpload(PDO $db, array $config) {
         }
     }
 
-    // Set sort_order to end of category
-    $sortOrderStmt = $db->prepare("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM photos WHERE category_id = ?");
-    $sortOrderStmt->execute([$categoryId]);
-    $nextSortOrder = (int) $sortOrderStmt->fetchColumn();
+    // Set sort_order to end of category — computed inside the INSERT transaction to avoid race conditions
 
-    // Insert into DB
+    // Insert into DB — sort_order is computed inside the transaction to prevent race conditions
     try {
+        $db->beginTransaction();
+
+        $sortOrderStmt = $db->prepare("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM photos WHERE category_id = ? FOR UPDATE");
+        $sortOrderStmt->execute([$categoryId]);
+        $nextSortOrder = (int) $sortOrderStmt->fetchColumn();
+
         $stmt = $db->prepare("
             INSERT INTO photos (category_id, filename, title, description, aspect_class, sort_order)
             VALUES (?, ?, ?, ?, ?, ?)
@@ -268,10 +271,12 @@ function handleUpload(PDO $db, array $config) {
             $aspectClass,
             $nextSortOrder
         ]);
+        $newId = $db->lastInsertId();
+        $db->commit();
         
         sendResponse(true, 'Zdjęcie zostało pomyślnie dodane.', [
             'photo' => [
-                'id' => $db->lastInsertId(),
+                'id' => $newId,
                 'filename' => $filename,
                 'title' => $title,
                 'description' => $description,
@@ -279,6 +284,7 @@ function handleUpload(PDO $db, array $config) {
             ]
         ]);
     } catch (PDOException $e) {
+        $db->rollBack();
         // Cleanup file if DB insert fails
         if (file_exists($targetPath)) {
             unlink($targetPath);
@@ -481,6 +487,13 @@ function handleDeleteCategory(PDO $db) {
         sendResponse(false, 'Nie można usunąć jedynej kategorii. System wymaga co najmniej jednej kategorii w bazie.');
     }
 
+    // Safety: don't delete if there are photos assigned to this category
+    $photoCheck = $db->prepare("SELECT COUNT(*) FROM photos WHERE category_id = ?");
+    $photoCheck->execute([$id]);
+    if ((int) $photoCheck->fetchColumn() > 0) {
+        sendResponse(false, 'Nie można usunąć kategorii zawierającej zdjęcia. Przenieś lub usuń wszystkie zdjęcia z tej kategorii przed jej usunięciem.');
+    }
+
     try {
         $stmt = $db->prepare("DELETE FROM categories WHERE id = ?");
         $stmt->execute([$id]);
@@ -516,7 +529,11 @@ function compressWithGD(string $sourcePath, string $targetPath, int $quality = 8
             $image = @imagecreatefrompng($sourcePath);
             break;
         case 'image/webp':
-            $image = @imagecreatefromwebp($sourcePath);
+            if (function_exists('imagecreatefromwebp')) {
+                $image = @imagecreatefromwebp($sourcePath);
+            } else {
+                return false;
+            }
             break;
         default:
             return false;
@@ -549,8 +566,16 @@ function compressWithGD(string $sourcePath, string $targetPath, int $quality = 8
         $image = $resizedImage;
     }
 
-    // Export to WebP format
-    $result = imagewebp($image, $targetPath, $quality);
+    // Export format with WebP fallback check
+    if (function_exists('imagewebp')) {
+        $result = imagewebp($image, $targetPath, $quality);
+    } elseif ($mime === 'image/png') {
+        // Fall back to PNG if the original was a PNG to preserve transparency
+        $result = imagepng($image, $targetPath, (int) round((100 - $quality) / 10));
+    } else {
+        // Fall back to JPEG for everything else
+        $result = imagejpeg($image, $targetPath, $quality);
+    }
     imagedestroy($image);
 
     return $result;
@@ -657,12 +682,15 @@ function handleAddReview(PDO $db) {
         $rating = 5;
     }
 
+    // Manual reviews added by admin are visible by default
+    $isVisible = 1;
+
     try {
         $stmt = $db->prepare("
-            INSERT INTO google_reviews (author_name, rating, review_text, review_time, is_manual)
-            VALUES (?, ?, ?, ?, 1)
+            INSERT INTO google_reviews (author_name, rating, review_text, review_time, is_manual, is_visible)
+            VALUES (?, ?, ?, ?, 1, ?)
         ");
-        $stmt->execute([$author, $rating, $text, $time]);
+        $stmt->execute([$author, $rating, $text, $time, $isVisible]);
         sendResponse(true, 'Opinia została pomyślnie dodana.');
     } catch (PDOException $e) {
         sendResponse(false, 'Błąd bazy danych: ' . $e->getMessage());
@@ -701,7 +729,8 @@ function handleEditReview(PDO $db) {
  */
 function handleToggleReviewVisibility(PDO $db) {
     $id = (int) ($_POST['id'] ?? 0);
-    $visible = (int) ($_POST['is_visible'] ?? 1);
+    // Clamp to strict boolean 0|1 — reject arbitrary integers from POST
+    $visible = ($_POST['is_visible'] ?? '1') === '0' ? 0 : 1;
 
     if ($id <= 0) {
         sendResponse(false, 'Brak identyfikatora opinii.');
@@ -756,15 +785,28 @@ function handleAddService(PDO $db) {
         sendResponse(false, 'Usługa z tym identyfikatorem (slug) już istnieje.');
     }
 
-    $sortOrderStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM services");
-    $nextSort = (int) $sortOrderStmt->fetchColumn();
-
     try {
+        $db->beginTransaction();
+
+        // sort_order computed inside transaction to prevent race conditions
+        $sortOrderStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM services FOR UPDATE");
+        $nextSort = (int) $sortOrderStmt->fetchColumn();
+
         $stmt = $db->prepare("INSERT INTO services (name, slug, description, icon, sort_order) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([$name, $slug, $description, $icon, $nextSort]);
+        $newId = $db->lastInsertId();
+        $db->commit();
         
-        sendResponse(true, 'Usługa została pomyślnie dodana.');
+        sendResponse(true, 'Usługa została pomyślnie dodana.', [
+            'service' => [
+                'id' => $newId,
+                'name' => $name,
+                'slug' => $slug,
+                'icon' => $icon,
+            ]
+        ]);
     } catch (PDOException $e) {
+        $db->rollBack();
         sendResponse(false, 'Błąd zapisu: ' . $e->getMessage());
     }
 }
@@ -811,19 +853,19 @@ function handleDeleteService(PDO $db) {
     }
 
     try {
-        // Fetch slide images first to delete from disk
+        $db->beginTransaction();
+
+        // Fetch slide images INSIDE the transaction so the read is consistent with the delete
         $stmt = $db->prepare("SELECT image FROM service_slides WHERE service_id = ? AND image IS NOT NULL");
         $stmt->execute([$id]);
         $slides = $stmt->fetchAll();
-
-        $db->beginTransaction();
 
         $stmtDel = $db->prepare("DELETE FROM services WHERE id = ?");
         $stmtDel->execute([$id]);
 
         $db->commit();
 
-        // Delete slide images from disk
+        // Only delete files from disk after the DB commit is confirmed
         foreach ($slides as $slide) {
             $filepath = __DIR__ . '/../' . $slide['image'];
             if (file_exists($filepath)) {
@@ -929,15 +971,20 @@ function handleAddServiceSlide(PDO $db, array $config) {
         }
     }
 
-    $sortStmt = $db->prepare("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM service_slides WHERE service_id = ?");
-    $sortStmt->execute([$serviceId]);
-    $nextSort = (int) $sortStmt->fetchColumn();
-
     try {
+        $db->beginTransaction();
+
+        // sort_order computed inside transaction to prevent race conditions
+        $sortStmt = $db->prepare("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM service_slides WHERE service_id = ? FOR UPDATE");
+        $sortStmt->execute([$serviceId]);
+        $nextSort = (int) $sortStmt->fetchColumn();
+
         $stmt = $db->prepare("INSERT INTO service_slides (service_id, image, gradient, icon, sort_order) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([$serviceId, $imagePath, $gradient ?: null, $icon ?: null, $nextSort]);
+        $db->commit();
         sendResponse(true, 'Slajd został dodany.');
     } catch (PDOException $e) {
+        $db->rollBack();
         if ($imagePath && file_exists(__DIR__ . '/../' . $imagePath)) {
             unlink(__DIR__ . '/../' . $imagePath);
         }
@@ -1060,17 +1107,22 @@ function handleAddEquipment(PDO $db, array $config) {
         sendResponse(false, 'Błąd zapisu i optymalizacji zdjęcia.');
     }
 
-    $sortStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM equipment");
-    $nextSort = (int) $sortStmt->fetchColumn();
-
     try {
+        $db->beginTransaction();
+
+        // sort_order computed inside transaction to prevent race conditions
+        $sortStmt = $db->query("SELECT COALESCE(MAX(sort_order), 0) + 1 FROM equipment FOR UPDATE");
+        $nextSort = (int) $sortStmt->fetchColumn();
+
         $stmt = $db->prepare("
             INSERT INTO equipment (name, image, icon, description, badge, spec_1, spec_2, sort_order)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ");
         $stmt->execute([$name, $filename, $icon, $description, $badge ?: null, $spec1 ?: null, $spec2 ?: null, $nextSort]);
+        $db->commit();
         sendResponse(true, 'Sprzęt został dodany do parku maszynowego.');
     } catch (PDOException $e) {
+        $db->rollBack();
         if (file_exists($targetPath)) {
             unlink($targetPath);
         }

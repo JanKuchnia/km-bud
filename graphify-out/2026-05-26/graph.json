@@ -31,33 +31,6 @@
       "norm_label": "index.php"
     },
     {
-      "label": "404.php",
-      "file_type": "code",
-      "source_file": "404.php",
-      "source_location": "L1",
-      "id": "404_php",
-      "community": 403,
-      "norm_label": "404.php"
-    },
-    {
-      "label": "500.php",
-      "file_type": "code",
-      "source_file": "500.php",
-      "source_location": "L1",
-      "id": "500_php",
-      "community": 404,
-      "norm_label": "500.php"
-    },
-    {
-      "label": "router.php",
-      "file_type": "code",
-      "source_file": "router.php",
-      "source_location": "L1",
-      "id": "router_php",
-      "community": 405,
-      "norm_label": "router.php"
-    },
-    {
       "label": "mcp_config.json",
       "file_type": "code",
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/mcp_config.json",
@@ -2245,24 +2218,6 @@
       "norm_label": "config.php"
     },
     {
-      "label": "env_loader.php",
-      "file_type": "code",
-      "source_file": "config/env_loader.php",
-      "source_location": "L1",
-      "id": "config_env_loader_php",
-      "community": 402,
-      "norm_label": "env_loader.php"
-    },
-    {
-      "label": "loadEnv()",
-      "file_type": "code",
-      "source_file": "config/env_loader.php",
-      "source_location": "L9",
-      "id": "config_env_loader_loadenv",
-      "community": 402,
-      "norm_label": "loadenv()"
-    },
-    {
       "label": "db.php",
       "file_type": "code",
       "source_file": "includes/db.php",
@@ -2365,7 +2320,7 @@
       "label": "handleUpdatePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L299",
+      "source_location": "L293",
       "id": "admin_api_handleupdatephoto",
       "community": 388,
       "norm_label": "handleupdatephoto()"
@@ -2374,7 +2329,7 @@
       "label": "handleDeletePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L334",
+      "source_location": "L328",
       "id": "admin_api_handledeletephoto",
       "community": 388,
       "norm_label": "handledeletephoto()"
@@ -2383,7 +2338,7 @@
       "label": "handleReorderPhotos()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L374",
+      "source_location": "L368",
       "id": "admin_api_handlereorderphotos",
       "community": 388,
       "norm_label": "handlereorderphotos()"
@@ -2392,7 +2347,7 @@
       "label": "handleAddCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L402",
+      "source_location": "L396",
       "id": "admin_api_handleaddcategory",
       "community": 388,
       "norm_label": "handleaddcategory()"
@@ -2401,7 +2356,7 @@
       "label": "handleEditCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L445",
+      "source_location": "L439",
       "id": "admin_api_handleeditcategory",
       "community": 388,
       "norm_label": "handleeditcategory()"
@@ -2410,7 +2365,7 @@
       "label": "handleDeleteCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L478",
+      "source_location": "L472",
       "id": "admin_api_handledeletecategory",
       "community": 388,
       "norm_label": "handledeletecategory()"
@@ -2419,7 +2374,7 @@
       "label": "compressWithGD()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L514",
+      "source_location": "L501",
       "id": "admin_api_compresswithgd",
       "community": 388,
       "norm_label": "compresswithgd()"
@@ -2428,7 +2383,7 @@
       "label": "compressWithTinyPNG()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L587",
+      "source_location": "L562",
       "id": "admin_api_compresswithtinypng",
       "community": 388,
       "norm_label": "compresswithtinypng()"
@@ -2437,7 +2392,7 @@
       "label": "translatePolishChars()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L645",
+      "source_location": "L620",
       "id": "admin_api_translatepolishchars",
       "community": 388,
       "norm_label": "translatepolishchars()"
@@ -2446,7 +2401,7 @@
       "label": "handleFetchGoogleReviews()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L662",
+      "source_location": "L637",
       "id": "admin_api_handlefetchgooglereviews",
       "community": 388,
       "norm_label": "handlefetchgooglereviews()"
@@ -2455,7 +2410,7 @@
       "label": "handleAddReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L671",
+      "source_location": "L646",
       "id": "admin_api_handleaddreview",
       "community": 388,
       "norm_label": "handleaddreview()"
@@ -2464,7 +2419,7 @@
       "label": "handleEditReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L703",
+      "source_location": "L675",
       "id": "admin_api_handleeditreview",
       "community": 388,
       "norm_label": "handleeditreview()"
@@ -2473,7 +2428,7 @@
       "label": "handleToggleReviewVisibility()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L730",
+      "source_location": "L702",
       "id": "admin_api_handletogglereviewvisibility",
       "community": 388,
       "norm_label": "handletogglereviewvisibility()"
@@ -2482,7 +2437,7 @@
       "label": "handleDeleteReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L751",
+      "source_location": "L722",
       "id": "admin_api_handledeletereview",
       "community": 388,
       "norm_label": "handledeletereview()"
@@ -2491,7 +2446,7 @@
       "label": "handleAddService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L769",
+      "source_location": "L740",
       "id": "admin_api_handleaddservice",
       "community": 388,
       "norm_label": "handleaddservice()"
@@ -2500,7 +2455,7 @@
       "label": "handleEditService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L817",
+      "source_location": "L775",
       "id": "admin_api_handleeditservice",
       "community": 388,
       "norm_label": "handleeditservice()"
@@ -2509,7 +2464,7 @@
       "label": "handleDeleteService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L849",
+      "source_location": "L807",
       "id": "admin_api_handledeleteservice",
       "community": 388,
       "norm_label": "handledeleteservice()"
@@ -2518,7 +2473,7 @@
       "label": "handleReorderServices()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L886",
+      "source_location": "L844",
       "id": "admin_api_handlereorderservices",
       "community": 388,
       "norm_label": "handlereorderservices()"
@@ -2527,7 +2482,7 @@
       "label": "handleAddServiceSlide()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L911",
+      "source_location": "L869",
       "id": "admin_api_handleaddserviceslide",
       "community": 388,
       "norm_label": "handleaddserviceslide()"
@@ -2536,7 +2491,7 @@
       "label": "handleDeleteServiceSlide()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L998",
+      "source_location": "L951",
       "id": "admin_api_handledeleteserviceslide",
       "community": 388,
       "norm_label": "handledeleteserviceslide()"
@@ -2545,7 +2500,7 @@
       "label": "handleReorderServiceSlides()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1037",
+      "source_location": "L990",
       "id": "admin_api_handlereorderserviceslides",
       "community": 388,
       "norm_label": "handlereorderserviceslides()"
@@ -2554,7 +2509,7 @@
       "label": "handleAddEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1062",
+      "source_location": "L1015",
       "id": "admin_api_handleaddequipment",
       "community": 388,
       "norm_label": "handleaddequipment()"
@@ -2563,7 +2518,7 @@
       "label": "handleEditEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1136",
+      "source_location": "L1084",
       "id": "admin_api_handleeditequipment",
       "community": 388,
       "norm_label": "handleeditequipment()"
@@ -2572,7 +2527,7 @@
       "label": "handleDeleteEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1225",
+      "source_location": "L1173",
       "id": "admin_api_handledeleteequipment",
       "community": 388,
       "norm_label": "handledeleteequipment()"
@@ -2581,7 +2536,7 @@
       "label": "handleReorderEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1263",
+      "source_location": "L1211",
       "id": "admin_api_handlereorderequipment",
       "community": 388,
       "norm_label": "handlereorderequipment()"
@@ -44663,16 +44618,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "config/env_loader.php",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "config_env_loader_php",
-      "target": "config_env_loader_loadenv",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "includes/db.php",
       "source_location": "L6",
       "weight": 1.0,
@@ -84376,9 +84321,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_md",
-      "target": "docs_plan_performance_plan_performance_md_performance_optimization_plan"
+      "target": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84386,9 +84331,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_baseline_performance_analysis"
+      "target": "docs_plan_performance_baseline_performance_analysis",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84396,9 +84341,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_proposed_technical_changes"
+      "target": "docs_plan_performance_proposed_technical_changes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84406,9 +84351,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L39",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_agent_assignments_task_breakdown"
+      "target": "docs_plan_performance_agent_assignments_task_breakdown",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84416,9 +84361,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L60",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_plan_performance_md_performance_optimization_plan",
-      "target": "docs_plan_performance_verification_plan"
+      "target": "docs_plan_performance_verification_plan",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84426,9 +84371,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L12",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_baseline_performance_analysis",
-      "target": "docs_plan_performance_key_bottlenecks_identified"
+      "target": "docs_plan_performance_key_bottlenecks_identified",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84436,9 +84381,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L22",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_1_critical_css_font_optimization"
+      "target": "docs_plan_performance_component_1_critical_css_font_optimization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84446,9 +84391,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L27",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_2_tailwind_compilation_optimization"
+      "target": "docs_plan_performance_component_2_tailwind_compilation_optimization",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84456,9 +84401,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_proposed_technical_changes",
-      "target": "docs_plan_performance_component_3_render_blocking_resources_mitigation"
+      "target": "docs_plan_performance_component_3_render_blocking_resources_mitigation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84466,9 +84411,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L41",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_1_research_setup"
+      "target": "docs_plan_performance_phase_1_research_setup",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84476,9 +84421,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L45",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_2_css_font_decoupling_p0"
+      "target": "docs_plan_performance_phase_2_css_font_decoupling_p0",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84486,9 +84431,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L50",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_3_tailwind_production_optimization_p0"
+      "target": "docs_plan_performance_phase_3_tailwind_production_optimization_p0",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84496,9 +84441,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_agent_assignments_task_breakdown",
-      "target": "docs_plan_performance_phase_4_verification_performance_auditing"
+      "target": "docs_plan_performance_phase_4_verification_performance_auditing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84506,9 +84451,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L62",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_verification_plan",
-      "target": "docs_plan_performance_automated_tests"
+      "target": "docs_plan_performance_automated_tests",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -84516,9 +84461,9 @@
       "source_file": "docs/PLAN-performance.md",
       "source_location": "L67",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "docs_plan_performance_verification_plan",
-      "target": "docs_plan_performance_manual_verification"
+      "target": "docs_plan_performance_manual_verification",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -85203,5 +85148,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2763d2f47536eee5589ea5fa4d183fbd8b83eb81"
+  "built_at_commit": "4376c475e666b055f808ae30958aa060781b7791"
 }

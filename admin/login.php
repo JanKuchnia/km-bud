@@ -49,11 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && empty($error)) {
         } else {
             // Verify password
             if (password_verify($password, $hash)) {
-                // Success! Reset attempts
+                // Success! Regenerate session to prevent fixation attacks
+                session_regenerate_id(true);
                 $_SESSION['admin_logged_in'] = true;
                 $_SESSION['last_activity'] = time();
                 $_SESSION['login_attempts'] = 0;
                 $_SESSION['lockout_time'] = 0;
+                // Regenerate CSRF token so the pre-login token is no longer valid
+                $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
                 
                 header('Location: index.php');
                 exit;

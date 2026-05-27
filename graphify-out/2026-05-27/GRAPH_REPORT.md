@@ -1,11 +1,11 @@
-# Graph Report - km-bud  (2026-05-27)
+# Graph Report - km-bud  (2026-05-26)
 
 ## Corpus Check
-- 210 files · ~1,558,999 words
+- 206 files · ~1,557,402 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4440 nodes · 4506 edges · 406 communities (396 shown, 10 thin omitted)
+- 4435 nodes · 4505 edges · 402 communities (392 shown, 10 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 26 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
@@ -429,7 +429,7 @@
 - `_generate_intelligent_overrides()` --calls--> `search()`  [INFERRED]
   /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/design_system.py → /home/jankuchnia/Pulpit/km-bud/.agent/.shared/ui-ux-pro-max/scripts/core.py
 
-## Communities (406 total, 10 thin omitted)
+## Communities (402 total, 10 thin omitted)
 
 ### Community 0 - "Design System Generation"
 Cohesion: 0.06
@@ -1957,6 +1957,8 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `path` connect `Security and Coverage Scans` to `Design System Generation`, `Asset Extraction`, `React Performance Checker`, `Checklist Runner`, `Verify All Script`, `Convert Rules`, `i18n Checker`, `API Validator`, `Auto Preview Server`, `GEO Checker`, `SEO Checker`, `Session Manager`, `Mobile Audit`, `UX Audit`, `Database Schema Validator`, `Accessibility Checker`, `Lint Runner`, `Test Runner`, `Community 244`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
+- **Why does `UX Psychology Reference` connect `Community 126` to `Community 366`, `Community 207`, `Community 208`, `Community 178`, `Community 115`, `Community 59`, `Community 60`, `Community 157`?**
+  _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Why does `persist_design_system()` connect `Design System Generation` to `Security and Coverage Scans`?**
   _High betweenness centrality (0.001) - this node is a cross-community bridge._
 - **Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?**
@@ -1967,5 +1969,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.06103896103896104 - nodes in this community are weakly interconnected._
 - **Should `Community 26` be split into smaller, more focused modules?**
   _Cohesion score 0.04081632653061224 - nodes in this community are weakly interconnected._
-- **Should `Community 27` be split into smaller, more focused modules?**
-  _Cohesion score 0.043478260869565216 - nodes in this community are weakly interconnected._

@@ -917,7 +917,46 @@ require_once __DIR__ . '/includes/header.php';
     let currentModalSlide = 0;
 
     function renderModalSlide() {
-      if (!activeModalSlides || activeModalSlides.length === 0) return;
+      // Get all layout elements that should be hidden/shown based on slide presence
+      const prevBtn = document.getElementById('modal-prev');
+      const nextBtn = document.getElementById('modal-next');
+      const dotsContainer = document.getElementById('modal-dots');
+      const galleryBtnContainer = document.getElementById('modal-gallery-btn')?.parentElement;
+
+      if (!activeModalSlides || activeModalSlides.length === 0) {
+        // Hide standard slide navigation controls
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (dotsContainer) dotsContainer.style.display = 'none';
+        if (galleryBtnContainer) galleryBtnContainer.style.display = 'none';
+
+        // Render premium visual empty state placeholder
+        modalSlidePreview.className = "w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl relative flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-white/5 select-none";
+        modalSlidePreview.innerHTML = `
+          <div class="flex flex-col items-center max-w-md px-4 animate-fade-in">
+            <div class="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-6 border border-white/10 shadow-inner">
+              <i data-lucide="image-off" class="w-8 h-8 text-neutral-400"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">Brak zdjęć w tej kategorii</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mb-6 leading-relaxed">
+              Obecnie nie ma zdjęć z tej kategorii. Trwają prace nad aktualizacją naszych ostatnich realizacji.
+            </p>
+            <a href="galeria.php" class="inline-flex items-center gap-2 bg-[var(--primary-color)] hover:bg-[var(--primary-button-hover-bg-color)] text-white px-6 py-3 rounded-[var(--button-rounded-radius)] font-bold text-sm sm:text-base transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 duration-200">
+              <i data-lucide="images" class="w-4 h-4"></i>
+              Zobacz całą galerię
+            </a>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      // Restore controls for valid slides
+      if (prevBtn) prevBtn.style.display = 'flex';
+      if (nextBtn) nextBtn.style.display = 'flex';
+      if (dotsContainer) dotsContainer.style.display = 'flex';
+      if (galleryBtnContainer) galleryBtnContainer.style.display = 'block';
+
       const slide = activeModalSlides[currentModalSlide];
 
       if (slide.image) {
@@ -938,8 +977,7 @@ require_once __DIR__ . '/includes/header.php';
     }
 
     function openServiceModal(category) {
-      if (!serviceSlides[category]) return;
-      activeModalSlides = serviceSlides[category];
+      activeModalSlides = serviceSlides[category] || [];
       currentModalSlide = 0;
 
       // Update gallery button href dynamically

@@ -1,4 +1,6 @@
 
+# Environment variables — contains real credentials, NEVER commit
+.env
 
-#Ignore vscode AI rules
+# Ignore vscode AI rules
 .github/instructions/codacy.instructions.md

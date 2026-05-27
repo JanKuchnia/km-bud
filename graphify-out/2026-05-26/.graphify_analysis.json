@@ -1,0 +1,487 @@
+{
+  "communities": {
+    "0": [
+      "agent_shared_ui_ux_pro_max_scripts_design_system_py",
+      "scripts_design_system_designsystemgenerator",
+      "scripts_design_system_designsystemgenerator_apply_reasoning",
+      "scripts_design_system_designsystemgenerator_extract_results",
+      "scripts_design_system_designsystemgenerator_find_reasoning_rule",
+      "scripts_design_system_designsystemgenerator_generate",
+      "scripts_design_system_designsystemgenerator_init",
+      "scripts_design_system_designsystemgenerator_load_reasoning",
+      "scripts_design_system_designsystemgenerator_multi_domain_search",
+      "scripts_design_system_designsystemgenerator_select_best_match",
+      "scripts_design_system_detect_page_type",
+      "scripts_design_system_format_ascii_box",
+      "scripts_design_system_format_markdown",
+      "scripts_design_system_format_master_md",
+      "scripts_design_system_format_page_override_md",
+      "scripts_design_system_generate_design_system",
+      "scripts_design_system_generate_intelligent_overrides",
+      "scripts_design_system_persist_design_system",
+      "scripts_design_system_rationale_1021",
+      "scripts_design_system_rationale_123",
+      "scripts_design_system_rationale_160",
+      "scripts_design_system_rationale_164",
+      "scripts_design_system_rationale_243",
+      "scripts_design_system_rationale_368",
+      "scripts_design_system_rationale_38",
+      "scripts_design_system_rationale_44",
+      "scripts_design_system_rationale_464",
+      "scripts_design_system_rationale_492",
+      "scripts_design_system_rationale_52",
+      "scripts_design_system_rationale_543",
+      "scripts_design_system_rationale_65",
+      "scripts_design_system_rationale_806",
+      "scripts_design_system_rationale_89",
+      "scripts_design_system_rationale_915"
+    ],
+    "1": [
+      "extract_assets_js",
+      "km_bud_extract_assets_altmatch",
+      "km_bud_extract_assets_buffer",
+      "km_bud_extract_assets_csscontent",
+      "km_bud_extract_assets_csspath",
+      "km_bud_extract_assets_csssizeafter",
+      "km_bud_extract_assets_csssizebefore",
+      "km_bud_extract_assets_fs",
+      "km_bud_extract_assets_htmlcontent",
+      "km_bud_extract_assets_htmlpath",
+      "km_bud_extract_assets_htmlsizeafter",
+      "km_bud_extract_assets_htmlsizebefore",
+      "km_bud_extract_assets_imgdir",
+      "km_bud_extract_assets_matches",
+      "km_bud_extract_assets_newtag",
+      "km_bud_extract_assets_originalsrcpattern",
+      "km_bud_extract_assets_replacements",
+      "km_bud_extract_assets_slug",
+      "km_bud_extract_assets_slugify",
+      "km_bud_extract_assets_targetpath"
+    ],
+    "2": [
+      "agent_shared_ui_ux_pro_max_scripts_core_py",
+      "scripts_core_bm25",
+      "scripts_core_bm25_fit",
+      "scripts_core_bm25_init",
+      "scripts_core_bm25_score",
+      "scripts_core_bm25_tokenize",
+      "scripts_core_detect_domain",
+      "scripts_core_load_csv",
+      "scripts_core_rationale_101",
+      "scripts_core_rationale_114",
+      "scripts_core_rationale_119",
+      "scripts_core_rationale_138",
+      "scripts_core_rationale_164",
+      "scripts_core_rationale_170",
+      "scripts_core_rationale_195",
+      "scripts_core_rationale_218",
+      "scripts_core_rationale_240",
+      "scripts_core_search",
+      "scripts_core_search_csv",
+      "scripts_core_search_stack"
+    ],
+    "3": [
+      "agent_skills_lint_and_validate_scripts_type_coverage_py",
+      "agent_skills_vulnerability_scanner_scripts_security_scan_py",
+      "km_bud_extract_assets_path",
+      "scripts_react_performance_checker_performancechecker_init",
+      "scripts_security_scan_main",
+      "scripts_security_scan_rationale_182",
+      "scripts_security_scan_rationale_237",
+      "scripts_security_scan_rationale_297",
+      "scripts_security_scan_rationale_373",
+      "scripts_security_scan_rationale_98",
+      "scripts_security_scan_run_full_scan",
+      "scripts_security_scan_scan_code_patterns",
+      "scripts_security_scan_scan_configuration",
+      "scripts_security_scan_scan_dependencies",
+      "scripts_security_scan_scan_secrets",
+      "scripts_type_coverage_check_python_coverage",
+      "scripts_type_coverage_check_typescript_coverage",
+      "scripts_type_coverage_main",
+      "scripts_type_coverage_rationale_19",
+      "scripts_type_coverage_rationale_75"
+    ],
+    "4": [
+      "agent_skills_nextjs_react_expert_scripts_react_performance_checker_py",
+      "scripts_react_performance_checker_main",
+      "scripts_react_performance_checker_performancechecker",
+      "scripts_react_performance_checker_performancechecker_check_barrel_imports",
+      "scripts_react_performance_checker_performancechecker_check_dynamic_imports",
+      "scripts_react_performance_checker_performancechecker_check_image_optimization",
+      "scripts_react_performance_checker_performancechecker_check_missing_memoization",
+      "scripts_react_performance_checker_performancechecker_check_useeffect_fetching",
+      "scripts_react_performance_checker_performancechecker_check_waterfalls",
+      "scripts_react_performance_checker_performancechecker_generate_report",
+      "scripts_react_performance_checker_performancechecker_run",
+      "scripts_react_performance_checker_rationale_108",
+      "scripts_react_performance_checker_rationale_132",
+      "scripts_react_performance_checker_rationale_159",
+      "scripts_react_performance_checker_rationale_182",
+      "scripts_react_performance_checker_rationale_22",
+      "scripts_react_performance_checker_rationale_47",
+      "scripts_react_performance_checker_rationale_73"
+    ],
+    "5": [
+      "agent_scripts_checklist_py",
+      "scripts_checklist_check_script_exists",
+      "scripts_checklist_colors",
+      "scripts_checklist_main",
+      "scripts_checklist_print_error",
+      "scripts_checklist_print_header",
+      "scripts_checklist_print_step",
+      "scripts_checklist_print_success",
+      "scripts_checklist_print_summary",
+      "scripts_checklist_print_warning",
+      "scripts_checklist_rationale_129",
+      "scripts_checklist_rationale_73",
+      "scripts_checklist_rationale_77",
+      "scripts_checklist_run_script"
+    ],
+    "6": [
+      "agent_scripts_verify_all_py",
+      "scripts_verify_all_colors",
+      "scripts_verify_all_main",
+      "scripts_verify_all_print_error",
+      "scripts_verify_all_print_final_report",
+      "scripts_verify_all_print_header",
+      "scripts_verify_all_print_step",
+      "scripts_verify_all_print_success",
+      "scripts_verify_all_print_warning",
+      "scripts_verify_all_rationale_151",
+      "scripts_verify_all_rationale_203",
+      "scripts_verify_all_run_script"
+    ],
+    "7": [
+      "agent_skills_nextjs_react_expert_scripts_convert_rules_py",
+      "scripts_convert_rules_generate_section_file",
+      "scripts_convert_rules_group_rules_by_section",
+      "scripts_convert_rules_main",
+      "scripts_convert_rules_parse_frontmatter",
+      "scripts_convert_rules_parse_rule_file",
+      "scripts_convert_rules_rationale_109",
+      "scripts_convert_rules_rationale_129",
+      "scripts_convert_rules_rationale_186",
+      "scripts_convert_rules_rationale_66",
+      "scripts_convert_rules_rationale_86"
+    ],
+    "8": [
+      "agent_skills_i18n_localization_scripts_i18n_checker_py",
+      "scripts_i18n_checker_check_hardcoded_strings",
+      "scripts_i18n_checker_check_locale_completeness",
+      "scripts_i18n_checker_find_locale_files",
+      "scripts_i18n_checker_flatten_keys",
+      "scripts_i18n_checker_main",
+      "scripts_i18n_checker_rationale_121",
+      "scripts_i18n_checker_rationale_132",
+      "scripts_i18n_checker_rationale_54",
+      "scripts_i18n_checker_rationale_71"
+    ],
+    "9": [
+      "agent_mcp_config_context7_args",
+      "agent_mcp_config_context7_command",
+      "agent_mcp_config_json",
+      "agent_mcp_config_mcpservers",
+      "agent_mcp_config_mcpservers_context7",
+      "agent_mcp_config_mcpservers_shadcn",
+      "agent_mcp_config_shadcn_args",
+      "agent_mcp_config_shadcn_command"
+    ],
+    "10": [
+      "agent_skills_api_patterns_scripts_api_validator_py",
+      "scripts_api_validator_check_api_code",
+      "scripts_api_validator_check_openapi_spec",
+      "scripts_api_validator_find_api_files",
+      "scripts_api_validator_main",
+      "scripts_api_validator_rationale_19",
+      "scripts_api_validator_rationale_38",
+      "scripts_api_validator_rationale_95"
+    ],
+    "11": [
+      "agent_scripts_auto_preview_py",
+      "scripts_auto_preview_get_project_root",
+      "scripts_auto_preview_get_start_command",
+      "scripts_auto_preview_is_running",
+      "scripts_auto_preview_main",
+      "scripts_auto_preview_start_server",
+      "scripts_auto_preview_status_server",
+      "scripts_auto_preview_stop_server"
+    ],
+    "12": [
+      "agent_skills_geo_fundamentals_scripts_geo_checker_py",
+      "scripts_geo_checker_check_page",
+      "scripts_geo_checker_find_web_pages",
+      "scripts_geo_checker_is_page_file",
+      "scripts_geo_checker_main",
+      "scripts_geo_checker_rationale_100",
+      "scripts_geo_checker_rationale_48",
+      "scripts_geo_checker_rationale_82"
+    ],
+    "13": [
+      "agent_skills_seo_fundamentals_scripts_seo_checker_py",
+      "scripts_seo_checker_check_page",
+      "scripts_seo_checker_find_pages",
+      "scripts_seo_checker_is_page_file",
+      "scripts_seo_checker_main",
+      "scripts_seo_checker_rationale_49",
+      "scripts_seo_checker_rationale_79",
+      "scripts_seo_checker_rationale_97"
+    ],
+    "14": [
+      "agent_scripts_session_manager_py",
+      "scripts_session_manager_analyze_package_json",
+      "scripts_session_manager_count_files",
+      "scripts_session_manager_detect_features",
+      "scripts_session_manager_get_project_root",
+      "scripts_session_manager_main",
+      "scripts_session_manager_print_status"
+    ],
+    "15": [
+      "agent_skills_mobile_design_scripts_mobile_audit_py",
+      "scripts_mobile_audit_main",
+      "scripts_mobile_audit_mobileauditor",
+      "scripts_mobile_audit_mobileauditor_audit_directory",
+      "scripts_mobile_audit_mobileauditor_audit_file",
+      "scripts_mobile_audit_mobileauditor_get_report",
+      "scripts_mobile_audit_mobileauditor_init"
+    ],
+    "16": [
+      "agent_skills_frontend_design_scripts_ux_audit_py",
+      "scripts_ux_audit_main",
+      "scripts_ux_audit_uxauditor",
+      "scripts_ux_audit_uxauditor_audit_directory",
+      "scripts_ux_audit_uxauditor_audit_file",
+      "scripts_ux_audit_uxauditor_get_report",
+      "scripts_ux_audit_uxauditor_init"
+    ],
+    "17": [
+      "agent_skills_database_design_scripts_schema_validator_py",
+      "scripts_schema_validator_find_schema_files",
+      "scripts_schema_validator_main",
+      "scripts_schema_validator_rationale_30",
+      "scripts_schema_validator_rationale_48",
+      "scripts_schema_validator_validate_prisma_schema"
+    ],
+    "18": [
+      "agent_skills_frontend_design_scripts_accessibility_checker_py",
+      "scripts_accessibility_checker_check_accessibility",
+      "scripts_accessibility_checker_find_html_files",
+      "scripts_accessibility_checker_main",
+      "scripts_accessibility_checker_rationale_31",
+      "scripts_accessibility_checker_rationale_45"
+    ],
+    "19": [
+      "agent_skills_lint_and_validate_scripts_lint_runner_py",
+      "scripts_lint_runner_detect_project_type",
+      "scripts_lint_runner_main",
+      "scripts_lint_runner_rationale_30",
+      "scripts_lint_runner_rationale_73",
+      "scripts_lint_runner_run_linter"
+    ],
+    "20": [
+      "agent_skills_testing_patterns_scripts_test_runner_py",
+      "scripts_test_runner_detect_test_framework",
+      "scripts_test_runner_main",
+      "scripts_test_runner_rationale_28",
+      "scripts_test_runner_rationale_80",
+      "scripts_test_runner_run_tests"
+    ],
+    "21": [
+      "agent_skills_performance_profiling_scripts_lighthouse_audit_py",
+      "scripts_lighthouse_audit_get_summary",
+      "scripts_lighthouse_audit_rationale_17",
+      "scripts_lighthouse_audit_rationale_61",
+      "scripts_lighthouse_audit_run_lighthouse"
+    ],
+    "22": [
+      "agent_skills_webapp_testing_scripts_playwright_runner_py",
+      "scripts_playwright_runner_rationale_116",
+      "scripts_playwright_runner_rationale_32",
+      "scripts_playwright_runner_run_accessibility_check",
+      "scripts_playwright_runner_run_basic_test"
+    ],
+    "23": [
+      "km_bud_update_content",
+      "km_bud_update_fs",
+      "update_js"
+    ],
+    "24": [
+      "agent_shared_ui_ux_pro_max_scripts_search_py",
+      "scripts_search_format_output",
+      "scripts_search_rationale_23"
+    ]
+  },
+  "cohesion": {
+    "0": 0.0855614973262032,
+    "1": 0.1,
+    "2": 0.14736842105263157,
+    "3": 0.13157894736842105,
+    "4": 0.16993464052287582,
+    "5": 0.27472527472527475,
+    "6": 0.3333333333333333,
+    "7": 0.2545454545454545,
+    "8": 0.28888888888888886,
+    "9": 0.25,
+    "10": 0.35714285714285715,
+    "11": 0.5357142857142857,
+    "12": 0.35714285714285715,
+    "13": 0.35714285714285715,
+    "14": 0.5714285714285714,
+    "15": 0.5238095238095238,
+    "16": 0.5238095238095238,
+    "17": 0.4666666666666667,
+    "18": 0.4666666666666667,
+    "19": 0.4666666666666667,
+    "20": 0.4666666666666667,
+    "21": 0.5,
+    "22": 0.4,
+    "23": 0.6666666666666666,
+    "24": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "km_bud_extract_assets_path",
+      "label": "path",
+      "degree": 23
+    },
+    {
+      "id": "scripts_design_system_designsystemgenerator",
+      "label": "DesignSystemGenerator",
+      "degree": 11
+    },
+    {
+      "id": "scripts_react_performance_checker_performancechecker",
+      "label": "PerformanceChecker",
+      "degree": 11
+    },
+    {
+      "id": "scripts_core_search_csv",
+      "label": "_search_csv()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_checklist_run_script",
+      "label": "run_script()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_core_bm25",
+      "label": "BM25",
+      "degree": 7
+    },
+    {
+      "id": "scripts_core_search",
+      "label": "search()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_design_system_generate_design_system",
+      "label": "generate_design_system()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_verify_all_run_script",
+      "label": "run_script()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_design_system_persist_design_system",
+      "label": "persist_design_system()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "_generate_intelligent_overrides()",
+      "target": "search()",
+      "source_files": [
+        ".agent/.shared/ui-ux-pro-max/scripts/design_system.py",
+        ".agent/.shared/ui-ux-pro-max/scripts/core.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "persist_design_system()",
+      "target": "path",
+      "source_files": [
+        ".agent/.shared/ui-ux-pro-max/scripts/design_system.py",
+        "extract_assets.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "get_project_root()",
+      "target": "path",
+      "source_files": [
+        ".agent/scripts/auto_preview.py",
+        "extract_assets.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "main()",
+      "target": "path",
+      "source_files": [
+        ".agent/scripts/checklist.py",
+        "extract_assets.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "get_project_root()",
+      "target": "path",
+      "source_files": [
+        ".agent/scripts/session_manager.py",
+        "extract_assets.js"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `path` connect `Community 3` to `Community 0`, `Community 1`, `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 10`, `Community 11`, `Community 12`, `Community 13`, `Community 14`, `Community 15`, `Community 16`, `Community 17`, `Community 18`, `Community 19`, `Community 20`?",
+      "why": "High betweenness centrality (0.753) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `persist_design_system()` connect `Community 0` to `Community 3`?",
+      "why": "High betweenness centrality (0.291) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `search()` connect `Community 2` to `Community 0`?",
+      "why": "High betweenness centrality (0.124) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 22 inferred relationships involving `path` (e.g. with `persist_design_system()` and `get_project_root()`) actually correct?",
+      "why": "`path` has 22 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `fs`, `content`, `fs` to the rest of the system?",
+      "why": "101 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.0855614973262032 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

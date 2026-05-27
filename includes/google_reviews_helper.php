@@ -22,10 +22,10 @@ function syncGoogleReviews(PDO $db, array $config): array {
 
     $response = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $curlError = curl_error($ch); // Capture BEFORE curl_close() frees the handle
     curl_close($ch);
 
     if ($httpCode !== 200 || !$response) {
-        $curlError = isset($ch) ? curl_error($ch) : 'Unknown connection error';
         error_log("Google Reviews Sync Failure: HTTP Code: {$httpCode}, Curl Error: {$curlError}");
         return ['success' => false, 'message' => 'Błąd połączenia z API Google. Sprawdź logi serwera.'];
     }

@@ -3,12 +3,27 @@
 RewriteEngine On
 RewriteBase /
 
+# Custom error pages
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+ErrorDocument 403 /404.php
+
 # Redirect starych URL-i HTML na PHP
 RewriteRule ^index\.html$ index.php [R=301,L]
 RewriteRule ^galeria\.html$ galeria.php [R=301,L]
 
 # Zabezpieczenie config/ przed bezpośrednim dostępem
 <FilesMatch "config\.php$">
+    Deny from all
+</FilesMatch>
+
+# Zabezpieczenie pliku .env przed bezpośrednim dostępem przez przeglądarkę
+<FilesMatch "^\.env(\.example)?$">
+    Deny from all
+</FilesMatch>
+
+# Zabezpieczenie env_loader.php przed bezpośrednim dostępem
+<FilesMatch "env_loader\.php$">
     Deny from all
 </FilesMatch>
 

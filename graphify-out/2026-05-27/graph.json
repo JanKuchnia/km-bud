@@ -31,33 +31,6 @@
       "norm_label": "index.php"
     },
     {
-      "label": "404.php",
-      "file_type": "code",
-      "source_file": "404.php",
-      "source_location": "L1",
-      "id": "404_php",
-      "community": 403,
-      "norm_label": "404.php"
-    },
-    {
-      "label": "500.php",
-      "file_type": "code",
-      "source_file": "500.php",
-      "source_location": "L1",
-      "id": "500_php",
-      "community": 404,
-      "norm_label": "500.php"
-    },
-    {
-      "label": "router.php",
-      "file_type": "code",
-      "source_file": "router.php",
-      "source_location": "L1",
-      "id": "router_php",
-      "community": 405,
-      "norm_label": "router.php"
-    },
-    {
       "label": "mcp_config.json",
       "file_type": "code",
       "source_file": "/home/jankuchnia/Pulpit/km-bud/.agent/mcp_config.json",
@@ -2245,24 +2218,6 @@
       "norm_label": "config.php"
     },
     {
-      "label": "env_loader.php",
-      "file_type": "code",
-      "source_file": "config/env_loader.php",
-      "source_location": "L1",
-      "id": "config_env_loader_php",
-      "community": 402,
-      "norm_label": "env_loader.php"
-    },
-    {
-      "label": "loadEnv()",
-      "file_type": "code",
-      "source_file": "config/env_loader.php",
-      "source_location": "L9",
-      "id": "config_env_loader_loadenv",
-      "community": 402,
-      "norm_label": "loadenv()"
-    },
-    {
       "label": "db.php",
       "file_type": "code",
       "source_file": "includes/db.php",
@@ -2365,7 +2320,7 @@
       "label": "handleUpdatePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L299",
+      "source_location": "L293",
       "id": "admin_api_handleupdatephoto",
       "community": 388,
       "norm_label": "handleupdatephoto()"
@@ -2374,7 +2329,7 @@
       "label": "handleDeletePhoto()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L334",
+      "source_location": "L328",
       "id": "admin_api_handledeletephoto",
       "community": 388,
       "norm_label": "handledeletephoto()"
@@ -2383,7 +2338,7 @@
       "label": "handleReorderPhotos()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L374",
+      "source_location": "L368",
       "id": "admin_api_handlereorderphotos",
       "community": 388,
       "norm_label": "handlereorderphotos()"
@@ -2392,7 +2347,7 @@
       "label": "handleAddCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L402",
+      "source_location": "L396",
       "id": "admin_api_handleaddcategory",
       "community": 388,
       "norm_label": "handleaddcategory()"
@@ -2401,7 +2356,7 @@
       "label": "handleEditCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L445",
+      "source_location": "L439",
       "id": "admin_api_handleeditcategory",
       "community": 388,
       "norm_label": "handleeditcategory()"
@@ -2410,7 +2365,7 @@
       "label": "handleDeleteCategory()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L478",
+      "source_location": "L472",
       "id": "admin_api_handledeletecategory",
       "community": 388,
       "norm_label": "handledeletecategory()"
@@ -2419,7 +2374,7 @@
       "label": "compressWithGD()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L514",
+      "source_location": "L501",
       "id": "admin_api_compresswithgd",
       "community": 388,
       "norm_label": "compresswithgd()"
@@ -2428,7 +2383,7 @@
       "label": "compressWithTinyPNG()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L587",
+      "source_location": "L574",
       "id": "admin_api_compresswithtinypng",
       "community": 388,
       "norm_label": "compresswithtinypng()"
@@ -2437,7 +2392,7 @@
       "label": "translatePolishChars()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L645",
+      "source_location": "L632",
       "id": "admin_api_translatepolishchars",
       "community": 388,
       "norm_label": "translatepolishchars()"
@@ -2446,7 +2401,7 @@
       "label": "handleFetchGoogleReviews()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L662",
+      "source_location": "L649",
       "id": "admin_api_handlefetchgooglereviews",
       "community": 388,
       "norm_label": "handlefetchgooglereviews()"
@@ -2455,7 +2410,7 @@
       "label": "handleAddReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L671",
+      "source_location": "L658",
       "id": "admin_api_handleaddreview",
       "community": 388,
       "norm_label": "handleaddreview()"
@@ -2464,7 +2419,7 @@
       "label": "handleEditReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L703",
+      "source_location": "L687",
       "id": "admin_api_handleeditreview",
       "community": 388,
       "norm_label": "handleeditreview()"
@@ -2473,7 +2428,7 @@
       "label": "handleToggleReviewVisibility()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L730",
+      "source_location": "L714",
       "id": "admin_api_handletogglereviewvisibility",
       "community": 388,
       "norm_label": "handletogglereviewvisibility()"
@@ -2482,7 +2437,7 @@
       "label": "handleDeleteReview()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L751",
+      "source_location": "L734",
       "id": "admin_api_handledeletereview",
       "community": 388,
       "norm_label": "handledeletereview()"
@@ -2491,7 +2446,7 @@
       "label": "handleAddService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L769",
+      "source_location": "L752",
       "id": "admin_api_handleaddservice",
       "community": 388,
       "norm_label": "handleaddservice()"
@@ -2500,7 +2455,7 @@
       "label": "handleEditService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L817",
+      "source_location": "L787",
       "id": "admin_api_handleeditservice",
       "community": 388,
       "norm_label": "handleeditservice()"
@@ -2509,7 +2464,7 @@
       "label": "handleDeleteService()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L849",
+      "source_location": "L819",
       "id": "admin_api_handledeleteservice",
       "community": 388,
       "norm_label": "handledeleteservice()"
@@ -2518,7 +2473,7 @@
       "label": "handleReorderServices()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L886",
+      "source_location": "L856",
       "id": "admin_api_handlereorderservices",
       "community": 388,
       "norm_label": "handlereorderservices()"
@@ -2527,7 +2482,7 @@
       "label": "handleAddServiceSlide()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L911",
+      "source_location": "L881",
       "id": "admin_api_handleaddserviceslide",
       "community": 388,
       "norm_label": "handleaddserviceslide()"
@@ -2536,7 +2491,7 @@
       "label": "handleDeleteServiceSlide()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L998",
+      "source_location": "L963",
       "id": "admin_api_handledeleteserviceslide",
       "community": 388,
       "norm_label": "handledeleteserviceslide()"
@@ -2545,7 +2500,7 @@
       "label": "handleReorderServiceSlides()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1037",
+      "source_location": "L1002",
       "id": "admin_api_handlereorderserviceslides",
       "community": 388,
       "norm_label": "handlereorderserviceslides()"
@@ -2554,7 +2509,7 @@
       "label": "handleAddEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1062",
+      "source_location": "L1027",
       "id": "admin_api_handleaddequipment",
       "community": 388,
       "norm_label": "handleaddequipment()"
@@ -2563,7 +2518,7 @@
       "label": "handleEditEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1136",
+      "source_location": "L1096",
       "id": "admin_api_handleeditequipment",
       "community": 388,
       "norm_label": "handleeditequipment()"
@@ -2572,7 +2527,7 @@
       "label": "handleDeleteEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1225",
+      "source_location": "L1185",
       "id": "admin_api_handledeleteequipment",
       "community": 388,
       "norm_label": "handledeleteequipment()"
@@ -2581,7 +2536,7 @@
       "label": "handleReorderEquipment()",
       "file_type": "code",
       "source_file": "admin/api.php",
-      "source_location": "L1263",
+      "source_location": "L1223",
       "id": "admin_api_handlereorderequipment",
       "community": 388,
       "norm_label": "handlereorderequipment()"
@@ -44659,16 +44614,6 @@
       "confidence_score": 1.0,
       "source": "agent_skills_webapp_testing_scripts_playwright_runner_py",
       "target": "scripts_playwright_runner_run_accessibility_check"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "config/env_loader.php",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "config_env_loader_php",
-      "target": "config_env_loader_loadenv",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
